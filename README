@@ -17,7 +17,7 @@ The document can be compiled by issuing the command
 
 latex Quantum
 
-in the base directory (containing Newton.tex).
+in the base directory (containing Quantum.tex).
 
 The document will need to be compiled at least three times to
 update all of the internal references, and to generate the
