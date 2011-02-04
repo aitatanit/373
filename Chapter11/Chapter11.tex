@@ -1,0 +1,493 @@
+\chapter{Addition of Angular Momentum}\label{sadd} 
+\section{Introduction}
+Consider an electron in a hydrogen atom. As we have already seen,  the electron's motion through space is parameterized by the three quantum numbers $n$, $l$,
+and $m$ (see Sect.~\ref{s10.4}). To these we must now add the
+two quantum numbers $s$ and $m_s$ which parameterize the electron's internal
+motion (see the previous chapter). Now, the quantum numbers $l$ and $m$
+specify the electron's orbital angular momentum vector, ${\bf L}$, (as much as it can be specified) whereas
+the quantum numbers $s$ and $m_s$ specify its spin angular momentum vector,
+${\bf S}$. But, if the electron possesses both orbital 
+and spin angular momentum  then what is its total angular momentum?
+
+\section{General Principles}\label{s11.2}
+The three basic orbital angular momentum operators, $L_x$, $L_y$,
+and $L_z$, obey the commutation relations (\ref{e8.6})--(\ref{e8.8}),
+which can be written in the convenient vector form:
+\begin{equation}
+{\bf L}\times{\bf L} = {\rm i}\,\hbar\,{\bf L}.
+\end{equation}
+Likewise, the three basic spin angular momentum operators, $S_x$, $S_y$,
+and $S_z$, obey the commutation relations (\ref{e10.1x})--(\ref{e10.2x}),
+which can also be written in  vector form: {\em i.e.},
+\begin{equation}
+{\bf S}\times{\bf S} = {\rm i}\,\hbar\,{\bf S}.
+\end{equation}
+Now, since the orbital angular momentum operators are associated
+with the electron's motion through space, whilst the spin angular
+momentum operators are associated with its internal
+motion, and these two types of motion are completely unrelated ({\em i.e.}, they correspond to different degrees of freedom---see Sect.~\ref{sfuncon}), it is reasonable to suppose that the two sets of operators commute with
+one another: {\em i.e.},
+\begin{equation}
+[L_i, S_j] = 0,
+\end{equation}
+where $i,j=1,2,3$ corresponds to $x,y,z$. 
+
+Let us now consider the electron's total angular momentum vector
+\begin{equation}
+{\bf J} = {\bf L} + {\bf S}.
+\end{equation}
+We have
+\begin{eqnarray}
+{\bf J}\times{\bf J} &= &({\bf L}+{\bf S})\times({\bf L}+{\bf S})\nonumber\\[0.5ex]
+&=& {\bf L}\times{\bf L} + {\bf S}\times{\bf S}+{\bf L}\times{\bf S}+{\bf S}\times{\bf L} ={\bf L}\times{\bf L} + {\bf S}\times{\bf S} \nonumber\\[0.5ex]
+&=& {\rm i}\,\hbar\,{\bf L} + {\rm i}\,\hbar\,{\bf S}\nonumber\\[0.5ex]
+&=& {\rm i}\,\hbar\,{\bf J}.
+\end{eqnarray}
+In other words,
+\begin{equation}
+{\bf J}\times{\bf J} = {\rm i}\,\hbar\,{\bf J}.
+\end{equation}
+It is thus evident that the three basic total angular momentum operators, $J_x$,
+$J_y$, and $J_z$, obey  analogous commutation relations to the
+corresponding orbital and spin angular momentum operators. It therefore follows
+that the total angular momentum  has similar properties to the
+orbital and spin angular momenta. For instance, it is
+only possible to simultaneously measure the magnitude
+squared of the total angular momentum vector,
+\begin{equation}
+J^2 =J_x^{\,2}+J_y^{\,2}+J_z^{\,2},
+\end{equation}
+together with a single Cartesian component. By convention, we shall
+always choose to measure $J_z$. A simultaneous eigenstate
+of $J_z$ and $J^2$ satisfies
+\begin{eqnarray}
+J_z\,\psi_{j,m_j}&=& m_j\,\hbar\,\psi_{j,m_j},\\[0.5ex]
+J^2\,\psi_{j,m_j} &=& j\,(j+1)\,\hbar^{\,2}\,\psi_{j,m_j},
+\end{eqnarray}
+where the quantum number $j$ can take positive integer, or half-integer,
+values, and the quantum number $m_j$ is restricted to the following
+range of values:
+\begin{equation}
+-j, -j+1,\cdots, j-1, j.
+\end{equation}
+
+Now
+\begin{equation}
+J^2 = ({\bf L}+{\bf S})\cdot({\bf L}+{\bf S}) = L^2+ S^2 + 2\,{\bf L}\cdot{\bf S},
+\end{equation}
+which can also be written as
+\begin{equation}\label{e11.12}
+J^2 = L^2+S^2 +2\,L_z\,S_z+ L_+\,S_-+L_-\,S_+.
+\end{equation}
+We know that the operator $L^2$ commutes with itself, with all of the
+Cartesian components of ${\bf L}$ (and, hence, with the raising
+and lowering operators $L_\pm$), and with all of the spin angular momentum
+operators (see Sect.~\ref{s8.2}). It is therefore clear that
+\begin{equation}
+[J^2,L^2] = 0.
+\end{equation}
+A similar argument allows us to also conclude that
+\begin{equation}
+[J^2,S^2]=0.
+\end{equation}
+Now, the operator $L_z$ commutes with itself, with $L^2$, with all of
+the spin angular momentum operators, but {\em not}\/ with the raising
+and lowering operators $L_\pm$ (see Sect.~\ref{s8.2}). It follows that
+\begin{equation}
+[J^2,L_z]\neq 0.
+\end{equation}
+Likewise, we can also show that
+\begin{equation}
+[J^2,S_z]\neq 0.
+\end{equation}
+Finally, we have
+\begin{equation}
+J_z = L_z+S_z,
+\end{equation}
+where $[J_z,L_z]=[J_z,S_z]=0$. 
+
+Recalling that only {\em commuting}\/ operators correspond to physical
+quantities which can be simultaneously measured (see Sect.~\ref{smeas}),
+it follows, from the above discussion,  that there  are {\em two}\/ alternative sets of
+physical variables associated with angular momentum which we can measure simultaneously.
+The first set correspond to the operators $L^2$, $S^2$, $L_z$, $S_z$, and $J_z$. The second set correspond to the operators
+$L^2$, $S^2$, $J^2$, and $J_z$. In other words, we can always measure
+the magnitude squared of the orbital and spin angular momentum vectors, together with
+the $z$-component of the total angular momentum vector.
+In addition, we can either choose to measure the $z$-components of
+the orbital and spin angular momentum vectors, or the magnitude squared
+of the total angular momentum vector.
+
+Let $\psi^{(1)}_{l,s;m,m_s}$ represent a simultaneous eigenstate
+of $L^2$, $S^2$, $L_z$, and $S_z$ corresponding to the following
+eigenvalues:
+\begin{eqnarray}
+L^2\,\psi^{(1)}_{l,s;m,m_s}&=& l\,(l+1)\,\hbar^2\,\psi^{(1)}_{l,s;m,m_s},\\[0.5ex]
+S^2\,\psi^{(1)}_{l,s;m,m_s}&=& s\,(s+1)\,\hbar^2\,\psi^{(1)}_{l,s;m,m_s},\\[0.5ex]
+L_z\,\psi^{(1)}_{l,s;m,m_s}&=& m\,\hbar\,\psi^{(1)}_{l,s;m,m_s},\\[0.5ex]
+S_z\,\psi^{(1)}_{l,s;m,m_s}&=& m_s\,\hbar\,\psi^{(1)}_{l,s;m,m_s}.
+\end{eqnarray}
+It is easily seen that
+\begin{eqnarray}
+J_z\,\psi^{(1)}_{l,s;m,m_s}& =& (L_z+S_z)\,\psi^{(1)}_{l,s;m,m_s}=
+(m+m_s)\,\hbar\,\psi^{(1)}_{l,s;m,m_s}\nonumber\\[0.5ex] &= &m_j\,\hbar\,\psi^{(1)}_{l,s;m,m_s}.
+\end{eqnarray}
+Hence,
+\begin{equation}
+m_j = m+m_s.\label{e11.23}
+\end{equation}
+In other words, the quantum numbers controlling the $z$-components
+of the various angular momentum vectors can simply be added algebraically.
+
+Finally, let $\psi^{(2)}_{l,s;j,m_j}$ represent a simultaneous eigenstate
+of $L^2$, $S^2$, $J^2$, and $J_z$ corresponding to the following
+eigenvalues:
+\begin{eqnarray}
+L^2\,\psi^{(2)}_{l,s;j,m_j}&=& l\,(l+1)\,\hbar^2\,\psi^{(2)}_{l,s;j,m_j},\\[0.5ex]
+S^2\,\psi^{(2)}_{l,s;j,m_j}&=& s\,(s+1)\,\hbar^2\,\psi^{(2)}_{l,s;j,m_j},\\[0.5ex]
+J^2\,\psi^{(2)}_{l,s;j,m_j}&=& j\,(j+1)\,\hbar^2\,\psi^{(2)}_{l,s;j,m_j},\label{e11.26}\\[0.5ex]
+J_z\,\psi^{(2)}_{l,s;j,m_j}&=& m_j\,\hbar\,\psi^{(2)}_{l,s;j,m_j}.
+\end{eqnarray}
+
+\section{Angular Momentum in the Hydrogen Atom}\label{s11.3}
+In a hydrogen atom, the wavefunction of an electron   in a simultaneous
+eigenstate of $L^2$ and $L_z$ has an angular dependence specified
+by the spherical harmonic $Y_{l,m}(\theta,\phi)$ (see Sect.~\ref{sharm}).
+If the electron is also in an eigenstate of $S^2$ and $S_z$ then the
+quantum numbers $s$ and $m_s$ take the values $1/2$ and $\pm 1/2$,
+respectively, and the internal state of the electron is  specified
+by the spinors $\chi_\pm$ (see Sect.~\ref{spauli}). Hence, the
+simultaneous eigenstates of $L^2$, $S^2$, $L_z$, and $S_z$ can be written
+in the separable form
+\begin{equation}\label{e11.28}
+\psi^{(1)}_{l,1/2;m,\pm 1/2} = Y_{l,m}\,\chi_\pm.
+\end{equation}
+Here, it is understood that orbital angular momentum operators act on
+the spherical harmonic functions, $Y_{l,m}$, whereas spin angular momentum operators act
+on the spinors, $\chi_\pm$. 
+
+Since the eigenstates $\psi^{(1)}_{l,1/2;m,\pm 1/2}$ are (presumably)
+orthonormal, and form a complete set, we can express the eigenstates $\psi^{(2)}_{l,1/2;j,m_j}$ as  linear combinations of them. For instance,
+\begin{equation}\label{e11.29}
+\psi^{(2)}_{l,1/2;j,m+1/2} = \alpha\,\psi^{(1)}_{l,1/2;m,1/2} + \beta\,
+\psi^{(1)}_{l,1/2;m+1,-1/2},
+\end{equation}
+where $\alpha$ and $\beta$ are, as yet, unknown coefficients. Note that
+the number of $\psi^{(1)}$ states which can appear on the right-hand side
+of the above expression is limited to two by the constraint that
+$m_j=m+m_s$ [see Eq.~(\ref{e11.23})], and the fact that $m_s$ can only take the values $\pm 1/2$. 
+Assuming that the $\psi^{(2)}$ eigenstates are properly normalized, we have
+\begin{equation}\label{e11.30}
+\alpha^2 + \beta^2 = 1.
+\end{equation}
+
+Now, it follows from Eq.~(\ref{e11.26}) that
+\begin{equation}\label{e11.31}
+J^2\,\psi^{(2)}_{l,1/2;j,m+1/2}= j\,(j+1)\,\hbar^2\,\psi^{(2)}_{l,1/2;j,m+1/2},
+\end{equation}
+where [see Eq.~(\ref{e11.12})]
+\begin{equation}\label{e11.32}
+J^2 = L^2+S^2 +2\,L_z\,S_z+ L_+\,S_-+L_-\,S_+.
+\end{equation}
+Moreover, according to Eqs.~(\ref{e11.28}) and (\ref{e11.29}), we can write
+\begin{equation}\label{e11.33}
+\psi^{(2)}_{l,1/2;j,m+1/2} = \alpha\,Y_{l,m}\,\chi_+ + \beta\,
+Y_{l,m+1}\,\chi_-.
+\end{equation}
+Recall, from Eqs.~(\ref{eraise}) and (\ref{elow}), that
+\begin{eqnarray}\label{e11.34}
+L_+\,Y_{l,m} &=& [l\,(l+1)-m\,(m+1)]^{1/2}\,\hbar\,Y_{l,m+1},\\[0.5ex]
+L_-\,Y_{l,m} &=& [l\,(l+1)-m\,(m-1)]^{1/2}\,\hbar\,Y_{l,m-1}.
+\end{eqnarray}
+By analogy, when the  spin raising and lowering operators, $S_\pm$, act on a general spinor, $\chi_{s,m_s}$, we obtain
+\begin{eqnarray}
+S_+\,\chi_{s,m_s} &=& [s\,(s+1)-m_s\,(m_s+1)]^{1/2}\,\hbar\,\chi_{s,m_s+1},\\[0.5ex]
+S_-\,\chi_{s,m_s} &=& [s\,(s+1)-m_s\,(m_s-1)]^{1/2}\,\hbar\,\chi_{s,m_s-1}.
+\end{eqnarray}
+For the special case of spin one-half spinors ({\em i.e.}, $s=1/2, m_s=\pm 1/2$), the above expressions reduce to
+\begin{equation}
+S_+\,\chi_+=S_-\,\chi_- = 0,
+\end{equation}
+and
+\begin{equation}\label{e11.39}
+S_\pm\,\chi_\mp = \hbar\,\chi_\pm.
+\end{equation}
+
+It follows from Eqs.~(\ref{e11.32}) and (\ref{e11.34})--(\ref{e11.39}) that
+\begin{eqnarray}
+J^2\,Y_{l,m}\,\chi_+&=& [l\,(l+1)+3/4+m]\,\hbar^2\,Y_{l,m}\,\chi_+\nonumber\\[0.5ex]
+&&+ [l\,(l+1)-m\,(m+1)]^{1/2}\,\hbar^2\,Y_{l,m+1}\,\chi_-,
+\end{eqnarray}
+and
+\begin{eqnarray}
+J^2\,Y_{l,m+1}\,\chi_-&=& [l\,(l+1)+3/4-m-1]\,\hbar^2\,Y_{l,m+1}\,\chi_-\nonumber\\[0.5ex]
+&&+ [l\,(l+1)-m\,(m+1)]^{1/2}\,\hbar^2\,Y_{l,m}\,\chi_+.
+\end{eqnarray}
+Hence, Eqs.~(\ref{e11.31}) and (\ref{e11.33}) yield
+\begin{eqnarray}\label{e11.42}
+(x - m)\,\alpha - [l\,(l+1)-m\,(m+1)]^{1/2}\,\beta &=& 0,\\[0.5ex]
+-[l\,(l+1)-m\,(m+1)]^{1/2}\,\alpha +(x+m+1)\,\beta&=& 0,\label{e11.43}
+\end{eqnarray}
+where 
+\begin{equation}
+x = j\,(j+1) - l\,(l+1) - 3/4.
+\end{equation}
+Equations (\ref{e11.42}) and (\ref{e11.43}) can be solved to give
+\begin{equation}
+x\,(x+1) = l\,(l+1),
+\end{equation}
+and
+\begin{equation}\label{e11.45}
+\frac{\alpha}{\beta} = \frac{[(l-m)\,(l+m+1)]^{1/2}}{x-m}.
+\end{equation}
+It follows that $x=l$ or $x=-l-1$, which corresponds to $j=l+1/2$ or
+$j=l-1/2$, respectively. Once $x$ is specified, Eqs.~(\ref{e11.30}) and (\ref{e11.45}) can be solved for $\alpha$ and $\beta$. We obtain
+\begin{equation}\label{e11.47}
+\psi^{(2)}_{l+1/2,m+1/2} = \left(\frac{l+m+1}{2\,l+1}\right)^{1/2}
+\psi^{(1)}_{m,1/2} + \left(\frac{l-m}{2\,l+1}\right)^{1/2}\psi^{(1)}_{m+1,-1/2},
+\end{equation}
+and
+\begin{equation}\label{e11.48}
+\psi^{(2)}_{l-1/2,m+1/2} = \left(\frac{l-m}{2\,l+1}\right)^{1/2}
+\psi^{(1)}_{m,1/2} -\left(\frac{l+m+1}{2\,l+1}\right)^{1/2}\psi^{(1)}_{m+1,-1/2}.
+\end{equation}
+Here, we have neglected the common subscripts $l,1/2$ for the sake of
+clarity: {\em i.e.}, $\psi^{(2)}_{l+1/2,m+1/2}\equiv \psi^{(2)}_{l,1/2;l+1/2,m+1/2}$, {\em etc.} The above equations can easily be inverted
+to give the $\psi^{(1)}$ eigenstates in terms of the $\psi^{(2)}$ eigenstates:
+\begin{eqnarray}
+\psi^{(1)}_{m,1/2} &=& \left(\frac{l+m+1}{2\,l+1}\right)^{1/2}\!\psi^{(2)}_{l+1/2,m+1/2} +  \left(\frac{l-m}{2\,l+1}\right)^{1/2}\!\psi^{(2)}_{l-1/2,m+1/2},\\[0.5ex]
+\!\!\!\!\!\!\psi^{(1)}_{m+1,-1/2}&=&  \left(\frac{l-m}{2\,l+1}\right)^{1/2}\!\psi^{(2)}_{l+1/2,m+1/2} - \left(\frac{l+m+1}{2\,l+1}\right)^{1/2}\!
+\psi^{(2)}_{l-1/2,m+1/2}.\label{e11.50}
+\end{eqnarray}
+The information contained in Eqs.~(\ref{e11.47})--(\ref{e11.50})
+is neatly summarized in Table~\ref{t2}. For instance, Eq.~(\ref{e11.47})
+is obtained by reading the first row of this table, whereas Eq.~(\ref{e11.50})
+is obtained by reading the second column. The coefficients in this type
+of table are generally known as {\em Clebsch-Gordon coefficients}.
+
+\begin{table}\centering
+\begin{tabular}{c|cc|c}
+&$m, 1/2$& $m+1, -1/2$&$m, m_s$\\[0.5ex]\hline
+$l+1/2, m+1/2$ & ${\scriptstyle\sqrt{(l+m+1)/(2\,l+1)}}$&  ${\scriptstyle\sqrt{(l-m)/(2\,l+1)}}$&\\[0.5ex]
+$l-1/2, m+1/2$& ${\scriptstyle\sqrt{(l-m)/(2\,l+1)}}$&${\scriptstyle-\sqrt{(l+m+1)/(2\,l+1)}}$&\\[0.5ex]\hline
+$j, m_j$&&&
+\end{tabular}
+\caption{\em Clebsch-Gordon coefficients for adding spin one-half to
+spin $l$.}\label{t2}
+\end{table}
+
+As an example, let us consider the $l=1$ states of a hydrogen atom. 
+The eigenstates of $L^2$, $S^2$, $L_z$, and $S_z$,
+ are denoted $\psi^{(1)}_{m,m_s}$. Since $m$ can take the values $-1,0,1$,
+ whereas $m_s$ can take the values $\pm 1/2$, there are
+ clearly six such states: {\em i.e.}, $\psi^{(1)}_{1,\pm 1/2}$, $\psi^{(1)}_{0,\pm 1/2}$,
+ and $\psi^{(1)}_{-1,\pm 1/2}$. The eigenstates of $L^2$, $S^2$, $J^2$, and $J_z$,
+ are denoted $\psi^{(2)}_{j,m_j}$. Since $l=1$ and $s=1/2$ can be combined
+ together to form either $j=3/2$ or $j=1/2$ (see earlier), there are
+ also six such states: {\em i.e.}, $\psi^{(2)}_{3/2,\pm 3/2}$, $\psi^{(2)}_{3/2,\pm 1/2}$, and $\psi^{(2)}_{1/2,\pm 1/2}$. According to
+ Table~\ref{t2}, the various different eigenstates are interrelated as follows:
+ \begin{eqnarray}\label{ecgs}
+ \psi^{(2)}_{3/2,\pm 3/2} &=& \psi^{(1)}_{\pm 1, \pm 1/2},\\[0.5ex]
+ \psi^{(2)}_{3/2,1/2} &=& \sqrt{\frac{2}{3}}\,\psi^{(1)}_{0,1/2} + 
+\sqrt{ \frac{1}{3}}\,\psi^{(1)}_{1,-1/2},\label{e11.52}\\[0.5ex]
+\psi^{(2)}_{1/2,1/2} &=& \sqrt{\frac{1}{3}}\,\psi^{(1)}_{0,1/2} -
+\sqrt{ \frac{2}{3}}\,\psi^{(1)}_{1,-1/2},\\[0.5ex]
+\psi^{(2)}_{1/2,-1/2} &=& \sqrt{\frac{2}{3}}\,\psi^{(1)}_{-1,1/2} 
+-\sqrt{ \frac{1}{3}}\,\psi^{(1)}_{0,-1/2},\\[0.5ex]
+\psi^{(2)}_{3/2,-1/2} &=& \sqrt{\frac{1}{3}}\,\psi^{(1)}_{-1,1/2} + 
+\sqrt{ \frac{2}{3}}\,\psi^{(1)}_{0,-1/2},
+ \end{eqnarray}
+ and
+ \begin{eqnarray}
+ \psi^{(1)}_{\pm 1,\pm 1/2} &=& \psi^{(2)}_{3/2, \pm 3/2},\\[0.5ex]
+\psi^{(1)}_{1,-1/2} &=& \sqrt{\frac{1}{3}}\,\psi^{(2)}_{3/2,1/2} -
+\sqrt{ \frac{2}{3}}\,\psi^{(2)}_{1/2,1/2},\\[0.5ex]
+ \psi^{(1)}_{0,1/2} &=& \sqrt{\frac{2}{3}}\,\psi^{(2)}_{3/2,1/2} + 
+\sqrt{ \frac{1}{3}}\,\psi^{(2)}_{1/2,1/2},\label{e11.57}\\[0.5ex]
+\psi^{(1)}_{0,-1/2} &=& \sqrt{\frac{2}{3}}\,\psi^{(2)}_{3/2,-1/2} 
+-\sqrt{ \frac{1}{3}}\,\psi^{(2)}_{1/2,-1/2},\label{ecge}\\[0.5ex]
+\psi^{(1)}_{-1,1/2} &=& \sqrt{\frac{1}{3}}\,\psi^{(2)}_{3/2,-1/2} + 
+\sqrt{ \frac{2}{3}}\,\psi^{(2)}_{1/2,-1/2},
+ \end{eqnarray}
+Thus, if we know that an electron in a hydrogen atom is in an $l=1$ 
+state characterized by $m=0$ and $m_s=1/2$ [{\em i.e.}, the state
+represented by $\psi^{(1)}_{0,1/2}$] then, according to Eq.~(\ref{e11.57}),
+a measurement of the total angular momentum will yield $j=3/2$, $m_j=1/2$
+with probability $2/3$, and $j=1/2$, $m_j=1/2$ with probability $1/3$. 
+Suppose that we make such a measurement, and obtain the result $j=3/2$, $m_j=1/2$. As a result of the measurement, the electron is thrown into
+the corresponding eigenstate, $\psi^{(2)}_{3/2,1/2}$.  It thus follows
+from Eq.~(\ref{e11.52}) that a subsequent measurement of $L_z$ and $S_z$
+will yield $m=0$, $m_s=1/2$ with probability $2/3$, and $m=1$, $m_s=-1/2$
+with probability $1/3$.
+
+\begin{table}
+\begin{tabular}{c|cccccc|c}
+&$-1, -1/2$& $-1, 1/2$&$0,-1/2$&$0,1/2$&$1,-1/2$&$1,1/2$&$m,m_s$\\[0.5ex]\hline
+$3/2, -3/2$ & $\scriptstyle{1}$&&&&&\\[0.5ex]
+$3/2, -1/2$& &${\scriptstyle\sqrt{1/3}}$&${\scriptstyle\sqrt{2/3}}$&&&&\\[0.5ex]
+$1/2, -1/2$& &${\scriptstyle\sqrt{2/3}}$&${\scriptstyle -\sqrt{1/3}}$&&&&\\[0.5ex]
+$3/2, 1/2$& &&&${\scriptstyle\sqrt{2/3}}$&${\scriptstyle\sqrt{1/3}}$&&\\[0.5ex]
+$1/2, 1/2$& &&&${\scriptstyle\sqrt{1/3}}$&${\scriptstyle - \sqrt{2/3}}$&&\\[0.5ex]
+$3/2, 3/2$& &&&&&${\scriptstyle 1}$&\\
+\hline
+$j, m_j$&&&&&&&
+\end{tabular}
+\caption{\em Clebsch-Gordon coefficients for adding spin one-half to
+spin one. Only non-zero coefficients are shown.}\label{t3}
+\end{table}
+
+The information contained in Eqs.~(\ref{ecgs})--(\ref{ecge}) is neatly summed
+up in Table~\ref{t3}. Note that each row and column of this
+table has unit norm, and also that the different rows and different columns
+are mutually orthogonal. Of course, this is because the $\psi^{(1)}$ and
+$\psi^{(2)}$ eigenstates are orthonormal.
+
+\section{Two Spin One-Half Particles}\label{shalf}
+Consider a system consisting of two spin one-half particles. Suppose
+that the system does not possess any orbital angular momentum. 
+Let ${\bf S}_1$ and ${\bf S}_2$ be the spin angular momentum operators
+of the first and second particles, respectively, and let
+\begin{equation}
+{\bf S} ={\bf S}_1 + {\bf S}_2
+\end{equation}
+be the total spin angular momentum operator. By analogy
+with the previous analysis, we conclude that it is possible to simultaneously measure either
+$S_1^{\,2}$, $S_2^{\,2}$, $S^2$, and $S_z$, or
+$S_1^{\,2}$, $S_2^{\,2}$, $S_{1z}$, $S_{2z}$, and $S_z$. 
+Let the quantum numbers associated with measurements of
+$S_1^{\,2}$, $S_{1z}$, $S_2^{\,2}$, $S_{2z}$, $S^2$, and 
+$S_z$ be $s_1$, $m_{s_1}$, $s_2$, $m_{s_2}$, $s$, and $m_s$, respectively.
+In other words, if the spinor $\chi_{s_1,s_2;m_{s_1},m_{s_2}}^{(1)}$ is
+a simultaneous eigenstate of $S_1^{\,2}$, $S_2^{\,2}$, $S_{1z}$,
+and $S_{2z}$, then
+\begin{eqnarray}
+S_1^{\,2}\, \chi_{s_1,s_2;m_{s_1},m_{s_2}}^{(1)}&=& s_1\,(s_1+1)\,\hbar^2
+\,\chi_{s_1,s_2;m_{s_1},m_{s_2}}^{(1)},\\[0.5ex]
+S_2^{\,2}\, \chi_{s_1,s_2;m_{s_1},m_{s_2}}^{(1)}&=& s_2\,(s_2+1)\,\hbar^2
+\,\chi_{s_1,s_2;m_{s_1},m_{s_2}}^{(1)},\\[0.5ex]
+S_{1z}\, \chi_{s_1,s_2;m_{s_1},m_{s_2}}^{(1)}&=& m_{s_1}\,\hbar
+\,\chi_{s_1,s_2;m_{s_1},m_{s_2}}^{(1)},\\[0.5ex]
+S_{2z}\, \chi_{s_1,s_2;m_{s_1},m_{s_2}}^{(1)}&=& m_{s_2}\,\hbar
+\,\chi_{s_1,s_2;m_{s_1},m_{s_2}}^{(1)},\\[0.5ex]
+S_z\, \chi_{s_1,s_2;m_{s_1},m_{s_2}}^{(1)}&=& m_s\,\hbar
+\,\chi_{s_1,s_2;m_{s_1},m_{s_2}}^{(1)}.
+\end{eqnarray}
+Likewise, if the spinor $\chi_{s_1,s_2;s,m_s}^{(2)}$ is
+a simultaneous eigenstate of $S_1^{\,2}$, $S_2^{\,2}$, $S^2$,
+and $S_z$, then
+\begin{eqnarray}
+S_1^{\,2}\, \chi_{s_1,s_2;s,m_s}^{(2)}&=& s_1\,(s_1+1)\,\hbar^2
+\,\chi_{s_1,s_2;s,m_s}^{(2)},\\[0.5ex]
+S_2^{\,2}\, \chi_{s_1,s_2;s,m_s}^{(2)}&=& s_2\,(s_2+1)\,\hbar^2
+\,\chi_{s_1,s_2;s,m_s}^{(2)},\\[0.5ex]
+S^{2}\, \chi_{s_1,s_2;s,m_s}^{(2)}&=& s\,(s+1)\,\hbar^2
+\,\chi_{s_1,s_2;s,m_s}^{(2)},\\[0.5ex]
+S_z\, \chi_{s_1,s_2;s,m_s}^{(2)}&=& m_s\,\hbar
+\,\chi_{s_1,s_2;s,m_s}^{(2)}.
+\end{eqnarray}
+Of course, since both particles have spin one-half, $s_1=s_2=1/2$, and
+$s_{1z}, s_{2z}=\pm 1/2$. Furthermore, by analogy with previous
+analysis,
+\begin{equation}
+m_s = m_{s_1}+ m_{s_2}.
+\end{equation}
+
+Now, we saw, in the previous section, that when spin $l$ is added
+to spin one-half then the possible values of the total angular momentum
+quantum number are $j=l\pm 1/2$. By analogy, when spin one-half
+is added to spin one-half then the possible values of the
+total spin quantum number are $s=1/2\pm 1/2$. In other words,
+when two spin one-half particles are combined, we either obtain 
+a state with overall spin $s=1$, or a state with overall spin $s=0$. To be more exact, there are
+ three  possible $s=1$ states (corresponding to $m_s=-1$, 0, 1), and
+one possible $s=0$ state (corresponding to $m_s=0$). The three $s=1$ states
+are generally known as the {\em triplet}\/ states, whereas the
+$s=0$ state is known as the {\em singlet}\/ state.
+
+\begin{table}\centering
+\begin{tabular}{c|cccc|c}
+&$-1/2, -1/2$& $-1/2, 1/2$&$1/2,-1/2$&$1/2,1/2$&$m_{s_1},m_{s_2}$\\[0.5ex]\hline
+$1, -1$&${\scriptstyle 1}$&&&&\\[0.5ex]
+$1, 0$&&${\scriptstyle 1/\sqrt{2}}$&${\scriptstyle 1/\sqrt{2}}$&&\\[0.5ex]
+$0, 0$&&${\scriptstyle 1/\sqrt{2}}$&${\scriptstyle -1/\sqrt{2}}$&&\\[0.5ex]
+$1, 1$&&&&${\scriptstyle 1}$&\\
+\hline
+$s, m_s$&&&&&
+\end{tabular}
+\caption{\em Clebsch-Gordon coefficients for adding spin one-half to
+spin one-half. Only non-zero coefficients are shown.}\label{t4}
+\end{table}
+
+The Clebsch-Gordon coefficients for adding spin one-half to
+spin one-half can easily be inferred from Table~\ref{t2} (with $l=1/2$),
+and are listed in Table~\ref{t4}. It follows from this table that the
+three triplet  states are:
+\begin{eqnarray}
+\chi^{(2)}_{1,-1} &=& \chi^{(1)}_{-1/2,-1.2},\\[0.5ex]
+\chi^{(2)}_{1,0} &=& \frac{1}{\sqrt{2}}\left(\chi^{(1)}_{-1/2,1/2}+ \chi^{(1)}_{1/2,-1/2}\right),\\[0.5ex]
+\chi^{(2)}_{1,1} &=& \chi^{(1)}_{1/2,1/2},
+\end{eqnarray}
+where $\chi^{(2)}_{s,m_s}$ is shorthand for $\chi^{(2)}_{s_1,s_2;s,m_s}$,
+{\em etc.} Likewise, the singlet
+state is written:
+\begin{equation}
+\chi^{(2)}_{0,0} =  \frac{1}{\sqrt{2}}\left(\chi^{(1)}_{-1/2,1/2}-\chi^{(1)}_{1/2,-1/2}\right).
+\end{equation}
+
+\subsubsection*{Exercises}
+{\small
+\begin{enumerate}
+\item An electron in a hydrogen atom occupies the combined spin
+and position state
+$$
+R_{2,1}\,\left(\sqrt{1/3}\,Y_{1,0}\,\chi_+ + \sqrt{2/3}\,Y_{1,1}\,\chi_-\right).
+$$
+\begin{enumerate}
+\item What values would a measurement of $L^2$ yield, and with
+what probabilities?
+\item Same for $L_z$.
+\item Same for $S^2$.
+\item Same for $S_z$.
+\item Same for $J^2$.
+\item Same for $J_z$.
+\item What is the probability density for finding the electron at
+$r$, $\theta$, $\phi$?
+\item What is the probability density for finding the electron in the
+spin up state (with respect to the $z$-axis) at radius $r$?
+\end{enumerate}
+
+
+\item In a low energy neutron-proton system (with zero orbital angular
+momentum) the potential energy is given by
+$$
+V(r) = V_1(r) + V_2(r)\left(3\,\frac{(\bsigma_1\cdot{\bf r})\,(\bsigma_2\cdot
+{\bf r})}{r^2} -\bsigma_1\cdot\bsigma_2\right) + V_3(r)\,\bsigma_1\cdot\bsigma_2,
+$$
+where $\bsigma_1$ denotes the vector of the Pauli matrices of the neutron,
+and $\bsigma_2$ denotes the vector of the Pauli matrices of the proton. Calculate
+the potential energy for the neutron-proton system:
+\begin{enumerate}
+\item In the spin singlet state.
+\item In the spin triplet state.
+\end{enumerate}
+
+
+\item Consider two electrons in a spin singlet state.
+\begin{enumerate}
+\item If a measurement of the spin of one of the electrons shows that it
+is in the state with $S_z=\hbar/2$, what is the probability that a
+measurement of the $z$-component of the spin of the
+other electron yields $S_z=\hbar/2$?
+\item If a measurement of the spin of one of the electrons shows
+that it is in the state with $S_y=\hbar/2$, what is the probability that a
+measurement of the $x$-component of the spin of the
+other electron yields $S_x=-\hbar/2$?
+\end{enumerate}
+Finally, if electron 1 is in a spin state described by $\cos\alpha_1\,\chi_+
++ \sin\alpha_1\,{\rm e}^{\,{\rm i}\,\beta_1}\,\chi_-$, and
+electron 2 is in a spin state described by  $\cos\alpha_2\,\chi_+
++ \sin\alpha_2\,{\rm e}^{\,{\rm i}\,\beta_2}\,\chi_-$, what is
+the probability that the two-electron spin state is a triplet state?
+\end{enumerate}
+
+}

@@ -1,0 +1,548 @@
+\chapter{Variational Methods}\label{s14} 
+\section{Introduction}
+We have seen, in Sect.~\ref{s10.4}, that we can solve Schr\"{o}dinger's equation {\em exactly}\/ to find the stationary eigenstates
+of a hydrogen atom. Unfortunately, it is not possible to find exact
+solutions of Schr\"{o}dinger's equation for atoms more complicated than hydrogen, or for molecules. In such systems, the best that we can do
+is to find {\em approximate}\/ solutions. Most of the methods which have been developed for finding such solutions employ the so-called {\em variational
+principle}\/ discussed below.
+
+\section{Variational Principle}
+Suppose that we wish to solve the time-independent Schr\"{o}dinger equation
+\begin{equation}
+H\,\psi = E\,\psi,
+\end{equation}
+where $H$ is a known (presumably complicated) time-independent Hamiltonian. Let $\psi$ be a {\em normalized}\/ trial solution to the above equation.
+The variational principle states, quite simply, that the
+ground-state energy, $E_0$, is always less than or equal to the expectation
+value of $H$ calculated with the trial wavefunction: {\em i.e.},
+\begin{equation}
+E_0 \leq \langle\psi|H|\psi\rangle.
+\end{equation}
+Thus, by varying $\psi$ until the expectation value of $H$ is {\em minimized}, we can
+obtain  an approximation to the wavefunction and energy of the ground-state.
+
+Let  us prove the variational principle.
+Suppose that the $\psi_n$ and the $E_n$ are the true eigenstates and eigenvalues
+of $H$: {\em i.e.},
+\begin{equation}\label{e14.3}
+H\,\psi_n = E_n\,\psi_n.
+\end{equation}
+Furthermore, let
+\begin{equation}\label{e14.4}
+E_0 < E_1 < E_2 < \cdots,
+\end{equation}
+so that $\psi_0$ is the ground-state, $\psi_1$ the first excited state,
+{\em etc}. The $\psi_n$ are assumed to be orthonormal:
+{\em i.e.},
+\begin{equation}\label{e14.5}
+\langle \psi_n|\psi_m\rangle = \delta_{nm}.
+\end{equation}
+ If our trial wavefunction $\psi$ is properly normalized then
+we can write
+\begin{equation}
+\psi = \sum_n c_n\,\psi_n,
+\end{equation}
+where
+\begin{equation}\label{e14.7}
+\sum_n |c_n|^{\,2} = 1.
+\end{equation}
+Now, the expectation value of $H$, calculated with $\psi$, takes the
+form
+\begin{eqnarray}
+\langle\psi|H|\psi\rangle & = &\left.\left\langle \sum_n c_n\,\psi_n\right|
+H\left|\sum_m\,c_m\,\psi_m\right\rangle\right. = \sum_{n,m} c_n^{\,\ast}\,c_m\,\langle \psi_n|H|\psi_m\rangle\nonumber\\[0.5ex]
+&=& \sum_n\,c_n^{\,\ast}\,c_m\,E_m\,\langle \psi_n|\psi_m\rangle=
+\sum_n E_n\,|c_n|^{\,2},
+\end{eqnarray}
+where use has been made of Eqs.~(\ref{e14.3}) and (\ref{e14.5}).
+So, we can write
+\begin{equation}
+\langle \psi|H|\psi\rangle = |c_0|^{\,2}\,E_0 + \sum_{n>0} |c_n|^{\,2}\,E_n.
+\end{equation}
+However, Eq.~(\ref{e14.7}) can be rearranged to give
+\begin{equation}
+|c_0|^{\,2} = 1-\sum_{n>0}|c_n|^{\,2}.
+\end{equation}
+Combining the previous two equations, we obtain
+\begin{equation}
+\langle \psi|H|\psi\rangle = E_0 + \sum_{n>0} |c_n|^{\,2}\,(E_n-E_0).
+\end{equation}
+Now, the second term on the right-hand side of the above expression
+is {\em positive definite}, since $E_n-E_0>0$  for all $n>0$ [see (\ref{e14.4})].
+Hence, we obtain the desired result
+\begin{equation}
+\langle \psi|H|\psi\rangle \geq E_0.
+\end{equation}
+
+Suppose that we have found a good approximation, $\tilde{\psi}_0$, to the ground-state
+wavefunction. If $\psi$ is a normalized trial wavefunction which is 
+orthogonal to $\tilde{\psi}_0$ ({\em i.e.}, $\langle \psi|\tilde{\psi}_0\rangle=0$)
+then, by repeating the above analysis, we can easily demonstrate that
+\begin{equation}
+\langle \psi |H|\psi\rangle \geq E_1.
+\end{equation}
+Thus, by varying $\psi$ until the expectation value of $H$ is {\em minimized}, we can
+obtain  an approximation to the wavefunction and energy of the first excited state. Obviously, we can continue this process until we have approximations
+to all of the stationary eigenstates. Note, however, that  the errors are clearly cumulative in this method, 
+so that any approximations to  highly excited states are unlikely to be very accurate. For this reason, the variational method is generally only
+used to calculate the ground-state and first few excited states of
+complicated quantum systems.
+
+\section{Helium Atom}
+A helium atom consists of a nucleus of charge $+2\,e$ surrounded
+by two electrons. Let us attempt to calculate its ground-state energy.
+
+Let the nucleus lie at the origin of our coordinate
+system, and let the position vectors of the two electrons be ${\bf r}_1$
+and ${\bf r}_2$, respectively. The Hamiltonian of the system thus
+takes the form
+\begin{equation}\label{e14.14}
+H = -\frac{\hbar^2}{2\,m_e}\left(\nabla_1^{\,2} + \nabla_2^{\,2}\right)
+- \frac{e^2}{4\pi\,\epsilon_0}\left(\frac{2}{r_1}+\frac{2}{r_2}-
+\frac{1}{|{\bf r_2}-{\bf r_1}|}\right),
+\end{equation}
+where we have neglected any reduced mass effects.
+The terms in the above expression represent the kinetic energy of the first
+electron, the kinetic energy of the second electron, the electrostatic
+attraction between the nucleus and the first electron, the electrostatic
+attraction between the nucleus and the second electron, and the
+electrostatic repulsion between the two electrons, respectively.
+It is the final term which causes all of the difficulties. Indeed, if this
+term is neglected then we can write
+\begin{equation}
+H = H_1 + H_2,
+\end{equation}
+where
+\begin{equation}
+H_{1,2} = -\frac{\hbar^2}{2\,m_e}\,\nabla^{\,2}_{1,2} -\frac{2\,e^2}{4\pi\,\epsilon_0\,r_{1,2}}.
+\end{equation}
+In other words, the Hamiltonian  just becomes the sum of separate Hamiltonians for each electron. In this case, we would expect the
+wavefunction to  be separable: {\em i.e.},
+\begin{equation}
+\psi({\bf r}_1,{\bf r}_2) = \psi_1({\bf r}_1)\,\psi_2({\bf r}_2). 
+\end{equation}
+Hence, Schr\"{o}dinger's equation
+\begin{equation}
+H\,\psi = E\,\psi
+\end{equation}
+reduces to
+\begin{equation}\label{e14.19}
+H_{1,2}\,\psi_{1,2} = E_{1,2}\,\psi_{1,2},
+\end{equation}
+where
+\begin{equation}
+E = E_1 + E_2.
+\end{equation}
+Of course, Eq.~(\ref{e14.19}) is the Schr\"{o}dinger equation of a hydrogen atom whose
+nuclear charge is $+2\,e$, instead of $+e$. It follows, from Sect.~\ref{s10.4} (making the substitution $e^2\rightarrow 2\,e^2$), that if both electrons are in their lowest energy
+states then
+\begin{eqnarray}
+\psi_1({\bf r}_1) &=& \psi_0({\bf r}_1),\\[0.5ex]
+\psi_2({\bf r}_2)&=& \psi_0({\bf r}_2),
+\end{eqnarray}
+where
+\begin{equation}
+\psi_0({\bf r}) = \frac{4}{\sqrt{2\,\pi}\,a_0^{\,3/2}}\,\exp\left(-\frac{2\,r}{a_0}\right).
+\end{equation}
+Here, $a_0$ is the Bohr radius [see Eq.~(\ref{e9.57})]. Note that $\psi_0$ is properly normalized. Furthermore,
+\begin{equation}
+E_1=E_2 = 4\,E_0,
+\end{equation}
+where $E_0=-13.6\,{\rm eV}$ is the hydrogen ground-state
+energy [see Eq.~(\ref{e9.56})]. Thus, our crude estimate
+for the ground-state energy of helium becomes
+\begin{equation}
+E = 4\,E_0 + 4\,E_0 = 8\,E_0 = -108.8\,{\rm eV}.
+\end{equation}
+Unfortunately, this estimate is significantly different from  the experimentally
+determined value, which is $-78.98\,{\rm eV}$. This fact
+demonstrates that the neglected electron-electron repulsion term makes a
+large contribution to the helium ground-state energy.
+Fortunately, however, we can  use the variational principle to estimate this contribution.
+
+Let us employ the separable wavefunction discussed above as our trial
+solution. Thus,
+\begin{equation}\label{e14.26}
+\psi({\bf r}_1, {\bf r}_2) = \psi_0({\bf r}_1)\,\psi_0({\bf r_2}) = 
+\frac{8}{\pi\,a_0^{\,3}}\,\exp\left(- \frac{2\,[r_1+r_2]}{a_0}\right).
+\end{equation}
+The expectation value of the Hamiltonian (\ref{e14.14}) thus becomes
+\begin{equation}\label{e14.27}
+\langle H\rangle = 8\,E_0 + \langle V_{ee}\rangle,
+\end{equation}
+where
+\begin{equation}\label{e14.28}
+\langle V_{ee}\rangle = \left\langle \psi\left|\frac{e^2}{4\pi\,\epsilon_0\,|{\bf r}_2-{\bf r}_1|}\right|\psi\right\rangle= \frac{e^2}{4\pi\,\epsilon_0}
+\int \frac{|\psi({\bf r}_1, {\bf r}_2)|^{\,2}}{|{\bf r}_2- {\bf r}_1|}\,d^3{\bf r}_1\,d^3{\bf r}_2.
+\end{equation}
+The variation principle only guarantees that (\ref{e14.27}) yields an
+{\em upper bound}\/ on the ground-state energy. In reality, we hope
+that it will give a reasonably accurate estimate of this energy.
+
+It follows from Eqs.~(\ref{e9.56}), (\ref{e14.26}) and (\ref{e14.28}) that
+\begin{equation}
+\langle V_{ee}\rangle = -\frac{4\,E_0}{\pi^2}\,\int
+\frac{{\rm e}^{-2\,(\hat{r}_1+ \hat{r}_2)}}{|\hat{\bf r}_1-\hat{\bf r}_2|}\,d^3\hat{\bf r}_1\,d^3\hat{\bf r}_2,
+\end{equation}
+where $\hat{\bf r}_{1,2} = 2\, {\bf r}_{1,2}/a_0$. Neglecting the hats, for the sake of clarity, the above
+expression can also be written
+\begin{equation}
+\langle V_{ee}\rangle = -\frac{4\,E_0}{\pi^2}\,\int
+\frac{{\rm e}^{-2\,(r_1+ r_2)}}{\sqrt{r_1^{\,2}+r_2^{\,2}-2\,r_1\,r_2\,\cos\theta}}\,d^3{\bf r}_1\,d^3{\bf r}_2,
+\end{equation}
+where $\theta$ is the angle subtended between vectors ${\bf r}_1$ and ${\bf r}_2$.
+If we perform the integral in ${\bf r}_1$ space before that in ${\bf r}_2$
+space then
+\begin{equation}\label{e14.31}
+\langle V_{ee}\rangle =  -\frac{4\,E_0}{\pi^2}\,\int {\rm e}^{-2\,r_2}\,I({\bf r}_2)\,d^3{\bf r}_2,
+\end{equation}
+where
+\begin{equation}
+I({\bf r}_2) = \int \frac{{\rm e}^{-2\,r_1}}{\sqrt{r_1^{\,2}+r_2^{\,2}-2\,r_1\,r_2\,\cos\theta}}\,d^3{\bf r}_1.
+\end{equation}
+
+Our first task is to evaluate the function $I({\bf r}_2)$. Let
+$(r_1,\,\theta_1,\,\phi_1)$ be a set of spherical polar coordinates in ${\bf r}_1$
+space whose axis of symmetry runs in the direction of ${\bf r}_2$. It follows
+that $\theta=\theta_1$. Hence,
+\begin{equation}
+I({\bf r}_2) = \int_0^\infty\int_0^\pi\int_0^{2\pi}
+\frac{{\rm e}^{-2\,r_1}}{\sqrt{r_1^{\,2}+r_2^{\,2}-2\,r_1\,r_2\,\cos\theta_1}}\,
+r_1^{\,2}\,dr_1\,\sin\theta_1\,d\theta_1\,d\phi_1,
+\end{equation}
+which trivially reduces to 
+\begin{equation}
+I({\bf r}_2) = 2\pi\int_0^\infty\int_0^\pi
+\frac{{\rm e}^{-2\,r_1}}{\sqrt{r_1^{\,2}+r_2^{\,2}-2\,r_1\,r_2\,\cos\theta_1}}\,
+r_1^{\,2}\,dr_1\,\sin\theta_1\,d\theta_1.
+\end{equation}
+Making the substitution $\mu=\cos\theta_1$, we can see that
+\begin{equation}
+\int_0^\pi\frac{1}{\sqrt{r_1^{\,2}+r_2^{\,2}-2\,r_1\,r_2\,\cos\theta_1}}\,
+\sin\theta_1\,d\theta_1 = 
+\int_{-1}^1 \frac{d\mu}{\sqrt{r_1^{\,2}+r_2^{\,2}-2\,r_1\,r_2\,\mu}}.
+\end{equation}
+Now,
+\begin{eqnarray}
+\int_{-1}^1 \frac{d\mu}{\sqrt{r_1^{\,2}+r_2^{\,2}-2\,r_1\,r_2\,\mu}}
+&=& \left[\frac{\sqrt{r_1^{\,2}+r_2^{\,2}-2\,r_1\,r_2\,\mu}}{r_1\,r_2}\right]_{+1}^{-1}\nonumber\\[0.5ex]
+&=& \frac{(r_1+r_2) - |r_1-r_2|}{r_1\,r_2}\nonumber\\[0.5ex]
+&=&\left\{\begin{array}{lcl}2/r_1&\mbox{\hspace{1cm}}&\mbox{for
+$r_1>r_2$}\\
+2/r_2&&\mbox{for $r_1<r_2$}\end{array}\right.,
+\end{eqnarray}
+giving
+\begin{equation}
+I({\bf r}_2) = 4\pi\left(\frac{1}{r_2}\int_0^{r_2}
+{\rm e}^{-2\,r_1}\,r_1^{\,2}\,dr_1 + \int_{r_2}^\infty
+{\rm e}^{-2\,r_1}\,r_1\,dr_1\right).
+\end{equation}
+But,
+\begin{eqnarray}
+\int {\rm e}^{-\beta\,x}\,x\,dx &= &-\frac{{\rm e}^{-\beta\,x}}{\beta^2}\,(1+\beta\,x),\\[0.5ex]
+\int{\rm e}^{-\beta\,x}\,x^2\,dx &=& - \frac{{\rm e}^{-\beta\,x}}{\beta^3}\,(2+2\,\beta\,x+\beta^2\,x^2),
+\end{eqnarray}
+yielding
+\begin{equation}
+I({\bf r}_2) = \frac{\pi}{r_2}\left[1-{\rm e}^{-2\,r_2}\,(1+r_2)\right].
+\end{equation}
+
+Since the function $I({\bf r}_2)$ only depends on the magnitude of ${\bf r}_2$,
+the integral (\ref{e14.31}) reduces to
+\begin{equation}
+\langle V_{ee}\rangle = -\frac{16\,E_0}{\pi}\int_0^\infty
+{\rm e}^{-2\,r_2}\,I(r_2)\,r_2^{\,2}\,dr_2,
+\end{equation}
+which yields
+\begin{equation}
+\langle V_{ee}\rangle = -16\,E_0\int_{0}^\infty
+{\rm e}^{-2\,r_2}\left[1-{\rm e}^{-2\,r_2}\,(1+r_2)\right]r_2\,dr_2=
+-\frac{5}{2}\,E_0.
+\end{equation}
+Hence, from (\ref{e14.27}), our estimate for the ground-state
+energy of helium is
+\begin{equation}\label{e14.43}
+\langle H\rangle = 8\,E_0 - \frac{5}{2}\,E_0 = \frac{11}{2}\,E_0 = -74.8\,{\rm eV}.
+\end{equation}
+This is remarkably close to the correct result.
+
+We can actually refine our estimate further. The trial wavefunction (\ref{e14.26}) essentially treats the two electrons as 
+{\em non-interacting}\/ particles. In
+reality, we would expect one electron to partially shield the nuclear
+charge from the other, and {\em vice versa}. Hence, a better
+trial wavefunction might be
+\begin{equation}\label{e14.44}
+\psi({\bf r}_1, {\bf r}_2) = 
+\frac{Z^3}{\pi\,a_0^{\,3}}\,\exp\left(- \frac{Z\,[r_1+r_2]}{a_0}\right),
+\end{equation}
+where $Z<2$ is effective nuclear charge number seen by each
+electron. Let us recalculate the ground-state energy of helium
+as a function of $Z$, using the above trial wavefunction, and then
+{\em minimize}\/ the result with respect to $Z$. According to
+the variational principle, this should give us an even  better estimate
+for the ground-state energy.
+
+We can rewrite the expression (\ref{e14.14}) for the Hamiltonian
+of the helium atom in the form
+\begin{equation}
+H = H_1(Z) + H_2(Z) + V_{ee} + U(Z),
+\end{equation}
+where
+\begin{equation}
+H_{1,2}(Z) = -\frac{\hbar^2}{2\,m_e}\,\nabla^{\,2}_{1,2} -\frac{Z\,e^2}{4\pi\,\epsilon_0\,r_{1,2}}
+\end{equation}
+is the Hamiltonian of a hydrogen atom with nuclear charge $+Z\,e$,
+\begin{equation}
+V_{ee} = \frac{e^2}{4\pi\,\epsilon_0}\,\frac{1}{|{\bf r}_2-{\bf r}_1|}
+\end{equation}
+is the electron-electron repulsion term, and
+\begin{equation}
+U(Z) = \frac{e^2}{4\pi\,\epsilon_0}\left(\frac{[Z-2]}{r_1} + \frac{[Z-2]}{r_2}\right).
+\end{equation}
+It follows that
+\begin{equation}
+\langle H\rangle (Z)= 2\,E_0(Z) + \langle V_{ee}\rangle(Z) + \langle U\rangle(Z),
+\end{equation}
+where $E_0(Z) = Z^2\,E_0$ is the ground-state energy of a hydrogen
+atom with nuclear charge $+Z\,e$, $\langle V_{ee}\rangle(Z) = -(5\,Z/4)\,E_0$ is the value of the electron-electron repulsion term when
+recalculated with the wavefunction (\ref{e14.44}) [actually, all we
+need to do is to make the substitution $a_0\rightarrow (2/Z)\,a_0$], and
+\begin{equation}
+\langle U\rangle(Z) = 2\,(Z-2)\left(\frac{e^2}{4\pi\,\epsilon_0}\right)\left\langle\frac{1}{r}\right\rangle.
+\end{equation}
+Here, $\langle 1/r\rangle$ is the expectation value of $1/r$ calculated
+for a hydrogen atom with nuclear charge $+Z\,e$. It follows from
+Eq.~(\ref{e9.74}) [with $n=1$, and making the substitution $a_0\rightarrow a_0/Z$] that
+\begin{equation}
+\left\langle \frac{1}{r}\right\rangle = \frac{Z}{a_0}.
+\end{equation}
+Hence,
+\begin{equation}
+\langle U\rangle(Z) = -4\,Z\,(Z-2)\,E_0,
+\end{equation}
+since $E_0=-e^2/(8\pi\,\epsilon_0\,a_0)$. 
+Collecting the various terms, our new expression for the expectation
+value of the Hamiltonian becomes
+\begin{equation}
+\langle H\rangle(Z) = \left[2\,Z^2 - \frac{5}{4}\,Z - 4\,Z\,(Z-2)\right] E_0
+= \left[-2\,Z^2+ \frac{27}{4}\,Z\right] E_0.
+\end{equation}
+The value of $Z$ which minimizes this expression is the root of
+\begin{equation}
+\frac{d\langle H\rangle}{dZ} = \left[-4\,Z+ \frac{27}{4}\right] E_0 = 0.
+\end{equation}
+It follows that
+\begin{equation}
+Z = \frac{27}{16} = 1.69.
+\end{equation}
+The fact that $Z<2$ confirms our earlier conjecture that the electrons partially
+shield the nuclear charge from one another. Our new estimate
+for the ground-state energy of helium is
+\begin{equation}
+\langle H\rangle(1.69) = \frac{1}{2}\left(\frac{3}{2}\right)^6 E_0 = -77.5\,{\rm eV}.
+\end{equation}
+This is clearly an improvement on our previous estimate (\ref{e14.43}) [recall that the
+correct result is $-78.98$ eV].
+
+Obviously, we could get even closer to the correct value of the
+helium ground-state energy by using a
+more complicated trial wavefunction with more adjustable parameters.
+
+Note, finally, that since the two electrons in a helium atom are {\em indistinguishable fermions}, the overall wavefunction must be {\em anti-symmetric}\/ with respect to exchange of particles (see Sect.~\ref{smany}).
+Now, the overall wavefunction is the product of the {\em spatial wavefunction}\/
+and the {\em spinor}\/ representing the spin-state. Our spatial wavefunction (\ref{e14.44}) is obviously {\em symmetric}\/ with respect to exchange of
+particles. This means that the spinor must be {\em anti-symmetric}. 
+It is clear, from Sect.~\ref{shalf},  that if the spin-state of
+an $l=0$ system consisting of two spin one-half particles ({\em i.e.}, two electrons)
+is {\em anti-symmetric}\/ with respect to interchange of particles then the system is
+in the so-called {\em singlet}\/ state with overall spin zero. Hence,
+the ground-state of helium has overall electron spin zero.
+
+\section{Hydrogen Molecule Ion}
+The hydrogen molecule ion consists of an electron orbiting about
+two protons, and is the simplest imaginable molecule. Let us
+investigate whether or not this molecule possesses a bound state: {\em i.e.}, whether or
+not it possesses a ground-state whose energy is less than that of
+a hydrogen atom and a free proton.
+According
+to the variation principle, we can deduce that the $H_2^+$ ion has a bound state if we can find {\em any}\/
+trial wavefunction for which the total Hamiltonian of the system has an expectation value less than that of a hydrogen atom and a free proton.
+
+\begin{figure}
+\epsfysize=3.5in
+\centerline{\epsffile{Chapter14/fig01.eps}}
+\caption{\em The hydrogen molecule ion.}\label{fh2p}   
+\end{figure}
+
+Suppose that the two protons are separated by a distance $R$. In fact, let them lie on the $z$-axis, with the first at the origin, and
+the second at $z=R$ (see Fig.~\ref{fh2p}). In the following, we shall treat the
+protons as essentially stationary. This is reasonable, since the electron
+moves far more rapidly than the protons.
+
+Let us try
+\begin{equation}\label{e14.57}
+\psi({\bf r})_\pm = A\left[\psi_0({\bf r}_1) \pm \psi_0({\bf r}_2)\right]
+\end{equation}
+as our trial wavefunction, where
+\begin{equation}
+\psi_0({\bf r}) = \frac{1}{\sqrt{\pi}\,a_0^{\,3/2}}\,{\rm e}^{-r/a_0}
+\end{equation}
+is a normalized hydrogen ground-state wavefunction centered on the origin, and ${\bf r}_{1,2}$ are
+ the position vectors of the electron with respect to each of the protons
+(see Fig.~\ref{fh2p}). Obviously, this is a very simplistic wavefunction,
+since it is just  a linear combination of hydrogen ground-state
+wavefunctions centered on each proton. Note, however, that the wavefunction  respects
+the obvious symmetries in the problem.
+
+Our first task is to normalize our trial wavefunction. We require that
+\begin{equation}
+\int |\psi_\pm|^2\,d^3{\bf r} = 1.
+\end{equation}
+Hence, from (\ref{e14.57}),
+$A = I^{-1/2}$, where
+\begin{equation}
+I = \int\left[|\psi_0({\bf r}_1)|^2 + |\psi_0({\bf r}_2)|^2 \pm
+2\,\psi_0({\bf r}_1)\,\psi({\bf r}_2)\right] d^3{\bf r}.
+\end{equation}
+It follows that
+\begin{equation}
+I = 2\,(1\pm J),
+\end{equation}
+with
+\begin{equation}
+J = \int \psi_0({\bf r}_1)\,\psi_0({\bf r}_2)\,d^3{\bf r}.
+\end{equation}
+
+Let us employ the standard spherical polar coordinates ($r$, $\theta$, $\phi$). 
+Now, it is easily seen that $r_1=r$ and $r_2=(r^2+R^2-2\,r\,R\,\cos\theta)^{1/2}$. Hence,
+\begin{equation}
+J = 2\int_0^\infty \int_0^\pi \exp\left[-x-(x^2+X^2-2\,x\,X\,\cos\theta)^{1/2}\right]\,x^2\,dx\,\sin\theta\,d\theta,
+\end{equation}
+where $X=R/a_0$. Here, we have already performed the trivial $\phi$ integral.
+Let $y=(x^2+X^2-2\,x\,X\,\cos\theta)^{1/2}$. It follows that
+$d(y^2)=2\,y\,dy = 2\,x\,X\,\sin\theta\,d\theta$, giving
+\begin{eqnarray}
+\int_0^\pi {\rm e}^{\,(x^2+X^2-2\,x\,X\,\cos\theta)^{1/2}}\,\sin\theta\,d\theta &=& \frac{1}{x\,X}\int_{|x-X|}^{x+X}
+{\rm e}^{-y}\,y\,dy\\[0.5ex]
+&=& - \frac{1}{x\,X}\left[{\rm e}^{-(x+X)}\,(1+x+X) - {\rm e}^{-|x-X|}\,(1+|x-X|)\right].\nonumber
+\end{eqnarray}
+Thus,
+\begin{eqnarray}
+J &=& - \frac{2}{X}\,{\rm e}^{-X}\int_0^X \left[{\rm e}^{-2\,x}\,(1+X+x)-
+(1+X-x)\right]x\,dx\nonumber\\[0.5ex]
+&&-\frac{2}{X}\int_X^\infty {\rm e}^{-2\,x}\left[{\rm e}^{-X}\,(1+X+x)-
+{\rm e}^X\,(1-X+x)\right] x\,dx,
+\end{eqnarray}
+which evaluates to
+\begin{equation}\label{e14.66}
+J = {\rm e}^{-X}\left(1+X+\frac{X^3}{3}\right).
+\end{equation}
+
+Now, the Hamiltonian of the electron is written
+\begin{equation}
+H = -\frac{\hbar^2}{2\,m_e}\,\nabla^2 - \frac{e^2}{4\pi\,\epsilon_0}\left(\frac{1}{r_1}+\frac{1}{r_2}\right).
+\end{equation}
+Note, however, that
+\begin{equation}
+\left(-\frac{\hbar^2}{2\,m_e}\,\nabla^2 - \frac{e^2}{4\pi\,\epsilon_0\,r_{1,2}}\right)\psi_0({\bf r}_{1,2}) = E_0\,\psi_0({\bf r}_{1,2}),
+\end{equation}
+since $\psi_0({\bf r}_{1,2})$ are hydrogen ground-state wavefunctions.
+It follows that
+\begin{eqnarray}
+H\,\psi_\pm &=& A\left[-\frac{\hbar^2}{2\,m_e}\,\nabla^2 - \frac{e^2}{4\pi\,\epsilon_0}\left(\frac{1}{r_1}+\frac{1}{r_2}\right)\right]
+\left[\psi_0({\bf r}_1) \pm \psi_0({\bf r}_2)\right]\nonumber\\[0.5ex]
+&=& E_0\,\psi - A\,\left(\frac{e^2}{4\pi\,\epsilon_0}\right)\left[
+\frac{\psi_0({\bf r}_1)}{r_2}\pm \frac{\psi_0({\bf r}_2)}{r_1}\right].
+\end{eqnarray}
+Hence,
+\begin{equation}
+\langle H\rangle = E_0 + 4\,A^2\,(D\pm E)\,E_0,
+\end{equation}
+where
+\begin{eqnarray}
+D&=& \left\langle \psi_0({\bf r}_1)\left|\frac{a_0}{r_2}\right|\psi_0({\bf r}_1)\right\rangle,\\[0.5ex]
+E&=& \left\langle \psi_0({\bf r}_1)\left|\frac{a_0}{r_1}\right|\psi_0({\bf r}_2)\right\rangle.
+\end{eqnarray}
+
+Now,
+\begin{equation}
+D = 2\int_0^\infty\int_0^\pi \frac{{\rm e}^{-2\,x}}{(x^2+X^2-2\,x\,X\,\cos\theta)^{1/2}}\,x^2\,dx\,\sin\theta\,d\theta,
+\end{equation}
+which reduces to
+\begin{equation}
+D =\frac{4}{X}\,\int_0^X {\rm e}^{-2\,x}\,x^2\,dx
++ 4\int_X^\infty {\rm e}^{-2\,x}\,x\,dx,
+\end{equation}
+giving
+\begin{equation}\label{e14.75}
+D = \frac{1}{X} \left( 1-[1+X]\,{\rm e}^{-2\,X}\right).
+\end{equation}
+Furthermore, 
+\begin{equation}
+E = 2\int_0^\infty \int_0^\pi \exp\left[-x-(x^2+X^2-2\,x\,X\,\cos\theta)^{1/2}\right]\,x\,dx\,\sin\theta\,d\theta,
+\end{equation}
+which reduces to
+\begin{eqnarray}
+E&=& - \frac{2}{X}\,{\rm e}^{-X}\int_0^X \left[{\rm e}^{-2\,x}\,(1+X+x)-
+(1+X-x)\right]dx\nonumber\\[0.5ex]
+&&-\frac{2}{X}\int_X^\infty {\rm e}^{-2\,x}\left[{\rm e}^{-X}\,(1+X+x)-
+{\rm e}^X\,(1-X+x)\right] dx,
+\end{eqnarray}
+yielding
+\begin{equation}\label{e14.78}
+E = (1+X)\,{\rm e}^{-X}.
+\end{equation}
+
+Our expression for the expectation value of the electron Hamiltonian is
+\begin{equation}
+\langle H\rangle = \left[1+ 2\,\frac{(D\pm E)}{(1\pm J)}\right] E_0,
+\end{equation}
+where $J$, $D$, and $E$ are specified as functions of $X=R/a_0$ in
+Eqs.~(\ref{e14.66}), (\ref{e14.75}), and (\ref{e14.78}), respectively.
+In order
+to obtain the total energy of the molecule, we must add to this the
+potential energy of the two protons. Thus,
+\begin{equation}
+E_{total} = \langle H\rangle + \frac{e^2}{4\pi\,\epsilon_0\,R} = \langle H\rangle - \frac{2}{X}\,E_0,
+\end{equation}
+since $E_0= -e^2/(8\pi\,\epsilon_0\,a_0)$.
+Hence, we can write
+\begin{equation}\label{e14.81}
+E_{total} = - F_\pm(R/a_0)\,E_0,
+\end{equation}
+where $E_0$ is the hydrogen ground-state energy, and
+\begin{equation}
+F_\pm(X) = -1 + \frac{2}{X}\left[\frac{(1+X)\,{\rm e}^{-2\,X}\pm(1-2\,X^2/3)
+\,{\rm e}^{-X}}{1\pm (1+X+X^2/3)\,{\rm e}^{-X}}\right].
+\end{equation}
+The functions $F_+(X)$ and $F_-(X)$ are both plotted in Fig.~\ref{fh2pa}.
+Recall that in order for  the $H_2^+$ ion to be in a bound  state it must have a lower
+energy than a hydrogen atom and a free proton: {\em i.e.}, $E_{total}< E_0$. It follows from Eq.~(\ref{e14.81}) that a bound state
+corresponds to $F_\pm < -1$. Clearly, the {\em even}\/ trial wavefunction $\psi_+$
+possesses a bound state, whereas the {\em odd}\/ trial wavefunction $\psi_-$
+does not [see Eq.~(\ref{e14.57})]. This is hardly surprising, since the
+even wavefunction {\em maximizes}\/ the electron probability density between 
+the two protons, thereby reducing their mutual electrostatic repulsion. On the other hand, the odd
+wavefunction does exactly the opposite. The {\em binding energy}\/ of the
+$H_2^+$ ion is defined as the difference between its energy and that of a
+hydrogen atom and a free proton: {\em i.e.},
+\begin{equation}
+E_{bind} = E_{total} - E_0 = - (F_+ +1)\,E_0. 
+\end{equation}
+According to the variational principle, the binding energy is less than or
+equal to the {\em minimum}\/ binding energy which can be inferred from Fig.~\ref{fh2pa}. 
+This minimum occurs when $X\simeq 2.5$ and $F_+\simeq -1.13$. 
+Thus, our estimates for the separation between the two
+protons, and the binding energy, for the $H_2^+$ ion
+are $R = 2.5\,a_0 = 1.33\times 10^{-10}\,{\rm m}$ and
+$E_{bind} = 0.13 \,E_0 = -1.77$ eV, respectively. The experimentally
+determined values   are $R=1.06\times 10^{-10}$ m, and $E_{bind}=-2.8$
+eV, respectively. Clearly, our estimates are not particularly accurate. However,
+our calculation does establish, beyond any doubt, the existence of
+a bound state of the $H_2^+$ ion, which is all that we set out to achieve.
+
+\begin{figure}
+\epsfysize=3.5in
+\centerline{\epsffile{Chapter14/fig02.eps}}
+\caption{\em The functions $F_+(X)$ (solid curve) and $F_-(X)$ (dashed curve).}\label{fh2pa}   
+\end{figure}

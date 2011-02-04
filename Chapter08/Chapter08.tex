@@ -1,0 +1,550 @@
+\chapter{Orbital Angular Momentum}\label{sorb}
+\section{Introduction}
+As is well-known, angular momentum plays a vitally important role in the classical description
+of three-dimensional motion. Let us now investigate the role of angular momentum in the quantum mechanical description of such motion.
+
+\section{Angular Momentum Operators}\label{s8.2}
+In classical mechanics, the vector angular momentum, {\bf L}, of a particle of 
+position vector ${\bf r}$ and linear momentum
+${\bf p}$ is defined as
+\begin{equation}\label{e8.0}
+{\bf L} = {\bf r}\times {\bf p}.
+\end{equation}
+It follows that
+\begin{eqnarray}\label{e8.1}
+L_x &=& y\,p_z - z\,p_y,\\[0.5ex]
+L_y &=& z\,p_x - x\,p_z,\\[0.5ex]
+L_z &=& x\,p_y - y\,p_x.\label{e8.3}
+\end{eqnarray}
+Let us, first of all, consider whether it is possible to use the above expressions as the
+definitions of the operators corresponding to the components of angular
+momentum in quantum mechanics, assuming that the $x_i$ and $p_i$ (where $x_1\equiv x$, $p_1\equiv p_x$, $x_2\equiv y$, {\em etc.})
+correspond to the appropriate quantum mechanical position and momentum operators. The first point to note is that expressions (\ref{e8.1})--(\ref{e8.3}) are {\em unambiguous} with respect to the order of the terms in multiplicative factors, since the various position and momentum operators
+appearing in them all {\em commute}\/
+with one another [see Eqs.~(\ref{commxp})]. Moreover, given that the $x_i$ and
+the $p_i$ are Hermitian operators, it is easily seen that the $L_i$ are
+also {\em Hermitian}. This is important, since only Hermitian operators can represent physical variables in quantum mechanics (see Sect.~\ref{s4.6}).
+We, thus, conclude that Eqs.~(\ref{e8.1})--(\ref{e8.3}) are plausible
+definitions for the quantum mechanical operators which represent the components of angular momentum.
+
+Let us now derive the commutation relations for the $L_i$. 
+For instance,
+\begin{eqnarray}
+[L_x, L_y]& =& [y\,p_z-z\,p_y, z\,p_x-x\,p_z] = y\,p_x\,[p_z,z] + x\,p_y\,[z,p_z]\nonumber\\[0.5ex] &= &{\rm i}\,\hbar\,(x\,p_y-y\,p_x) = {\rm i}\,\hbar\,L_z,
+\end{eqnarray}
+where use has been made of the definitions of the $L_i$ [see Eqs.~(\ref{e8.1})--(\ref{e8.3})], and commutation relations (\ref{commxx})--(\ref{commxp})
+for the $x_i$ and $p_i$. There are two similar commutation relations:
+one for $L_y$ and $L_z$, and one for $L_z$ and $L_x$. Collecting all of these
+commutation relations together, we obtain
+\begin{eqnarray}\label{e8.6}
+[L_x, L_y]&=& {\rm i}\,\hbar\,L_z,\\[0.5ex]
+[L_y, L_z]&=& {\rm i}\,\hbar\,L_x,\\[0.5ex]
+[L_z,L_x]&=& {\rm i}\,\hbar\,L_y.\label{e8.8}
+\end{eqnarray}
+
+By analogy with classical mechanics, the operator $L^2$, which represents
+the {\em magnitude squared}\/ of the angular momentum vector,  is defined
+\begin{equation}\label{e8.9}
+L^2 = L_x^{\,2} + L_y^{\,2} + L_z^{\,2}.
+\end{equation}
+Now, it is easily demonstrated that if $A$ and $B$ are two general
+operators then
+\begin{equation}\label{e8.10}
+[A^2,B] = A\,[A, B] +[A,B]\,A.
+\end{equation}
+Hence, 
+\begin{eqnarray}
+[L^2,L_x] &=& [L_y^{\,2},L_x] + [L_z^{\,2},L_x]\nonumber\\[0.5ex]
+&=& L_y\,[L_y,L_x] + [L_y,L_x]\,L_y + L_z\,[L_z,L_x] + [L_z, L_x]\,L_z\nonumber\\[0.5ex]
+&=&  {\rm i}\,\hbar\left(-L_y\,L_z - L_z\,L_y + L_z\,L_y + L_y\,L_z\right) = 0,
+\end{eqnarray}
+where use has been made of Eqs.~(\ref{e8.6})--(\ref{e8.8}). In other words,
+$L^2$ commutes with $L_x$. Likewise, it is easily demonstrated that
+$L^2$ also commutes with $L_y$, and with $L_z$. Thus,
+\begin{equation}\label{e8.12}
+[L^2, L_x] = [L^2, L_y] = [L^2,L_z] = 0.
+\end{equation}
+
+Recall, from Sect.~\ref{smeas}, that in order for two physical quantities
+to be (exactly) measured {\em simultaneously}, the operators which represent
+them in quantum mechanics must {\em commute} with one another. Hence, 
+ the commutation relations (\ref{e8.6})--(\ref{e8.8}) and (\ref{e8.12})
+imply that we can only simultaneously measure the magnitude squared of
+the angular momentum vector, $L^2$, together with, at most,  {\em one}\/ of its
+Cartesian components. By convention, we shall always choose to measure
+the $z$-component, $L_z$. 
+
+Finally, it is helpful to define the operators
+\begin{equation}\label{e8.13}
+L_\pm = L_x\pm {\rm i}\,L_y.
+\end{equation}
+Note that $L_+$ and $L_-$ are not Hermitian operators, but are
+the Hermitian conjugates of one another (see Sect.~\ref{s4.6}): {\em i.e.},
+\begin{equation}\label{e8.14}
+(L_\pm)^\dag = L_\mp,\\[0.5ex]
+\end{equation}
+Moreover, it is easily seen that
+\begin{eqnarray}
+L_+\,L_- &=& (L_x+{\rm i}\,L_y)\,(L_x-{\rm i}\,L_y)
+= L_x^{\,2} + L_y^{\,2} - {\rm i}\,[L_x, L_y]
+= L_x^{\,2} + L_y^{\,2} + \hbar\,L_z\nonumber\\[0.5ex]
+&=& L^2 - L_z^{\,2} + \hbar\,L_z.\label{e8.15}
+\end{eqnarray}
+Likewise,
+\begin{equation}\label{e8.17}
+L_-\,L_+ = L^2 - L_z^{\,2} -\hbar\,L_z,
+\end{equation}
+giving
+\begin{equation}
+[L_+, L_-] = 2\,\hbar\,L_z.
+\end{equation}
+We also have
+\begin{eqnarray}\label{e8.19}
+[L_+,L_z] &=& [L_x,L_z] + {\rm i}\,[L_y,L_z] = -{\rm i}\,\hbar\,L_y - \hbar\,L_x= - \hbar\,L_+,
+\end{eqnarray}
+and, similarly,
+\begin{equation}
+[L_-,L_z] = \hbar\,L_-.
+\end{equation}
+
+\section{Representation of Angular Momentum}\label{s8.3}
+Now, we saw earlier, in Sect.~\ref{s7.2}, that the operators, $p_i$,  which represent
+the Cartesian components of linear momentum in quantum mechanics, can be represented
+as the spatial differential operators $-{\rm i}\,\hbar\,\partial/\partial x_i$. 
+Let us now investigate whether angular momentum operators can similarly
+be represented as spatial differential operators.
+
+It is most convenient to perform our investigation using conventional
+{\em spherical polar coordinates}: {\em i.e.}, $r$, $\theta$, and $\phi$. These are
+defined with respect to our usual Cartesian coordinates as follows:
+\begin{eqnarray}\label{e8.21}
+x &=& r\,\sin\theta\,\cos\phi,\\[0.5ex]
+y&=& r\,\sin\theta\,\sin\phi,\\[0.5ex]
+z&=& r\,\cos\theta.\label{e8.23}
+\end{eqnarray}
+It follows, after some tedious analysis, that
+\begin{eqnarray}
+\frac{\partial}{\partial x} &=& \sin\theta\,\cos\phi\,\frac{\partial}{\partial r} + \frac{\cos\theta\,\cos\phi}{r}\,\frac{\partial}{\partial\theta} - \frac{\sin\phi}{r\,\sin\theta}\,\frac{\partial}{\partial\phi},\label{e8xx}\\[0.5ex]
+\frac{\partial}{\partial y} &=& \sin\theta\,\sin\phi\,\frac{\partial}{\partial r} + \frac{\cos\theta\,\sin\phi}{r}\,\frac{\partial}{\partial\theta} + \frac{\cos\phi}{r\,\sin\theta}\,\frac{\partial}{\partial\phi},\label{e8yy}\\[0.5ex]
+\frac{\partial}{\partial z} &=& \cos\theta\,\frac{\partial}{\partial r} -\frac{\sin\theta}{r}\,\frac{\partial}{\partial \theta}.\label{e8zz}
+\end{eqnarray}
+Making use of the definitions (\ref{e8.1})--(\ref{e8.3}), (\ref{e8.9}), and (\ref{e8.13}), the fundamental representation (\ref{e6.12})--(\ref{e6.14}) of the $p_i$ operators as spatial differential operators, the Eqs.~(\ref{e8.21})--(\ref{e8zz}), and a great deal of tedious algebra, we finally obtain
+\begin{eqnarray}
+L_x &=& - {\rm i}\,\hbar\left(-\sin\phi\,\frac{\partial}{\partial\theta}
+-\cos\phi\,\cot\theta\,\frac{\partial}{\partial\phi}\right),\\[0.5ex]
+L_y &=& - {\rm i}\,\hbar\left(\cos\phi\,\frac{\partial}{\partial\theta}
+-\sin\phi\,\cot\theta\,\frac{\partial}{\partial\phi}\right),\\[0.5ex]
+L_z &=& -{\rm i}\,\hbar\,\frac{\partial}{\partial\phi},\label{e8.26}
+\end{eqnarray}
+as well as
+\begin{equation}
+L^2 = -\hbar^2\left[\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(
+\sin\theta\,\frac{\partial}{\partial\theta}\right) + \frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\phi^2}\right],
+\end{equation}
+and
+\begin{equation}\label{e8.28}
+L_\pm = \hbar\,{\rm e}^{\pm{\rm i}\,\phi}\left(\pm\frac{\partial}{\partial\theta} +{\rm i}\,\cot\theta\,\frac{\partial}{\partial\phi}\right).
+\end{equation}
+We, thus, conclude that all of our angular momentum operators can be represented
+as differential operators involving the {\em angular}\/ spherical
+coordinates, $\theta$ and $\phi$, but not involving the {\em radial}\/ coordinate,
+$r$.
+
+\section{Eigenstates of Angular Momentum}\label{seian}
+Let us find the simultaneous eigenstates of the angular momentum
+operators $L_z$ and $L^2$. Since both of these operators can
+be represented as purely angular differential operators, it stands to
+reason that their eigenstates  only depend on the angular coordinates
+$\theta$ and $\phi$. Thus,
+we can write
+\begin{eqnarray}\label{e8.29}
+L_z\,Y_{l,m}(\theta,\phi) &=& m\,\hbar\,Y_{l,m}(\theta,\phi),\\[0.5ex]
+L^2\,Y_{l,m}(\theta,\phi) &=& l\,(l+1)\,\hbar^{\,2}\,Y_{l,m}(\theta,\phi).\label{e8.30}
+\end{eqnarray}
+Here, the $Y_{l,m}(\theta,\phi)$ are the eigenstates in question, whereas the dimensionless
+quantities $m$ and $l$ parameterize the eigenvalues of $L_z$ and $L^2$,
+which are $m\,\hbar$ and $l\,(l+1)\,\hbar^2$, respectively. Of course,
+we expect the $Y_{l,m}$ to be both mutually orthogonal and properly normalized
+(see Sect.~\ref{seig}), so that
+\begin{equation}\label{e8.31}
+\oint Y^{\,\ast}_{l',m'}(\theta,\phi)\,Y_{l,m}(\theta,\phi)\,d\Omega = \delta_{ll'}\,\delta_{mm'},
+\end{equation}
+where $d\Omega = \sin\theta\,d\theta\,d\phi$ is an element of solid angle,
+and the integral is over all solid angle.
+
+Now, 
+\begin{eqnarray}
+L_z\,(L_+\,Y_{l,m}) &=& (L_+\,L_z + [L_z, L_+])\,Y_{l,m}= (L_+\,L_z + \hbar\,L_+)\,Y_{l,m}\nonumber\\[0.5ex]
+&=& (m+1)\,\hbar\,(L_+\,Y_{l,m}),
+\end{eqnarray}
+where use has been made of Eq.~(\ref{e8.19}). We, thus, conclude that
+when the operator $L_+$ operates on an eigenstate of $L_z$ corresponding to the eigenvalue $m\,\hbar$ it converts it to an
+eigenstate corresponding to the eigenvalue $(m+1)\,\hbar$.
+Hence, $L_+$ is known as the {\em raising operator} (for $L_z$). It is
+also easily demonstrated that
+\begin{equation}\label{e8.32}
+L_z\,(L_-\,Y_{l,m}) = (m-1)\,\hbar\,(L_-\,Y_{l,m}).
+\end{equation}
+In other words, when $L_-$ operates on an eigenstate of $L_z$ corresponding to the eigenvalue $m\,\hbar$ it converts it to an
+eigenstate corresponding to the eigenvalue $(m-1)\,\hbar$.
+Hence, $L_-$ is known as the {\em lowering operator} (for $L_z$).
+
+Writing
+\begin{eqnarray}
+L_+\,Y_{l,m} &=& c_{l,m}^+\,Y_{l,m+1},\\[0.5ex]
+L_-\,Y_{l,m} &=& c_{l,m}^-\,Y_{l,m-1},
+\end{eqnarray}
+we obtain
+\begin{equation}
+L_-\,L_+\,Y_{l,m} = c^+_{l,m}\,c^-_{l,m+1}\,Y_{l,m} =
+[l\,(l+1)-m\,(m+1)]\,\hbar^2\,Y_{l,m},
+\end{equation}
+where use has been made of Eq.~(\ref{e8.17}). Likewise,
+\begin{equation}
+L_+\,L_-\,Y_{l,m} = c^+_{l,m-1}\,c^-_{l,m}\,Y_{l,m} = [l\,(l+1)-m\,(m-1)]\,\hbar^2\,Y_{l,m},
+\end{equation}
+where use has been made of Eq.~(\ref{e8.15}). It
+follows that
+\begin{eqnarray}
+c^+_{l,m}\,c^-_{l,m+1}&=& [l\,(l+1)-m\,(m+1)]\,\hbar^2,\\[0.5ex]
+c^+_{l,m-1}\,c^-_{l,m}&=& [l\,(l+1)-m\,(m-1)]\,\hbar^2.
+\end{eqnarray}
+These equations are satisfied when
+\begin{equation}
+c^\pm_{l,m} = [l\,(l+l) - m\,(m\pm 1)]^{1/2}\,\hbar.
+\end{equation}
+Hence, we can write
+\begin{eqnarray}\label{eraise}
+L_+\,Y_{l,m} &=& [l\,(l+1)-m\,(m+1)]^{1/2}\,\hbar\,Y_{l,m+1},\\[0.5ex]
+L_-\,Y_{l,m} &=& [l\,(l+1)-m\,(m-1)]^{1/2}\,\hbar\,Y_{l,m-1}.\label{elow}
+\end{eqnarray}
+
+\section{Eigenvalues of $L_z$}\label{slz}
+It seems reasonable to attempt to write the eigenstate $Y_{l,m}(\theta,\phi)$
+in the separable form
+\begin{equation}\label{e8.34}
+Y_{l,m}(\theta,\phi) = \Theta_{l,m}(\theta)\,\Phi_m(\phi).
+\end{equation}
+We can satisfy the orthonormality constraint (\ref{e8.31}) provided that
+\begin{eqnarray}
+\int_{-\pi}^\pi \Theta^{\,\ast}_{l',m'}(\theta)\,\Theta_{l,m}(\theta)\,\sin\theta\,d\theta &=
+& \delta_{ll'},\\[0.5ex]
+\int_0^{2\pi}\Phi^{\,\ast}_{m'}(\phi)\,\Phi_{m}(\phi)\,d\phi &=
+& \delta_{mm'}.\label{e8.36}
+\end{eqnarray}
+
+Note, from Eq.~(\ref{e8.26}), that the differential operator which represents
+$L_z$ only depends on the azimuthal angle $\phi$, and is independent
+of the polar angle $\theta$. It therefore follows from Eqs.~(\ref{e8.26}), (\ref{e8.29}), and (\ref{e8.34})
+that
+\begin{equation}
+-{\rm i}\,\hbar\frac{d\Phi_m}{d\phi} = m\,\hbar\,\Phi_m.
+\end{equation}
+The solution to this equation is
+\begin{equation}\label{e8.38}
+\Phi_m(\phi)\sim {\rm e}^{\,{\rm i}\,m\,\phi}.
+\end{equation}
+Here, the  symbol $\sim$ just means that we are neglecting multiplicative constants. 
+
+Now, our basic interpretation of a wavefunction
+as a quantity whose modulus squared represents the probability density
+of finding a particle at a particular point in space suggests that a
+physical wavefunction must be {\em single-valued}\/ in space. Otherwise, the probability density at a given point would not, in general, have a unique value, which does not
+make physical sense. 
+Hence, we demand that the wavefunction (\ref{e8.38})
+be single-valued: {\em i.e.}, $\Phi_m(\phi+2\,\pi)= \Phi_m(\phi)$
+for all $\phi$. This immediately implies that the quantity $m$ is {\em quantized}. 
+In fact, $m$ can only take {\em integer values}. Thus, we conclude that the eigenvalues
+of $L_z$ are also quantized, and take the values $m\,\hbar$, where $m$ is an integer. [A more rigorous argument is that
+$\Phi_m(\phi)$ must be continuous in order to ensure that $L_z$ is an Hermitian operator, since the proof of
+hermiticity involves an  integration by parts in $\phi$ that has canceling contributions from $\phi=0$ and $\phi=2\pi$.]
+
+Finally, we can easily normalize the eigenstate (\ref{e8.38}) by making use of the
+orthonormality constraint (\ref{e8.36}). We obtain
+\begin{equation}
+\Phi_m(\phi) = \frac{{\rm e}^{\,{\rm i}\,m\,\phi}}{\sqrt{2\pi}}.
+\end{equation}
+This is the properly normalized eigenstate of $L_z$ corresponding to the eigenvalue $m\,\hbar$. 
+
+\section{Eigenvalues of $L^2$}\label{slsq}
+Consider the angular wavefunction $\psi(\theta,\phi) = L_+\,Y_{l,m}(\theta,\phi)$. We know that
+\begin{equation}
+\oint \psi^\ast(\theta,\phi)\,\psi(\theta,\phi)\,d\Omega \geq 0,
+\end{equation}
+since $\psi^\ast\,\psi\equiv |\psi|^2$ is a positive-definite real quantity.
+Hence, making use of Eqs.~(\ref{e5.48}) and (\ref{e8.14}), we find that
+\begin{eqnarray}
+\oint (L_+\,Y_{l,m})^\ast\,(L_+\,Y_{l,m})\,d\Omega
+&=& \oint Y_{l,m}^{\,\ast}\,(L_+)^\dag\,(L_+\,Y_{l,m})\,d\Omega\nonumber\\[0.5ex]
+&=& \oint Y_{l,m}^{\,\ast}\,L_-\,L_+\,Y_{l,m}\,d\Omega\geq 0.
+\end{eqnarray}
+It follows from Eqs.~(\ref{e8.17}), and (\ref{e8.29})--(\ref{e8.31}) that
+\begin{eqnarray}
+\oint Y_{l,m}^{\,\ast}\,(L^2 -L_z^{\,2}-\hbar\,L_z)\,Y_{l,m}\,d\Omega
+&=& \oint Y_{l,m}^{\,\ast}\,\hbar^2\left[l\,(l+1) -m\,(m+1)\right]Y_{l,m}\,d\Omega\nonumber\\[0.5ex]
+&=& \hbar^2\,\left[l\,(l+1) -m\,(m+1)\right]\,\oint Y_{l,m}^{\,\ast}\,Y_{l,m}\,d\Omega\nonumber\\[0.5ex]
+&=&\hbar^2\,\left[l\,(l+1) -m\,(m+1)\right]\geq 0.
+\end{eqnarray}
+We, thus, obtain the constraint
+\begin{equation}\label{e8.42}
+l\,(l+1) \geq m\,(m+1).
+\end{equation}
+Likewise, the inequality
+\begin{equation}
+\oint (L_-\,Y_{l,m})^\ast\,(L_-\,Y_{l,m})\,d\Omega
+=\oint Y_{l,m}^{\,\ast}\,L_+\,L_-\,Y_{l,m}\,d\Omega\geq 0
+\end{equation}
+leads to a second constraint: 
+\begin{equation}\label{e8.44}
+l\,(l+1) \geq m\,(m-1).
+\end{equation}
+
+Without loss of generality, we can assume that $l\geq 0$. This
+is reasonable, from a physical standpoint, since $l\,(l+1)\,\hbar^2$
+is supposed to represent the magnitude squared of something, and
+should, therefore, only take non-negative values. If $l$ is non-negative 
+then the constraints (\ref{e8.42})  and (\ref{e8.44}) are equivalent
+to the following constraint:
+\begin{equation}
+-l \leq m \leq l.
+\end{equation}
+We, thus, conclude that the quantum number $m$ can only take a {\em restricted range}\/ of integer values.
+
+Well, if $m$ can only take a restricted range of integer values  then there
+must exist a lowest possible value it can take. Let us call this special value $m_-$,
+and let $Y_{l,m_-}$ be the corresponding eigenstate. Suppose
+we act on this eigenstate with the lowering operator $L_-$.  According
+to Eq.~(\ref{e8.32}), this will have the effect of converting the
+eigenstate into that of a state with a lower value of $m$. However,
+no such state exists. A non-existent state is represented in quantum
+mechanics by the null wavefunction, $\psi=0$. Thus, we must have
+\begin{equation}\label{e8.46}
+L_-\,Y_{l,m_-} = 0.
+\end{equation}
+Now, from Eq.~(\ref{e8.15}),
+\begin{equation}
+L^2 = L_+\,L_-+L_z^{\,2} - \hbar\,L_z
+\end{equation}
+Hence,
+\begin{equation}
+L^2\,Y_{l,m_-} = (L_+\,L_-+L_z^{\,2} - \hbar\,L_z)\,Y_{l,m_-},
+\end{equation}
+or
+\begin{equation}
+l\,(l+1)\,Y_{l,m_-} = m_-\,(m_- -1)\,Y_{l,m_-},
+\end{equation}
+where use has been made of (\ref{e8.29}), (\ref{e8.30}), and (\ref{e8.46}).
+It follows that
+\begin{equation}
+l\,(l+1) = m_-\,(m_--1).
+\end{equation}
+Assuming that $m_-$ is negative, the solution to the above equation
+is
+\begin{equation}
+m_- = - l.
+\end{equation}
+We can similarly show that the largest possible value of $m$ is
+\begin{equation}
+m_+ =+ l.
+\end{equation}
+The above two results imply that $l$ is an {\em integer}, since
+$m_-$ and $m_+$ are both constrained to be integers. 
+
+We can now formulate the rules which determine the allowed values
+of the quantum numbers $l$ and $m$. The quantum number $l$
+takes the non-negative integer values $0, 1, 2, 3, \cdots$. Once
+$l$ is given, the quantum number $m$ can take any integer value in the
+range
+\begin{equation}
+-l,\,-l+1,\,\cdots\, 0, \,\cdots,\, l-1,\, l.
+\end{equation}
+Thus, if $l=0$ then $m$ can only take the value $0$, if $l=1$ then
+$m$ can take the values $-1, 0, +1$, if $l=2$ then $m$ can take
+the values $-2,-1,0,+1,+2$, and so on.
+
+\section{Spherical Harmonics}\label{sharm}
+The simultaneous eigenstates, $Y_{l,m}(\theta,\phi)$, of $L^2$ and $L_z$
+are known as the {\em spherical harmonics}. Let us investigate their
+functional form.
+
+Now, we know that
+\begin{equation}
+L_+\,Y_{l,l}(\theta,\phi) = 0,
+\end{equation}
+since there is no state for which $m$ has a larger value than $+l$. 
+Writing
+\begin{equation}
+Y_{l,l}(\theta,\phi) = \Theta_{l,l}(\theta)\,{\rm e}^{\,{\rm i}\,l\,\phi}
+\end{equation}
+[see Eqs.~(\ref{e8.34}) and (\ref{e8.38})], and making use of
+Eq.~(\ref{e8.28}), we obtain
+\begin{equation}
+\hbar\,{\rm e}^{\,{\rm i}\,\phi}\left(\frac{\partial}{\partial\theta} + {\rm i}\,\cot\theta\,\frac{\partial}{\partial\phi}\right)\Theta_{l,l}(\theta)\,{\rm e}^{\,i\,l\,\phi}=0.
+\end{equation}
+This equation yields
+\begin{equation}
+\frac{d\Theta_{l,l}}{d\theta} - l\,\cot\theta\,\Theta_{l,l} = 0.
+\end{equation}
+which can easily be solved to give
+\begin{equation}
+\Theta_{l,l}\sim (\sin\theta)^l.
+\end{equation}
+Hence, we conclude that
+\begin{equation}\label{e8.59}
+Y_{l,l}(\theta,\phi) \sim (\sin\theta)^l\,{\rm e}^{\,{\rm i}\,l\,\phi}.
+\end{equation}
+Likewise, it is easy to demonstrate that
+\begin{equation}\label{e8.60}
+Y_{l,-l}(\theta,\phi) \sim (\sin\theta)^l\,{\rm e}^{-{\rm i}\,l\,\phi}.
+\end{equation}
+
+Once we know $Y_{l,l}$, we can obtain $Y_{l,l-1}$ by operating
+on $Y_{l,l}$ with the lowering operator $L_-$. Thus,
+\begin{equation}
+Y_{l,l-1} \sim L_-\,Y_{l,l} \sim {\rm e}^{-{\rm i}\,\phi}\left(-\frac{\partial}{\partial\theta} + {\rm i}\,\cot\theta\,\frac{\partial}{\partial\phi}\right) (\sin\theta)^l\,{\rm e}^{\,{\rm i}\,l\,\phi},
+\end{equation}
+where use has been made of Eq.~(\ref{e8.28}). 
+The above equation yields
+\begin{equation}
+Y_{l,l-1}\sim {\rm e}^{\,{\rm i}\,(l-1)\,\phi}\left(\frac{d}{d\theta} +l\,\cot\theta\right)(\sin\theta)^l.
+\end{equation}
+Now,
+\begin{equation}\label{e8.64}
+\left(\frac{d}{d\theta}+l\,\cot\theta\right)f(\theta)\equiv
+\frac{1}{(\sin\theta)^l}\frac{d}{d\theta}\left[
+(\sin\theta)^l\,f(\theta)\right],
+\end{equation}
+where $f(\theta)$ is a general function. Hence, we can write
+\begin{equation}\label{e8.64a}
+Y_{l,l-1}(\theta,\phi)\sim \frac{{\rm e}^{\,{\rm i}\,(l-1)\,\phi}}{(\sin\theta)^{l-1}}\left(\frac{1}{\sin\theta}\frac{d}{d\theta}\right)
+(\sin\theta)^{2\,l}.
+\end{equation}
+Likewise, we can show that
+\begin{equation}\label{e8.65}
+Y_{l,-l+1}(\theta,\phi)\sim L_+\,Y_{l,-l}\sim \frac{{\rm e}^{-{\rm i}\,(l-1)\,\phi}}{(\sin\theta)^{l-1}}\left(\frac{1}{\sin\theta}\frac{d}{d\theta}\right)
+(\sin\theta)^{2\,l}.
+\end{equation}
+
+We can now obtain $Y_{l,l-2}$ by operating on $Y_{l,l-1}$ with the
+lowering operator. We get
+\begin{equation}
+Y_{l,l-2}\sim L_-\,Y_{l,l-1}\sim {\rm e}^{-{\rm i}\,\phi}\left(-\frac{\partial}{\partial\theta} + {\rm i}\,\cot\theta\,\frac{\partial}{\partial\phi}\right) \frac{{\rm e}^{\,{\rm i}\,(l-1)\,\phi}}{(\sin\theta)^{l-1}}\left(\frac{1}{\sin\theta}\frac{d}{d\theta}\right)
+(\sin\theta)^{2\,l},
+\end{equation}
+which reduces to
+\begin{equation}
+Y_{l,l-2}\sim {\rm e}^{-{\rm i}\,(l-2)\,\phi}\left[\frac{d}{d\theta} +(l-1)\,\cot\theta\right] \frac{1}{(\sin\theta)^{l-1}}\left(\frac{1}{\sin\theta}\frac{d}{d\theta}\right)
+(\sin\theta)^{2\,l}.
+\end{equation}
+Finally, making use of Eq.~(\ref{e8.64}), we obtain
+\begin{equation}\label{e8.68}
+Y_{l,l-2}(\theta,\phi) \sim \frac{{\rm e}^{\,{\rm i}\,(l-2)\,\phi}}{(\sin\theta)^{l-2}}\left(\frac{1}{\sin\theta}\frac{d}{d\theta}\right)^2
+(\sin\theta)^{2\,l}.
+\end{equation}
+Likewise, we can show that
+\begin{equation}\label{e8.69}
+Y_{l,-l+2}(\theta,\phi) \sim L_+\,Y_{l,-l+1}\sim \frac{{\rm e}^{-{\rm i}\,(l-2)\,\phi}}{(\sin\theta)^{l-2}}\left(\frac{1}{\sin\theta}\frac{d}{d\theta}\right)^2
+(\sin\theta)^{2\,l}.
+\end{equation}
+
+A comparison of Eqs.~(\ref{e8.59}), (\ref{e8.64a}), and (\ref{e8.68})
+reveals the general functional form of the spherical harmonics:
+\begin{equation}
+Y_{l,m}(\theta,\phi)\sim  \frac{{\rm e}^{\,{\rm i}\,m\,\phi}}{(\sin\theta)^m}\left(\frac{1}{\sin\theta}\frac{d}{d\theta}\right)^{l-m}
+(\sin\theta)^{2\,l}.
+\end{equation}
+Here, $m$ is assumed to be non-negative. Making the substitution $u=\cos\theta$, we can also write
+\begin{equation}
+Y_{l,m}(u,\phi)\sim  {\rm e}^{\,{\rm i}\,m\,\phi}\,(1-u^2)^{-m/2}\left(\frac{d}{d u}\right)^{l-m}
+(1-u^2)^l.
+\end{equation}
+Finally, it is clear from Eqs.~(\ref{e8.60}), (\ref{e8.65}), and (\ref{e8.69})
+that
+\begin{equation}
+Y_{l,-m} \sim Y^{\,\ast}_{l,m}.
+\end{equation}
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter08/fig01.eps}}
+\caption{\em The $|Y_{l,m}(\theta,\phi)|^{\,2}$ plotted as a functions of $\theta$. The solid, short-dashed, and long-dashed curves correspond to 
+$l,m=0,0$,  and $1,0$, and $1,\pm1$, respectively.}\label{ylm1}   
+\end{figure}
+
+We now need to normalize our spherical harmonic functions so as to ensure that
+\begin{equation}
+\oint |Y_{l,m}(\theta,\phi)|^2\,d\Omega = 1.
+\end{equation}
+After a great deal of tedious analysis, the normalized spherical
+harmonic functions are found to take the form
+\begin{equation}
+Y_{l,m}(\theta,\phi) =(-1)^m\, \left[\frac{2\,l+1}{4\pi}\,\frac{(l-m)!}{(l+m)!}\right]^{1/2} P_{l,m}(\cos\theta)\,{\rm e}^{\,{\rm i}\,m\,\phi}
+\end{equation}
+for $m\geq 0$, where the $P_{l,m}$ are known as {\em associated Legendre
+polynomials}, and are written
+\begin{equation}
+P_{l,m}(u) = (-1)^{l+m}\,\frac{(l+m)!}{(l-m)!}\,\frac{(1-u^2)^{-m/2}}{2^l\,l!}\left(\frac{d}{du}\right)^{l-m} (1-u^2)^l
+\end{equation}
+for $m\geq 0$. Alternatively,
+\begin{equation}
+P_{l,m}(u) = (-1)^{l}\,\frac{(1-u^2)^{m/2}}{2^l\,l!}\left(\frac{d}{du}\right)^{l+m} (1-u^2)^l,
+\end{equation}
+for $m\geq 0$. 
+The spherical harmonics characterized by $m<0$ 
+can be calculated from those characterized by $m>0$ via the identity
+\begin{equation}
+Y_{l,-m} = (-1)^m\,Y^{\,\ast}_{l,m}.
+\end{equation}
+The spherical harmonics are {\em orthonormal}: {\em i.e.}, 
+\begin{equation}\label{spho}
+\oint Y_{l',m'}^{\,\ast}\,Y_{l,m}\,d\Omega = \delta_{ll'}\,\delta_{mm'},
+\end{equation}
+and also form a {\em complete set}. In other words,
+{\em any}\/ function of $\theta$ and $\phi$ can be represented as 
+a superposition of spherical harmonics. Finally, and most importantly,
+the spherical harmonics are the simultaneous eigenstates of $L_z$ and $L^2$
+corresponding to the eigenvalues $m\,\hbar$ and $l\,(l+1)\,\hbar^2$,
+respectively.
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter08/fig02.eps}}
+\caption{\em The $|Y_{l,m}(\theta,\phi)|^{\,2}$ plotted as a functions of $\theta$. The solid, short-dashed, and long-dashed curves correspond to 
+$l,m=2,0$,  and $2,\pm 1$, and $2,\pm 2$, respectively.}\label{ylm2}   
+\end{figure}
+
+
+All of the $l=0$, $l=1$, and $l=2$ spherical harmonics are listed below:
+\begin{eqnarray}
+Y_{0,0} &=&\frac{1}{\sqrt{4\pi}},\\[0.5ex]
+Y_{1,0} &=& \sqrt{\frac{3}{4\pi}}\,\cos\theta,\\[0.5ex]
+Y_{1,\pm1} &=& \mp \sqrt{\frac{3}{8\pi}}\,\sin\theta\,{\rm e}^{\pm{\rm i}\,\phi},\\[0.5ex]
+Y_{2,0} &=& \sqrt{\frac{5}{16\pi}}\,(3\,\cos^2\theta - 1),\\[0.5ex]
+Y_{2,\pm 1}&=&\mp\sqrt{\frac{15}{8\pi}}\,\sin\theta\,\cos\theta\,{\rm e}^{\pm{\rm i}\,\phi},\\[0.5ex]
+Y_{2,\pm 2}&=& \sqrt{\frac{15}{32\pi}}\,\sin^2\theta\,{\rm e}^{\pm 2\,{\rm i}\,\phi}.
+\end{eqnarray}
+The $\theta$ variation of these functions is illustrated in Figs.~\ref{ylm1} and
+\ref{ylm2}.
+
+
+\subsubsection*{Exercises}
+{\small
+\begin{enumerate}
+\item A system is in the state $\psi=Y_{l,m}(\theta,\phi)$. Calculate
+$\langle L_x\rangle$ and $\langle L_x^{\,2}\rangle$. 
+
+\item Find the eigenvalues and eigenfunctions (in terms of the
+angles $\theta$ and $\phi$) of $L_x$. 
+
+\item Consider a beam of particles with $l=1$. A measurement
+of $L_x$ yields the result $\hbar$. What values will be
+obtained by a subsequent measurement of $L_z$, and with what probabilities? Repeat the calculation for the cases in which the
+measurement of $L_x$ yields the results $0$ and $-\hbar$. 
+
+\item The Hamiltonian for an axially symmetric rotator is given by
+$$
+H = \frac{L_x^{\,2}+L_y^{\,2}}{2\,I_1} + \frac{L_z^{\,2}}{2\,I_2}.
+$$
+What are the eigenvalues of $H$?
+\end{enumerate}
+}

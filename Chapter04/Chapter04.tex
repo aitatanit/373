@@ -1,0 +1,1152 @@
+\chapter{Fundamentals of Quantum Mechanics}\label{s4}
+\section{Introduction}
+The previous chapter serves as a useful introduction to many of the basic
+concepts of quantum mechanics. In this chapter, we shall examine
+these concepts in a more systematic 
+fashion. For the sake of simplicity, we shall  concentrate on one-dimensional systems.
+
+\section{Schr\"{o}dinger's Equation}
+Consider a dynamical system consisting of a single non-relativistic particle of mass $m$ moving along the $x$-axis in some real potential $V(x)$. In quantum mechanics, the instantaneous state of the system is represented by a complex wavefunction $\psi(x,t)$. This wavefunction evolves in time
+according to Schr\"{o}dinger's equation:
+\begin{equation}\label{e3.1}
+{\rm i}\,\hbar\,\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2\,m}\frac{\partial^2 \psi}{\partial x^2} + V(x)\,\psi.
+\end{equation}
+The wavefunction is interpreted as follows: $|\psi(x,t)|^{\,2}$ is
+the probability density of a measurement of the particle's
+displacement yielding the value $x$. Thus, the probability of
+a measurement of the displacement giving a result
+between $a$ and $b$ (where $a<b$) is
+\begin{equation}\label{e3.2}
+P_{x\,\in\, a:b}(t) = \int_{a}^{b}|\psi(x,t)|^{\,2}\,dx.
+\end{equation}
+Note that this quantity is real and positive definite.
+
+\section{Normalization of the Wavefunction}
+Now, a probability is a real number between 0 and 1. An outcome
+of a measurement which has a probability 0 is an impossible outcome, whereas an
+outcome which has a probability 1 is a certain outcome. According to
+Eq.~(\ref{e3.2}), the probability of a measurement of $x$ yielding
+a result between $-\infty$ and $+\infty$ is
+\begin{equation}
+P_{x\,\in\, -\infty:\infty}(t) = \int_{-\infty}^{\infty}|\psi(x,t)|^{\,2}\,dx.
+\end{equation}
+However, a measurement of $x$ {\em must}\/ yield a value between $-\infty$ and
+$+\infty$, since the particle has to be located somewhere. It follows that
+$P_{x\,\in\, -\infty:\infty}=1$, or
+\begin{equation}\label{e3.4}
+\int_{-\infty}^{\infty}|\psi(x,t)|^{\,2}\,dx = 1,
+\end{equation}
+which is generally known as the {\em normalization condition}\/ for the
+wavefunction.
+
+For example, suppose that we wish to normalize the wavefunction of
+a Gaussian wave packet, centered on $x=x_0$, and of characteristic
+width $\sigma$ (see Sect.~\ref{s2.9}): {\em i.e.}, 
+\begin{equation}\label{e3.5}
+\psi(x) = \psi_0\,{\rm e}^{-(x-x_0)^{\,2}/(4\,\sigma^2)}.
+\end{equation}
+In order to determine the normalization constant $\psi_0$, we simply substitute
+Eq.~(\ref{e3.5}) into Eq.~(\ref{e3.4}), to obtain
+\begin{equation}
+|\psi_0|^{\,2}\int_{-\infty}^{\infty}{\rm e}^{-(x-x_0)^{\,2}/(2\,\sigma^2)}\,dx = 1.
+\end{equation}
+Changing the variable of integration to $y=(x-x_0)/(\sqrt{2}\,\sigma)$, we get
+\begin{equation}
+|\psi_0|^{\,2}\sqrt{2}\,\sigma\,\int_{-\infty}^{\infty}{\rm e}^{-y^2}\,dy=1.
+\end{equation}
+However,
+\begin{equation}\label{e3.8}
+\int_{-\infty}^{\infty}{\rm e}^{-y^2}\,dy = \sqrt{\pi},
+\end{equation}
+which implies that
+\begin{equation}
+|\psi_0|^{\,2} = \frac{1}{(2\pi\,\sigma^2)^{1/2}}.
+\end{equation}
+Hence, a general normalized Gaussian wavefunction takes the form
+\begin{equation}\label{eng}
+\psi(x) = \frac{{\rm e}^{\,{\rm i}\,\varphi}}{(2\pi\,\sigma^2)^{1/4}}\,{\rm e}^{-(x-x_0)^{\,2}/(4\,\sigma^2)},
+\end{equation}
+where $\varphi$ is an arbitrary real phase-angle.
+
+Now, it is  important to demonstrate that if a wavefunction is initially
+normalized then it stays normalized as it evolves in time according
+to Schr\"{o}din\-ger's equation. If this is not the case then
+the probability interpretation of the wavefunction is untenable, since it
+does not make sense for the probability that a measurement  of $x$ yields {\em any}\/ possible outcome (which is, manifestly, unity) to change in time.
+Hence, we require that
+\begin{equation}
+\frac{d}{dt}\int_{-\infty}^{\infty}|\psi(x,t)|^{\,2} \,dx = 0,
+\end{equation}
+for  wavefunctions satisfying Schr\"{o}dinger's equation.
+The above equation gives
+\begin{equation}\label{e3.12}
+\frac{d}{dt}\int_{-\infty}^{\infty}\psi^{\ast}\,\psi\,dx=
+\int_{-\infty}^{\infty}\left(\frac{\partial\psi^{\ast}}{\partial t}\,\psi
++\psi^\ast\,\frac{\partial\psi}{\partial t}\right)\,dx=0.
+\end{equation}
+Now, multiplying Schr\"{o}dinger's equation by $\psi^{\ast}/({\rm i}\,\hbar)$,
+we obtain
+\begin{equation}
+\psi^{\ast}\,\frac{\partial\psi}{\partial t}= \frac{{\rm i}\,\hbar}{2\,m}\,\psi^\ast\,\frac{\partial^2\psi}{\partial x^2} - \frac{{\rm i}}{\hbar}\,V\,|\psi|^{\,2}.
+\end{equation}
+The complex conjugate of this expression yields
+\begin{equation}
+\psi\,\frac{\partial\psi^\ast}{\partial t}= -\frac{{\rm i}\,\hbar}{2\,m}\,\psi\,\frac{\partial^2\psi^\ast}{\partial x^2} + \frac{{\rm i}}{\hbar}\,V\,|\psi|^{\,2}
+\end{equation}
+[since $(A\,B)^\ast = A^\ast\,B^\ast$, $A^{\ast\,\ast}=A$, and $i^\ast= -i$].
+Summing the previous two equations, we get
+\begin{equation}\label{e3.15}
+\frac{\partial\psi^\ast}{\partial t} \,\psi+ \psi^{\ast}\,\frac{\partial\psi}{\partial t} = \frac{{\rm i}\,\hbar}{2\,m}\left(
+\psi^\ast\,\frac{\partial^2\psi}{\partial x^2}-\psi\,\frac{\partial^2\psi^\ast}{\partial x^2}\right)=\frac{{\rm i}\,\hbar}{2\,m}\,\frac{\partial}{\partial x}\!\left(\psi^\ast\,\frac{\partial\psi}{\partial x} - \psi\,\frac{\partial\psi^\ast}{\partial x}\right).
+\end{equation}
+Equations~(\ref{e3.12}) and (\ref{e3.15}) can be combined to
+produce
+\begin{equation}
+\frac{d}{dt}\int_{-\infty}^{\infty}|\psi|^{\,2}\,dx=
+\frac{{\rm i}\,\hbar}{2\,m}\left[\psi^\ast\,\frac{\partial\psi}{\partial x} - \psi\,\frac{\partial\psi^\ast}{\partial x}\right]_{-\infty}^{\infty} = 0.
+\end{equation}
+The above equation is satisfied provided
+\begin{equation}
+|\psi|\rightarrow 0\mbox{\hspace{0.5cm}as\hspace{0.5cm}}|x|\rightarrow\infty.
+\end{equation}
+However, this is a necessary condition for the integral on the left-hand
+side of Eq.~(\ref{e3.4}) to converge. Hence, we conclude that
+all wavefunctions which are {\em square-integrable}\/ [{\em i.e.},  are such that the integral in Eq.~(\ref{e3.4}) converges] have the property
+that if the normalization condition (\ref{e3.4}) is satisfied at one instant
+in time then it is satisfied at all subsequent times.
+
+It is also possible to demonstrate, via very similar analysis to the above, that
+\begin{equation}\label{epc}
+\frac{d P_{x\,\in\,a:b}}{dt} + j(b,t) - j(a,t) = 0,
+\end{equation}
+where $P_{x\,\in\,a:b}$ is defined in Eq.~(\ref{e3.2}), and
+\begin{equation}\label{eprobc}
+j(x,t) = \frac{{\rm i}\,\hbar}{2\,m}\left(\psi\,\frac{\partial\psi^\ast}{\partial x} - \psi^\ast\,\frac{\partial\psi}{\partial x}\right)
+\end{equation}
+is known as the {\em probability current}. Note that $j$ is real.
+Equation~(\ref{epc}) is a {\em probability conservation equation}.
+According to this equation, the probability of a measurement
+of $x$ lying in the interval $a$ to $b$ evolves in time due to the
+difference between the flux of probability into the interval [{\em i.e.}, $j(a,t)$],
+and that out of the interval [{\em i.e.}, $j(b,t)$].
+Here, we are interpreting $j(x,t)$ as the {\em flux}\/ of probability in the $+x$-direction at position $x$ and time $t$.
+
+Note, finally, that not all wavefunctions can be normalized according to the scheme set out in Eq.~(\ref{e3.4}). For instance, a plane wave wavefunction
+\begin{equation}
+\psi(x,t) = \psi_0\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}
+\end{equation}
+is  not square-integrable, and, thus, cannot be normalized. 
+For such wavefunctions, the best we can say is that
+\begin{equation}
+P_{x\,\in\, a:b}(t) \propto \int_{a}^{b}|\psi(x,t)|^{\,2}\,dx.
+\end{equation}
+In the following, all wavefunctions are assumed to be square-integrable and
+normalized, unless otherwise stated.
+
+\section{Expectation Values and Variances}
+We have seen that $|\psi(x,t)|^{\,2}$ is the probability density of a
+measurement of a particle's displacement yielding the value $x$ at time $t$. 
+Suppose that we made a large number of independent measurements of the
+displacement on
+an equally  large number of identical quantum systems. In general, measurements
+made on different systems will yield different results. However, from the
+definition of probability, the
+mean  of all these results is simply
+\begin{equation}\label{e3.22}
+\langle x\rangle = \int_{-\infty}^{\infty} x\,|\psi|^{\,2}\,dx.
+\end{equation}
+Here,
+$\langle x\rangle$ is called the {\em expectation value}\/ of $x$.
+Similarly the expectation value of any function of $x$ is
+\begin{equation}
+\langle f(x)\rangle = \int_{-\infty}^{\infty} f(x)\,|\psi|^{\,2}\,dx.
+\end{equation}
+
+In general, the results of the various different measurements of $x$ will be scattered
+around the expectation value $\langle x\rangle$. The
+degree of scatter is parameterized by  the quantity
+\begin{equation}\label{e3.24a}
+\sigma^2_x = \int_{-\infty}^{\infty} \left(x-\langle x\rangle\right)^{\,2}\,|\psi|^{\,2}\,dx \equiv \langle x^2\rangle -\langle x\rangle^{2},
+\end{equation}
+which is known as the {\em variance}\/ of $x$. The square-root of this
+quantity, $\sigma_x$, is called the {\em standard deviation}\/ of $x$.
+We generally expect  the results of measurements of $x$ to lie
+within a few standard deviations of the expectation value.
+
+For instance, consider the normalized Gaussian wave packet [see Eq. (\ref{eng})]
+ \begin{equation}\label{e3.24}
+\psi(x) = \frac{{\rm e}^{\,{\rm i}\,\varphi}}{(2\pi\,\sigma^2)^{1/4}}\,{\rm e}^{-(x-x_0)^{\,2}/(4\,\sigma^2)}.
+\end{equation}
+The expectation value of $x$ associated with this wavefunction is 
+\begin{equation}
+\langle x\rangle = \frac{1}{\sqrt{2\pi\,\sigma^2}}\int_{-\infty}^{\infty}
+x\,{\rm e}^{-(x-x_0)^{\,2}/(2\,\sigma^2)}\,dx.
+\end{equation}
+Let $y=(x-x_0)/(\sqrt{2}\,\sigma)$. It follows that
+\begin{equation}
+\langle x\rangle = \frac{x_0}{\sqrt{\pi}}\int_{-\infty}^{\infty}{\rm e}^{-y^2}\,dy+\frac{\sqrt{2}\,\sigma}{\sqrt{\pi}}\,\int_{-\infty}^{\infty}y\,{\rm e}^{-y^2}\,dy.
+\end{equation}
+However, the second integral on the right-hand side is zero, by symmetry. 
+Hence, making use of Eq.~(\ref{e3.8}), we obtain
+\begin{equation}
+\langle x\rangle =x_0.
+\end{equation}
+Evidently,  the expectation value of $x$ for a Gaussian wave packet is
+equal to the most likely value of $x$ ({\em i.e.}, the value of $x$ which
+maximizes $|\psi|^{\,2}$).
+
+The variance of $x$ associated with the Gaussian wave packet (\ref{e3.24})
+is
+\begin{equation}
+\sigma^2_x = \frac{1}{\sqrt{2\pi\,\sigma^2}}\int_{-\infty}^{\infty}
+(x-x_0)^{\,2}\,{\rm e}^{-(x-x_0)^{\,2}/(2\,\sigma^2)}\,dx.
+\end{equation}
+Let $y=(x-x_0)/(\sqrt{2}\,\sigma)$. It follows that
+\begin{equation}
+\sigma^2_x =\frac{2\,\sigma^2}{\sqrt{\pi}}\,\int_{-\infty}^{\infty} y^2\,{\rm e}^{-y^2}\,dy.
+\end{equation}
+However,
+\begin{equation}
+\int_{-\infty}^{\infty} y^2\,{\rm e}^{-y^2}\,dy = \frac{\sqrt{\pi}}{2},
+\end{equation}
+giving
+\begin{equation}
+\sigma_x^{\,2} = \sigma^2.
+\end{equation}
+This result is consistent with our earlier interpretation of $\sigma$ as a measure of the
+spatial extent of the wave packet (see Sect.~\ref{s2.9}).
+It follows that we can rewrite the Gaussian wave packet (\ref{e3.24}) in the convenient form
+\begin{equation}
+\psi(x) = \frac{{\rm e}^{\,{\rm i}\,\varphi}}{(2\pi\,\sigma_x^{\,2})^{1/4}}\,{\rm e}^{-(x-\langle x\rangle)^{\,2}/(4\,\sigma_x^{\,2})}.
+\end{equation}
+
+\section{Ehrenfest's Theorem}\label{s4.5}
+A simple way  to calculate the expectation value of
+momentum
+is to evaluate the time derivative of $\langle x\rangle$, and then
+multiply by the mass $m$: {\em i.e.},
+\begin{equation}\label{e4.34x}
+ \langle p \rangle = m\,\frac{d\langle x\rangle}{dt} = m\,\frac{d}{dt}\int_{-\infty}^{\infty}x\,|\psi|^{\,2}\,dx =m \int_{-\infty}^{\infty}x\,\frac{\partial|\psi|^{\,2}}{\partial t}\,dx.
+\end{equation}
+However, it is easily demonstrated that
+\begin{equation}\label{ediffp}
+\frac{\partial|\psi|^{\,2}}{\partial t} + \frac{\partial j}{\partial x} = 0
+\end{equation}
+[this is just the differential form of Eq.~(\ref{epc})],
+where $j$ is the probability current defined in Eq.~(\ref{eprobc}).
+Thus,
+\begin{equation}
+\langle p\rangle = -m\int_{-\infty}^{\infty} x\,\frac{\partial j}{\partial x}\,dx
+= m\int_{-\infty}^{\infty}j\,dx,
+\end{equation}
+where we have integrated by parts. It follows from Eq.~(\ref{eprobc})
+that
+\begin{equation}
+\langle p\rangle = - \frac{{\rm i}\,\hbar}{2}\int_{-\infty}^{\infty}
+\left(\psi^\ast\,\frac{\partial\psi}{\partial x} - \frac{\partial\psi^\ast}{\partial x}\,\psi\right)dx = - {\rm i}\,\hbar\int_{-\infty}^{\infty}
+\psi^\ast\,\frac{\partial\psi}{\partial x}\,dx,
+\end{equation}
+where we have again integrated by parts. Hence, the expectation value of the momentum can be written
+\begin{equation}\label{e3.38}
+\langle p\rangle = m\,\frac{d\langle x\rangle}{dt}= - {\rm i}\,\hbar\int_{-\infty}^{\infty}
+\psi^\ast\,\frac{\partial\psi}{\partial x}\,dx.
+\end{equation}
+
+It follows from the above that
+\begin{eqnarray}
+\frac{d\langle p\rangle}{dt} &=& -{\rm i}\,\hbar\int_{-\infty}^{\infty}
+\left(\frac{\partial\psi^\ast}{\partial t}\,\frac{\partial\psi}{\partial x} + \psi^\ast\,\frac{\partial^2\psi}{\partial t\partial x}\right)dx\nonumber\\[0.5ex] &=& 
+\int_{-\infty}^{\infty}\left[ \left({\rm i}\,\hbar\,\frac{\partial\psi}{\partial t}\right)^\ast\frac{\partial \psi}{\partial x} + \frac{\partial\psi^\ast}{\partial x}\left({\rm i}\,\hbar\,\frac{\partial\psi}{\partial t}\right)\right]dx,
+\end{eqnarray}
+where we have integrated by parts. 
+Substituting from Schr\"{o}dinger's equation (\ref{e3.1}), and simplifying, we obtain
+\begin{equation}
+\frac{d\langle p\rangle}{dt} = \int_{-\infty}^{\infty}
+\left[-\frac{\hbar^2}{2\,m}\frac{\partial}{\partial x}\!\left(\frac{\partial\psi^{\ast}}{\partial x}\frac{\partial \psi}{\partial x}\right) + V(x)\,\frac{\partial |\psi|^{\,2}}{\partial x}\right]dx = \int_{-\infty}^{\infty} V(x)\,\frac{\partial |\psi|^{\,2}}{\partial x}\,dx.
+\end{equation}
+Integration by parts yields
+\begin{equation}\label{e3.41}
+\frac{d\langle p\rangle}{dt} =-\int_{-\infty}^{\infty} \frac{dV}{dx}\,|\psi|^{\,2}\,dx =- \left\langle \frac{dV}{dx}\right\rangle.
+\end{equation}
+
+Hence, according to Eqs.~(\ref{e4.34x}) and (\ref{e3.41}),
+\begin{eqnarray}\label{e3.42}
+m\,\frac{d\langle x\rangle}{dt}&=& \langle p\rangle,\\[0.5ex]
+\frac{d\langle p\rangle}{dt} &=& -\left\langle \frac{dV}{dx}\right\rangle.\label{e3.43}
+\end{eqnarray}
+Evidently, the expectation values of displacement and momentum obey
+time evolution equations which are analogous to those of classical mechanics. 
+This result is known as {\em Ehrenfest's theorem}.
+
+Suppose that the potential $V(x)$ is {\em slowly varying}. In this case, we can
+expand $dV/dx$ as a Taylor series about $\langle x\rangle$. Keeping
+terms up to second order, we obtain
+\begin{equation}
+\frac{dV(x)}{dx} = \frac{dV(\langle x\rangle)}{d\langle x\rangle}
++ \frac{dV^2(\langle x\rangle)}{d\langle x\rangle^2}\,(x-\langle x\rangle)
++ \frac{1}{2}\,\frac{dV^3(\langle x\rangle)}{d\langle x\rangle^3}\,(x-\langle x\rangle)^{\,2}.
+\end{equation}
+Substitution of the above expansion into Eq.~(\ref{e3.43}) yields
+\begin{equation}
+\frac{d\langle p\rangle}{dt} = - \frac{dV(\langle x\rangle)}{d\langle x\rangle}
+- \frac{\sigma_x^{\,2}}{2}\,\frac{dV^3(\langle x\rangle)}{d\langle x\rangle^3},
+\end{equation}
+since $\langle 1\rangle =1$, and $\langle x-\langle x\rangle\rangle = 0$,
+and $\langle (x-\langle x\rangle)^{\,2}\rangle = \sigma_x^{\,2}$.
+The final term on the right-hand side of the above equation can be neglected
+when the spatial extent of the particle wavefunction, $\sigma_x$, is much
+smaller than the variation length-scale of the potential. In this case,
+Eqs.~(\ref{e3.42}) and (\ref{e3.43}) reduce to
+\begin{eqnarray}
+m\,\frac{d\langle x\rangle}{dt}&=& \langle p\rangle,\\[0.5ex]
+\frac{d\langle p\rangle}{dt} &=& -\frac{dV(\langle x\rangle)}{d\langle x\rangle}.
+\end{eqnarray}
+These equations are {\em exactly equivalent}\/ to the equations of classical
+mechanics, with $\langle x\rangle$ playing the role of the particle displacement. Of course, if the spatial extent of the wavefunction is negligible
+then a measurement of $x$ is almost certain to yield a result which lies
+very close to $\langle x\rangle$. Hence, we conclude that quantum mechanics
+corresponds to classical mechanics in the limit that the spatial
+extent of the wavefunction (which is typically of order the de Boglie wavelength) is negligible. This is an important result, since we know that
+classical mechanics gives the correct answer in this limit.
+
+\section{Operators}\label{s4.6}
+An operator, $O$ (say), is a mathematical entity which transforms
+one function into another: {\em i.e.},
+\begin{equation}
+O(f(x))\rightarrow g(x).
+\end{equation}
+For instance, $x$ is an operator, since $x\,f(x)$ is a different function
+to $f(x)$, and is fully specified once $f(x)$ is given. Furthermore,
+$d/dx$ is also an operator, since $df(x)/dx$ is a different function
+to $f(x)$, and is fully specified once $f(x)$ is given.
+Now,
+\begin{equation}
+x\,\frac{df}{dx} \neq \frac{d}{dx}\left(x\,f\right).
+\end{equation}
+This can also be written
+\begin{equation}
+x\,\frac{d}{dx} \neq \frac{d}{dx}\,x,
+\end{equation}
+where the operators are assumed to act on everything to
+their right, and a final $f(x)$ is understood [where $f(x)$ is a general function]. The above expression illustrates
+an important point: {\em i.e.}, in general, {\em operators do not
+commute}. Of course, some operators do commute: {\em e.g.},
+\begin{equation}
+x\,x^2 = x^2\,x.
+\end{equation}
+Finally, an operator, $O$,  is termed {\em linear}\/ if
+\begin{equation}
+O(c\,f(x)) =c\,O(f(x)),
+\end{equation}
+where $f$ is a general function, and $c$ a general complex number.
+All of the operators employed in quantum mechanics are linear.
+
+Now, from Eqs.~(\ref{e3.22}) and (\ref{e3.38}),
+\begin{eqnarray}
+\langle x\rangle &=& \int_{-\infty}^{\infty}\psi^\ast\,x\,\psi\,dx,\\[0.5ex]
+\langle p\rangle &=& \int_{-\infty}^{\infty}\psi^{\ast}\left(-{\rm i}\,\hbar\,
+\frac{\partial}{\partial x}\right)\psi\,dx.
+\end{eqnarray}
+These expressions suggest a number of things. First, classical dynamical
+variables, such as $x$ and $p$, are represented in quantum mechanics
+by {\em linear operators}\/ which act on the wavefunction. Second,
+displacement is represented by the algebraic operator $x$,
+and momentum by the differential operator $-{\rm i}\,\hbar\,\partial/\partial x$: {\em i.e.},
+\begin{equation}\label{e3.54}
+p  \equiv -{\rm i}\,\hbar\,\frac{\partial}{\partial x}.
+\end{equation}
+Finally, the expectation value of some dynamical variable represented by
+the operator $O(x)$ is simply
+\begin{equation}\label{e3.55}
+\langle O \rangle = \int_{-\infty}^{\infty}\psi^\ast(x,t)\,O(x)\,\psi(x,t)\,dx.
+\end{equation}
+
+Clearly, if an operator is to represent a dynamical variable which has
+physical significance then its expectation value must be {\em real}. 
+In other words, if the operator $O$ represents a physical variable
+then we require that $\langle O\rangle = \langle O \rangle^\ast$, or
+\begin{equation}\label{e3.55a}
+\int_{-\infty}^{\infty} \psi^\ast\,(O\,\psi)\,dx = \int_{-\infty}^{\infty}(O\,\psi)^\ast\,\psi\,dx,
+\end{equation}
+where $O^\ast$ is the complex conjugate of $O$. An operator which
+satisfies the above constraint is called an {\em Hermitian}\/ operator. 
+It is easily demonstrated that $x$ and $p$ are both Hermitian.
+The {\em Hermitian conjugate}, $O^\dag$, of
+a general operator, $O$, is defined as follows:
+\begin{equation}\label{e5.48}
+\int_{-\infty}^{\infty} \psi^{\ast} \,(O\,\psi)\,dx=\int_{-\infty}^\infty
+(O^\dag\,\psi)^\ast\,\psi\,dx.
+\end{equation}
+The Hermitian conjugate of an Hermitian operator is the same as the operator
+itself: {\em i.e.}, $p^\dag = p$. For a non-Hermitian operator, $O$ (say),
+it is easily demonstrated that $(O^\dag)^\dag=O$, and that the operator $O+O^\dag$ is Hermitian. 
+Finally, if $A$ and $B$ are two operators, then $(A\,B)^\dag = B^\dag\,A^\dag$. 
+
+Suppose that we wish to find the operator which corresponds to the
+classical dynamical variable $x\,p$. In classical mechanics, there
+is no difference between $x\,p$ and $p\,x$. However, in quantum
+mechanics, we have already seen that $x\,p\neq p\,x$. So,
+should be choose $x\,p$ or $p\,x$? Actually, neither of these combinations
+is Hermitian. However, $(1/2)\,[x\,p + (x\,p)^\dag]$ is Hermitian. 
+Moreover, $(1/2)\,[x\,p + (x\,p)^\dag]=(1/2)\,(x\,p+p^\dag\,x^\dag)=(1/2)\,(x\,p+p\,x)$, which neatly resolves
+our problem of which order to put $x$ and $p$. 
+
+It is a reasonable guess that the operator corresponding to energy (which is
+called the Hamiltonian, and conventionally denoted $H$) takes the form
+\begin{equation}
+H \equiv \frac{p^2}{2\,m} + V(x).
+\end{equation}
+Note that $H$ is Hermitian. Now, it follows from Eq.~(\ref{e3.54}) that
+\begin{equation}
+H \equiv -\frac{\hbar^2}{2\,m}\,\frac{\partial^2}{\partial x^2} + V(x).
+\end{equation}
+However, according to Schr\"{o}dinger's equation, (\ref{e3.1}), we have
+\begin{equation}
+-\frac{\hbar^2}{2\,m}\,\frac{\partial^2}{\partial x^2} + V(x) = {\rm i}\,\hbar\,\frac{\partial}{\partial t},
+\end{equation}
+so
+\begin{equation}
+H \equiv {\rm i}\,\hbar\,\frac{\partial}{\partial t}.
+\end{equation}
+Thus, the time-dependent Schr\"{o}dinger equation can be written
+\begin{equation}\label{etimed}
+{\rm i}\,\hbar\,\frac{\partial\psi}{\partial t} = H\,\psi.
+\end{equation}
+
+Finally, if $O(x,p,E)$ is a classical dynamical variable which is
+a function of displacement, momentum, and energy, then a reasonable
+guess for the corresponding operator in quantum mechanics is
+$(1/2)\,[O(x,p,H)+ O^\dag(x,p,H)]$, where $p=-{\rm i}\,\hbar\,\partial/\partial x$, and $H={\rm i}\,\hbar\,\partial/\partial t$.
+
+\section{Momentum Representation}
+Fourier's theorerm (see Sect.~\ref{s2.9}), applied to one-dimensional wavefunctions, yields
+\begin{eqnarray}
+\psi(x,t) &=& \frac{1}{\sqrt{2 \pi}}\int_{-\infty}^{\infty} \bar{\psi}(k,t)\,{\rm e}^{+{\rm i}\,k\,x}\,dk,\\[0.5ex]
+\bar{\psi}(k,t) &=& \frac{1}{\sqrt{2 \pi}}\int_{-\infty}^\infty \psi(x,t)\,{\rm e}^{-{\rm i}\,k\,x}\,dx,
+\end{eqnarray}
+where $k$ represents wavenumber. However, $p=\hbar\,k$. Hence,
+we can also write
+\begin{eqnarray}\label{e3.64}
+\psi(x,t) &=& \frac{1}{\sqrt{2\pi\,\hbar}}\int_{-\infty}^{\infty} \phi(p,t)\,{\rm e}^{+{\rm i}\,p\,x/\hbar}\,dp,\\[0.5ex]
+\phi(p,t) &=& \frac{1}{\sqrt{2\pi\,\hbar}}\int_{-\infty}^\infty \psi(x,t)\,{\rm e}^{-{\rm i}\,p\,x/\hbar}\,dx,\label{e3.65}
+\end{eqnarray}
+where $\phi(p,t)= \bar{\psi}(k,t)/\sqrt{\hbar}$ is the momentum-space
+equivalent to the real-space wavefunction $\psi(x,t)$.
+
+At this stage, it is convenient to introduce a  useful function called the
+{\em Dirac delta-function}. This function, denoted $\delta(x)$, was
+first devised by Paul Dirac, and has the following rather
+unusual properties: $\delta(x)$ is zero for $x\neq 0$, and is infinite
+at $x=0$. However, the singularity at $x=0$ is such that
+\begin{equation}\label{e3.64a}
+\int_{-\infty}^{\infty}\delta(x)\,dx = 1.
+\end{equation}
+The delta-function is an example of what is known as a {\em generalized function}: {\em i.e.}, 
+its value is not well-defined at all $x$, but its integral is well-defined.
+Consider the integral
+\begin{equation}
+\int_{-\infty}^{\infty}f(x)\,\delta(x)\,dx.
+\end{equation}
+Since $\delta(x)$ is only non-zero infinitesimally close to $x=0$, we
+can safely replace $f(x)$ by $f(0)$ in the above integral (assuming $f(x)$
+is well behaved at $x=0$), to give
+\begin{equation}
+\int_{-\infty}^{\infty}f(x)\,\delta(x)\,dx = f(0)\,\int_{-\infty}^{\infty}\delta(x)\,dx=f(0),
+\end{equation}
+where use has been made of Eq.~(\ref{e3.64a}). A simple generalization of this result yields
+\begin{equation}\label{e3.69}
+\int_{-\infty}^\infty f(x)\,\delta(x-x_0)\,dx = f(x_0),
+\end{equation}
+which can also be thought of as an alternative definition of a delta-function.
+
+Suppose that $\psi(x) = \delta(x-x_0)$. It follows from Eqs.~(\ref{e3.65})
+and (\ref{e3.69}) that 
+\begin{equation}
+\phi(p) = \frac{{\rm e}^{-{\rm i}\,p\,x_0/\hbar}}{\sqrt{2\pi\,\hbar}}.
+\end{equation}
+Hence, Eq.~(\ref{e3.64}) yields the important result
+\begin{equation}
+\delta(x-x_0)= \frac{1}{2\pi\,\hbar}\int_{-\infty}^{\infty}{\rm e}^{+{\rm i}\,p\,(x-x_0)/\hbar}\,dp.
+\end{equation}
+Similarly,
+\begin{equation}\label{e3.72}
+\delta(p-p_0)= \frac{1}{2\pi\,\hbar}\int_{-\infty}^{\infty}{\rm e}^{+{\rm i}\,(p-p_0)\,x/\hbar}\,dx.
+\end{equation}
+
+It turns out that we can just as well formulate quantum mechanics using 
+momentum-space wavefunctions, $\phi(p,t)$, as real-space wavefunctions, $\psi(x,t)$. The former scheme is known as the {\em momentum representation} of quantum mechanics. In the momentum representation,
+wavefunctions are the Fourier transforms of the equivalent real-space
+wavefunctions, and dynamical variables are represented by {\em different}\/ operators. Furthermore, by analogy with Eq.~(\ref{e3.55}), the
+expectation value of some operator $O(p)$ takes the form
+\begin{equation}\label{e4.55a}
+\langle O\rangle = \int_{-\infty}^{\infty}\phi^\ast(p,t)\,O(p)\,\phi(p,t)\,dp.
+\end{equation}
+
+Consider momentum. We can write
+\begin{eqnarray}
+\langle p\rangle& =& \int_{-\infty}^{\infty} \psi^\ast(x,t)\left(-{\rm i}\,\hbar\,
+\frac{\partial}{\partial x}\right)\psi(x,t)\,dx \nonumber\\[0.5ex]&=& \frac{1}{2\pi\,\hbar}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+\phi^\ast(p',t)\,\phi(p,t)\,p\,{\rm e}^{+{\rm i}\,(p-p')\,x/\hbar}\,dx\,dp\,dp',
+\end{eqnarray}
+where use has been made of Eq.~(\ref{e3.64}).
+However, it follows from Eq.~(\ref{e3.72})
+that
+\begin{equation}
+\langle p\rangle = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\phi^\ast(p',t)\,\phi(p,t)\,p\,\delta(p-p')\,dp\,dp'.
+\end{equation}
+Hence, using  Eq.~(\ref{e3.69}), we obtain
+\begin{equation}
+\langle p\rangle = \int_{-\infty}^{\infty}\phi^\ast(p,t)\,p\,\phi(p,t)\,dp =  \int_{-\infty}^{\infty}p\,|\phi|^{\,2}\,dp.
+\end{equation}
+Evidently,  momentum is represented by the operator $p$ in the momentum
+representation. The above expression also strongly suggests [by comparison with Eq.~(\ref{e3.22})] that $|\phi(p,t)|^{\,2}$ can be interpreted as
+the probability density of a measurement of momentum yielding the
+value $p$ at time $t$. It follows that $\phi(p,t)$ must satisfy an analogous normalization
+condition to Eq.~(\ref{e3.4}): {\em i.e.},
+\begin{equation}\label{enormp}
+\int_{-\infty}^{\infty} |\phi(p,t)|^{\,2}\,dp = 1.
+\end{equation}
+
+Consider displacement. We can write
+\begin{eqnarray}
+\langle x\rangle& =& \int_{-\infty}^{\infty} \psi^\ast(x,t)\,x\,\psi(x,t)\,dx \\[0.5ex]&=& \frac{1}{2\pi\,\hbar}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+\phi^\ast(p',t)\,\phi(p,t)\left(-{\rm i}\,\hbar\,\frac{\partial}{\partial p}\right){\rm e}^{+{\rm i}\,(p-p')\,x/\hbar}\,dx\,dp\,dp'.\nonumber
+\end{eqnarray}
+Integration by parts yields
+\begin{equation}
+\langle x\rangle=  \frac{1}{2\pi\,\hbar}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+\phi^\ast(p',t)\,{\rm e}^{+{\rm i}\,(p-p')\,x/\hbar}\left({\rm i}\,\hbar\,\frac{\partial}{\partial p}\right)\phi(p,t)\,dx\,dp\,dp'.
+\end{equation}
+Hence, making use of Eqs.~(\ref{e3.72}) and (\ref{e3.69}), we obtain
+\begin{equation}
+\langle x\rangle=  \frac{1}{2\pi\,\hbar}\int_{-\infty}^{\infty}
+\phi^\ast(p) \left({\rm i}\,\hbar\,\frac{\partial}{\partial p}\right)\phi(p)\,dp.
+\end{equation}
+Evidently, displacement is represented by the operator
+\begin{equation}
+x\equiv{\rm i}\,\hbar\,\frac{\partial}{\partial p}
+\end{equation}
+in the momentum representation.
+
+Finally, let us consider the normalization of the momentum-space wavefunction $\phi(p,t)$. We have
+\begin{equation}
+\int_{-\infty}^{\infty} \psi^\ast(x,t)\,\psi(x,t)\,dx = \frac{1}{2\pi\,\hbar}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+\phi^\ast(p',t)\,\phi(p,t)\,{\rm e}^{+{\rm i}\,(p-p')\,x/\hbar}\,dx\,dp\,dp'.
+\end{equation}
+Thus, it follows from Eqs.~(\ref{e3.69}) and (\ref{e3.72})
+that
+\begin{equation}\label{e3.83}
+\int_{-\infty}^{\infty} |\psi(x,t)|^{\,2}\,dx =\int_{-\infty}^{\infty}|\phi(p,t)|^{\,2}\,dp.
+\end{equation}
+Hence, if $\psi(x,t)$ is properly normalized [see Eq.~(\ref{e3.4})] then $\phi(p,t)$,
+as defined in Eq.~(\ref{e3.65}), is also properly normalized [see Eq.~(\ref{enormp})].
+
+The existence of the momentum representation illustrates an important point:
+{\em i.e.}, that there are many different, but entirely equivalent, ways
+of mathematically formulating quantum mechanics. For instance, it
+is also possible to represent wavefunctions as row and column vectors, and dynamical
+variables 
+as matrices which act upon these vectors.
+
+\section{Heisenberg's Uncertainty Principle}\label{suncert}
+Consider a real-space Hermitian operator $O(x)$. A straightforward generalization of Eq. (\ref{e3.55a}) yields
+\begin{equation}\label{e3.84}
+\int_{-\infty}^\infty \psi_1^{\ast}\,(O\,\psi_2)\,dx = \int_{-\infty}^\infty
+(O\,\psi_1)^\ast\,\psi_2\,dx,
+\end{equation}
+where $\psi_1(x)$ and $\psi_2(x)$ are general functions. 
+
+Let $f=(A-\langle A\rangle)\,\psi$, where $A(x)$ is an Hermitian operator,
+and $\psi(x)$ a general  wavefunction. We have
+\begin{equation}
+\int_{-\infty}^\infty |f|^{\,2}\,dx= \int_{-\infty}^\infty f^\ast\,f\,dx = \int_{-\infty}^\infty[(A-\langle A\rangle)\,\psi]^{\,\ast}\,[(A-\langle A\rangle)\,\psi]\,dx.
+\end{equation}
+Making use of Eq.~(\ref{e3.84}), we obtain
+\begin{equation}\label{e3.86}
+\int_{-\infty}^\infty |f|^{\,2}\,dx=\int_{-\infty}^\infty \psi^\ast\,(A-\langle A \rangle)^{\,2}\,\psi\,dx = \sigma_A^{\,2},
+\end{equation}
+where $\sigma_A^{\,2}$ is the variance of $A$ [see Eq.~(\ref{e3.24a})].
+Similarly, if $g=(B-\langle B\rangle)\,\psi$, where $B$ is a second
+Hermitian operator, then
+ \begin{equation}
+\int_{-\infty}^\infty |g|^{\,2}\,dx = \sigma_B^{\,2},
+\end{equation}
+
+Now, there is a standard result in mathematics, known as the
+{\em Schwartz inequality}, which states that
+\begin{equation}
+\left|\int_a^b\,f^\ast(x)\,g(x)\,dx\right|^{\,2}\leq \int_a^b|f(x)|^{\,2}\,dx\,\int_a^b |g(x)|^{\,2}\,dx,
+\end{equation}
+where $f$ and $g$ are two general functions. Furthermore, if $z$ is
+a complex number then
+\begin{equation}\label{e3.89}
+|z|^{\,2} = [{\rm Re}(z)]^{\,2} + [{\rm Im}(z)]^{\,2} \geq [{\rm Im}(z)]^{\,2} = \left[\frac{1}{2\,{\rm i}}\,(z-z^\ast)\right]^{\,2}.
+\end{equation}
+Hence, if $z=\int_{-\infty}^\infty f^\ast\,g\,dx$ then Eqs.~(\ref{e3.86})--(\ref{e3.89}) yield
+\begin{equation}\label{e3.90}
+\sigma_A^{\,2}\,\sigma_B^{\,2} \geq \left[\frac{1}{2\,{\rm i}}\,(z-z^\ast)\right]^{\,2}.
+\end{equation}
+However,
+\begin{equation}
+z = \int_{-\infty}^{\infty} [(A-\langle A\rangle)\,\psi]^{\,\ast}\,[(B-\langle B\rangle)\,\psi]\,dx = \int_{-\infty}^{\infty} \psi^\ast\,(A-\langle A\rangle)\,(B-\langle B\rangle)\,\psi\,dx,
+\end{equation}
+where use has been made of Eq.~(\ref{e3.84}). The above
+equation reduces to
+\begin{equation}
+z =\int_{-\infty}^\infty \psi^\ast\,A\,B\,\psi\,dx -\langle A\rangle\,\langle B\rangle.
+\end{equation}
+Furthermore, it is easily demonstrated that
+\begin{equation}
+z ^\ast=\int_{-\infty}^\infty \psi^\ast\,B\,A\,\psi\,dx -\langle A\rangle\,\langle B\rangle.
+\end{equation}
+Hence, Eq.~(\ref{e3.90}) gives
+\begin{equation}\label{e3.94}
+\sigma_A^{\,2}\,\sigma_B^{\,2} \geq \left(\frac{1}{2\,{\rm i}}\langle[A,B]\rangle\right)^{\,2},
+\end{equation}
+where
+\begin{equation}
+[A,B] \equiv A\,B-B\,A.
+\end{equation}
+
+Equation~(\ref{e3.94}) is the general form of  {\em Heisenberg's uncertainty principle}\/ in quantum mechanics. It states that if two dynamical
+variables are represented by the two Hermitian operators $A$ and $B$,
+and these  operators {\em do not commute}\/ ({\em i.e.}, $A\,B\neq B\,A$),
+then it is {\em impossible}\/ to simultaneously (exactly) measure the two variables.
+Instead, the product of the variances in the measurements  is always greater than some critical value, which
+depends on the extent to which the two operators do not commute.
+
+For instance, displacement and momentum are represented (in real-space) by the
+operators $x$ and $p\equiv-{\rm i}\,\hbar\,\partial/\partial x$, respectively.
+Now, it is easily demonstrated that
+\begin{equation}
+[x,p] = {\rm i}\,\hbar.
+\end{equation}
+Thus,
+\begin{equation}
+\sigma_x\,\sigma_p\geq \frac{\hbar}{2},
+\end{equation}
+which can be recognized as the standard displacement-momentum uncertainty
+principle (see Sect.~\ref{sun}). It turns out that the minimum uncertainty ({\em i.e.},
+$\sigma_x\,\sigma_p=\hbar/2$) is only achieved by {\em Gaussian}\/ wave packets (see Sect.~\ref{s2.9}): {\em i.e.},
+\begin{eqnarray}
+\psi(x) &=& \frac{{\rm e}^{+{\rm i}\,p_0\,x/\hbar}}{(2\pi\,\sigma_x^{\,2})^{1/4}}\,{\rm e}^{-(x-x_0)^{\,2}/4\,\sigma_x^{\,2}},\\[0.5ex]
+\phi(p) &=&\frac{{\rm e}^{-{\rm i}\,p\,x_0/\hbar}}{(2\pi\,\sigma_p^{\,2})^{1/4}}\,{\rm e}^{-(p-p_0)^{\,2}/4\,\sigma_p^{\,2}},
+\end{eqnarray}
+where $\phi(p)$ is the momentum-space equivalent of $\psi(x)$.
+
+Energy and time are represented by the operators $H\equiv{\rm i}\,\hbar\,\partial/\partial t$ and $t$, respectively. These operators do not commute,
+indicating that energy and time cannot be measured simultaneously.
+In fact,
+\begin{equation}
+[H,t] = {\rm i}\,\hbar,
+\end{equation}
+so
+\begin{equation}
+\sigma_E\,\sigma_t\geq \frac{\hbar}{2}.
+\end{equation}
+This can be written, somewhat less exactly, as
+\begin{equation}
+{\mit\Delta}E\,{\mit\Delta} t\gtapp \hbar,
+\end{equation}
+where ${\mit\Delta}E$ and ${\mit\Delta} t$ are the uncertainties in
+energy and time, respectively. The above expression is generally
+known as the {\em energy-time uncertainty principle}.
+
+For instance, suppose that a particle passes some fixed point on the $x$-axis.
+Since the particle is, in reality, an extended wave packet, it takes a certain amount
+of time ${\mit\Delta}t$ for the particle to pass. Thus, there is an uncertainty,
+${\mit\Delta}t$, in the arrival time of the particle. Moreover, since
+$E=\hbar\,\omega$, the only wavefunctions which have unique energies
+are those with unique frequencies: {\em i.e.}, plane waves. Since a
+wave packet of finite extent is made up of a combination of plane waves
+of different wavenumbers, and, hence, different frequencies, there will
+be an uncertainty ${\mit\Delta}E$ in the particle's energy which is
+proportional to the range of frequencies of the plane waves making up the
+wave packet. The more compact the wave packet (and, hence, the
+smaller ${\mit\Delta}t$), the larger the range of frequencies of the constituent plane waves (and, hence, the large ${\mit\Delta}E$), and
+{\em vice versa}. To be more exact, if $\psi(t)$ is the wavefunction
+measured at the fixed point as a function of time, then we can write
+\begin{equation}
+\psi(t)= \frac{1}{\sqrt{2\pi\,\hbar}}\int_{-\infty}^{\infty}\chi(E)\,{\rm e}^{-{\rm i}\,E\,t/\hbar}\,dE.
+\end{equation}
+In other words, we can express $\psi(t)$ as a linear combination of
+plane waves of definite energy $E$. Here, $\chi(E)$ is the complex
+amplitude of plane waves of energy $E$ in this combination. By Fourier's
+theorem, we also have
+\begin{equation}
+\chi(E) = \frac{1}{\sqrt{2\pi\,\hbar}}\int_{-\infty}^{\infty}\psi(t)\,{\rm e}^{+{\rm i}\,E\,t/\hbar}\,dt.
+\end{equation}
+For instance, if $\psi(t)$ is a Gaussian then it is easily shown that
+$\chi(E)$ is also a Gaussian: {\em i.e.}, 
+\begin{eqnarray}
+\psi(t) &=& \frac{{\rm e}^{-{\rm i}\,E_0\,t/\hbar}}{(2\pi\,\sigma_t^{\,2})^{1/4}}\,{\rm e}^{-(t-t_0)^{\,2}/4\,\sigma_t^{\,2}},\\[0.5ex]
+\chi(E) &=&\frac{{\rm e}^{+{\rm i}\,E\,t_0/\hbar}}{(2\pi\,\sigma_E^{\,2})^{1/4}}\,{\rm e}^{-(E-E_0)^{\,2}/4\,\sigma_E^{\,2}},
+\end{eqnarray}
+where $\sigma_E\,\sigma_t=\hbar/2$. As before, Gaussian wave packets
+satisfy the minimum uncertainty principle $\sigma_E\,\sigma_t=\hbar/2$. Conversely, non-Gaussian wave packets
+are characterized by $\sigma_E\,\sigma_t>\hbar/2$.
+
+\section{Eigenstates and Eigenvalues}\label{seig}
+Consider a general real-space operator $A(x)$. When this operator
+acts on a general wavefunction $\psi(x)$ the result is usually a wavefunction
+with a completely different shape. However, there are certain special
+wavefunctions which are such that when $A$ acts on them the
+result is just a multiple of the original wavefunction. These special
+wavefunctions are called {\em eigenstates}, and the multiples
+are called {\em eigenvalues}. Thus, if
+\begin{equation}\label{e3.107}
+A\,\psi_a(x) = a\,\psi_a(x),
+\end{equation}
+where $a$ is a complex number, then $\psi_a$ is called an eigenstate of
+$A$ corresponding to the eigenvalue $a$.
+
+Suppose that $A$ is an Hermitian operator corresponding to some physical dynamical
+variable.
+Consider a particle whose wavefunction is $\psi_a$. The expectation of
+value $A$ in this state is simply [see Eq.~(\ref{e3.55})]
+\begin{equation}
+\langle A\rangle = \int_{-\infty}^\infty \psi_a^{\ast}\,A\,\psi_a\,dx
+= a\,\int_{-\infty}^\infty \psi_a^{\ast}\,\psi_a\,dx =a,
+\end{equation}
+where use has been made of Eq.~(\ref{e3.107}) and the normalization
+condition (\ref{e3.4}). Moreover, 
+\begin{equation}
+\langle A^2\rangle = \int_{-\infty}^\infty \psi_a^{\ast}\,A^2\,\psi_a\,dx
+= a\,\int_{-\infty}^\infty \psi_a^{\ast}\,A\,\psi_a\,dx =a^2\,\int_{-\infty}^\infty \psi_a^{\ast}\,\psi_a\,dx =a^2,
+\end{equation}
+so
+the variance of $A$ is [{\em cf.}, Eq.~(\ref{e3.24a})]
+\begin{equation}
+\sigma_A^{\,2} = \langle A^2\rangle - \langle A\rangle^2 = a^2-a^2 = 0.
+\end{equation}
+The fact that the variance is {\em zero}\/ implies that every measurement of $A$ is bound to
+yield the same result: namely,  $a$.  Thus, the eigenstate $\psi_a$ is a state which is
+associated with a {\em unique}\/ value of the dynamical variable corresponding to $A$. This
+unique value is simply the associated eigenvalue.
+
+It is easily demonstrated that the eigenvalues of an Hermitian operator
+are all {\em real}. Recall [from Eq.~(\ref{e3.84})] that an
+Hermitian operator satisfies
+\begin{equation}\label{e3.111}
+\int_{-\infty}^\infty \psi_1^\ast\,(A\,\psi_2)\,dx = \int_{-\infty}^\infty
+(A\,\psi_1)^\ast\,\psi_2\,dx.
+\end{equation}
+Hence, if $\psi_1=\psi_2=\psi_a$ then
+\begin{equation}
+\int_{-\infty}^\infty \psi_a^\ast\,(A\,\psi_a)\,dx = \int_{-\infty}^\infty
+(A\,\psi_a)^\ast\,\psi_a\,dx,
+\end{equation}
+which reduces to [see Eq.~(\ref{e3.107})]
+\begin{equation}
+a=a^\ast,
+\end{equation}
+assuming that $\psi_a$ is properly normalized.
+
+Two wavefunctions, $\psi_1(x)$ and $\psi_2(x)$, are said to be {\em orthogonal}\/
+if
+\begin{equation}
+\int_{-\infty}^{\infty}\psi_1^\ast\,\psi_2\,dx = 0.
+\end{equation}
+Consider two eigenstates of $A$, $\psi_a$ and $\psi_{a'}$, which
+correspond to the two {\em different}\/ eigenvalues $a$ and $a'$, respectively. Thus,
+\begin{eqnarray}
+A\,\psi_a&=& a\,\psi_a,\\[0.5ex]
+A\,\psi_{a'}&=& a'\,\psi_{a'}.
+\end{eqnarray}
+Multiplying the complex conjugate of the first equation by $\psi_{a'}$,
+and the second equation by $\psi_a^\ast$, and then integrating over all
+$x$, we obtain
+\begin{eqnarray}
+\int_{-\infty}^\infty (A\,\psi_a)^\ast\,\psi_{a'}\,dx&=& a\,\int_{-\infty}^\infty\psi_a^\ast\,\psi_{a'}\,dx,\\[0.5ex]
+\int_{-\infty}^\infty \psi_a^\ast\,(A\,\psi_{a'})\,dx&=& a'\,\int_{-\infty}^{\infty}\psi_a^\ast\,\psi_{a'}\,dx.
+\end{eqnarray}
+However, from Eq.~(\ref{e3.111}), the left-hand sides of the above two
+equations are equal. Hence, we can
+write
+\begin{equation}
+(a-a')\, \int_{-\infty}^\infty\psi_a^\ast\,\psi_{a'}\,dx = 0.
+\end{equation}
+By assumption, $a\neq a'$, yielding
+\begin{equation}
+\int_{-\infty}^\infty\psi_a^\ast\,\psi_{a'}\,dx = 0.
+\end{equation} 
+In other words, eigenstates of an Hermitian operator corresponding to
+{\em different}\/ eigenvalues are automatically {\em orthogonal}.
+
+Consider two eigenstates of $A$, $\psi_a$ and $\psi_a'$, which
+correspond to the {\em same}\/ eigenvalue, $a$. Such eigenstates
+are termed {\em degenerate}. The above proof of the orthogonality
+of different eigenstates fails for degenerate eigenstates. 
+Note, however, that {\em any}\/ linear combination of
+$\psi_a$ and $\psi_a'$ is also an eigenstate of $A$ corresponding
+to the eigenvalue $a$. Thus, even if $\psi_a$ and $\psi_a'$ are not
+orthogonal, we can always choose two linear combinations
+of these eigenstates which are orthogonal. For instance,
+if $\psi_a$ and $\psi_a'$ are properly normalized, and
+\begin{equation}
+\int_{-\infty}^\infty \psi_a^\ast\,\psi_a'\,dx = c,
+\end{equation}
+then it is easily demonstrated that
+\begin{equation}
+\psi_a'' = \frac{|c|}{\sqrt{1-|c|^2}}\left(\psi_a - c^{-1}\,\psi_a'\right)
+\end{equation}
+is a properly normalized eigenstate of $A$, corresponding to the
+eigenvalue $a$, which is orthogonal to $\psi_a$. It is straightforward
+to generalize the above argument to three or more degenerate eigenstates.
+Hence, we conclude that the eigenstates of an Hermitian
+operator are, or can be chosen to be, {\em mutually orthogonal}.
+
+It is also possible to demonstrate that the eigenstates of an
+Hermitian operator form a {\em complete set}: {\em i.e.}, that any
+general wavefunction can be written as a linear combination
+of these eigenstates. However, the proof is quite difficult, and
+we shall not attempt it here. 
+
+In summary, given an Hermitian
+operator $A$, any general wavefunction, $\psi(x)$, can be written
+\begin{equation}\label{e3.123}
+\psi = \sum_{i}c_i\,\psi_i,
+\end{equation}
+where the $c_i$ are complex weights, and the $\psi_i$ are the properly
+normalized (and mutually orthogonal) eigenstates of $A$: {\em i.e.}, 
+\begin{equation}
+A\,\psi_i = a_i\,\psi_i,
+\end{equation}
+where $a_i$ is the eigenvalue corresponding to the eigenstate $\psi_i$,
+and
+\begin{equation}\label{e3.125}
+\int_{-\infty}^\infty \psi_i^\ast\,\psi_j \,dx = \delta_{ij}.
+\end{equation}
+Here, $\delta_{ij}$ is called the {\em Kronecker delta-function}, and
+takes the value unity when its two indices are equal, and zero otherwise.
+
+It follows from Eqs.~(\ref{e3.123}) and (\ref{e3.125})
+that
+\begin{equation}\label{e3.126}
+c_i = \int_{-\infty}^\infty \psi_i^\ast\,\psi\,dx.
+\end{equation}
+Thus, the expansion coefficients in Eq.~(\ref{e3.123}) are easily determined,
+given the wavefunction $\psi$ and the eigenstates $\psi_i$. 
+Moreover, if $\psi$ is a properly normalized wavefunction then Eqs.~(\ref{e3.123}) and (\ref{e3.125})
+yield
+\begin{equation}\label{e3.127}
+\sum_i |c_i|^2 =1.
+\end{equation}
+
+\section{Measurement}\label{smeas}
+Suppose that $A$ is an Hermitian operator corresponding to some dynamical
+variable. By analogy with the discussion  in Sect.~\ref{scoll},  we expect that if a measurement of $A$
+yields the result $a$  then the act of measurement will cause the wavefunction to collapse to a state in which a measurement
+of $A$ is {\em bound}\/ to give the result $a$. 
+What sort of wavefunction, $\psi$, is such that a measurement of $A$ is
+bound to yield a certain result, $a$? Well, expressing $\psi$ as
+a linear combination of the eigenstates of $A$, we have
+\begin{equation}\label{e4.128}
+\psi = \sum_i c_i\,\psi_i,
+\end{equation}
+where $\psi_i$ is an eigenstate of $A$ corresponding to the eigenvalue $a_i$. If a measurement of $A$ is bound to yield the result $a$ then
+\begin{equation}
+\langle A\rangle= a,
+\end{equation}
+and
+\begin{equation}\label{e4.130}
+\sigma_A^{\,2} = \langle A^2\rangle - \langle A\rangle = 0.
+\end{equation}
+Now it is easily seen that
+\begin{eqnarray}\label{e4.131}
+\langle A\rangle &=& \sum_i |c_i|^2\,a_i,\\[0.5ex]
+\langle A^2\rangle &=& \sum_i |c_i|^2\,a_i^{\,2}.
+\end{eqnarray}
+Thus, Eq.~(\ref{e4.130}) gives
+\begin{equation}
+ \sum_i a_i^{\,2}\,|c_i|^2 - \left(\sum_i a_i\,|c_i|^2\right)^2=0.
+\end{equation}
+Furthermore, the normalization condition yields
+\begin{equation}\label{e4.134}
+\sum_i |c_i|^2 = 1.
+\end{equation}
+
+For instance, suppose that there are only two eigenstates. The above two
+equations then reduce to $|c_1|^2=x$, and $|c_2|^2=1-x$, where $0\leq x\leq 1$,
+and
+\begin{equation}\label{e4.126}
+(a_1-a_2)^2\,x\,(1-x) = 0.
+\end{equation}
+The only solutions are $x=0$ and $x=1$. This result can easily
+be generalized to the case where there are more than two eigenstates.
+It follows that a state associated with a definite value of $A$ is
+one in which one of the $|c_i|^2$ is unity, and all of the others are zero.
+In other words, the only states associated with definite values of $A$
+are the {\em eigenstates} of $A$. It immediately
+follows that {\em the result of a measurement of $A$ must be one of the eigenvalues of $A$}. Moreover, if a general wavefunction is expanded
+as a linear combination of the eigenstates of $A$, like in Eq.~(\ref{e4.128}),
+then it is clear from Eq.~(\ref{e4.131}), and the general definition of a mean,
+that the probability of a measurement of $A$ yielding the eigenvalue $a_i$
+is simply $|c_i|^2$, where $c_i$ is the coefficient in front of
+the $i$th eigenstate in the expansion. Note, from Eq.~(\ref{e4.134}),
+that these probabilities are properly normalized: {\em i.e.}, the probability
+of a measurement of $A$ resulting in  any possible answer is unity.
+Finally, if a measurement of $A$ results in the eigenvalue $a_i$ then
+immediately after the measurement the system will be left in the
+eigenstate corresponding to $a_i$.
+
+Consider two physical dynamical variables represented by the two
+Hermitian operators $A$ and $B$. Under what circumstances is
+it possible to simultaneously measure these two variables (exactly)? 
+Well, the possible results of measurements of $A$ and $B$ are the eigenvalues
+of $A$ and $B$, respectively. Thus, to simultaneously measure $A$ and $B$ (exactly) there
+must exist states which are {\em simultaneous eigenstates}\/ of $A$ and $B$. 
+In fact,  in order for $A$ and $B$ to be simultaneously measurable under all
+circumstances, we need {\em all}\/ of the eigenstates of $A$ to also be eigenstates of $B$, and {\em vice versa}, so that all states associated with unique values of $A$ are
+also associated with unique values of $B$, and {\em vice versa}.
+
+Now, we have already seen, in Sect.~\ref{suncert}, that if $A$ and $B$
+do not commute ({\em i.e.}, if $A\,B\neq B\,A$) then they cannot
+be simultaneously measured. This suggests that the condition
+for simultaneous measurement is that $A$ and $B$ should commute.
+ Suppose that this is the case, and  that the $\psi_i$ and $a_i$ are the normalized eigenstates and
+eigenvalues of $A$, respectively. It follows that
+\begin{equation}
+(A\,B-B\,A)\,\psi_i = (A\,B-B\,a_i)\,\psi_i = (A-a_i)\,B\,\psi_i = 0,
+\end{equation}
+or
+\begin{equation}
+A\,(B\,\psi_i) = a_i\,(B\,\psi_i).
+\end{equation}
+Thus, $B\,\psi_i$ is an eigenstate of $A$ corresponding to
+the eigenvalue $a_i$ (though not necessarily a normalized one). In other words, $B\,\psi_i\propto \psi_i$, or
+\begin{equation}
+B\,\psi_i = b_i\,\psi_i,
+\end{equation}
+where $b_i$ is a constant of proportionality.
+Hence, $\psi_i$  is an eigenstate of $B$, and, thus,  a simultaneous
+eigenstate of $A$ and $B$. We conclude that if $A$ and $B$ commute then
+they possess simultaneous eigenstates, and are thus simultaneously measurable (exactly). 
+
+\section{Continuous Eigenvalues}
+In the previous two sections, it was tacitly assumed that we were dealing
+with operators possessing {\em discrete}\/ eigenvalues and square-integrable
+eigenstates. Unfortunately, some operators---most notably,  $x$ and 
+$p$---possess
+eigenvalues which lie in a {\em continuous range}  and non-square-integrable
+eigenstates (in fact, these two properties go hand in hand). Let us, therefore, investigate
+the eigenstates and eigenvalues of the displacement and momentum
+operators.
+
+Let $\psi_x(x,x')$ be the eigenstate of $x$ corresponding to the eigenvalue $x'$. It follows that
+\begin{equation}
+x\,\psi_x(x,x') = x'\,\psi_x(x,x')
+\end{equation}
+for all $x$. Consider the Dirac delta-function $\delta(x-x')$. We can write
+\begin{equation}
+x\,\delta(x-x') = x'\,\delta(x-x'),
+\end{equation}
+since $\delta(x-x')$ is only non-zero infinitesimally close to $x=x'$. 
+Evidently, $\psi_x(x,x')$ is proportional to $\delta(x-x')$. Let us make the
+constant of proportionality unity, so that
+\begin{equation}
+\psi_x(x,x') = \delta(x-x').
+\end{equation}
+Now, it is easily demonstrated that
+\begin{equation}
+\int_{-\infty}^{\infty} \delta(x-x')\,\delta(x-x'')\,dx = \delta(x'-x'').
+\end{equation}
+Hence, $\psi_x(x,x')$ satisfies the orthonormality condition
+\begin{equation}\label{e4.143}
+\int_{-\infty}^\infty \psi_x^\ast(x,x')\,\psi_x(x,x'')\,dx = \delta(x'-x'').
+\end{equation}
+This condition is analogous to the orthonormality condition (\ref{e3.125})
+satisfied by  square-integrable  eigenstates.
+Now, by definition, $\delta(x-x')$ satisfies
+\begin{equation}
+\int_{-\infty}^\infty f(x)\,\delta(x-x')\,dx = f(x'),
+\end{equation}
+where $f(x)$ is a general function. We can thus write
+\begin{equation}\label{e4.144}
+\psi(x) = \int_{-\infty}^\infty c(x')\,\psi_x(x,x')\,dx',
+\end{equation}
+where $c(x')=\psi(x')$, or
+\begin{equation}\label{e4.145}
+c(x') = \int_{-\infty}^\infty \psi_x^\ast(x,x')\,\psi(x)\,dx.
+\end{equation}
+In other words, we can expand a general wavefunction $\psi(x)$
+as a linear combination of the eigenstates, $\psi_x(x,x')$, of the
+displacement operator. Equations (\ref{e4.144}) and (\ref{e4.145})
+are analogous to Eqs.~(\ref{e3.123}) and (\ref{e3.126}), respectively, 
+for square-integrable eigenstates. Finally, by analogy with the
+results in Sect.~\ref{seig}, the probability density of a measurement of $x$
+yielding the value $x'$ is $|c(x')|^{\,2}$, which is equivalent to the
+standard result
+$|\psi(x')|^{\,2}$. Moreover, these probabilities are properly normalized
+provided $\psi(x)$ is properly normalized [{\em cf.}, Eq.~(\ref{e3.127})]: {\em i.e.},
+\begin{equation}
+\int_{-\infty}^\infty |c(x')|^{\,2}\,dx'= \int_{-\infty}^\infty |\psi(x')|^{\,2}\,dx' =1.
+\end{equation}
+Finally, if a measurement of $x$ yields the value $x'$ then the system
+is left in the corresponding displacement eigenstate, $\psi_x(x,x')$, immediately after the measurement: {\em i.e.}, the wavefunction
+collapses to a ``spike-function'', $\delta(x-x')$, as discussed in Sect.~\ref{scoll}.
+
+Now, an eigenstate of the momentum operator $p\equiv -{\rm i}\,\hbar\,\partial/\partial x$ corresponding to the eigenvalue $p'$ satisfies
+\begin{equation}
+-{\rm i}\,\hbar\,\frac{\partial \psi_p(x,p')}{\partial x} = p'\,\psi_p(x,p').
+\end{equation}
+It is evident that
+\begin{equation}\label{e4.148}
+\psi_p(x,p') \propto {\rm e}^{+{\rm i}\,p'\,x/\hbar}.
+\end{equation}
+Now, we require $\psi_p(x,p')$ to satisfy an analogous orthonormality condition
+to Eq.~(\ref{e4.143}): {\em i.e.}, 
+\begin{equation}
+\int_{-\infty}^\infty \psi_p^\ast(x,p')\,\psi_p(x,p'')\,dx = \delta(p'-p'').
+\end{equation}
+Thus, it follows from Eq.~(\ref{e3.72}) that the constant of proportionality
+in Eq.~(\ref{e4.148}) should be $(2\pi\,\hbar)^{-1/2}$: {\em i.e.}, 
+\begin{equation}\label{e4.148a}
+\psi_p(x,p') =\frac{ {\rm e}^{+{\rm i}\,p'\,x/\hbar}}{(2\pi\,\hbar)^{1/2}}.
+\end{equation}
+Furthermore, according to Eqs.~(\ref{e3.64}) and (\ref{e3.65}),
+\begin{equation}\label{e4.152}
+\psi(x) = \int_{-\infty}^\infty c(p')\,\psi_p(x,p')\,dp',
+\end{equation}
+where $c(p') = \phi(p')$ [see Eq.~(\ref{e3.65})], or
+\begin{equation}\label{e4.153}
+c(p') = \int_{-\infty}^\infty \psi_p^\ast(x,p')\,\psi(x)\,dx.
+\end{equation}
+In other words, we can expand a general wavefunction $\psi(x)$
+as a linear combination of the eigenstates, $\psi_p(x,p')$, of the
+momentum operator. Equations (\ref{e4.152}) and (\ref{e4.153})
+are again analogous to Eqs.~(\ref{e3.123}) and (\ref{e3.126}), respectively, 
+for square-integrable eigenstates. Likewise, the probability density
+of a measurement of $p$ yielding the result $p'$ is $|c(p')|^{\,2}$, which is equivalent to the standard result $|\phi(p')|^{\,2}$. The probabilities are also properly
+normalized provided $\psi(x)$ is properly normalized [{\em cf.}, Eq.~(\ref{e3.83})]:
+{\em i.e.}, 
+\begin{equation}
+\int_{-\infty}^\infty |c(p')|^{\,2}\,dp'= \int_{-\infty}^{\infty}
+|\phi(p')|^{\,2}\,dp' = \int_{-\infty}^\infty |\psi(x')|^{\,2}\,dx' =1.
+\end{equation}
+Finally, if a mesurement of $p$ yields the value $p'$ then the system
+is left in the corresponding momentum eigenstate, $\psi_p(x,p')$, immediately after the measurement.
+
+\section{Stationary States}\label{sstat}
+An eigenstate of the energy operator $H\equiv {\rm i}\,\hbar\,\partial/\partial t$
+corresponding to the eigenvalue $E_i$ satisfies
+\begin{equation}
+{\rm i}\,\hbar\,\frac{\partial \psi_E(x,t,E_i)}{\partial t} = E_i\,\psi_E(x,t,E_i).
+\end{equation}
+It is evident that this equation can be solved by writing
+\begin{equation}
+\psi_E(x,t,E_i) = \psi_i(x)\,{\rm e}^{-{\rm i}\,E_i\,t/\hbar},
+\end{equation}
+where $\psi_i(x)$ is a properly normalized stationary ({\em i.e.}, non-time-varying) wavefunction. The wavefunction $\psi_E(x,t,E_i)$  corresponds to a so-called  {\em stationary state}, since
+the probability density $|\psi_E|^{\,2}$ is non-time-varying. Note that
+a stationary state is associated with a {\em unique}\/ value for the energy.
+Substitution of the above expression into Schr\"{o}dinger's equation (\ref{e3.1}) yields the equation satisfied by the
+stationary wavefunction:
+\begin{equation}\label{etimeii}
+\frac{\hbar^2}{2\,m}\,\frac{d^2 \psi_i}{d x^2} = 
+\left[V(x)-E_i\right]\psi_i.
+\end{equation}
+This is known as the {\em time-independent Schr\"{o}dinger equation}. 
+More generally, this equation takes the form
+\begin{equation}\label{etimei}
+H\,\psi_i = E_i\,\psi_i,
+\end{equation}
+where $H$ is assumed not to be an explicit function of $t$.
+Of course, the $\psi_i$ satisfy the usual orthonormality condition:
+\begin{equation}\label{e4.157}
+\int_{-\infty}^\infty \psi_i^\ast\,\psi_j\,dx = \delta_{ij}.
+\end{equation}
+Moreover, we can express a general wavefunction as a linear combination
+of energy eigenstates:
+\begin{equation}\label{e4.158}
+\psi(x,t) = \sum_i c_i\,\psi_i(x)\,{\rm e}^{-{\rm i}\,E_i\,t/\hbar},
+\end{equation}
+where
+\begin{equation}
+c_i = \int_{-\infty}^{\infty} \psi_i^\ast(x)\,\psi(x,0)\,dx.
+\end{equation}
+Here, $|c_i|^{\,2}$ is the probability that a measurement of the energy will
+yield the eigenvalue $E_i$. Furthermore, immediately after such a measurement, the system is left in the corresponding energy eigenstate.
+The generalization of the above results to the case where $H$ has continuous
+eigenvalues is straightforward.
+
+If a dynamical variable is represented by some Hermitian operator $A$ which
+commutes with $H$ (so that it has simultaneous eigenstates with $H$), and
+contains no specific time dependence, then it is evident from Eqs. (\ref{e4.157}) and (\ref{e4.158}) that the expectation value and
+variance of $A$ are {\em time independent}. In this sense, the dynamical
+variable in question is a constant of the motion.
+
+\subsubsection*{Exercises}
+{\small
+\begin{enumerate}
+\item Monochromatic light with a wavelength of $6000\,\AA$ passes
+through a fast shutter that opens for $10^{-9}$ sec. What is the
+subsequent spread in wavelengths of the no longer monochromatic light?
+
+
+\item Calculate $\langle x\rangle$, $\langle x^2\rangle$, and $\sigma_x$, as
+well as $\langle p\rangle$, $\langle p^2\rangle$, and $\sigma_p$,
+for the normalized wavefunction
+$$
+\psi(x) = \sqrt{\frac{2\,a^3}{\pi}}\,\frac{1}{x^2+a^2}.
+$$
+Use these to find $\sigma_x\,\sigma_p$. Note that $\int_{-\infty}^{\infty} dx/(x^2+a^2) = \pi/a$.
+
+
+\item Classically, if a particle is not observed then the probability of finding it
+in a one-dimensional box of length $L$, which extends from $x=0$ to $x=L$, is a constant $1/L$ per unit length.
+Show that the classical expectation value of $x$ is $L/2$, the expectation value of 
+$x^2$ is $L^2/3$, and the standard deviation of $x$ is $L/\sqrt{12}$. 
+
+
+\item Demonstrate that if a particle in a one-dimensional stationary state is bound then the
+expectation value of its momentum must be zero. 
+
+\item Suppose that $V(x)$ is complex. Obtain an expression for $\partial P(x,t)/\partial t$ and $d/dt \int P(x,t)\,dx$ from Schr\"{o}dinger's equation.  What does this tell us about a complex $V(x)$? 
+
+\item $\psi_1(x)$ and $\psi_2(x)$ are normalized eigenfunctions corresponding to
+the same eigenvalue. If
+$$
+\int_{-\infty}^\infty \psi_1^\ast\,\psi_2\,dx = c,
+$$
+where $c$ is real, find normalized linear combinations of $\psi_1$ and
+$\psi_2$ which are orthogonal to (a) $\psi_1$, (b) $\psi_1+\psi_2$.
+
+
+\item Demonstrate that $p=-{\rm i}\,\hbar\,\partial/\partial x$ is an Hermitian
+operator. Find the Hermitian conjugate of $a = x + {\rm i}\,p$.
+ 
+\item An  operator $A$, corresponding to a physical quantity $\alpha$, has
+two normalized eigenfunctions $\psi_1(x)$ and $\psi_2(x)$, with eigenvalues
+$a_1$ and $a_2$. An operator $B$, corresponding to another physical
+quantity $\beta$, has normalized eigenfunctions $\phi_1(x)$ and $\phi_2(x)$,
+with eigenvalues $b_1$ and $b_2$. The eigenfunctions are
+related via
+\begin{eqnarray}
+\psi_1 &=& (2\,\phi_1+3\,\phi_2) \left/ \sqrt{13},\right.\nonumber\\[0.5ex]
+\psi_2 &=& (3\,\phi_1-2\,\phi_2) \left/ \sqrt{13}.\right.\nonumber
+\end{eqnarray}
+$\alpha$ is measured and the value $a_1$ is obtained. If $\beta$ is then measured and then $\alpha$ again, show that the probability of obtaining
+$a_1$ a second time is $97/169$.
+
+\item Demonstrate that an  operator which commutes with the
+Hamiltonian, and contains no explicit time dependence, has an expectation
+value which is constant in time.
+
+\item For a certain system, the operator corresponding to the physical
+quantity $A$ does not commute with the Hamiltonian. It has
+eigenvalues $a_1$ and $a_2$, corresponding to properly normalized eigenfunctions
+\begin{eqnarray}
+\phi_1 &=& (u_1+u_2)\left/\sqrt{2},\right.\nonumber\\[0.5ex]
+\phi_2 &=& (u_1-u_2)\left/\sqrt{2},\right.\nonumber
+\end{eqnarray}
+where $u_1$ and $u_2$ are properly normalized eigenfunctions of the
+Hamiltonian with eigenvalues $E_1$ and $E_2$. If the system is in the
+state $\psi=\phi_1$ at time $t=0$, show that the expectation value of $A$
+at time $t$ is
+$$
+\langle A\rangle = \left(\frac{a_1+a_2}{2}\right) + \left(\frac{a_1-a_2}{2}\right)\cos\left(\frac{[E_1-E_2]\,t}{\hbar}\right).
+$$
+
+\end{enumerate}
+}

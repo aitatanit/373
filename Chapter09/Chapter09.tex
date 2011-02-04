@@ -1,0 +1,640 @@
+\chapter{Central Potentials}\label{scent}
+\section{Introduction}
+In this chapter, we shall investigate the interaction of a non-relativistic
+particle of mass $m$ and energy $E$ with various so-called {\em central potentials},
+$V(r)$, where $r=\sqrt{x^2+y^2+z^2}$ is the radial distance from the origin.
+It is, of course, most convenient
+ to work in spherical polar coordinates---$r$, $\theta$,  $\phi$---during such an investigation (see Sect.~\ref{s8.3}). Thus, we shall be searching for stationary
+wavefunctions, $\psi(r,\theta,\phi)$, which satisfy the time-independent
+Schr\"{o}dinger equation (see Sect.~\ref{sstat})
+\begin{equation}\label{e9.1}
+H\,\psi = E\,\psi,
+\end{equation}
+where the  Hamiltonian takes the standard non-relativistic  form
+\begin{equation}\label{e9.2}
+H = \frac{p^2}{2\,m} + V(r).
+\end{equation}
+
+\section{Derivation of Radial Equation}\label{srad}
+Now, we have seen that the Cartesian components of the momentum, ${\bf p}$,
+can be represented as (see Sect.~\ref{s7.2})
+\begin{equation}
+p_i = -{\rm i}\,\hbar\,\frac{\partial}{\partial x_i}
+\end{equation}
+for $i=1,2,3$, where $x_1\equiv x$, $x_2\equiv y$, $x_3\equiv z$, and ${\bf r}\equiv (x_1, x_2, x_3)$. Likewise, it is easily demonstrated,
+from the above expressions, and the basic definitions of the spherical polar coordinates
+[see Eqs.~(\ref{e8.21})--(\ref{e8zz})],  that the radial component
+of the momentum can be represented as
+\begin{equation}\label{e9.4}
+p_r \equiv \frac{{\bf p}\cdot{\bf r}}{r} = -{\rm i}\,\hbar\,\frac{\partial}{\partial r}.
+\end{equation}
+
+Recall that the angular momentum vector, ${\bf L}$, is defined [see Eq.~(\ref{e8.0})]
+\begin{equation}\label{e9.5}
+{\bf L} = {\bf r}\times {\bf p}.
+\end{equation}
+This expression can also be written in the following form:
+\begin{equation}\label{e9.6}
+L_i = \epsilon_{ijk}\,x_j\,p_k.
+\end{equation}
+Here, the $\epsilon_{ijk}$ (where $i,j,k$ all run from 1 to 3) are 
+elements of the so-called {\em totally anti-symmetric tensor}. The values of
+the various
+elements of this tensor are determined via a simple rule:
+\begin{equation}\label{e9.7}
+\epsilon_{ijk} = \left\{
+\begin{array}{rcl}
+0 &\mbox{\hspace{1cm}}&\mbox{if $i,j,k$ not all different}\\[0.5ex]
+1 &&\mbox{if $i,j,k$ are cyclic permutation of $1,2,3$}\\[0.5ex]
+-1 &&\mbox{if $i,j,k$ are anti-cyclic permutation of $1,2,3$}
+\end{array}\right. .
+\end{equation}
+Thus, $\epsilon_{123}=\epsilon_{231}=1$, $\epsilon_{321}=\epsilon_{132}=-1$, and $\epsilon_{112}=\epsilon_{131}=0$, {\em etc.}
+Equation~(\ref{e9.6}) also makes use of the {\em Einstein summation
+convention}, according to which repeated indices are summed (from
+1 to 3). For instance, $a_i\,b_i\equiv a_1\,b_1+a_2\,b_2+a_3\,b_3$. 
+Making use of this convention, as well as Eq.~(\ref{e9.7}), it
+is easily seen that Eqs.~(\ref{e9.5}) and (\ref{e9.6}) are indeed equivalent.
+
+Let us calculate the value of $L^2$ using Eq.~(\ref{e9.6}). According
+to our new notation, $L^2$ is the same as $L_i\,L_i$. Thus, we
+obtain
+\begin{equation}\label{e9.8}
+L^2 = \epsilon_{ijk}\,x_j\,p_k\,\epsilon_{ilm}\,x_l\,p_m = 
+\epsilon_{ijk}\,\epsilon_{ilm}\,x_j\,p_k\,x_l\,p_m.
+\end{equation}
+Note that we are able to shift the position of $\epsilon_{ilm}$ because its
+elements are just numbers, and, therefore, commute with all of
+the $x_i$ and the $p_i$. Now, it is easily demonstrated that
+\begin{equation}\label{e9.9}
+\epsilon_{ijk}\,\epsilon_{ilm}\equiv \delta_{jl}\,\delta_{km}-\delta_{jm}\,\delta_{kl}.
+\end{equation}
+Here $\delta_{ij}$ is the usual {\em Kronecker delta}, whose elements
+are determined according to the rule
+\begin{equation}
+\delta_{ij} = \left\{
+\begin{array}{rcl}
+1 &\mbox{\hspace{1cm}}&\mbox{if $i$ and $j$ the same}\\[0.5ex]
+0 &&\mbox{if $i$ and $j$ different}\\[0.5ex]
+\end{array}\right. .
+\end{equation}
+It follows from Eqs.~(\ref{e9.8}) and (\ref{e9.9}) that
+\begin{equation}\label{e9.11}
+L^2 = x_i\,p_j\,x_i\,p_j - x_i\,p_j\,x_j\,p_i.
+\end{equation}
+Here, we have made use of the fairly self-evident result that $\delta_{ij}\,a_i\,b_j
+\equiv a_i\,b_i$. We have also been careful to preserve the order of
+the various terms on the right-hand side of the above expression, since the $x_i$ and the $p_i$ do not necessarily
+commute with one another.
+
+We now need to rearrange the order of the terms on the right-hand
+side of Eq.~(\ref{e9.11}). We can achieve this by making use of
+the fundamental commutation relation for the $x_i$ and the $p_i$ [see Eq.~(\ref{commxp})]:
+\begin{equation}\label{e9.12}
+[x_i,p_j] = {\rm i}\,\hbar\,\delta_{ij}.
+\end{equation}
+Thus,
+\begin{eqnarray}
+L^2 &=& x_i\left(x_i\,p_j - [x_i,p_j]\right) p_j
+- x_i\,p_j\,\left(p_i\,x_j+[x_j,p_i]\right)\nonumber\\[0.5ex]
+&=&x_i\,x_i\,p_j\,p_j - {\rm i}\,\hbar\,\delta_{ij}\,x_i\,p_j
+-x_i\,p_j\,p_i\,x_j - {\rm i}\,\hbar\,\delta_{ij}\,x_i\,p_j\nonumber\\[0.5ex]
+&=&x_i\,x_i\,p_j\,p_j -x_i\,p_i\,p_j\,x_j - 2\,{\rm i}\,\hbar\,x_i\,p_i.
+\end{eqnarray}
+Here, we have made use of the fact that $p_j\,p_i=p_i\,p_j$, since
+the $p_i$ commute with one another [see Eq.~(\ref{commpp})].
+Next,
+\begin{equation}
+L^2 = x_i\,x_i\,p_j\,p_j - x_i\,p_i\left(x_j\,p_j - [x_j,p_j]\right) - 2\,{\rm i}\,\hbar\,x_i\,p_i.
+\end{equation}
+Now, according to (\ref{e9.12}),
+\begin{equation}
+[x_j,p_j]\equiv [x_1,p_1]+[x_2,p_2]+[x_3,p_3] = 3\,{\rm i}\,\hbar.
+\end{equation}
+Hence, we obtain
+\begin{equation}
+L^2 = x_i\,x_i\,p_j\,p_j - x_i\,p_i\,x_j\,p_j + {\rm i}\,\hbar\,x_i\,p_i.
+\end{equation}
+When expressed in more conventional vector notation, the above expression 
+becomes
+\begin{equation}\label{e9.17}
+L^2 = r^2\,p^2 - ({\bf r}\cdot{\bf p})^2 + {\rm i}\,\hbar\,{\bf r}\cdot{\bf p}.
+\end{equation}
+Note that if we had attempted to derive the above expression
+directly from Eq. (\ref{e9.5}), using standard vector identities, then we would have missed
+the final term on the right-hand side. This term originates from the lack
+of commutation between the $x_i$ and $p_i$ operators in quantum mechanics. Of course, standard
+vector analysis assumes that all terms commute with one another.
+
+Equation (\ref{e9.17}) can be rearranged to give
+\begin{equation}
+p^2 = r^{-2}\left[({\bf r}\cdot{\bf p})^2- {\rm i}\,\hbar\,{\bf r}\cdot{\bf p}+L^2\right].
+\end{equation}
+Now,
+\begin{equation}
+{\bf r}\cdot{\bf p} = r\,p_r = -{\rm i}\,\hbar\,r\,\frac{\partial}{\partial r},
+\end{equation}
+where use has been made of Eq.~(\ref{e9.4}). Hence, we obtain
+\begin{equation}
+p^2 = -\hbar^2\left[\frac{1}{r}\frac{\partial}{\partial r}\left(r\,\frac{\partial}{\partial r}\right)
++ \frac{1}{r}\frac{\partial}{\partial r}- \frac{L^2}{\hbar^2\,r^2}\right].
+\end{equation}
+Finally, the above equation can be combined with Eq.~(\ref{e9.2})
+to give the following expression for the Hamiltonian:
+\begin{equation}\label{e9.21}
+H = -\frac{\hbar^2}{2\,m}\left(\frac{\partial^2}{\partial r^2}
++ \frac{2}{r}\frac{\partial}{\partial r}- \frac{L^2}{\hbar^2\,r^2}\right)
++V(r).
+\end{equation}
+
+Let us now consider whether the above Hamiltonian commutes with
+the angular momentum operators $L_z$ and $L^2$. Recall, from 
+Sect.~\ref{s8.3}, that $L_z$ and $L^2$ are represented as differential
+operators which depend solely on the angular spherical polar
+coordinates, $\theta$ and $\phi$, and do not contain the radial
+polar coordinate, $r$. Thus, any function of $r$, or any differential
+operator involving $r$ (but not $\theta$ and $\phi$), will automatically
+commute with $L^2$ and $L_z$. Moreover, $L^2$ commutes
+both with itself, and with $L_z$ (see Sect.~\ref{s8.2}). It
+is, therefore, clear that the above Hamiltonian  commutes with
+both $L_z$ and $L^2$. 
+
+Now, according to Sect.~\ref{smeas}, if two operators commute with
+one another then they possess simultaneous eigenstates. We thus conclude
+that {\em for a particle moving in a central potential the eigenstates of the
+Hamiltonian are simultaneous eigenstates of $L_z$ and $L^2$}.
+Now, we have already found the simultaneous eigenstates of
+$L_z$ and $L^2$---they are the spherical harmonics, $Y_{l,m}(\theta,\phi)$,
+discussed in Sect.~\ref{sharm}. It follows that the spherical
+harmonics are also eigenstates of the Hamiltonian. This observation leads
+us to try the following separable form for the stationary
+wavefunction:
+\begin{equation}\label{e9.22}
+\psi(r,\theta,\phi) = R(r)\,Y_{l,m}(\theta,\phi).
+\end{equation}
+It immediately follows, from (\ref{e8.29}) and (\ref{e8.30}), and the
+fact that $L_z$ and $L^2$ both obviously commute with $R(r)$, that
+\begin{eqnarray}
+L_z\,\psi &=& m\,\hbar\,\psi,\\[0.5ex]
+L^2\,\psi&=& l\,(l+1)\,\hbar^2\,\psi.\label{e9.24}
+\end{eqnarray}
+Recall that the quantum numbers $m$ and $l$ are restricted to take certain
+integer values, as explained in Sect.~\ref{slsq}.
+
+Finally, making use of Eqs.~(\ref{e9.1}), (\ref{e9.21}), and (\ref{e9.24}),
+we obtain the following differential equation which determines the radial variation  of the stationary wavefunction:
+\begin{equation}
+-\frac{\hbar^2}{2\,m}\left(\frac{d^2}{d r^2}
++ \frac{2}{r}\frac{d}{d r}- \frac{l\,(l+1)}{r^2}\right)R_{n,l}
++V\,R_{n,l} = E\,R_{n,l}.
+\end{equation}
+Here, we have labeled the function $R(r)$ by two quantum numbers,
+$n$ and $l$. The second  quantum number, $l$, is, of course, related to the eigenvalue of $L^2$. [Note that
+the azimuthal quantum number, $m$, does not appear in the above equation, 
+and, therefore, does not influence either the function $R(r)$ or the energy, $E$.] As we shall see, the first quantum number, $n$, is determined by the constraint that the radial wavefunction be square-integrable.
+
+\section{Infinite Spherical Potential Well}\label{rwell}
+Consider a particle of mass $m$ and energy $E>0$ moving in the
+following simple central potential:
+\begin{equation}
+V(r) = \left\{\begin{array}{lcl}
+0&\mbox{\hspace{1cm}}&\mbox{for $0\leq r\leq a$}\\[0.5ex]
+\infty&&\mbox{otherwise}
+\end{array}\right..
+\end{equation}
+Clearly, the wavefunction $\psi$ is only non-zero in the region $0\leq r \leq a$.
+Within this region, it is subject to the physical boundary conditions that it be well behaved ({\em i.e.},
+square-integrable) at $r=0$, and that it be zero at $r=a$ (see Sect.~\ref{s5.2}).
+Writing the wavefunction in the standard form
+\begin{equation}\label{e9.27}
+\psi(r,\theta,\phi) = R_{n,l}(r)\,Y_{l,m}(\theta,\phi),
+\end{equation}
+we deduce (see previous section) that the radial function $R_{n,l}(r)$ satisfies
+\begin{equation}
+\frac{d^2 R_{n,l}}{dr^2} + \frac{2}{r}\frac{dR_{n,l}}{dr} + \left(k^2
+- \frac{l\,(l+1)}{r^2}\right) R_{n,l} = 0
+\end{equation}
+in the region $0\leq r \leq a$, where
+\begin{equation}\label{e9.29}
+k^2 = \frac{2\,m\,E}{\hbar^2}.
+\end{equation}
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter09/fig01.eps}}
+\caption{\em The first few spherical Bessel functions. The solid, short-dashed, long-dashed, and dot-dashed curves show $j_0(z)$, $j_1(z)$, $y_0(z)$, and $y_1(z)$, respectively.}\label{sph}   
+\end{figure}
+
+Defining the scaled radial variable $z=k\,r$, the above differential
+equation can be transformed into the standard form
+\begin{equation}
+\frac{d^2 R_{n,l}}{dz^2} + \frac{2}{z}\frac{dR_{n,l}}{dz} + \left[1
+- \frac{l\,(l+1)}{z^2}\right] R_{n,l} = 0.
+\end{equation}
+The two independent solutions to this well-known second-order differential  equation are called {\em spherical Bessel 
+functions},\footnote{M.~Abramowitz,
+and I.A.~Stegun, {\em Handbook of Mathematical Functions} (Dover,
+New York NY, 1965), Sect.~10.1.}
+and can be written
+\begin{eqnarray}
+j_l(z)&=& z^l\left(-\frac{1}{z}\frac{d}{dz}\right)^l\left(\frac{\sin z}{z}\right),\\[0.5ex]
+y_l(z)&=& -z^l\left(-\frac{1}{z}\frac{d}{dz}\right)^l\left(\frac{\cos z}{z}\right).
+\end{eqnarray}
+Thus, the first few spherical Bessel functions take the form
+\begin{eqnarray}
+j_0(z) &=& \frac{\sin z}{z},\\[0.5ex]
+j_1(z)&=&\frac{\sin z}{z^2} - \frac{\cos z}{z},\\[0.5ex]
+y_0(z) &=& - \frac{\cos z}{z},\\[0.5ex]
+y_1(z) &=& - \frac{\cos z}{z^2} - \frac{\sin z}{z}.
+\end{eqnarray}
+These functions are also plotted in Fig.~\ref{sph}. It can be seen that
+the spherical Bessel functions are oscillatory in nature, passing through
+zero many times. However, the $y_l(z)$ functions are badly
+behaved  ({\em i.e.}, they are not square-integrable) at $z=0$, whereas
+the $j_l(z)$ functions are well behaved everywhere. It follows from
+our boundary condition at $r=0$ that the $y_l(z)$ are unphysical, and that the radial wavefunction $R_{n,l}(r)$
+is thus proportional to $j_l(k\,r)$ only. In order to satisfy the boundary
+condition at $r=a$ [{\em i.e.}, $R_{n,l}(a)=0$], the value of $k$ must
+be chosen such that $z=k\,a$ corresponds to one of the zeros of $j_l(z)$.
+Let us denote the $n$th zero of $j_l(z)$ as $z_{n,l}$. It follows that
+\begin{equation}
+k\,a = z_{n,l},
+\end{equation}
+for $n=1,2,3,\ldots$. 
+Hence, from (\ref{e9.29}), the allowed energy levels are
+\begin{equation}\label{e9.39}
+E_{n,l} = z_{n,l}^{\,2}\,\frac{\hbar^2}{2\,m\,a^2}.
+\end{equation}
+The first few values of $z_{n,l}$ are listed in Table~\ref{tsph}. It
+can be seen that $z_{n,l}$ is an increasing function of both $n$ and $l$.
+
+\begin{table}\centering
+\begin{tabular}{c|rrrr}\hline
+&$n=1$&$n=2$&$n=3$&$n=4$\\\hline
+$l=0$ & 3.142 & 6.283 & 9.425& 12.566\\[0.5ex]
+$l=1$ & 4.493 & 7.725 & 10.904 & 14.066\\[0.5ex]
+$l=2$ & 5.763 & 9.095 & 12.323& 15.515\\[0.5ex]
+$l=3$ & 6.988 & 10.417 & 13.698 & 16.924\\[0.5ex]
+$l=4$ & 8.183 & 11.705 & 15.040 & 18.301
+\end{tabular}
+\caption{\em The first few zeros of the spherical Bessel function $j_l(z)$.}\label{tsph}
+\end{table}
+
+We are now in a position to interpret the three quantum numbers---$n$, $l$,
+and $m$---which determine the form of the wavefunction
+specified in Eq.~(\ref{e9.27}). As is clear from Sect.~\ref{sorb}, the
+azimuthal quantum number $m$ determines the number of nodes in the
+wavefunction as the azimuthal angle $\phi$ varies between 0 and $2\pi$. Thus, $m=0$
+corresponds to no nodes, $m=1$ to a single node, $m=2$ to two nodes,
+{\em etc}. Likewise, the polar quantum number $l$ determines the
+number of nodes in the wavefunction as the polar angle $\theta$ varies between 0 and $\pi$.
+Again, $l=0$ corresponds to no nodes, $l=1$ to a single node,
+{\em etc}. Finally, the radial quantum number $n$ determines
+the number of nodes in the wavefunction as the radial
+variable $r$ varies between 0 and $a$ (not counting any
+nodes at $r=0$ or $r=a$). Thus, $n=1$ corresponds to no nodes,
+$n=2$ to a single node, $n=3$ to two nodes, {\em etc}. Note that,
+for the
+case of an infinite potential well,
+the only restrictions on the values that the various quantum numbers can take  are that $n$ must be a positive integer, $l$ must be
+a non-negative integer, and $m$ must be an integer lying between $-l$ and $l$. Note, further,
+that the allowed energy levels (\ref{e9.39}) only depend on the
+values of the quantum numbers $n$ and $l$. Finally, it is
+easily demonstrated that the spherical Bessel functions are mutually
+orthogonal: {\em i.e.}, 
+\begin{equation}
+\int_0^a j_l(z_{n,l}\,r/a)\,j_{l}(z_{n',l}\,r/a) \,r^2\,dr = 0
+\end{equation}
+when $n\neq n'$. 
+Given that the $Y_{l,m}(\theta,\phi)$ are mutually orthogonal (see Sect.~\ref{sorb}), this ensures that wavefunctions (\ref{e9.27}) corresponding to distinct
+sets of values of the quantum numbers $n$, $l$, and $m$ are mutually
+orthogonal.
+
+\section{Hydrogen Atom}\label{s10.4}
+A hydrogen atom consists of an electron, of charge $-e$ and mass $m_e$,
+and a proton, of charge $+e$ and mass $m_p$,  moving in the Coulomb
+potential
+\begin{equation}
+V({\bf r}) = - \frac{e^2}{4\pi\,\epsilon_0\,|{\bf r}|},
+\end{equation}
+where ${\bf r}$ is the position vector of the electron with respect to the
+proton. Now, according to the analysis in Sect.~\ref{stwo}, this two-body
+problem can be converted into an equivalent one-body problem. In the
+latter problem, a particle of mass
+\begin{equation}
+\mu = \frac{m_e\,m_p}{m_e+m_p}
+\end{equation}
+moves in the central potential
+\begin{equation}
+V(r) = - \frac{e^2}{4\pi\,\epsilon_0\,r}.
+\end{equation}
+Note, however, that since $m_e/m_p\simeq 1/1836$ the difference
+between $m_e$ and $\mu$ is very small. Hence, in the following,
+we shall write neglect this difference entirely.
+
+Writing the wavefunction in the usual form, 
+\begin{equation}
+\psi(r,\theta,\phi) = R_{n,l}(r)\,Y_{l,m}(\theta,\phi),
+\end{equation}
+it follows from Sect.~\ref{srad} that the radial function $R_{n,l}(r)$ satisfies
+\begin{equation}
+-\frac{\hbar^2}{2\,m_e}\left(\frac{d^2}{dr^2} + \frac{2}{r}\frac{d}{dr} -\frac{l\,(l+1)}{r^2}\right) R_{n,l} -\left(\frac{e^2}{4\pi\,\epsilon_0\,r}+E
+\right) R_{n,l}= 0.
+\end{equation}
+Let $r = a\,z$, with
+\begin{equation}\label{e9.45}
+a = \sqrt{\frac{\hbar^2}{2\,m_e\,(-E)}}=\sqrt{\frac{E_0}{E}}\,a_0,
+\end{equation}
+where $E_0$ and $a_0$ are defined in Eqs.~(\ref{e9.56}) and (\ref{e9.57}),
+respectively.
+Here, it is assumed that $E<0$, since we are only interested in bound-states of the hydrogen atom. The above differential equation transforms
+to
+\begin{equation}
+\left(\frac{d^2}{dz^2} + \frac{2}{z}\frac{d}{dz}-\frac{l\,(l+1)}{z^2}+ \frac{\zeta}{z}-1\right)
+R_{n,l} = 0,
+\end{equation}
+where
+\begin{equation}\label{e9.47}
+\zeta = \frac{2\,m_e\,a\,e^2}{4\pi\,\epsilon_0\,\hbar^2}=2\,\sqrt{\frac{E_0}{E}}.
+\end{equation}
+Suppose that $R_{n,l}(r) = Z(r/a)\,\exp(-r/a)/(r/a)$. It follows that
+\begin{equation}\label{e9.48}
+\left(\frac{d^2}{dz^2}  -2\,\frac{d}{dz} - \frac{l\,(l+1)}{z^2} + \frac{\zeta}{z}\right) Z = 0.
+\end{equation}
+We now need to solve the above differential equation in the domain $z=0$ to $z= \infty$, subject to the constraint that $R_{n,l}(r)$ be square-integrable.
+
+Let us look for a power-law solution of the form
+\begin{equation}\label{e9.49}
+Z(z) = \sum_k c_k\,z^k.
+\end{equation}
+Substituting this solution into Eq.~(\ref{e9.48}), we obtain
+\begin{equation}
+\sum_k c_k\left\{k\,(k-1)\,z^{k-2} - 2\,k\,z^{k-1} - l\,(l+1)\,z^{k-2}
++ \zeta\,z^{k-1}\right\} = 0.
+\end{equation}
+Equating the coefficients of $z^{k-2}$ gives the recursion relation
+\begin{equation}\label{e9.51}
+c_k\,\left[k\,(k-1)-l\,(l+1)\right] = c_{k-1}\,\left[2\,(k-1) - \zeta\right].
+\end{equation}
+Now, the power series  (\ref{e9.49}) must terminate at small $k$, at
+some positive value of $k$, otherwise  $Z(z)$ 
+behaves unphysically as $z\rightarrow 0$ [{\em i.e.}, it yields an $R_{n,l}(r)$ that is not square-integrable
+as $r\rightarrow  0$]. From the above recursion relation, this is only possible if $[k_{min}\,(k_{min}-1)-l\,(l+1)]=0$, where the first term in the series is $c_{k_{min}}\,z^{k_{min}}$. There are two possibilities: $k_{min}=-l$
+or $k_{min}=l+1$. However, the former possibility predicts unphysical behaviour of
+$Z(z)$ at $z=0$. Thus, we conclude that $k_{min}=l+1$. 
+Note that, since $R_{n,l}(r)\simeq Z(r/a)/(r/a)\simeq (r/a)^l$ at small $r$, there is a finite
+probability of finding the electron at the nucleus for an $l=0$ state, whereas
+there is zero probability of finding the electron at the nucleus for
+an $l>0$ state [{\em i.e.}, $|\psi|^2=0$ at $r=0$, except when
+$l=0$].
+
+For large values of $z$, the ratio of successive coefficients in  the power series (\ref{e9.49})
+is
+\begin{equation}
+\frac{c_k}{c_{k-1}} = \frac{2}{k},
+\end{equation}
+according to Eq.~(\ref{e9.51}). This is the same as the ratio
+of successive coefficients in the power  series
+\begin{equation}
+\sum_k \frac{(2\,z)^k}{k!},
+\end{equation}
+which converges to $\exp(2\,z)$. We conclude that $Z(z)\rightarrow
+\exp(2\,z)$ as $z\rightarrow\infty$. It thus follows that
+$R_{n,l}(r)\sim Z(r/a)\,\exp(-r/a)/(r/a)\rightarrow \exp(r/a)/(r/a)$ as $r\rightarrow\infty$. This does not correspond to physically acceptable behaviour of the wavefunction, since $\int|\psi|^2\,dV$ must be finite.
+The only way in which we can avoid this unphysical behaviour is if the
+power series (\ref{e9.49}) {\em terminates}\/ at some maximum value of $k$. According to
+the recursion relation (\ref{e9.51}), this is only possible if
+\begin{equation}\label{e9.54}
+\frac{\zeta}{2} = n,
+\end{equation}
+where $n$ is an integer, and the last term in the series is $c_n\,z^n$. Since the
+first term in  the series is $c_{l+1}\,z^{l+1}$, it follows that $n$ must
+be greater than $l$, otherwise there are no terms in the series at all. 
+Finally, it is clear from Eqs.~(\ref{e9.45}),  (\ref{e9.47}), and (\ref{e9.54}) that
+\begin{equation}\label{e9.55}
+E = \frac{E_0}{n^2}
+\end{equation}
+and
+\begin{equation}
+a = n\,a_0,
+\end{equation}
+where
+\begin{equation}\label{e9.56}
+E_0 = -\frac{m_e\,e^4}{2\,(4\pi\,\epsilon_0)^2\,\hbar^2} = - \frac{e^2}{8\pi\,\epsilon_0\,a_0}
+= -13.6\,{\rm eV},
+\end{equation}
+and
+\begin{equation}\label{e9.57}
+a_0 = \frac{4\pi\,\epsilon_0\,\hbar^2}{m_e\,e^2} = 5.3\times 10^{-11}\,{\rm m}.
+\end{equation}
+Here, $E_0$ is the energy of so-called {\em ground-state}\/ (or lowest energy state) of the
+hydrogen atom, and the length $a_0$ is known as the {\em Bohr radius}. 
+Note that $|E_0|\sim \alpha^2\,m_e\,c^2$, where $\alpha = e^2/ (4\pi\,\epsilon_0\,\hbar\,c)\simeq 1/137$ is the dimensionless {\em fine-structure constant}. The fact that $|E_0|\ll m_e\,c^2$ is the ultimate justification for our non-relativistic treatment of the hydrogen atom.
+
+We conclude that the wavefunction of a hydrogen atom takes the form
+\begin{equation}\label{e9.59}
+\psi_{n,l,m}(r,\theta,\phi) = R_{n,l}(r)\,Y_{l,m}(\theta,\phi).
+\end{equation}
+Here, the $Y_{l,m}(\theta,\phi)$ are the spherical harmonics (see Sect~\ref{sharm}), and $R_{n,l}(z=r/a)$ is the solution of
+\begin{equation}
+\left(\frac{1}{z^2}\,\frac{d}{dz}\,z^2\,\frac{d}{dz}- \frac{l\,(l+1)}{z^2}
++ \frac{2\,n}{z}-1\right) R_{n,l} = 0
+\end{equation}
+which varies as $z^l$ at small $z$.
+Furthermore, the quantum numbers $n$, $l$, and $m$ can only take values
+which satisfy the inequality
+\begin{equation}\label{e9.61}
+|m| \leq l < n,
+\end{equation}
+where $n$ is a positive integer, $l$ a non-negative integer, and $m$ an integer.
+
+Now, we expect the stationary states of the hydrogen atom to be orthonormal: {\em i.e.},
+\begin{equation}
+\int \psi^\ast_{n',l',m'}\,\psi_{n,l,m}\,dV = \delta_{nn'}\,\delta_{ll'}\,\delta_{mm'},
+\end{equation}
+where $dV$ is a volume element, and the integral is over all space. Of
+course, $dV = r^2\,dr\,d{\mit\Omega}$, where $d{\mit\Omega}$ is an element
+of solid angle. Moreover, we already know that the spherical
+harmonics are orthonormal [see Eq.~(\ref{spho})]: {\em i.e.},
+\begin{equation}
+\oint Y_{l',m'}^{\,\ast}\,Y_{l,m}\,d\Omega = \delta_{ll'}\,\delta_{mm'}.
+\end{equation}
+It, thus, follows that the radial wavefunction satisfies the
+orthonormality constraint
+\begin{equation}
+\int_0^{\infty} R_{n',l}^\ast\,R_{n,l}\,r^2\,dr = \delta_{nn'}.
+\end{equation}
+The first few radial wavefunctions for the hydrogen atom are listed below:
+\begin{eqnarray}
+R_{1,0}(r)&=& \frac{2}{a_0^{\,3/2}}\,\exp\left(-\frac{r}{a_0}\right),\\[0.5ex]
+R_{2,0}(r) &=& \frac{2}{(2\,a_0)^{3/2}}\left(1-\frac{r}{2\,a_0}\right)
+\exp\left(-\frac{r}{2\,a_0}\right),\\[0.5ex]
+R_{2,1}(r)&=& \frac{1}{\sqrt{3}\,(2\,a_0)^{3/2}}\,\frac{r}{a_0}\,
+\exp\left(-\frac{r}{2\,a_0}\right),\\[0.5ex]
+R_{3,0}(r)&=& \frac{2}{(3\,a_0)^{3/2}}\left(1-
+\frac{2\,r}{3\,a_0} + \frac{2\,r^2}{27\,a_0^{\,2}}\right)\exp\left(-\frac{r}{3\,a_0}\right),\\[0.5ex]
+R_{3,1}(r) &=& \frac{4\,\sqrt{2}}{9\,(3\,a_0)^{3/2}}\,\frac{r}{a_0}
+\left(1-\frac{r}{6\,a_0}\right)\,\exp\left(-\frac{r}{3\,a_0}\right),\\[0.5ex]
+R_{3,2}(r)&=& \frac{2\,\sqrt{2}}{27\,\sqrt{5}\,(3\,a_0)^{3/2}}
+\left(\frac{r}{a_0}\right)^2 \exp\left(-\frac{r}{3\,a_0}\right).
+\end{eqnarray}
+These functions are illustrated in Figs.~\ref{coul1} and \ref{coul2}.
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter09/fig02.eps}}
+\caption{\em The $a_0\,r^2\,|R_{n,l}(r)|^{\,2}$ plotted as a functions of $r/a_0$. The solid, short-dashed, and long-dashed curves correspond to 
+$n,l=1,0$,  and $2,0$, and $2,1$, respectively.}\label{coul1}   
+\end{figure}
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter09/fig03.eps}}
+\caption{\em The $a_0\,r^2\,|R_{n,l}(r)|^{\,2}$ plotted as a functions of $r/a_0$. The solid, short-dashed, and long-dashed curves correspond to 
+$n,l=3,0$,  and $3,1$, and $3,2$, respectively.}\label{coul2}   
+\end{figure}
+
+Given the (properly normalized) hydrogen wavefunction (\ref{e9.59}),
+plus our interpretation of $|\psi|^2$ as a probability density,  we can calculate
+\begin{equation}
+\langle r^k\rangle = \int_0^\infty r^{2+k}\,|R_{n,l}(r)|^{\,2}\,dr,
+\end{equation}
+where the angle-brackets denote an expectation value.
+For instance, it can be demonstrated (after much tedious algebra) that
+\begin{eqnarray}
+\langle r^2\rangle &=& \frac{a_0^{\,2}\,n^2}{2}\,[5\,n^2+1-3\,l\,(l+1)],\label{e9.73}\\[0.5ex]
+\langle r\rangle &=& \frac{a_0}{2}\,[3\,n^2-l\,(l+1)],\\[0.5ex]
+\left\langle \frac{1}{r}\right\rangle &=& \frac{1}{n^2\,a_0},\label{e9.74}\\[0.5ex]
+\left\langle\frac{1}{r^2}\right\rangle &=& \frac{1}{(l+1/2)\,n^3\,a_0^{\,2}},\label{e9.75}\\[0.5ex]
+\left\langle\frac{1}{r^3}\right\rangle &=&\frac{1}{l\,(l+1/2)\,(l+1)\,n^3\,a_0^{\,3}}.\label{e9.75a}
+\end{eqnarray}
+
+According to Eq.~(\ref{e9.55}), the energy levels of the bound-states of a hydrogen atom
+only depend on the radial quantum number $n$. It turns out that this is a special
+property of a $1/r$ potential. For a general central potential, $V(r)$, the
+quantized energy levels of a bound-state depend on both $n$ and $l$ (see Sect.~\ref{rwell}).
+
+The fact that the energy levels of a hydrogen atom only depend on $n$,
+and not on $l$ and $m$, implies that the energy spectrum of a hydrogen
+atom is {\em highly degenerate}: {\em i.e.}, there are many different
+states which possess the same energy. According to the inequality
+(\ref{e9.61}) (and the fact that $n$, $l$, and $m$ are integers), for
+a given value of $l$, there are $2\,l+1$  different allowed values of $m$
+({\em i.e.}, $-l,-l+1, \cdots, l-1, l$). Likewise, for a given value of $n$,
+there are $n$ different allowed values of $l$ ({\em i.e.}, $0,1,\cdots, n-1$). Now,
+all states possessing  the same value of $n$ have the same energy ({\em i.e.}, they are degenerate). Hence, the total number of
+degenerate states corresponding to a given value of $n$ is
+\begin{equation}
+1 + 3 + 5 + \cdots +2\,(n-1)+1 = n^2.
+\end{equation}
+Thus, the ground-state ($n=1$) is not degenerate, the first excited
+state ($n=2$) is four-fold degenerate, the second excited state
+($n=3$) is nine-fold degenerate, {\em etc.}   [Actually, when we take
+into account the two spin states of an electron (see Sect.~\ref{sspin}),
+the degeneracy of the $n$th energy level becomes $2\,n^2$.]
+
+\section{Rydberg Formula}
+An electron in a given stationary state of a hydrogen atom, characterized
+by the quantum numbers $n$, $l$, and $m$, should, in principle,
+remain in that state indefinitely. In practice, if the state is slightly
+perturbed---{\em e.g.}, by interacting with a photon---then the electron can make a transition to another stationary
+state with different quantum numbers.% (see Sect.~13). 
+
+Suppose that an electron in a hydrogen atom
+makes a transition from an initial state whose radial quantum
+number is $n_i$ to a final state whose radial quantum number is $n_f$. 
+According to Eq.~(\ref{e9.55}), the energy of the electron
+will change by
+\begin{equation}
+{\mit\Delta} E = E_0\left(\frac{1}{n_f^{\,2}}-\frac{1}{n_i^{\,2}}\right).
+\end{equation}
+If ${\mit\Delta} E$ is negative then we would expect the electron
+to {\em emit}\/ a photon of frequency $\nu=- {\mit\Delta}E/h$ [see Eq.~(\ref{ee3.15})]. Likewise, if ${\mit\Delta} E$ is positive then the electron
+must {\em absorb}\/ a photon of energy $\nu={\mit\Delta}E/h$. 
+Given that $\lambda^{-1}=\nu/c$, the possible wavelengths of 
+ the photons emitted by a hydrogen atom as its electron makes
+transitions between different energy levels are 
+\begin{equation}\label{e9.77}
+\frac{1}{\lambda} = R\left(\frac{1}{n_f^{\,2}}-\frac{1}{n_i^{\,2}}\right),
+\end{equation}
+where
+\begin{equation}
+R = \frac{-E_0}{h\,c} =\frac{m_e\,e^4}{(4\pi)^3\,\epsilon_0^{\,2}\,\hbar^3\,c} = 1.097\times 10^7\,{\rm m^{-1}}.
+\end{equation}
+Here, it is assumed that $n_f<n_i$. Note that the emission spectrum
+of hydrogen is {\em quantized}: {\em i.e.}, a hydrogen atom
+can only emit photons with certain fixed set of  wavelengths. Likewise, a hydrogen
+atom can only absorb photons which have the same fixed set of wavelengths. 
+This set of  wavelengths constitutes the characteristic emission/absorption
+spectrum of the hydrogen atom, and can be observed as ``spectral lines'' using  a spectroscope.
+
+Equation~(\ref{e9.77}) is known as the {\em Rydberg formula}. Likewise,
+$R$ is called the {\em Rydberg constant}. The Rydberg formula
+was actually discovered empirically in the nineteenth century by spectroscopists, and was first explained theoretically by Bohr in 1913 using a primitive version of quantum mechanics. Transitions to the ground-state ($n_f=1$) give rise to spectral lines in the ultraviolet band---this set of
+lines is called the {\em Lyman series}. Transitions to the first excited
+state ($n_f=2$) give rise to spectral lines in the visible band---this
+set of lines is called the {\em Balmer series}. Transitions to the second excited
+state ($n_f=3$) give rise to spectral lines in the infrared band---this
+set of lines is called the {\em Paschen series}, and so on.
+
+\subsubsection*{Exercises}
+{\small
+\begin{enumerate}
+
+\item A particle of mass $m$ is placed in a {\em finite}\/ spherical
+well:
+$$
+V(r) = \left\{
+\begin{array}{lcl}
+-V_0&\mbox{\hspace{1cm}}&\mbox{for $r\leq a$}\\
+0&&\mbox{for $r>a$}
+\end{array}
+\right. ,
+$$
+with $V_0>0$ and $a>0$.
+Find the ground-state by solving the radial equation with $l=0$. 
+Show that there is no ground-state if $V_0\,a^2< \pi^2\,\hbar^2/8\,m$.
+
+
+\item Consider a particle of mass $m$ in the three-dimensional harmonic oscillator potential
+$V(r)=(1/2)\,m\,\omega^2\,r^2$. Solve the problem by separation of
+variables in spherical polar coordinates, and, hence, determine the
+ energy eigenvalues of the system.  
+
+\item The normalized wavefunction for the ground-state of a hydrogen-like
+atom (neutral hydrogen, ${\rm He}^+$, ${\rm Li}^{++}$, {\em etc}.) with
+nuclear charge $Z\,e$ has the form
+$$
+\psi = A\,\exp(-\beta\,r),
+$$
+where $A$ and $\beta$ are constants, and $r$ is the distance between the
+nucleus and the electron. Show the following:
+\begin{enumerate}
+\item $A^2=\beta^3/\pi$.
+\item $\beta = Z/a_0$, where $a_0=(\hbar^2/m_e)\,(4\pi\,\epsilon_0/e^2)$.
+\item The energy is $E=-Z^2\,E_0$ where $E_0 = (m_e/2\,\hbar^2)\,(e^2/4\pi\,\epsilon_0)^2$.
+\item The expectation values of the potential and kinetic energies are
+$2\,E$ and $-E$, respectively.
+\item The expectation value of $r$ is $(3/2)\,(a_0/Z)$.
+\item The most probable value of $r$ is $a_0/Z$.
+\end{enumerate}
+
+
+\item An atom of tritium is in its ground-state.  Suddenly the nucleus
+decays into a helium nucleus, via the emission of a fast electron
+which leaves the atom without perturbing the extranuclear electron,
+Find the probability that the resulting ${\rm He}^+$ ion will be
+left in an $n=1$, $l=0$ state. Find the probability that it will
+be left  in a $n=2$, $l=0$ state. What is the probability that the
+ion will be left in an $l>0$ state? 
+
+\item Calculate the wavelengths of the photons emitted from the  $n=2$, $l=1$ to $n=1$, $l=0$
+transition in hydrogen, deuterium, and positronium. 
+
+\item To conserve linear momentum, an atom emitting a photon must
+recoil, which means that not all of the energy made available in the
+downward jump goes to the photon. Find a hydrogen atom's recoil
+energy when it emits a photon in an $n=2$ to $n=1$ transition. What
+fraction of the transition energy is the recoil energy? 
+\end{enumerate}
+}

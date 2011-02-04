@@ -1,0 +1,480 @@
+ \chapter{Three-Dimensional Quantum Mechanics}\label{sthree}
+ \section{Introduction}
+In this chapter, we shall extend our previous one-dimensional formulation
+of non-relativistic quantum mechanics to produce a fully three-dimensional theory.
+
+\section{Fundamental Concepts}\label{s7.2}
+We have  seen that in one dimension the instantaneous state
+of a single non-relativistic particle is fully specified by a complex wavefunction,
+$\psi(x,t)$. The probability
+of finding the particle at time $t$ between $x$ and $x+dx$ is
+$P(x,t)\,dx$, where
+\begin{equation}
+P(x,t) = |\psi(x,t)|^2.
+\end{equation}
+Moreover, the wavefunction is
+normalized such that
+\begin{equation}
+\int_{-\infty}^\infty |\psi(x,t)|^2\,dx = 1
+\end{equation}
+at all times.
+
+In three dimensions, the instantaneous state of a single particle is also
+fully specified by a complex wavefunction, $\psi(x,y,z,t)$.
+By analogy with the one-dimensional case, the probability of finding
+the particle at time $t$ between $x$ and $x+dx$, between $y$ and $y+dx$, and between
+$z$ and $z+dz$, is $P(x,y,z,t)\,dx\,dy\,dz$, where
+\begin{equation}
+P(x,y,z,t) = |\psi(x,y,z,t)|^2.
+\end{equation}
+As usual, this interpretation of the wavefunction only makes sense if the
+wavefunction is normalized such that
+\begin{equation}
+\int_{-\infty}^\infty\int_{-\infty}^\infty\int_{-\infty}^\infty |\psi(x,y,z,t)|^2\,dx\,dy\,dz = 1.
+\end{equation}
+This normalization constraint ensures that the probability of finding the particle anywhere is space is always unity.
+
+In one dimension, we can write the probability conservation equation (see
+Sect.~\ref{s4.5})
+\begin{equation}\label{e6.5}
+\frac{\partial|\psi|^2}{\partial t} + \frac{\partial j}{\partial x} = 0,
+\end{equation}
+where
+\begin{equation}
+j  = \frac{{\rm i}\,\hbar}{2\,m}\left(\psi\,\frac{\partial\psi^\ast}{\partial x} - \psi^\ast\,\frac{\partial\psi}{\partial x}\right)
+\end{equation}
+is the flux of probability along the $x$-axis. Integrating 
+Eq.~(\ref{e6.5}) over all space, and making use of the fact that $\psi\rightarrow 0$
+as $|x|\rightarrow\infty$ if $\psi$ is to be square-integrable, we obtain
+\begin{equation}
+\frac{d}{dt}\int_{-\infty}^{\infty} |\psi(x,t)|^2\,dx = 0.
+\end{equation}
+In other words, if the wavefunction  is initially normalized then it stays
+normalized as time progresses. This is a necessary criterion for the viability of our basic
+interpretation of $|\psi|^2$ as a probability density.
+
+In three dimensions, by analogy with the one dimensional case, the probability conservation equation becomes
+\begin{equation}\label{e6.8}
+\frac{\partial|\psi|^2}{\partial t} + \frac{\partial j_x}{\partial x} + \frac{\partial j_y}{\partial y} + \frac{\partial j_z}{\partial z}= 0.
+\end{equation}
+Here,
+\begin{equation}
+j_{x} =\frac{{\rm i}\,\hbar}{2\,m}\left(\psi\,\frac{\partial\psi^\ast}{\partial x} - \psi^\ast\,\frac{\partial\psi}{\partial x}\right)
+\end{equation}
+is the flux of probability along the $x$-axis, and
+\begin{equation}
+j_{y} =\frac{{\rm i}\,\hbar}{2\,m}\left(\psi\,\frac{\partial\psi^\ast}{\partial y} - \psi^\ast\,\frac{\partial\psi}{\partial y}\right)
+\end{equation}
+ the flux of probability along the $y$-axis, {\em etc}.
+Integrating 
+Eq.~(\ref{e6.8}) over all space, and making use of the fact that $\psi\rightarrow 0$
+as $|{\bf r}|\rightarrow\infty$ if $\psi$ is to be square-integrable, we obtain
+\begin{equation}
+\frac{d}{dt}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty} |\psi(x,y,z,t)|^2\,dx\,dy\,dz = 0.
+\end{equation}
+Thus, the normalization of the wavefunction is again preserved as time
+progresses, as must be the case if $|\psi|^2$ is to be interpreted as a
+probability density.
+
+In one dimension, position is represented by the algebraic operator $x$,
+whereas momentum is represented by the differential operator
+$-{\rm i}\,\hbar\,\partial/\partial x$ (see Sect.~\ref{s4.6}). By analogy, in
+three dimensions, the Cartesian coordinates $x$, $y$, and $z$
+are represented by the algebraic operators $x$, $y$, and $z$,
+respectively, whereas the three Cartesian components of momentum,
+$p_x$, $p_y$, and $p_z$, have the following representations:
+\begin{eqnarray}\label{e6.12}
+p_x &\equiv & -{\rm i}\,\hbar\,\frac{\partial}{\partial x},\\[0.5ex]
+p_y &\equiv & -{\rm i}\,\hbar\,\frac{\partial}{\partial y},\\[0.5ex]
+p_z &\equiv & -{\rm i}\,\hbar\,\frac{\partial}{\partial z}.\label{e6.14}
+\end{eqnarray}
+
+Let $x_1 =x$, $x_2=y$,  $x_3=z$, and $p_1=p_x$, {\em etc.}
+Since the $x_i$ are {\em independent}\/ variables ({\em i.e.},
+$\partial x_i/\partial x_j=\delta_{ij}$), we conclude that the
+various position and momentum operators satisfy the following commutation
+relations:
+\begin{eqnarray}\label{commxx}
+[x_i,x_j] &=& 0,\\[0.5ex]
+[p_i,p_j] &=& 0,\label{commpp}\\[0.5ex]
+[x_i,p_j] &=& {\rm i}\,\hbar\,\delta_{ij}.\label{commxp}
+\end{eqnarray}
+Now, we know, from Sect.~\ref{smeas}, that two dynamical variables
+can only be (exactly) measured {\em simultaneously}\/ if the operators which represent
+them in quantum mechanics {\em commute}\/ with one another. Thus,
+it is clear, from the above commutation relations, that the only restriction
+on measurement in a system consisting of a single particle moving in
+three dimensions is that it is impossible to
+simultaneously measure a given position coordinate and the corresponding
+component of momentum. Note, however, that it is perfectly possible to
+simultaneously measure two different positions coordinates, or two
+different components of the momentum. The commutation
+relations (\ref{commxx})--(\ref{commxp}) again illustrate the
+point that  quantum mechanical operators corresponding to different degrees of freedom of a
+dynamical system (in this case, motion in different directions) tend to commute
+with one another (see Sect.~\ref{sfuncon}).
+
+In one dimension, the time evolution of the wavefunction is given
+by [see Eq.~(\ref{etimed})]
+\begin{equation}\label{e6.15}
+{\rm i}\,\hbar\,\frac{\partial\psi}{\partial t} = H\,\psi,
+\end{equation}
+where 
+$H$  is the  Hamiltonian. The same equation
+governs the time evolution of the wavefunction in three dimensions.
+
+Now, in one dimension, the Hamiltonian of a non-relativistic particle
+of mass $m$ takes the form
+\begin{equation}
+H = \frac{p_x^{\,2}}{2\,m} + V(x,t),
+\end{equation}
+where $V(x)$ is the potential energy. In three dimensions, this expression
+generalizes to
+\begin{equation}
+H = \frac{p_x^{\,2}+ p_y^{\,2}+p_z^{\,2}}{2\,m} + V(x,y,z,t).
+\end{equation}
+Hence, making use of Eqs.~(\ref{e6.12})--(\ref{e6.14}) and (\ref{e6.15}), the three-dimensional version of the time-dependent Schr\"{o}ndiger equation
+becomes [see Eq.~(\ref{e3.1})]
+\begin{equation}\label{esh3d}
+{\rm i}\,\hbar\,\frac{\partial\psi}{\partial t} = - \frac{\hbar^2}{2\,m}\,
+\nabla^2\psi + V\,\psi.
+\end{equation}
+Here, the differential operator
+\begin{equation}
+\nabla^2 \equiv \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial
+y^2} + \frac{\partial^2}{\partial z^2}
+\end{equation}
+is known as the {\em Laplacian}. Incidentally, the probability conservation equation 
+(\ref{e6.8}) is easily derivable from Eq.~(\ref{esh3d}).
+An eigenstate of the Hamiltonian corresponding
+to the eigenvalue $E$ satisfies
+\begin{equation}
+H\,\psi = E\,\psi.
+\end{equation}
+It follows from Eq.~(\ref{e6.15}) that (see Sect.~\ref{sstat})
+\begin{equation}
+\psi(x,y,z,t) = \psi(x,y,z)\,{\rm e}^{-{\rm i}\,E\,t/\hbar},
+\end{equation}
+where the stationary wavefunction $\psi(x,y,z)$ satisfies the
+three-dimensional version of the time-independent Schr\"{o}ndiger equation
+[see Eq.~(\ref{etimeii})]:
+\begin{equation}
+\nabla^2\psi = \frac{2\,m}{\hbar^2}\,(V-E)\,\psi,
+\end{equation}
+where $V$ is assumed not to depend explicitly on $t$.
+
+\section{Particle in a Box}
+Consider a particle of mass $m$ trapped inside a cubic box of dimension $a$ (see Sect.~\ref{s5.2}). The particle's stationary wavefunction, $\psi(x,y,z)$, satisfies
+\begin{equation}\label{e6.21}
+\left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}\right)\psi = -\frac{2\,m}{\hbar^2}\,E\,\psi,
+\end{equation}
+where $E$ is the particle energy. The wavefunction satisfies the boundary
+condition that it must be zero at the edges of the box.
+
+Let us search for a separable solution to the above equation of the
+form
+\begin{equation}\label{e6.22}
+\psi(x,y,z) = X(x)\,Y(y)\,Z(z).
+\end{equation}
+The factors of the wavefunction satisfy the boundary conditions
+$X(0)=X(a)=0$, $Y(0)=Y(a)=0$, and $Z(0)=Z(a)= 0$.
+Substituting (\ref{e6.22}) into Eq.~(\ref{e6.21}), and rearranging, we
+obtain
+\begin{equation}\label{e7.28}
+\frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z} = -\frac{2\,m}{\hbar^2}\,E,
+\end{equation}
+where $'$ denotes a derivative with respect to argument. It is evident that
+the only way in which the above equation can be satisfied at all points
+within the box is if
+\begin{eqnarray}
+\frac{X''}{X} &=& - k_x^{\,2},\\[0.5ex]
+\frac{Y''}{Y} &=& - k_y^{\,2},\\[0.5ex]
+\frac{Z''}{Z} &=& - k_z^{\,2},\label{e7.31}
+\end{eqnarray}
+where $k_x^{\,2}$, $k_y^{\,2}$, and $k_z^{\,2}$ are {\em spatial constants}. Note that the right-hand
+sides of the above equations must contain  negative, rather than positive,
+spatial constants, because it would not otherwise be possible to satisfy the
+boundary conditions. The solutions to the above equations which are properly
+normalized, and satisfy the boundary conditions, are [see Eq.~(\ref{e5.11})]
+\begin{eqnarray}
+X(x) &=& \sqrt{\frac{2}{a}}\sin (k_x\,x),\\[0.5ex]
+Y(y) &=& \sqrt{\frac{2}{a}}\sin (k_y\,y),\\[0.5ex]
+Z(z) &=& \sqrt{\frac{2}{a}}\sin (k_z\,z),
+\end{eqnarray}
+where
+\begin{eqnarray}
+k_x &=& \frac{l_x\,\pi}{a},\\[0.5ex]
+k_y &=& \frac{l_y\,\pi}{a},\\[0.5ex]
+k_z &=& \frac{l_z\,\pi}{a}.
+\end{eqnarray}
+Here, $l_x$, $l_y$, and $l_z$ are {\em positive integers}.
+Thus, from Eqs.~(\ref{e7.28})--(\ref{e7.31}), the energy is written [see Eq.~(\ref{eenergy})]
+\begin{equation}\label{e7.38}
+E = \frac{l^2\,\pi^2\,\hbar^2}{2\,m\,a^2}.
+\end{equation}
+where
+\begin{equation}\label{e7.39}
+l^2 = l_x^{\,2} + l_y^{\,2}+ l_z^{\,2}.
+\end{equation}
+
+\section{Degenerate Electron Gases}
+Consider $N$ electrons trapped in a cubic box of dimension $a$. Let us
+treat the electrons as essentially {\em non-interacting}\/ particles. According to Sect.~\ref{snon}, 
+the total energy of a system consisting of many non-interacting particles is simply the sum of the single-particle energies of the individual
+particles. Furthermore, electrons are subject to
+the {\em Pauli exclusion principle}\/ (see Sect.~\ref{siden}), since
+they are indistinguishable fermions. The exclusion principle
+states that no two electrons in our system can occupy the same single-particle
+energy level. Now, from the previous section, the single-particle
+energy levels for a particle in a box are characterized by the three quantum numbers
+$l_x$, $l_y$, and $l_z$. Thus, we conclude that no two electrons in
+our system can have the same set of values of $l_x$, $l_y$, and $l_z$. It
+turns out that this is not quite true, because electrons possess an intrinsic
+angular momentum called {\em spin} (see Cha.~\ref{sspin}). The spin states of an electron are
+governed by an additional quantum number, which can take one of two different
+values. Hence, when spin is taken into account, we conclude that
+a maximum of {\em two}\/ electrons (with different spin quantum numbers) can occupy
+a single-particle energy level corresponding to a particular set of values of $l_x$, $l_y$,
+and $l_z$. Note, from Eqs.~(\ref{e7.38}) and (\ref{e7.39}), that the associated particle energy is
+proportional to $l^2 = l_x^{\,2} + l_y^{\,2}+ l_z^{\,2}$.
+
+Suppose that our electrons are {\em cold}: {\em i.e.}, they have comparatively
+little thermal energy. In this case, we would expect them
+to fill the lowest single-particle energy levels available to them. We can imagine  the single-particle energy levels as existing in a sort of three-dimensional quantum number space whose Cartesian coordinates are
+$l_x$, $l_y$, and $l_z$. Thus, the energy levels are uniformly
+distributed in this space on a cubic lattice. Moreover, the distance between
+nearest neighbour energy levels is unity. This implies that the
+number of energy levels per unit volume is also unity. Finally, the energy of a given energy
+level
+is proportional to its distance, $l^2 = l_x^{\,2} + l_y^{\,2}+ l_z^{\,2}$,
+from the origin.
+
+Since we expect cold electrons to occupy the lowest  energy levels
+available to them, but only two electrons can occupy a given energy
+level, it follows that if the number of electrons, $N$, is very large then
+the filled energy levels will be approximately distributed in a {\em sphere}\/ centered
+on the origin of quantum number space. The number of energy levels contained in a sphere
+of radius $l$ is approximately equal to the volume of the sphere---since
+the number of energy levels per unit volume is unity. It turns out that this
+is not quite correct, because we have forgotten that the quantum numbers
+$l_x$, $l_y$, and $l_z$ can only take {\em positive}\/ values.
+Hence, the filled energy levels actually only occupy one {\em octant}\/ of a sphere.
+The radius $l_F$ of the octant of filled energy levels in quantum number space can be calculated
+by equating the number of energy levels it contains to the number of electrons,
+$N$.
+Thus, we can write
+\begin{equation}
+N = 2\times\frac{1}{8}\times \frac{4\,\pi}{3}\,l_F^{\,3}.
+\end{equation}
+Here, the factor 2 is to take into account the two spin states of an electron,
+and the factor $1/8$ is to take account of the fact that $l_x$, $l_y$, and $l_z$
+can only take positive values.
+Thus,
+\begin{equation}
+l_F = \left(\frac{3\,N}{\pi}\right)^{1/3}.
+\end{equation}
+According to Eq.~(\ref{e7.38}), the energy of the most energetic
+electrons---which is known as the {\em Fermi energy}---is given by
+\begin{equation}\label{e7.42}
+E_F = \frac{l_F^{\,2}\,\pi^2\,\hbar^2}{2\,m_e\,a^2}=\frac{\pi^2\,\hbar^2}{2\,m\,a^2}\left(\frac{3\,N}{\pi}\right)^{2/3},
+\end{equation}
+where $m_e$ is the electron mass.
+This can also be written as
+\begin{equation}\label{e7.43}
+E_F = \frac{\pi^2\,\hbar^2}{2\,m_e}\left(\frac{3\,n}{\pi}\right)^{2/3},
+\end{equation}
+where $n=N/a^3$ is the number of electrons per unit volume (in real space). Note
+that the Fermi energy only depends on the {\em number density}\/
+of the confined electrons. 
+
+The mean energy of the electrons is given by
+\begin{equation}
+\bar{E} = E_F\left.\int_0^{l_F}l^2\,4\pi\,l^2\,dl\right/\frac{4}{3}\,\pi\,l_F^{\,5}=
+\frac{3}{5}\,E_F,
+\end{equation}
+since $E\propto l^2$, and the energy levels are uniformly
+distributed in quantum number space inside an octant of radius $l_F$. Now, according to classical physics, the mean
+thermal energy of the electrons is $(3/2)\,k_B\,T$, where $T$ is the
+electron temperature, and $k_B$  the
+Boltzmann constant. Thus, if $k_B\,T\ll E_F$ then our original assumption
+that the electrons are cold is valid. Note that, in this case, the
+electron energy is {\em much larger}\/ than that predicted by classical
+physics---electrons in this state are termed {\em degenerate}. On the
+other hand, if $k_B\,T\gg E_F$ then the electrons are hot, and are essentially
+governed by classical physics---electrons in this state are termed {\em non-degenerate}.
+
+The total energy of a degenerate electron gas is
+\begin{equation}
+E_{total} = N\,\bar{E} = \frac{3}{5}\,N\,E_F.
+\end{equation}
+Hence, the gas pressure takes the form
+\begin{equation}\label{e7.46}
+P = -\frac{\partial E_{total}}{\partial V} = \frac{2}{5}\,n\,E_F,
+\end{equation}
+since $E_F\propto a^{-2}=V^{-2/3}$ [see Eq.~(\ref{e7.42})].
+Now, the pressure predicted by classical physics is $P= n\,k_B\,T$. 
+Thus, a degenerate electron gas has a {\em much higher}\/ pressure than
+that which would be predicted by classical physics. This is an entirely
+quantum mechanical effect, and is due to the fact that identical fermions
+cannot get significantly closer together than a de Broglie wavelength
+without violating the Pauli exclusion principle. Note that, according to
+Eq.~(\ref{e7.43}), the mean spacing between degenerate electrons is
+\begin{equation}
+d\sim n^{-1/3}\sim \frac{h}{\sqrt{m_e\,E}}\sim \frac{h}{p}\sim \lambda,
+\end{equation}
+where $\lambda$ is the de~Broglie wavelength. Thus, an electron gas
+is non-degener\-ate when the mean spacing between the electrons is much
+greater than the de~Broglie wavelength, and becomes degenerate as the
+mean spacing approaches the de Broglie wavelength.
+
+In turns out that the conduction ({\em i.e.}, free) electrons inside metals are
+highly degenerate (since the number of electrons per unit volume
+is very large, and $E_F\propto n^{2/3}$). Indeed, most metals are hard to compress
+as a direct consequence of the high degeneracy pressure of their conduction
+electrons. To be more exact, resistance to compression is usually measured
+in terms of a quantity known as the {\em bulk modulus}, which is defined
+\begin{equation}
+B = - V\,\frac{\partial P}{\partial V}
+\end{equation}
+Now, for a fixed number of electrons, $P\propto V^{-5/3}$ [see Eqs.~(\ref{e7.42}) and (\ref{e7.46})]. Hence,
+\begin{equation}
+B = \frac{5}{3}\,P = \frac{\pi^3\,\hbar^2}{9\,m}\left(\frac{3\,n}{\pi}\right)^{5/3}.
+\end{equation}
+For example, the number density of free electrons in magnesium is
+$n\sim 8.6\times 10^{28}\,{\rm m}^{-3}$. This leads to the following estimate
+for the bulk modulus: $B\sim 6.4\times 10^{10}\,{\rm N}\,{\rm m}^{-2}$.
+The actual bulk modulus is $B= 4.5\times 10^{10}\,{\rm N}\,{\rm m}^{-2}$.
+
+\section{White-Dwarf Stars}
+A main-sequence hydrogen-burning star, such as the Sun, is maintained
+in equilibrium via the balance of the gravitational attraction tending
+to  make it collapse, and the thermal pressure tending to make it expand. 
+Of course, the
+thermal energy of the star is generated by nuclear reactions occurring deep inside
+its core. Eventually, however, the star will run out of burnable fuel, and, therefore,
+start to collapse, as it radiates away its remaining thermal energy.
+What is the ultimate fate of such a star?
+
+A burnt-out star is basically a gas of electrons and ions. As the
+star collapses, its density increases, and so the mean separation between its
+constituent particles decreases. Eventually, the mean separation becomes
+of order the de~Broglie wavelength of the electrons, and the electron
+gas becomes {\em degenerate}. Note, that the de~Broglie wavelength of the
+ions is  much smaller than that of the electrons, so the ion gas remains
+non-degenerate. Now, even at
+zero temperature, a degenerate electron gas exerts a substantial pressure,
+because the Pauli exclusion principle prevents the mean electron separation
+from becoming significantly  smaller than the typical 
+de~Broglie wavelength (see 
+previous section). Thus, it is possible for a burnt-out star to maintain
+itself against complete collapse under gravity via the {\em degeneracy pressure}
+of its constituent electrons. Such stars are termed {\em white-dwarfs}. 
+Let us investigate the physics of white-dwarfs in more detail.
+
+The total energy of a white-dwarf star can be written
+\begin{equation}
+{\cal E} = K + U,\label{e8wd1}
+\end{equation}
+where $K$ is the kinetic energy of the degenerate electrons (the kinetic
+energy of the ion is negligible), and $U$ is the gravitational potential
+energy. Let us assume, for the sake of simplicity, that the density of the
+star is {\em uniform}. In this case, the gravitational potential
+energy takes the form
+\begin{equation}
+U = -\frac{3}{5}\frac{G\,M^2}{R},\label{e8wd2}
+\end{equation}
+where $G$ is the gravitational constant, $M$ is the stellar mass, and $R$ is
+the stellar radius.
+
+From the previous subsection, the kinetic energy of a degenerate electron gas is simply
+\begin{equation}\label{e8wd4}
+K = N\,\bar{E} = \frac{3}{5}\,N\,E_F = \frac{3}{5}\,N\,\frac{\pi^2\,\hbar^2}{2\,m_e}\left(\frac{3\,N}{\pi\,V}\right)^{2/3},
+\end{equation}
+where $N$ is the number of electrons, $V$ the volume of the star, and $m_e$
+the electron mass.
+
+The interior of a white-dwarf star is composed of atoms like
+$C^{12}$ and $O^{16}$ which contain equal numbers of protons, neutrons, and
+electrons. Thus,
+\begin{equation}
+M = 2\,N\,m_p,\label{e8wd6}
+\end{equation}
+where $m_p$ is the proton mass. 
+
+Equations (\ref{e8wd1})--(\ref{e8wd6}) can be combined to give
+\begin{equation}\label{e7.52}
+{\cal E} = \frac{A}{R^2} - \frac{B}{R},
+\end{equation}
+where
+\begin{eqnarray}
+A &=& \frac{3}{20}\left(\frac{9\pi}{8}\right)^{2/3}\frac{\hbar^2}{m_e}
+\left(\frac{M}{m_p}\right)^{5/3},\\[0.5ex]
+B&=& \frac{3}{5}\,G\,M^2.
+\end{eqnarray}
+The equilibrium radius of the star, $R_\ast$, is that which
+{\em minimizes} the total energy ${\cal E}$. In fact,
+it is easily demonstrated that
+\begin{equation}
+R_\ast = \frac{2\,A}{B},
+\end{equation}
+which yields
+\begin{equation}
+R_\ast = \frac{(9\pi)^{2/3}}{8}\,\frac{\hbar^2}{G\,m_e\,m_p^{\,5/3}\,
+M^{1/3}}.
+\end{equation}
+The above formula can also be written
+\begin{equation}\label{e7.57}
+\frac{R_\ast}{R_\odot}= 0.010\left(\frac{M_\odot}{M}\right)^{1/3},\label{e8wd9}
+\end{equation}
+where $R_\odot= 7\times 10^5\,{\rm km}$ is the solar radius, and
+$M_\odot = 2\times 10^{30}\,{\rm kg}$  the solar mass. It follows that
+the radius of a typical solar mass white-dwarf is about 7000\,km: 
+{\em i.e.}, about the same as the radius of the Earth. The first
+white-dwarf to be discovered (in 1862) was the companion of Sirius. Nowadays,
+thousands of white-dwarfs have been observed, all with properties similar
+to those described above.
+
+
+Note from Eqs.~(\ref{e8wd4}), (\ref{e8wd6}), and (\ref{e7.57})
+that $\bar{E}\propto M^{4/3}$. In other words, the mean energy of the
+electrons inside a white dwarf {\em increases}\/ as the  stellar mass increases.
+Hence, for a sufficiently massive white dwarf, the electrons can become
+{\em relativistic}. It turns out that the degeneracy pressure for
+relativistic electrons only scales as $R^{-1}$, rather that $R^{-2}$, 
+and thus is unable to balance the gravitational pressure [which also
+scales as $R^{-1}$---see Eq.~(\ref{e7.52})]. It follows that electron
+ degeneracy pressure is only able to halt the collapse of a burnt-out star
+ provided that the stellar mass does not exceed some critical value, known
+ as the {\em Chandrasekhar limit},
+ which turns out to be about $1.4$ times the mass of the Sun. Stars
+ whose mass exceeds the Chandrasekhar limit inevitably collapse to
+ produce extremely compact objects, such as neutron stars (which are
+ held up by the degeneracy pressure of their constituent neutrons), 
+ or black holes.
+
+\subsubsection*{Exercises}
+{\small
+\begin{enumerate}
+\item Consider a particle of mass $m$ moving in a three-dimensional
+isotropic harmonic oscillator potential of force constant $k$. Solve the
+problem via the separation of variables, and obtain an expression for
+the allowed values of the total energy of the system (in a stationary state).
+\item Repeat the calculation of the Fermi energy of a gas of fermions by
+assuming that the fermions are massless, so that the energy-momentum relation
+is $E=p\,c$. 
+\item Calculate the density of states of an electron gas in a cubic
+box of volume $L^3$, bearing in  mind that there are two electrons
+per energy state. In other words, calculate the number of electron
+states in the interval $E$ to $E+dE$. This number can be written $dN = \rho(E)\,dE$,
+where $\rho$ is the density of states. 
+\item Repeat the above calculation for a two-dimensional electron
+gas in a square box of area $L^2$.
+\item Given that the number density of free electrons in copper is
+$8.5\times 10^{28}\,{\rm m}^{-3}$, calculate the Fermi
+energy in electron volts, and the velocity of an electron whose kinetic
+energy is equal to the Fermi energy. 
+\item Obtain an expression for the Fermi energy (in eV) of an electron in a white
+dwarf star as a function of the stellar mass (in solar masses). At what
+mass does the Fermi energy equal the rest mass energy?
+\end{enumerate}
+}

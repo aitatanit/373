@@ -1,0 +1,297 @@
+\chapter{Probability Theory}\label{s2}
+
+\section{Introduction}
+This  section is devoted to a brief, and
+fairly low level, introduction to a branch of mathematics known as
+{\em probability theory}.
+
+\section{What is Probability?}
+What is the {\em scientific}
+ definition of probability? Well, let us consider
+an observation made on a general system, $S$. This can result in 
+ any one of a number
+of different possible outcomes. Suppose that we wish to find the probability of
+some general outcome, $X$. In order to ascribe a probability, we have to
+consider the system as a member of a large set, ${\mit\Sigma}$,
+of similar systems.
+Mathematicians have a fancy name for a large 
+group of similar systems. They call such a group an {\em ensemble}, which is
+just the French for ``group.'' So, let us consider an ensemble, ${\mit\Sigma}$, of 
+similar systems, $S$. The probability of the outcome $X$ is defined as the
+ratio of the number of systems in the ensemble which exhibit this outcome
+to the total number of systems, in the limit that the latter
+number tends to
+infinity. We can write this symbolically as
+\begin{equation}
+P(X) = \lim_{{\mit\Omega}({\mit\Sigma})\rightarrow\infty}\frac{{\mit\Omega}(X)}{{\mit\Omega}({\mit\Sigma})},
+\end{equation}
+where ${\mit\Omega}({\mit\Sigma})$ is the total number of systems in the ensemble, 
+and ${\mit\Omega}(X)$  the
+number of systems exhibiting the outcome $X$. We can see that the probability
+$P(X)$ must be a number between 0 and 1. The probability is {\em zero} if no
+systems exhibit the outcome $X$, even when the number of systems goes to 
+infinity. This is just another way of saying that there is {\em no chance}
+ of the
+outcome $X$. The probability is {\em unity} if all systems exhibit the outcome
+$X$ in the limit as the number of systems goes to infinity. This is another
+way of saying that the outcome $X$ is {\em bound} to occur.
+
+\section{Combining Probabilities}
+Consider two {\em distinct} possible outcomes, $X$ and $Y$, 
+of an observation made on the system $S$, with probabilities of
+occurrence  $P(X)$ and
+$P(Y)$, respectively. Let us  determine the probability of
+obtaining the outcome $X$ {\em or} $Y$, which we shall denote $P(X\mid Y)$.
+From the basic definition of probability,
+\begin{equation}
+P(X\mid Y) =\lim_{{\mit\Omega}({\mit\Sigma})\rightarrow\infty}
+\frac{
+{\mit\Omega}(X \mid Y)}{{\mit\Omega}({\mit\Sigma})},
+\end{equation}
+where ${\mit\Omega}(X \mid Y)$ is the number of systems in the ensemble which exhibit
+either the outcome $X$ or the outcome $Y$. Now, 
+\begin{equation}
+{\mit\Omega}(X\mid Y) = {\mit\Omega}(X) + {\mit\Omega}(Y)
+\end{equation}
+if the outcomes $X$ and $Y$ are mutually exclusive (which  must be the case
+if they are two distinct outcomes). Thus,
+\begin{equation}
+P(X\mid Y) = P(X) + P(Y). \label{x2.4}
+\end{equation}
+So, the probability of the outcome $X$ {\em or} the outcome $Y$ is just the
+{\em  sum}
+of the individual probabilities of $X$ and $Y$. For instance, with  a 
+six-sided die the probability of throwing any particular number (one to six) is
+$1/6$, because all of the possible outcomes are considered to be equally
+likely. It follows, from what  has just been said, that the probability of
+throwing either a one or a two is simply  $1/6+1/6$, which equals $1/3$.
+
+Let us denote all of the $M$, say,  possible outcomes of an observation
+made on the system $S$ by
+$X_i$, where $i$ runs from $1$ to $M$. Let us
+determine  the probability of obtaining
+{\em any}\/ of these outcomes. This quantity is  unity,
+from the basic definition of probability, because each 
+of the systems in the ensemble must
+exhibit one of the possible outcomes. But, this quantity is also equal to
+the sum of the probabilities of all the individual outcomes, by (\ref{x2.4}),
+so we conclude that
+this sum is equal to unity: {\em i.e.}, 
+\begin{equation}
+\sum_{i=1}^{M} P(X_i) =1.\label{x2.5}
+\end{equation}
+The above expression is called the {\em normalization condition}, and must be satisfied by
+any complete set of probabilities. This condition is equivalent to the
+self-evident statement that an observation of a system must definitely
+result in one of its possible outcomes. 
+
+There is another way in which we can combine probabilities. Suppose 
+that we 
+make an observation on a system picked at random from the ensemble, and then
+pick a second system {\em completely independently} and
+make another observation. We  are assuming here that the first 
+observation does not influence the second observation in 
+any way. The fancy mathematical way of saying this is that the two
+observations are {\em statistically independent}.
+Let us determine the probability of obtaining
+the outcome $X$ in the first system {\em and}\/
+ the outcome $Y$ in the second system, which we shall denote
+$P(X\otimes Y)$.
+ In order to determine this probability, we have to form an ensemble of all
+of the possible pairs of systems which we could choose from the ensemble
+${{\mit\Sigma}}$. Let us denote this ensemble ${{\mit\Sigma}}\otimes {{\mit\Sigma}}$. 
+The number of pairs of systems in this new 
+ensemble is just the
+square of the number of systems in the original ensemble, so
+\begin{equation}
+{\mit\Omega}({{\mit\Sigma}}\otimes{{\mit\Sigma}}) = {\mit\Omega}({{\mit\Sigma}})\, {\mit\Omega}({{\mit\Sigma}}).
+\end{equation}
+Furthermore, the number of pairs of systems
+in the ensemble ${{\mit\Sigma}}\otimes {{\mit\Sigma}}$
+ which exhibit the
+outcome $X$ in the first system and $Y$ in the second system
+  is simply the
+product of the number of systems which exhibit the outcome $X$ 
+and the number of systems which exhibit the outcome $Y$ in the original
+ensemble, so that 
+\begin{equation}
+{\mit\Omega}(X\otimes Y) = {\mit\Omega}(X) \,{\mit\Omega}(Y).
+\end{equation}
+It follows from the basic definition of probability that
+\begin{equation}
+P(X\otimes Y) =\lim_{{\mit\Omega}({\mit\Sigma})\rightarrow\infty}
+  \frac{{\mit\Omega}(X\otimes Y)}{{\mit\Omega}({{\mit\Sigma}}\otimes {{\mit\Sigma}})}= P(X) \,P(Y).
+\end{equation}
+Thus, the probability of obtaining the outcomes $X$ {\em and}
+ $Y$ in two statistically independent
+observations is  the {\em product} of the individual probabilities of
+$X$ and $Y$. For instance, the probability of throwing a one and then a two
+on a six-sided die is $1/6 \times 1/6$, which equals $1/36$.
+
+\section{Mean, Variance, and Standard Deviation}
+What is meant by the mean or average of a quantity? Well, suppose that we
+wished to calculate  the average age of undergraduates at the University of Texas at Austin.
+We could go to the central administration building and find
+out how many eighteen year-olds, nineteen year-olds, {\em etc.}\ were currently
+enrolled. We would then write something like
+\begin{equation}
+{\rm Average~Age} \simeq \frac{N_{18}\times 18 + N_{19}\times 19 +N_{20}
+\times 20+\cdots}
+{N_{18}+N_{19}+N_{20}\cdots},
+\end{equation}
+where $N_{18}$ is the number of enrolled eighteen year-olds, {\em etc}.
+Suppose that we were to pick a student {\em at random} and then ask ``What is
+the probability of this student being eighteen?'' From what we have
+already discussed, this probability is defined
+\begin{equation}
+P_{18} \simeq
+\frac{N_{18}}{N_{\rm students}},
+\end{equation}
+where $N_{\rm students}$ is the total number of enrolled
+students. (Actually, this definition is only accurate in the limit that $N_{\rm students}$ is very
+large.)
+ We can now see that the average age takes
+the form
+\begin{equation}
+{\rm Average~Age} \simeq P_{18}\times 18 + P_{19}\times 19 + P_{20}\times 20
++\cdots.
+\end{equation}
+
+Well, there is nothing special about the age distribution of students
+at UT Austin. So, for a general variable $u$, which can take on any one of $M$
+possible values $u_1$, $u_2, \cdots, u_M$, with  corresponding probabilities
+$P(u_1)$, $P(u_2),\cdots, P(u_M)$,
+the mean or average value of $u$, which
+is denoted $\langle u\rangle$, is defined as
+\begin{equation}\label{dmean}
+\langle u\rangle \equiv \sum_{i=1}^{M} P(u_i)\, u_i.
+\end{equation}
+
+Suppose that $f(u)$ is some function of  $u$. Then, for each of
+ the $M$ possible values of $u$ there is a corresponding value 
+of $f(u)$ which occurs with the same probability.  Thus, $f(u_1)$ corresponds
+to $u_1$ and occurs with the probability $P(u_1)$, and so on. It follows from
+our previous definition  that the mean value of $f(u)$ is
+given by
+\begin{equation}
+\langle f(u)\rangle \equiv \sum_{i=1}^{M} P(u_i)\, f(u_i).
+\end{equation} 
+
+Suppose that $f(u)$ and $g(u)$ are two general functions of $u$. It follows that
+\begin{equation}
+\langle f(u)+g(u)\rangle = \sum_{i=1}^{M}P(u_i)\,[f(u_i)+g(u_i)]
+= \sum_{i=1}^{M}P(u_i)\,f(u_i)+ \sum_{i=1}^{M}P(u_i)\,g(u_i),
+\end{equation}
+so
+\begin{equation}
+\langle f(u)+g(u)\rangle= \langle f(u)\rangle+\langle g(u)\rangle.
+\end{equation}
+Finally, if $c$ is a general constant then 
+\begin{equation}
+\langle c \,f(u)\rangle = c\,\langle f(u)\rangle.
+\end{equation}
+
+We now know how to define the mean value of the general variable $u$. 
+But, how can we  characterize the scatter around the mean value?
+We could investigate the deviation of $u$ from its mean value $\langle u\rangle$,
+which is denoted
+\begin{equation}
+{\mit\Delta} u \equiv  u- \langle u\rangle.
+\end{equation}
+In fact, this is not a particularly interesting quantity, since its average
+is  zero:
+\begin{equation}
+\langle {\mit\Delta} u\rangle = \left\langle(u-\langle u\rangle)\right\rangle = \langle u\rangle-\langle u\rangle = 0.
+\end{equation}
+This is another way of saying that the average deviation from the
+mean vanishes. A more interesting quantity is the square of the 
+deviation. The average value of this quantity,
+\begin{equation}\label{dvar}
+\left\langle ({\mit\Delta} u)^2\right\rangle = \sum_{i=1}^M P(u_i)\,(u_i - \langle u\rangle)^2,
+\end{equation}
+is usually called the
+{\em variance}.
+The variance is  a  {\em positive} number,
+ unless there is no scatter at all in the
+distribution, so that all possible values of $u$ correspond to the
+mean value $\langle u\rangle$, in which case it is {\em zero}. 
+The following general relation
+is often useful
+\begin{equation}
+\left \langle (u-\langle u\rangle )^2\right\rangle = \left\langle(
+u^2-2\,u\,\langle u\rangle+\langle u\rangle^2)\right\rangle= \left\langle u^2\right\rangle-2\,\langle u\rangle\,\langle u\rangle+\langle u\rangle^2,
+\end{equation}
+giving
+\begin{equation}
+\left\langle({\mit\Delta} u)^2\right\rangle= \left\langle u^2\right\rangle-\langle u\rangle^2.
+\end{equation}
+The variance of $u$ 
+is proportional to the square of the scatter
+of $u$ around its mean value. A more useful  measure of the scatter
+ is given by the square root of the variance,
+\begin{equation}
+\sigma_u = \left[\,\left\langle({\mit\Delta} u)^2\right\rangle\,\right]^{1/2},
+\end{equation}
+which is usually called the {\em standard deviation} of $u$. The
+standard deviation is essentially the width of the range over which
+$u$ is distributed around its mean value $\langle u\rangle$.
+
+\section{Continuous Probability Distributions}
+Suppose, now, that the variable $u$ can take on a {\em continuous}\/ range of possible
+values. In general, we expect the probability that $u$ takes on a value
+in the range $u$ to $u+du$ to be {\em directly proportional}\/ to $du$,
+in the limit that $du\rightarrow 0$. In other words,
+\begin{equation}
+P(u\in u:u+du) = P(u)\,du,
+\end{equation}
+where $P(u)$ is known as the {\em probability density}. 
+The earlier results (\ref{x2.5}), (\ref{dmean}), and (\ref{dvar}) generalize in a
+straightforward manner to give
+\begin{eqnarray}
+1&=& \int_{-\infty}^\infty P(u)\,du,\\[0.5ex]
+\langle u\rangle &=& \int_{-\infty}^\infty P(u)\,u\,du,\\[0.5ex]
+\left\langle({\mit\Delta} u)^2\right\rangle &=& \int_{-\infty}^\infty P(u)\, (u-\langle u\rangle)^2\,du = \left\langle u^2\right\rangle-\langle u\rangle^2,
+\end{eqnarray}
+respectively.
+
+\subsubsection*{Exercises}
+{\small
+\begin{enumerate}
+\item In the ``game'' of Russian roulette, the player inserts a single cartridge into the drum
+of a revolver, leaving the other five chambers of the drum empty. The player then spins
+the drum, aims at his/her head, and pulls the trigger.
+\begin{enumerate}
+\item What is the probability of the player still being alive after playing the game $N$ times?
+\item What is the probability of the player surviving $N-1$ turns in this game, and then being
+shot the $N$th time he/she pulls the trigger?
+\item What is the mean number of times the player gets to pull the trigger?
+\end{enumerate}
+
+\item Suppose that the probability density for the speed $s$ of a car on a road
+is given by
+$$
+P(s) = A\,s\,\exp\left(-\frac{s}{s_0}\right),
+$$
+where $0\leq s\leq \infty$. Here, $A$ and $s_0$ are positive constants. More
+explicitly, $P(s)\,ds$ gives the probability that a car has a speed
+between $s$ and $s+ds$.
+\begin{enumerate}
+\item Determine $A$ in terms of $s_0$.
+\item What is the mean value of the speed?
+\item What is the ``most probable'' speed: {\em i.e.}, the speed
+for  which the probability density has a maximum? 
+\item What is the probability that a car has a speed more than three times as large
+as the mean value?
+\end{enumerate}
+
+\item An radioactive atom has a uniform decay probability  per unit time $w$:
+{\em i.e.}, the probability of decay in a time interval $dt$ is $w\,dt$. 
+Let $P(t)$ be the probability of the atom not having decayed at time $t$,
+given that it was created  at time $t=0$. Demonstrate that
+$$
+P(t) = {\rm e}^{-w\,t}.
+$$
+What is the mean lifetime of the atom?
+
+\end{enumerate}
+}

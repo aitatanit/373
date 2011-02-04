@@ -1,0 +1,541 @@
+\chapter{Spin Angular Momentum}\label{sspin}
+\section{Introduction}
+Broadly speaking, a classical extended object ({\em e.g.}, the Earth) can possess two types of
+angular momentum. The first type is due to the rotation of the
+object's center of mass about some  fixed external point ({\em e.g.}, the Sun)---this
+is generally known as {\em orbital angular momentum}. The
+second type is due to the object's internal motion---this is generally
+known as {\em spin angular momentum} (since, for a rigid object, the internal
+motion consists of spinning about an axis passing through the center of
+mass). By analogy,  quantum  particles can possess
+both orbital angular momentum due to their motion through space
+ (see
+Cha.~\ref{sorb}),
+and spin angular momentum due to their internal motion. 
+Actually, the analogy with classical extended objects is not entirely accurate, since electrons, for instance,
+are structureless point particles. In fact, in quantum mechanics, it is best to think of spin angular momentum
+ as  a kind of {\em intrinsic}\/ angular momentum possessed by particles. It turns out that each type of elementary particle
+has a characteristic spin angular momentum, just as each type
+has a characteristic charge and  mass.
+
+\section{Spin Operators}\label{s10.2}
+Since spin is a type of angular momentum, it is reasonable to suppose
+that it possesses similar properties to orbital angular momentum.
+Thus, by analogy with Sect.~\ref{s8.2}, we would expect to be able
+to define three operators---$S_x$, $S_y$, and $S_z$---which represent
+the three Cartesian components of spin angular momentum. Moreover,
+it is plausible that these operators
+possess
+analogous commutation relations to the three corresponding orbital
+angular momentum operators, $L_x$, $L_y$, and $L_z$ [see Eqs.~(\ref{e8.6})--(\ref{e8.8})]. In other words,
+\begin{eqnarray}\label{e10.1x}
+[S_x, S_y]&=& {\rm i}\,\hbar\,S_z,\\[0.5ex]
+[S_y, S_z]&=& {\rm i}\,\hbar\,S_x,\\[0.5ex]
+[S_z,S_x]&=& {\rm i}\,\hbar\,S_y.\label{e10.2x}
+\end{eqnarray}
+We can represent the magnitude squared of the spin angular momentum vector by the operator
+\begin{equation}
+S^2 = S_x^{\,2} + S_y^{\,2}+ S_z^{\,2}.
+\end{equation}
+By analogy with the analysis in Sect.~\ref{s8.2}, it is
+easily demonstrated that
+\begin{equation}
+[S^2, S_x] = [S^2, S_y] = [S^2,S_z] = 0.
+\end{equation}
+We thus conclude (see Sect.~\ref{smeas}) that we can simultaneously measure the magnitude squared
+of the spin angular momentum vector, together with, at most, one Cartesian component.
+By convention, we shall always choose to measure the $z$-component, $S_z$. 
+
+By analogy with Eq.~(\ref{e8.13}), we can define raising and lowering
+operators for spin angular momentum:
+\begin{equation}
+S_\pm = S_x \pm {\rm i}\,S_y.
+\end{equation}
+If $S_x$, $S_y$, and $S_z$ are Hermitian operators, as must be
+the case if they are to represent physical quantities, then $S_\pm$ are
+the Hermitian conjugates of one another: {\em i.e.},
+\begin{equation}\label{e10.7}
+(S_\pm)^\dag = S_\mp.
+\end{equation}
+Finally, by analogy with Sect.~\ref{s8.2}, it is easily
+demonstrated that
+\begin{eqnarray}
+S_+\,S_- &=& S^2-S_z^{\,2}+\hbar\,S_z,\label{e10.7a}\\[0.5ex]
+S_-\,S_+&=& S^2-S_z^{\,2}-\hbar\,S_z,\label{e10.8}\\[0.5ex]
+[S_+,S_z]&=& - \hbar\,S_+,\label{e10.9}\\[0.5ex]
+[S_-,S_z]&=& +\hbar\,S_-.\label{e10.10}
+\end{eqnarray}
+
+\section{Spin Space}\label{s10.3}
+We now have to discuss the wavefunctions upon which the previously introduced
+spin operators act. Unlike regular wavefunctions, spin wavefunctions
+do not exist in real space. Likewise, the spin angular momentum operators
+cannot be represented as differential operators in real space.
+Instead, we need to think of spin wavefunctions as
+existing in an abstract (complex) vector space. The different members of
+this space correspond to the different internal configurations of the particle
+under investigation.
+Note that only the {\em directions}\/ of our vectors have any physical significance
+(just as only the shape of a regular wavefunction has any physical
+significance). Thus,
+if the vector $\chi$  corresponds to a particular internal state then
+$c\,\chi$ corresponds to the same state, where $c$ is a complex number.
+Now, we expect the internal states of our particle to be {\em superposable},
+since the superposability of states is one of the fundamental assumptions of
+quantum mechanics.
+It follows that the vectors making up our vector space must also be superposable.
+Thus, if $\chi_1$ and $\chi_2$ are two vectors corresponding to two
+different internal states then $c_1\,\chi_1+c_2\,\chi_2$ is another vector
+corresponding to the state obtained by superposing $c_1$ times state 1
+with $c_2$ times state 2 (where $c_1$ and $c_2$ are complex numbers). Finally, the dimensionality of our vector
+space is simply the number of linearly independent vectors required to span
+it ({\em i.e.}, the number of linearly independent internal states of the
+particle under investigation).
+
+We now need to define the length of our vectors. We can do this by
+introducing a second, or {\em dual}, vector space whose elements are in one to one
+correspondence with the elements of our first space. Let the element of the second
+space which corresponds to the element $\chi$ of the first space
+be called $\chi^\dag$. Moreover, the element of the second space
+which corresponds to $c\,\chi$ is $c^\ast\,\chi^\dag$. We shall assume
+that it is possible to combine $\chi$ and $\chi^\dag$ in a multiplicative
+fashion to generate a real
+positive-definite number which we interpret as the length, or {\em norm},
+of $\chi$. Let us denote this number $\chi^\dag\,\chi$. Thus, we
+have
+\begin{equation}\label{e10.11}
+\chi^\dag\,\chi\geq 0
+\end{equation}
+for all $\chi$. We shall also assume that it is possible to combine unlike states
+in an analogous multiplicative fashion to produce complex numbers. The
+product of two unlike states $\chi$ and $\chi'$ is denoted $\chi^\dag\,\chi'$.
+Two states $\chi$ and $\chi'$ are said to be mutually orthogonal, or independent,
+if $\chi^\dag\,\chi' = 0$.
+
+Now, when a general spin operator, $A$, operates on a general spin-state, $\chi$, it coverts it into a different spin-state which we shall denote
+$A\,\chi$. The dual of this state is $(A\,\chi)^\dag\equiv \chi^\dag\,A^\dag$, where $A^\dag$ is the Hermitian conjugate of $A$ (this is the definition of an
+Hermitian conjugate in spin space).  An eigenstate
+of $A$ corresponding to the eigenvalue $a$ satisfies
+\begin{equation}
+A\,\chi_{a} = a\,\chi_{a}.
+\end{equation}
+As before, if $A$ corresponds to a physical variable then a measurement
+of $A$ will result in one of its eigenvalues (see Sect.~\ref{smeas}). In order to ensure that
+these eigenvalues are all real, $A$ must be Hermitian: {\em i.e.}, $A^\dag=A$ (see Sect.~\ref{seig}). We expect the $\chi_a$ to be mutually orthogonal. We
+can also normalize them such that they all have unit length. In other words,
+\begin{equation}
+\chi_{a}^\dag\,\chi_{a'} = \delta_{aa'}.
+\end{equation}
+Finally, a general spin state can be written
+as a superposition of the normalized eigenstates of $A$: {\em i.e.}, 
+\begin{equation}
+\chi = \sum_a c_a\, \chi_{a}.
+\end{equation}
+A measurement of $\chi$ will then yield the result $a$ with probability $|c_a|^2$. 
+
+\section{Eigenstates of $S_z$ and $S^2$}
+Since the operators $S_z$ and $S^2$ commute, they must possess simultaneous
+eigenstates (see Sect.~\ref{smeas}). Let these eigenstates take the form [see Eqs. (\ref{e8.29}) and (\ref{e8.30})]:
+\begin{eqnarray}
+S_z\,\chi_{s,m_s}&=& m_s\,\hbar\,\chi_{s,m_s},\label{e10.16}\\[0.5ex]
+S^2\,\chi_{s,m_s} &=& s\,(s+1)\,\hbar^{\,2}\,\chi_{s,m_s}.\label{e10.17}
+\end{eqnarray}
+
+Now, it is easily demonstrated, from the commutation relations (\ref{e10.9}) and
+(\ref{e10.10}), that
+\begin{equation}
+S_z\,(S_+\,\chi_{s,m_s}) = (m_s+1)\,\hbar\,(S_+\,\chi_{s,m_s}),
+\end{equation}
+and
+\begin{equation}
+S_z\,(S_-\,\chi_{s,m_s}) = (m_s-1)\,\hbar\,(S_-\,\chi_{s,m_s}).
+\end{equation}
+Thus, $S_+$ and $S_-$ are indeed the raising and lowering operators,
+respectively, for spin angular momentum (see Sect.~\ref{seian}).
+The eigenstates of $S_z$ and $S^2$ are assumed to be orthonormal: {\em i.e.},
+\begin{equation}\label{e10.20}
+\chi^\dag_{s,m_s}\,\chi_{s',m_s'} =\delta_{ss'}\,\delta_{m_s m_s'}.
+\end{equation}
+
+Consider the wavefunction $\chi=S_+\,\chi_{s,m_s}$. Since we know,
+from Eq. (\ref{e10.11}), that $\chi^\dag\,\chi\geq 0$, it follows that
+\begin{equation}
+(S_+\,\chi_{s,m_s})^\dag\,(S_+\,\chi_{s,m_s}) = \chi_{s,m_s}^\dag\,
+S_+^\dag\,S_+\,\chi_{s,m_s} = \chi_{s,m_s}^\dag\,S_-\,S_+\,\chi_{s,m_s}\geq 0,
+\end{equation}
+where use has been made of Eq.~(\ref{e10.7}). Equations~(\ref{e10.8}), (\ref{e10.16}), (\ref{e10.17}), and (\ref{e10.20})
+yield
+\begin{equation}
+s\,(s+1) \geq m_s\,(m_s+1).
+\end{equation}
+Likewise, if $\chi=S_-\,\chi_{s,m_s}$ then we obtain
+\begin{equation}
+s\,(s+1)\geq m_s\,(m_s-1).
+\end{equation}
+Assuming that $s\geq 0$, the above two inequalities
+imply that
+\begin{equation}
+-s \leq m_s\leq s.
+\end{equation}
+Hence, at fixed $s$, there is both a maximum and a minimum possible value that $m_s$
+can take.
+
+Let $m_{s\,min}$ be the minimum possible value of $m_s$. It follows
+that (see Sect.~\ref{slsq})
+\begin{equation}
+S_-\,\chi_{s,m_{s\,min}}= 0.
+\end{equation}
+Now, from Eq.~(\ref{e10.7a}), 
+\begin{equation}
+S^2 = S_+\,S_-+S_z^{\,2}-\hbar\,S_z.
+\end{equation}
+Hence,
+\begin{equation}
+S^2\,\chi_{s,m_{s\,min}} = (S_+\,S_- +S_z^{\,2}-\hbar\,S_z)\,\chi_{s,m_{s\,min}},
+\end{equation}
+giving
+\begin{equation}
+s\,(s+1) = m_{s\,min}\,(m_{s\,min}-1).
+\end{equation}
+Assuming that $m_{s\,min}<0$, this equation yields
+\begin{equation}
+m_{s\,min} = -s.
+\end{equation}
+Likewise, it is easily demonstrated that
+\begin{equation}
+m_{s\,max} = +s.
+\end{equation}
+Moreover,
+\begin{equation}\label{e10.31}
+S_-\,\chi_{s,-s} = S_+\,\chi_{s,s} = 0.
+\end{equation}
+
+Now, the raising operator $S_+$, acting upon $\chi_{s,-s}$, converts
+it into some multiple of $\chi_{s,-s+1}$. Employing the raising operator
+a second time, we obtain a multiple of $\chi_{s,-s+2}$. However, this
+process cannot continue indefinitely, since there is a maximum possible
+value of $m_s$. Indeed, after acting upon $\chi_{s,-s}$ a sufficient number
+of times with the raising operator $S_+$, we must obtain a multiple
+of $\chi_{s,s}$, so that employing the raising operator one more time
+leads to the null state [see Eq.~(\ref{e10.31})]. If this is not the case then we will inevitably obtain eigenstates
+of $S_z$ corresponding to $m_s>s$, which we have already demonstrated is impossible.
+
+It follows, from the above argument, that
+\begin{equation}
+m_{s\,max}-m_{s\,min} = 2\,s = k,
+\end{equation}
+where $k$ is a positive integer. Hence, the quantum number $s$
+can either take {\em positive integer}\/ or {\em positive half-integer}\/ values.
+Up to now, our analysis has been very similar to that which we used earlier to investigate orbital
+angular momentum (see Sect.~\ref{sorb}). Recall, that for orbital angular momentum the quantum number $m$, which is analogous to $m_s$,
+is restricted to take {\em integer}\/ values (see Cha.~\ref{slz}). This implies
+that the quantum number $l$, which is analogous to $s$, is also
+restricted to take integer values.
+However,
+the origin of these restrictions is the representation of the orbital
+angular momentum operators as differential operators in real space
+(see Sect.~\ref{s8.3}). There is no equivalent representation of the
+corresponding spin angular momentum operators. Hence, we conclude
+that there is no reason why the quantum number $s$ cannot take half-integer,
+as well as integer, values.
+
+In 1940, Wolfgang Pauli proved the so-called {\em spin-statistics theorem}\/
+using relativistic quantum mechanics. According to this theorem, all
+{\em fermions}\/ possess {\em half-integer spin}\/ ({\em i.e.}, a half-integer value of $s$),
+whereas all {\em bosons}\/ possess {\em integer spin}\/ ({\em i.e.}, an integer value of $s$). In fact, all presently known
+fermions, including electrons and protons, possess {\em spin one-half}. In other words,
+electrons and protons are characterized by $s=1/2$ and $m_s=\pm 1/2$.
+
+\section{Pauli Representation}\label{spauli}
+Let us denote the two independent spin eigenstates of an electron as
+\begin{equation}
+\chi_\pm \equiv \chi_{1/2,\pm 1/2}.
+\end{equation}
+It thus follows, from Eqs.~(\ref{e10.16}) and (\ref{e10.17}), that
+\begin{eqnarray}
+S_z\,\chi_\pm &=& \pm \frac{1}{2}\,\hbar\,\chi_\pm,\label{e10.34}\\[0.5ex]
+S^2\,\chi_\pm &=& \frac{3}{4}\,\hbar^2\,\chi_\pm.
+\end{eqnarray}
+Note that $\chi_+$ corresponds to an electron whose spin angular momentum vector has a positive component along the $z$-axis. Loosely speaking,
+we could say that the spin vector points in the $+z$-direction (or its spin is
+``up''). Likewise,
+$\chi_-$ corresponds to an electron whose spin points in  the $-z$-direction
+(or whose spin is ``down'').
+These two eigenstates satisfy the orthonormality requirements
+\begin{equation}\label{e10.35}
+\chi_+^\dag\,\chi_+ = \chi_-^\dag\,\chi_- = 1,
+\end{equation}
+and
+\begin{equation}\label{e10.36}
+\chi_+^\dag\,\chi_- = 0.
+\end{equation}
+A general spin state can be represented as a linear combination of
+$\chi_+$ and $\chi_-$: {\em i.e.},
+\begin{equation}
+\chi = c_+\,\chi_+ + c_-\,\chi_-.
+\end{equation}
+It is thus evident that electron spin space is {\em two-dimensional}.
+
+Up to now, we have discussed spin space in rather abstract terms. In the
+following, we shall describe a particular representation of electron
+spin space due to Pauli. This so-called {\em Pauli representation}\/ allows us
+to visualize spin space, and also facilitates calculations involving spin.
+
+Let us attempt to represent a general spin state as a complex {\em column vector}\/ in some two-dimensional space: {\em i.e.},
+\begin{equation}
+\chi \equiv \left(\begin{array}{c}c_+\\c_-\end{array}\right).
+\end{equation}
+The corresponding dual vector is represented as a {\em row vector}: {\em i.e.},
+\begin{equation}
+\chi^\dag\equiv  (c_+^\ast, c_-^\ast).
+\end{equation}
+Furthermore, the product $\chi^\dag\,\chi$ is obtained according to the
+ordinary rules of matrix multiplication: {\em i.e.},
+\begin{equation}
+\chi^\dag\,\chi =  (c_+^\ast, c_-^\ast)\left(\begin{array}{c}c_+\\c_-\end{array}\right) = c_+^\ast\,c_+ + c_-^\ast\,c_- = |c_+|^2 + |c_-|^2\geq 0.
+\end{equation}
+Likewise, the product $\chi^\dag\,\chi'$ of two different spin states
+is also obtained from the rules of matrix multiplication: {\em i.e.},
+\begin{equation}
+\chi^\dag\,\chi' =  (c_+^\ast, c_-^\ast)\left(\begin{array}{c}c_+'\\c_-'\end{array}\right) = c_+^\ast\,c_+' + c_-^\ast\,c_-'.
+\end{equation}
+Note that this particular representation of spin space is in complete accordance with the discussion in Sect.~\ref{s10.3}. For obvious reasons,
+ a vector used to represent a spin state is generally known as
+{\em spinor}.
+
+A general spin operator $A$ is represented as a $2\times 2$ matrix
+which operates on a spinor: {\em i.e.},
+\begin{equation}
+A\,\chi \equiv \left(\begin{array}{cc}A_{11},& A_{12}\\
+A_{21},& A_{22}\end{array}\right)\left(\begin{array}{c}c_+\\c_-\end{array}\right).
+\end{equation}
+As is easily demonstrated, the Hermitian conjugate of $A$ is represented by
+the transposed complex conjugate of the matrix used to represent $A$: {\em i.e.},
+\begin{equation}
+A^\dag \equiv \left(\begin{array}{cc}A_{11}^\ast,& A_{21}^\ast\\
+A_{12}^\ast,& A_{22}^\ast\end{array}\right).
+\end{equation}
+
+Let us represent the spin eigenstates $\chi_+$ and $\chi_-$  as
+\begin{equation}
+\chi_+ \equiv \left(\begin{array}{c}1\\0\end{array}\right),
+\end{equation}
+and
+\begin{equation}
+\chi_- \equiv \left(\begin{array}{c}0\\1\end{array}\right),
+\end{equation}
+respectively. Note that these forms automatically
+satisfy the orthonormality constraints (\ref{e10.35}) and (\ref{e10.36}). 
+It is convenient to write the spin operators $S_i$ (where $i=1,2,3$ corresponds to
+$x,y,z$) as
+\begin{equation}\label{e10.46}
+S_i = \frac{\hbar}{2}\,\sigma_i.
+\end{equation}
+Here, the $\sigma_i$ are dimensionless $2\times 2$ matrices. According
+to Eqs.~(\ref{e10.1x})--(\ref{e10.2x}), the $\sigma_i$ satisfy the commutation
+relations
+\begin{eqnarray}
+[\sigma_x, \sigma_y]&=& 2\,{\rm i}\,\sigma_z,\\[0.5ex]
+[\sigma_y, \sigma_z]&=& 2\,{\rm i}\,\sigma_x,\\[0.5ex]
+[\sigma_z,\sigma_x]&=& 2\,{\rm i}\,\sigma_y.
+\end{eqnarray}
+Furthermore, Eq.~(\ref{e10.34}) yields
+\begin{equation}
+\sigma_z\,\chi_\pm = \pm \chi_\pm.
+\end{equation}
+It is easily demonstrated, from the above expressions, that the $\sigma_i$ are represented by the
+following matrices:
+\begin{eqnarray}
+\sigma_x&\equiv&  \left(\begin{array}{cc}0,&1\\
+1,& 0\end{array}\right),\\[0.5ex]
+\sigma_y&\equiv&  \left(\begin{array}{cc}0,&-{\rm i}\\
+{\rm i},& 0\end{array}\right),\\[0.5ex]
+\sigma_z&\equiv&  \left(\begin{array}{cc}1,&0\\
+0,& -1\end{array}\right).\label{e10.53}
+\end{eqnarray}
+Incidentally, these matrices are generally known as the {\em Pauli matrices}. 
+
+Finally, a general spinor takes the form
+\begin{equation}
+\chi = c_+\,\chi_++c_-\,\chi_- =  \left(\begin{array}{c}c_+\\c_-\end{array}\right).
+\end{equation}
+If the spinor is properly normalized then
+\begin{equation}
+\chi^\dag\,\chi = |c_+|^2 + |c_-|^2 =1.
+\end{equation}
+In this case, we can interpret $|c_+|^2$ as the probability that
+an observation of $S_z$ will yield the result $+\hbar/2$, and
+$|c_-|^2$ as the probability that an observation of $S_z$
+will yield the result $-\hbar/2$.
+
+\section{Spin Precession}\label{sspinp}
+According to classical physics, a small current loop possesses a {\em magnetic moment}\/ of magnitude $\mu=I\,A$, where
+$I$ is the current circulating around the loop, and $A$ the area of the loop.
+The direction of the magnetic moment is conventionally taken to be
+normal to the plane of the loop, in the sense  given by a standard
+right-hand circulation rule. Consider a small current loop consisting of an electron in uniform circular motion. It is
+easily demonstrated that the electron's orbital angular momentum ${\bf L}$
+is related to the magnetic moment $\bmu$ of the loop via
+\begin{equation}\label{e10.57}
+\bmu = -\frac{e}{2\,m_e}\,{\bf L},
+\end{equation}
+where $e$ is the magnitude of the electron charge, and $m_e$ the electron mass.
+
+The above expression suggests that there may be a similar relationship between
+magnetic moment and spin angular momentum. We can write
+\begin{equation}\label{e10.58}
+\bmu = -\frac{g\,e}{2\,m_e}\,{\bf S},
+\end{equation}
+where $g$ is called the {\em gyromagnetic ratio}. Classically, we would
+expect $g=1$. In fact,
+\begin{equation}\label{e10.59}
+g = 2\left(1+\frac{\alpha}{2\pi}+\cdots\right) = 2.0023192,
+\end{equation}
+where $\alpha= e^2/(2\,\epsilon_0\,h\,c) \simeq 1/137$ is the so-called
+{\em fine-structure constant}. The fact that the gyromagnetic ratio is
+(almost) twice that expected from classical physics is only explicable using relativistic
+quantum mechanics. Furthermore, the small corrections to the relativistic result $g=2$ come from quantum field theory.
+
+The energy of a classical magnetic moment $\bmu$ in a uniform magnetic field ${\bf B}$ is
+\begin{equation}\label{e10.60a}
+H = - \bmu\cdot {\bf B}.
+\end{equation}
+Assuming that the above expression also holds good in quantum mechanics,
+the Hamiltonian of an electron in a $z$-directed magnetic field of magnitude
+$B$ takes the form
+\begin{equation}\label{e10.60}
+H = \Omega\,S_z,
+\end{equation}
+where
+\begin{equation}
+\Omega = \frac{g\,e\,B}{2\,m_e}.
+\end{equation}
+Here, for the sake of simplicity, we are neglecting the electron's translational degrees of freedom.
+
+Schr\"{o}dinger's equation can be written
+[see Eq.~(\ref{etimed})]
+\begin{equation}\label{e10.62}
+{\rm i}\,\hbar\,\frac{\partial\chi}{\partial t} = H\,\chi,
+\end{equation}
+where the spin state of the electron is characterized by the spinor $\chi$.
+Adopting the Pauli representation, we obtain
+\begin{equation}\label{e10.63}
+\chi = \left(\begin{array}{c}c_+(t)\\c_-(t)\end{array}\right),
+\end{equation}
+where $|c_+|^2+|c_-|^2=1$. Here, $|c_+|^2$ is the probability of observing the
+spin-up state, and $|c_-|^2$ the probability of observing the spin-down
+state. It follows from Eqs.~(\ref{e10.46}), (\ref{e10.53}), (\ref{e10.60}),
+(\ref{e10.62}), and (\ref{e10.63}) that
+\begin{equation}
+{\rm i}\,\hbar\left(\begin{array}{c}\dot{c}_+\\\dot{c}_-\end{array}\right)
+=\frac{\Omega\,\hbar}{2} \left(\begin{array}{cc}1,&0\\
+0,& -1\end{array}\right)\left(\begin{array}{c}c_+\\c_-\end{array}\right),
+\end{equation}
+where $\dot{~}\equiv d/dt$.
+Hence, 
+\begin{equation}\label{e10.65}
+\dot{c}_\pm = \mp {\rm i}\,\frac{\Omega}{2}\,c_\pm.
+\end{equation}
+Let
+\begin{eqnarray}
+c_+(0) &=& \cos(\alpha/2),\label{e10.66}\\[0.5ex]
+c_-(0) &=& \sin(\alpha/2).\label{e10.67}
+\end{eqnarray}
+The significance of the angle $\alpha$ will become apparent presently.
+Solving Eq.~(\ref{e10.65}),  subject to the initial conditions
+(\ref{e10.66}) and (\ref{e10.67}), we obtain
+\begin{eqnarray}\label{e10.68}
+c_+(t) &=& \cos(\alpha/2)\,\exp(-{\rm i}\,\Omega\,t/2),\\[0.5ex]
+c_-(t)&=& \sin(\alpha/2)\,\exp(+{\rm i}\,\Omega\,t/2).\label{e10.69}
+\end{eqnarray}
+
+We can most easily visualize the effect of the time dependence in the above
+expressions for $c_\pm$ by calculating the expectation
+values of the three Cartesian components of the electron's spin angular momentum. By analogy
+with Eq.~(\ref{e3.55}), the expectation value of a general spin operator
+$A$ is simply
+\begin{equation}
+\langle A \rangle = \chi^\dag\,A\,\chi.
+\end{equation}
+Hence, the expectation value of $S_z$ is
+\begin{equation}
+\langle S_z\rangle= \frac{\hbar}{2}\left(c_+^\ast, c_-^\ast\right) \left(\begin{array}{cc}1,&0\\
+0,& -1\end{array}\right)\left(\begin{array}{c}c_+\\ c_-\end{array}\right),
+\end{equation}
+which reduces to
+\begin{equation}\label{e10.72}
+\langle S_z \rangle = \frac{\hbar}{2}\,\cos\alpha
+\end{equation}
+with the help of Eqs.~(\ref{e10.68}) and (\ref{e10.69}). Likewise,
+the expectation value of $S_x$ is
+\begin{equation}
+\langle S_x\rangle= \frac{\hbar}{2}\left(c_+^\ast, c_-^\ast\right) \left(\begin{array}{cc}0,&1\\
+1,& 0\end{array}\right)\left(\begin{array}{c}c_+\\ c_-\end{array}\right),
+\end{equation}
+which reduces to
+\begin{equation}\label{e10.74}
+\langle S_x\rangle = \frac{\hbar}{2}\,\sin\alpha\,\cos(\Omega\,t).
+\end{equation}
+Finally, the expectation value of $S_y$ is
+\begin{equation}\label{e10.75}
+\langle S_y\rangle = \frac{\hbar}{2}\,\sin\alpha\,\sin(\Omega\,t).
+\end{equation}
+According to Eqs.~(\ref{e10.72}), (\ref{e10.74}), and (\ref{e10.75}),
+the {\em expectation value}\/ of the spin angular momentum vector subtends
+a constant angle $\alpha$ with the $z$-axis, and {\em precesses}\/ about
+this axis at the frequency 
+\begin{equation}
+\Omega \simeq \frac{e\,B}{m_e}.
+\end{equation}
+This behaviour is actually equivalent to that predicted by classical physics.
+Note, however, that a {\em measurement}\/ of $S_x$, $S_y$, or $S_z$ will always
+yield either $+\hbar/2$ or $-\hbar/2$. It is the {\em relative probabilities}\/
+of obtaining these two results which varies as the expectation value
+of a given component of the spin varies.
+
+\subsubsection*{Exercises}
+{\small
+\begin{enumerate}
+\item Find the Pauli representations of  $S_x$, $S_y$, and $S_z$ for a spin-1 particle.
+
+\item  Find the Pauli representations of the normalized eigenstates of $S_x$ and $S_y$ for
+a spin-$1/2$ particle. 
+\item Suppose that a spin-$1/2$ particle
+has a spin vector which lies in the $x$-$z$ plane, making an
+angle $\theta$ with the $z$-axis. Demonstrate that a measurement of $S_z$
+yields $\hbar/2$ with probability $\cos^2(\theta/2)$, and $-\hbar/2$
+with probability $\sin^2(\theta/2)$. 
+
+\item An electron is in the spin-state 
+$$
+\chi = A\,\left(\begin{array}{c}1-2\,{\rm i}\\2\end{array}\right)
+$$
+in the Pauli representation. Determine the constant $A$ by normalizing
+$\chi$. If a measurement of $S_z$ is made, what values will be
+obtained, and with what probabilities? What is the expectation
+value of $S_z$? Repeat the above calculations for $S_x$ and $S_y$. 
+
+
+\item Consider a spin-$1/2$ system represented by the normalized spinor
+$$
+\chi =\left(\begin{array}{c}\cos\alpha\\\sin\alpha\,\exp(\,{\rm i}\,\beta)\end{array}\right)
+$$
+in the Pauli representation, where $\alpha$ and $\beta$ are real. What is the probability that a measurement of
+$S_y$ yields $-\hbar/2$? 
+
+\item An electron is at rest in an oscillating magnetic field
+$$
+{\bf B} = B_0\,\cos(\omega\,t)\,{\bf e}_z,
+$$
+where $B_0$ and $\omega$ are real positive constants. 
+\begin{enumerate}
+\item Find the Hamiltonian of the system.
+\item If the electron starts in the spin-up state with respect to the
+$x$-axis, determine the spinor $\chi(t)$ which represents the state
+of the system in the Pauli representation at all subsequent times.
+\item Find the probability that a measurement of $S_x$ yields
+the result $-\hbar/2$ as a function of time.
+\item What is the minimum value of $B_0$ required to force a
+complete flip in $S_x$?
+\end{enumerate}
+\end{enumerate}}

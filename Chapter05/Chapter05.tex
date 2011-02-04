@@ -1,0 +1,958 @@
+\chapter{One-Dimensional Potentials}\label{s5}
+\section{Introduction}
+In this chapter, we shall investigate the interaction of
+a non-relativistic particle of mass $m$ and energy $E$ with various
+one-dimensional potentials, $V(x)$. Since we are searching for stationary
+ solutions with unique energies, we can write the wavefunction in the form (see Sect.~\ref{sstat})
+\begin{equation}
+\psi(x,t) = \psi(x)\,{\rm e}^{-{\rm i}\,E\,t/\hbar},
+\end{equation} 
+where $\psi(x)$ satisfies the time-independent Schr\"{o}dinger equation:
+\begin{equation}\label{e5.2}
+\frac{d^2 \psi}{d x^2} = \frac{2\,m}{\hbar^2}
+\left[V(x)-E\right]\psi.
+\end{equation}
+In general, the solution, $\psi(x)$,  to the above equation must be 
+{\em finite}, otherwise the probability density $|\psi|^{\,2}$ would
+become infinite (which is unphysical). Likewise, the solution must  be
+{\em continuous}, otherwise the
+probability current (\ref{eprobc}) would become infinite (which is also
+unphysical).
+
+\section{Infinite Potential Well}\label{s5.2}
+Consider a particle of mass $m$ and energy $E$ moving in the following simple potential:
+\begin{equation}
+V(x) = \left\{\begin{array}{lcl}
+0&\mbox{\hspace{1cm}}&\mbox{for $0\leq x\leq a$}\\[0.5ex]
+\infty&&\mbox{otherwise}
+\end{array}\right..
+\end{equation}
+It follows from Eq.~(\ref{e5.2}) that if $d^2\psi/d x^2$ (and, hence, $\psi$) is
+to remain finite then $\psi$ must go to zero in regions where the potential
+is infinite. Hence, $\psi=0$ in the regions $x\leq 0$ and $x\geq a$.
+Evidently, the problem is equivalent to that of a particle trapped in a
+one-dimensional box of length $a$.
+The boundary conditions on $\psi$ in
+the region $0<x<a$ are 
+\begin{equation}\label{e5.4}
+\psi(0) = \psi(a) = 0.
+\end{equation}
+Furthermore, it follows from Eq.~(\ref{e5.2}) that $\psi$ satisfies
+\begin{equation}\label{e5.5}
+\frac{d^2 \psi}{d x^2} = - k^2\,\psi
+\end{equation}
+in this  region, where
+\begin{equation}\label{e5.6}
+k^2 = \frac{2\,m\,E}{\hbar^2}.
+\end{equation}
+Here, we are assuming that $E>0$. It is easily demonstrated that there are
+no solutions with $E<0$ which are capable of satisfying the boundary conditions (\ref{e5.4}).
+
+The solution to Eq.~(\ref{e5.5}), subject to the boundary conditions
+(\ref{e5.4}), is
+\begin{equation}
+\psi_n(x) = A_n\,\sin(k_n\,x),
+\end{equation}
+where the $A_n$ are arbitrary (real) constants, and
+\begin{equation}\label{e5.8}
+k_n = \frac{n\,\pi}{a},
+\end{equation}
+for $n=1,2,3,\cdots$. Now, it can be seen from Eqs.~(\ref{e5.6}) and (\ref{e5.8}) 
+that the energy $E$ is only allowed to take certain discrete values:
+{\em i.e.},
+\begin{equation}\label{eenergy}
+E_n = \frac{n^2\,\pi^2\,\hbar^2}{2\,m\,a^2}.
+\end{equation}
+In other words, the eigenvalues of the energy operator are {\em discrete}. This
+is a general feature of {\em bounded}\/ solutions: {\em i.e.}, solutions in which $|\psi|\rightarrow 0$ as $|x|\rightarrow\infty$. According to the discussion in Sect.~\ref{sstat},
+we expect the stationary eigenfunctions $\psi_n(x)$ to satisfy
+the orthonormality constraint
+\begin{equation}
+\int_0^a \psi_n(x)\,\psi_m(x)\,dx = \delta_{nm}.
+\end{equation}
+It is easily demonstrated that this is the case, provided $A_n = \sqrt{2/a}$. 
+Hence,
+\begin{equation}\label{e5.11}
+\psi_n(x) = \sqrt{\frac{2}{a}}\,\sin\left(n\,\pi\,\frac{x}{a}\right)
+\end{equation}
+for $n=1,2,3,\cdots$. 
+
+Finally, again from Sect.~\ref{sstat}, the general {\em time-dependent}\/ solution can be written as a linear superposition of stationary solutions:
+\begin{equation}
+\psi(x,t) = \sum_{n=0,\infty} c_n\,\psi_n(x)\,{\rm e}^{-{\rm i}\,E_n\,t/\hbar},
+\end{equation}
+where
+\begin{equation}\label{e5.13}
+c_n = \int_0^a\psi_n(x)\,\psi(x,0)\,dx.
+\end{equation}
+
+\section{Square Potential Barrier}\label{s5.3}
+Consider a particle of mass $m$ and energy $E>0$ interacting with the
+simple square potential barrier
+\begin{equation}
+V(x) = \left\{\begin{array}{lcl}
+V_0&\mbox{\hspace{1cm}}&\mbox{for $0\leq x\leq a$}\\[0.5ex]
+0&&\mbox{otherwise}
+\end{array}
+\right.,
+\end{equation}
+where $V_0>0$. In the regions to the left and to the right of the
+barrier, $\psi(x)$ satisfies
+\begin{equation}\label{e5.15}
+\frac{d^2 \psi}{d x^2} = - k^2\,\psi,
+\end{equation}
+where $k$ is given by Eq.~(\ref{e5.6}).
+
+ Let us adopt the following solution
+of the above equation to the left of the barrier ({\em i.e.}, $x<0$):
+\begin{equation}
+\psi(x) = {\rm e}^{\,{\rm i}\,k\,x} + R\,{\rm e}^{-{\rm i}\,k\,x}.
+\end{equation}
+This solution consists of a plane wave of unit amplitude traveling to
+the right [since the time-dependent wavefunction is multiplied by 
+$\exp(-{\rm i}\,\omega\,t)$, where $\omega=E/\hbar>0$], and a plane wave of complex amplitude $R$ traveling to
+the left. We interpret the first plane wave as an {\em incoming particle}\/ (or, rather, a stream of incoming particles), and
+the second as a particle (or stream of particles) {\em reflected}\/ by the potential barrier. Hence, $|R|^{\,2}$ is
+the probability of reflection. This can be seen by calculating the
+probability current (\ref{eprobc}) in the region $x<0$, which takes the form
+\begin{equation}
+j_l=v\,(1-|R|^{\,2}),
+\end{equation}
+where $v = p/m=\hbar\,k/m$ is the classical particle velocity.
+
+Let us adopt the following solution to Eq.~(\ref{e5.15}) to the right
+of the barrier ({\em i.e.} $x>a$):
+\begin{equation}
+\psi(x) = T\,{\rm e}^{\,{\rm i}\,k\,x}.
+\end{equation}
+This solution consists of a plane wave of complex amplitude $T$
+traveling to the right. We interpret this as a particle (or stream of particles) {\em transmitted}\/ through
+the barrier. Hence, $|T|^{\,2}$ is the probability of transmission. 
+The probability current in the region $x>a$ takes the form
+\begin{equation}
+j_r = v\, |T|^{\,2}.
+\end{equation}
+Now, according to Eq.~(\ref{ediffp}), in a stationary state ({\em i.e.}, $\partial |\psi|^{\,2}/\partial t = 0$), the probability current is a {\em spatial constant}
+({\em i.e.}, $\partial j/\partial x = 0$). Hence, we must have $j_l=j_r$, or
+\begin{equation}\label{e5.20}
+|R|^{\,2} + |T|^{\,2} = 1.
+\end{equation}
+In other words, the probabilities of reflection and transmission sum to
+unity, as must be the case, since reflection and transmission are  the only possible outcomes for a
+particle incident on the barrier.
+
+Inside the barrier ({\em i.e.}, $0\leq x \leq a$), $\psi(x)$ satisfies
+\begin{equation}\label{e5.21}
+\frac{d^2 \psi}{d x^2} = - q^2\,\psi,
+\end{equation}
+where
+\begin{equation}
+q^2 = \frac{2\,m\,(E-V_0)}{\hbar^2}.
+\end{equation}
+
+Let us, first of all, consider the case where $E> V_0$. In this case, the general
+solution to Eq.~(\ref{e5.21}) inside the barrier takes the
+form
+\begin{equation}
+\psi(x) = A\,{\rm e}^{\,{\rm i}\,q\,x} +B\,{\rm e}^{-{\rm i}\,q\,x},
+\end{equation}
+where $q=\sqrt{2\,m\,(E-V_0)/\hbar^2}$. 
+
+Now, the boundary conditions at the edges of the barrier ({\em i.e.}, at
+$x=0$ and $x=a$) are that $\psi$ and $d\psi/d x$ are both
+continuous. These boundary conditions ensure that the probability current
+(\ref{eprobc}) remains finite and continuous across the edges of the boundary, as must be the
+case if it is to be a spatial constant.
+
+Continuity of $\psi$ and $d\psi/d x$ at the left edge of
+the barrier ({\em i.e.}, $x=0$) yields
+\begin{eqnarray}
+1 + R &=& A+B,\\[0.5ex]
+k\,(1-R) &=& q\,(A-B).
+\end{eqnarray}
+Likewise, continuity of $\psi$ and $d\psi/d x$ at the right edge of
+the barrier ({\em i.e.}, $x=a$) gives
+\begin{eqnarray}
+A\, {\rm e}^{\,{\rm i}\,q\,a}+ B \,{\rm e}^{-{\rm i}\,q\,a} &=& T\,{\rm e}^{\,{\rm i}\,k\,a},\\[0.5ex]
+q\left(A\,{\rm e}^{\,{\rm i}\,q\,a} -B \,{\rm e}^{-{\rm i}\,q\,a}\right) &=& k\,T\,{\rm e}^{\,{\rm i}\,k\,a}.
+\end{eqnarray}
+After considerable algebra, the above four equations yield
+\begin{equation}\label{e5.28}
+|R|^{\,2} = \frac{(k^2-q^2)^{\,2}\,\sin^2(q\,a)}{4\,k^2\,q^2 + (k^2-q^2)^{\,2}\,\sin^2(q\,a)},
+\end{equation}
+and
+\begin{equation}\label{e5.29}
+|T|^{\,2} = \frac{4\,k^2\,q^2}{4\,k^2\,q^2 + (k^2-q^2)^{\,2}\,\sin^2(q\,a)}.
+\end{equation}
+Note that the above two expression satisfy the constraint (\ref{e5.20}).
+
+It is instructive to compare the quantum mechanical probabilities
+of reflection and transmission---(\ref{e5.28}) and (\ref{e5.29}), respectively---with those derived from classical physics. Now, according
+to classical physics, if a particle of energy $E$ is incident on
+a potential barrier of height $V_0<E$ then the particle slows down
+as it passes through the barrier, but is otherwise unaffected.
+In other words, the classical probability of reflection is
+{\em zero}, and the classical probability of transmission is {\em unity}.
+
+\begin{figure}
+\epsfysize=2.8in
+\centerline{\epsffile{Chapter05/fig01.eps}}
+\caption{\em Transmission (solid-curve) and reflection (dashed-curve) probabilities for a square potential barrier of width $a=1.25\,\lambda$, where $\lambda$ is the free-space de Broglie wavelength, as a function
+of the ratio of the height of the barrier, $V_0$, to the
+energy, $E$, of the incident particle.}\label{fb1}   
+\end{figure}
+
+\begin{figure}
+\epsfysize=2.8in
+\centerline{\epsffile{Chapter05/fig02.eps}}
+\caption{\em Transmission (solid-curve) and reflection (dashed-curve) probabilities for a particle of energy $E$ incident on  a square potential barrier of height $V_0 = 0.75\,E$, as a function
+of the ratio of the width of the barrier, $a$, to the free-space de Broglie
+wavelength, $\lambda$.}\label{fb2}   
+\end{figure}
+
+The reflection  and transmission probabilities obtained from Eqs.~(\ref{e5.28}) and (\ref{e5.29}), respectively,  are plotted in Figs.~\ref{fb1} and
+\ref{fb2}. It can be seen, from Fig.~\ref{fb1}, that the classical
+result, $|R|^{\,2}=0$ and $|T|^{\,2}=1$, is obtained in the limit where the height of the barrier
+is relatively small ({\em i.e.}, $V_0\ll E$). However, when $V_0$ is
+of order $E$,  there is a substantial probability that the incident particle
+will be {\em reflected}\/ by the barrier. According to classical physics, reflection is impossible when $V_0 < E$. 
+
+It can also be seen, from Fig.~\ref{fb2},
+that at certain barrier widths the probability of reflection goes to {\em zero}. It turns out that this is true irrespective of the energy of the incident particle.
+It is evident, from Eq.~(\ref{e5.28}), that these special barrier widths
+correspond to
+\begin{equation}
+q\,a = n\,\pi,
+\end{equation}
+where $n=1,2,3,\cdots$. In other words, the special barriers widths are
+integer multiples of half the de Broglie wavelength of the particle {\em inside}\/ the
+barrier. There is no reflection at the special barrier widths because, at these
+widths,
+the backward traveling wave reflected from the left edge of the barrier
+interferes destructively with the similar wave reflected from the right
+edge of the barrier to give zero net reflected wave.
+
+Let us, now, consider the case $E< V_0$. In this case, the general
+solution to Eq.~(\ref{e5.21}) inside the barrier takes the
+form
+\begin{equation}
+\psi(x) = A\,{\rm e}^{\,q\,x} + B\,{\rm e}^{-q\,x},
+\end{equation}
+where $q=\sqrt{2\,m\,(V_0-E)/\hbar^2}$. 
+Continuity of $\psi$ and $d \psi/d x$ at the left edge of
+the barrier ({\em i.e.}, $x=0$) yields
+\begin{eqnarray}
+1 + R &=& A+B,\\[0.5ex]
+{\rm i}\,k\,(1-R) &=& q\,(A-B).
+\end{eqnarray}
+Likewise, continuity of $\psi$ and $d\psi/d x$ at the right edge of
+the barrier ({\em i.e.}, $x=a$) gives
+\begin{eqnarray}
+A\, {\rm e}^{\,q\,a}+ B \,{\rm e}^{-q\,a} &=& T\,{\rm e}^{\,{\rm i}\,k\,a},\\[0.5ex]
+q\left(A\, {\rm e}^{\,q\,a}-B \,{\rm e}^{-q\,a}\right) &=& {\rm i}\,k\,T\,{\rm e}^{\,{\rm i}\,k\,a}.
+\end{eqnarray}
+After considerable algebra, the above four equations yield
+\begin{equation}\label{e5.36}
+|R|^{\,2} = \frac{(k^2+q^2)^{\,2}\,\sinh^2(q\,a)}{4\,k^2\,q^2 + (k^2+q^2)^{\,2}\,\sinh^2(q\,a)},
+\end{equation}
+and
+\begin{equation}\label{e5.37}
+|T|^{\,2} = \frac{4\,k^2\,q^2}{4\,k^2\,q^2 + (k^2+q^2)^{\,2}\,\sinh^2(q\,a)}.
+\end{equation}
+These expressions can also be obtained from Eqs.~(\ref{e5.28}) and
+(\ref{e5.29}) by making the substitution $q\rightarrow -{\rm i}\,q$.
+Note that Eqs.~(\ref{e5.36}) and (\ref{e5.37}) satisfy the constraint (\ref{e5.20}).
+
+It is again instructive to compare the quantum mechanical probabilities
+of reflection and transmission---(\ref{e5.36}) and (\ref{e5.37}), respectively---with those derived from classical physics. Now, according
+to classical physics, if a particle of energy $E$ is incident on
+a potential barrier of height $V_0>E$ then the particle is reflected.
+In other words, the classical probability of reflection is
+{\em unity}, and the classical probability of transmission is {\em zero}.
+
+\begin{figure}
+\epsfysize=2.8in
+\centerline{\epsffile{Chapter05/fig03.eps}}
+\caption{\em Transmission (solid-curve) and reflection (dashed-curve) probabilities for a square potential barrier of width $a=0.5\,\lambda$, where $\lambda$ is the free-space de Broglie wavelength, as a function
+of the ratio of the energy,  $E$, of the incoming particle to the
+height, $V_0$, of the barrier.}\label{fb3}   
+\end{figure}
+
+\begin{figure}
+\epsfysize=2.8in
+\centerline{\epsffile{Chapter05/fig04.eps}}
+\caption{\em Transmission (solid-curve) and reflection (dashed-curve) probabilities for a particle of energy $E$ incident on  a square potential barrier of height $V_0 = (4/3)\,E$, as a function
+of the ratio of the width of the barrier, $a$, to the free-space de Broglie
+wavelength, $\lambda$.}\label{fb4}   
+\end{figure}
+
+The reflection  and transmission probabilities obtained from Eqs.~(\ref{e5.36}) and (\ref{e5.37}), respectively,  are plotted in Figs.~\ref{fb3} and
+\ref{fb4}. It can be seen, from Fig.~\ref{fb3}, that the classical
+result, $|R|^{\,2}=1$ and $|T|^{\,2}=0$, is obtained for relatively
+thin barriers ({\em i.e.}, $q\,a\sim 1$) in the limit where the height of the barrier
+is relatively large ({\em i.e.}, $V_0\gg E$). However, when $V_0$ is
+of order $E$,  there is a substantial probability that the incident particle
+will be {\em transmitted}\/ by the barrier. According to classical physics, transmission is impossible when $V_0 > E$. 
+
+It can also be seen, from
+Fig.~\ref{fb4}, that the transmission probability decays {\em exponentially}\/
+as the width of the barrier increases. Nevertheless, even for very
+wide barriers ({\em i.e.}, $q\,a\gg 1$), there is a small but {\em finite}\/
+probability that a particle incident on the barrier will be
+{\em transmitted}. This phenomenon, which is inexplicable within
+the context of classical physics, is called {\em tunneling}. 
+
+\section{WKB Approximation}
+Consider a particle of mass $m$ and energy $E>0$ moving through some {\em slowly varying}\/
+potential $V(x)$. The particle's wavefunction satisfies
+\begin{equation}\label{e5.38}
+\frac{d^2\psi(x)}{dx^2} = - k^2(x)\,\psi(x),
+\end{equation}
+where
+\begin{equation}
+k^2(x) = \frac{2\,m\,[E-V(x)]}{\hbar^2}.
+\end{equation}
+Let us try a solution to Eq.~(\ref{e5.38}) of the form
+\begin{equation}\label{e5.40}
+\psi(x) = \psi_0\,\exp\left(\int_0^x{\rm i}\,k(x')\,dx'\right),
+\end{equation}
+where $\psi_0$ is a complex constant. Note that this solution represents
+a particle propagating in the positive $x$-direction [since the full
+wavefunction is multiplied by $\exp(-{\rm i}\,\omega\,t)$, where $\omega=E/\hbar>0$] with the continuously varying wavenumber
+$k(x)$.
+It follows that
+\begin{equation}
+\frac{d\psi(x)}{dx} = {\rm i}\,k(x)\,\psi(x),
+\end{equation}
+and
+\begin{equation}\label{e5.42}
+\frac{d^2\psi(x)}{dx^2} = {\rm i}\,k'(x)\,\psi(x) - k^2(x)\,\psi(x),
+\end{equation}
+where $k'\equiv dk/dx$. A comparison of Eqs.~(\ref{e5.38}) and (\ref{e5.42})
+reveals that Eq.~(\ref{e5.40}) represents an approximate solution to
+Eq.~(\ref{e5.38}) provided that the first term on its right-hand side
+is negligible compared to the second. This yields
+the validity criterion $|k'|\ll k^2$, or
+\begin{equation}\label{e5.43}
+\frac{k}{|k'|}\gg k^{-1}.
+\end{equation}
+In other words, the variation length-scale of $k(x)$, which is
+approximately the same as the variation length-scale of $V(x)$, must
+be {\em much greater}\/ than the particle's de Broglie wavelength (which
+is of order $k^{-1}$). Let us suppose that this is the case. Incidentally,
+the approximation involved in dropping the first term on the right-hand side
+of Eq.~(\ref{e5.42}) is generally known as the {\em WKB approximation}.\,\footnote{After G.~Wentzel, H.A.~Kramers, and L.~Brillouin.}
+Similarly, Eq.~(\ref{e5.40}) is termed a WKB solution.
+
+According to the WKB solution (\ref{e5.40}),  the probability
+density remains constant: {\em i.e.}, 
+\begin{equation}
+|\psi(x)|^{\,2} = |\psi_0|^{\,2},
+\end{equation}
+as long as the particle
+moves through a region in which $E>V(x)$, and $k(x)$ is consequently real ({\em i.e.}, an allowed region
+ according to classical physics).
+Suppose, however, that the particle encounters a potential barrier ({\em i.e.}, a region from which the particle is excluded according to classical
+physics). By definition, $E<V(x)$ inside such a barrier, and
+$k(x)$ is consequently imaginary. Let the barrier extend from $x=x_1$ to $x_2$, where
+$0<x_1<x_2$. The WKB solution inside the barrier is written
+\begin{equation}\label{e5.45}
+\psi(x) = \psi_1\,\exp\left(-\int_{x_1}^x |k(x')|\,dx'\right),
+\end{equation}
+where
+\begin{equation}
+\psi_1=\psi_0\,\exp\left(\int_0^{x_1}{\rm i}\,k(x')\,dx'\right).
+\end{equation}
+Here, we have neglected the unphysical exponentially growing solution.
+
+According to the WKB solution (\ref{e5.45}), the probability
+density {\em decays exponentially}\/ inside the barrier: {\em i.e.}, 
+\begin{equation}
+|\psi(x)|^{\,2} = |\psi_1|^{\,2}\,\exp\left(-2\,\int_{x_1}^x |k(x')|\,dx'\right),
+\end{equation}
+where $|\psi_1|^{\,2}$ is the probability density at the left-hand
+side of the barrier ({\em i.e.}, $x=x_1$). It follows that the
+probability density at the right-hand side of the barrier ({\em i.e.}, $x=x_2$) is
+\begin{equation}
+|\psi_2|^{\,2} = |\psi_1|^{\,2}\,\exp\left(-2\,\int_{x_1}^{x_2} |k(x')|\,dx'\right).
+\end{equation}
+Note that $|\psi_2|^{\,2} < |\psi_1|^{\,2}$. Of course, in the region to the right of the
+barrier ({\em i.e.}, $x>x_2$), the probability density takes the
+constant value $|\psi_2|^{\,2}$. 
+
+We can interpret the ratio of the probability densities to the right and to the left  of the potential barrier as the probability, $|T|^{\,2}$, that a particle
+incident from the left will tunnel through the barrier and
+emerge on the other side: {\em i.e.},
+\begin{equation}\label{e5.49}
+|T|^{\,2} = \frac{|\psi_2|^{\,2}}{|\psi_1|^{\,2}} = \exp\left(-2\,\int_{x_1}^{x_2} |k(x')|\,dx'\right)
+\end{equation}
+(see Sect.~\ref{s5.3}).
+It is easily demonstrated that the probability of a particle incident from the
+right  tunneling through the barrier is the same.
+
+Note that the criterion (\ref{e5.43}) for the validity of the WKB approximation
+implies that the above transmission probability is {\em very small}. Hence,
+the WKB approximation only applies to situations in which there is
+very little chance of a particle tunneling through the potential barrier in question.
+Unfortunately, the validity criterion (\ref{e5.43}) breaks down completely
+at the edges of the barrier ({\em i.e.}, at $x=x_1$ and $x_2$), since
+$k(x)=0$ at these points. However, it can be demonstrated that the
+contribution of those regions, around $x=x_1$ and $x_2$, in which the WKB
+approximation breaks down to the integral in Eq.~(\ref{e5.49})
+is fairly negligible. Hence, the above expression for the tunneling
+probability is a reasonable approximation provided that the incident particle's
+de Broglie wavelength is  much smaller than the spatial extent of the potential
+barrier.
+
+\section{Cold Emission}
+Suppose that an unheated  metal surface is subject to a large uniform external electric field
+of strength ${\cal E}$,
+which is directed such that it accelerates electrons {\em away}\/ from the surface. We have
+already seen (in Sect.~\ref{s3.3}) that electrons just below the surface
+of a metal can be regarded as being in a potential well of depth $W$,
+where $W$ is called the {\em work function}\/ of the surface. Adopting a simple
+one-dimensional treatment of the problem, let the metal lie at $x<0$, and
+the surface at $x=0$. Now, the applied electric field is shielded from the
+interior of the metal.  Hence, the energy, $E$, say, of an electron just below the
+surface is unaffected by the field.
+In the absence of the electric field, the potential
+barrier just above is the surface is simply $V(x)-E=W$. The electric field
+modifies this to $V(x)-E=W-e\,{\cal E}\,x$. The potential barrier is
+sketched in Fig.~\ref{fcold}.
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter05/fig05.eps}}
+\caption{\em The potential barrier for an electron  in a metal
+surface subject to an external electric field.}\label{fcold}   
+\end{figure}
+
+It can be seen, from Fig.~\ref{fcold}, that an electron just below the  surface of the
+metal is confined by a triangular potential barrier which extends from $x=x_1$ to $x_2$,
+where $x_1=0$ and $x_2 = W / e\,{\cal E}$. Making use of the
+WKB approximation (see the previous subsection), the probability of such an
+electron tunneling through the barrier, and consequently being emitted from the surface,
+is
+\begin{equation}
+|T|^{\,2} = \exp\left(-\frac{2\,\sqrt{2\,m}}{\hbar}\int_{x_1}^{x_2}
+\sqrt{V(x)- E}\,dx\right),
+\end{equation}
+or
+\begin{equation}
+|T|^{\,2} = \exp\left(-\frac{2\,\sqrt{2\,m}}{\hbar}\int_{0}^{W/e\,{\cal E}}
+\sqrt{W-e\,{\cal E}\,x }\,dx\right).
+\end{equation}
+This reduces to
+\begin{equation}
+|T|^{\,2} = \exp\left(-2\,\sqrt{2}\,\frac{m^{1/2}\,W^{\,3/2}}{\hbar\,e\,{\cal E}}\int_{0}^{1}
+\sqrt{1-y}\,dy\right),
+\end{equation}
+or
+\begin{equation}\label{e5.53}
+|T|^{\,2} = \exp\left(-\frac{4\,\sqrt{2}}{3}\,\frac{m^{1/2}\,W^{\,3/2}}{\hbar\,e\,{\cal E}}\right).
+\end{equation}
+The above result is known as the {\em Fowler-Nordheim}\/ formula. Note that
+the probability of emission increases {\em exponentially}\/ as the electric
+field-strength above the surface of the metal increases.
+
+The cold emission of electrons from a metal surface is the basis of
+an important device known as a {\em scanning tunneling microscope}, or an STM. An STM consists of a very sharp conducting probe which is
+scanned over the surface of a metal (or any other solid conducting medium). 
+A large voltage difference is applied between the probe and the surface. Now, the surface electric
+field-strength  immediately below the probe tip is proportional
+to the applied potential difference, and inversely proportional to the spacing between
+the tip and the surface. Electrons tunneling between the surface
+and the probe tip give rise to a weak electric current. The magnitude of
+this current is proportional to the tunneling probability (\ref{e5.53}). It
+follows that the current is an {\em extremely sensitive}\/ function of the surface
+electric field-strength, and, hence, of the spacing between the tip and the surface (assuming that the
+potential difference is held constant). An STM can thus be used to construct
+a very accurate contour map of the surface under investigation. In fact, STMs are
+capable of achieving sufficient resolution to image individual atoms
+
+\section{Alpha Decay}
+Many types of heavy atomic nucleus spontaneously decay to produce  daughter nucleii
+via the emission of $\alpha$-particles ({\em i.e.},  helium nucleii) of some characteristic energy.
+This process is know as
+$\alpha$-decay. Let us investigate the $\alpha$-decay of a particular type of atomic nucleus of radius $R$, charge-number $Z$,
+and mass-number $A$. Such a nucleus thus decays to produce a daughter
+nucleus of charge-number $Z_1=Z-2$ and mass-number $A_1=A-4$,
+and an $\alpha$-particle of charge-number $Z_2=2$ and mass-number
+$A_2=4$. Let the characteristic energy of the $\alpha$-particle
+be $E$. Incidentally, nuclear radii
+are found to satisfy the empirical formula
+\begin{equation}
+R = 1.5\times 10^{-15}\,A^{1/3}\,{\rm m}=2.0\times 10^{-15}\,Z_1^{1/3}\,{\rm m}
+\end{equation}
+for $Z\gg 1$.
+
+In 1928, George Gamov proposed a very successful theory of $\alpha$-decay,
+according to which the $\alpha$-particle moves freely inside the nucleus, and is emitted after {\em tunneling}\/ through the
+potential barrier between itself and the daughter nucleus.  In other words,
+the $\alpha$-particle, whose energy is $E$, is trapped in a potential well of radius $R$ by the
+potential barrier
+\begin{equation}
+V(r) = \frac{Z_1\,Z_2\,e^2}{4\pi\,\epsilon_0\,r}
+\end{equation}
+for $r>R$. 
+
+Making use of the WKB approximation (and neglecting the fact
+that $r$ is a radial, rather than a Cartesian, coordinate), the probability
+of the $\alpha$-particle tunneling through the barrier is
+\begin{equation}
+|T|^{\,2} = \exp\left(-\frac{2\sqrt{2\,m}}{\hbar}\int_{r_1}^{r_2}
+\sqrt{V(r)-E}\,dr\right),
+\end{equation}
+where $r_1=R$ and $r_2 = Z_1\,Z_2\,e^2/(4\pi\,\epsilon_0\,E)$. Here,
+$m=4\,m_p$ is the $\alpha$-particle mass. The above expression 
+reduces to
+\begin{equation}
+|T|^{\,2} = \exp\left(-2\,\sqrt{2}\,\beta \int_{1}^{E_c/E}\left[\frac{1}{y}-\frac{E}{E_c}\right]^{1/2} dy\right),
+\end{equation}
+where 
+\begin{equation}
+\beta = \left(\frac{Z_1\,Z_2\,e^2\,m\,R}{4\pi\,\epsilon_0\,\hbar^2}\right)^{1/2} = 0.74\,Z_1^{2/3}
+\end{equation}
+is a dimensionless constant, and
+\begin{equation}
+E_c = \frac{Z_1\,Z_2\,e^2}{4\pi\,\epsilon_0\,R} = 1.44\,Z_1^{2/3}\,\,{\rm MeV}
+\end{equation}
+is the characteristic energy the $\alpha$-particle would need in order to escape
+from the nucleus without tunneling. Of course, $E\ll E_c$. 
+It is easily demonstrated that
+\begin{equation}
+\int_1^{1/\epsilon}\left[\frac{1}{y} - \epsilon\right]^{1/2} dy \simeq
+\frac{\pi}{2\,\sqrt{\epsilon}}-2
+\end{equation}
+when $\epsilon\ll 1$. 
+Hence.
+\begin{equation}
+|T|^{\,2} \simeq \exp\left(-2\,\sqrt{2}\,\beta\left[\frac{\pi}{2}\sqrt{\frac{E_c}{E}}-2\right]\right).
+\end{equation}
+
+Now, the $\alpha$-particle moves inside the nucleus with the characteristic
+velocity $v= \sqrt{2\,E/m}$. It follows that the particle bounces backward
+and forward within the nucleus at the frequency 
+$\nu\simeq v/R$, giving
+\begin{equation}
+\nu\simeq 2\times 10^{28}\,\,{\rm yr}^{-1}
+\end{equation}
+for a 1 MeV $\alpha$-particle trapped inside a typical  heavy nucleus of radius $10^{-14}$\,m.
+Thus, the $\alpha$-particle effectively attempts to tunnel through the potential
+barrier $\nu$ times a second. If each of these attempts has a probability
+$|T|^{\,2}$ of succeeding, then the probability of decay per unit time
+is $\nu\,|T|^2$. Hence, if there are $N(t)\gg 1$ undecayed nuclii at time $t$ then
+there are only $N+dN$ at time $t+dt$, where
+\begin{equation}
+dN = - N\,\nu\,|T|^2\,dt.
+\end{equation}
+This expression can be integrated to give
+\begin{equation}
+N(t) = N(0)\,\exp(-\nu\,|T|^2\,t).
+\end{equation}
+Now, the {\em half-life}, $\tau$,  is defined as the time  which must elapse
+in order for half of the nuclii originally present to decay. It follows from
+the above formula that
+\begin{equation}
+\tau = \frac{\ln 2}{\nu\,|T|^2}.
+\end{equation}
+Note that the half-life is {\em independent}\/ of $N(0)$.
+
+Finally, making use of the above results, we obtain
+\begin{equation}\label{e5.64}
+\log_{10}[\tau ({\rm yr})] = -C_1 - C_2\,Z_1^{\,2/3} + C_3\,\frac{Z_1}{\sqrt{E({\rm MeV})}},
+\end{equation}
+where
+\begin{eqnarray}
+C_1 &= &28.5,\\[0.5ex]
+C_2 &=& 1.83,\\[0.5ex]
+C_3 &=& 1.73.
+\end{eqnarray}
+ 
+\begin{figure}
+\epsfysize=4in
+\centerline{\epsffile{Chapter05/fig06.eps}}
+\caption{\em The experimentally determined half-life, $\tau_{ex}$, of various atomic nucleii which decay via $\alpha$ emission versus the best-fit theoretical half-life $\log_{10}(\tau_{th}) = -28.9 - 1.60\,Z_1^{\,2/3} + 1.61\,Z_1/\sqrt{E}$. Both half-lives are measured in years. Here, $Z_1=Z-2$, where $Z$ is the charge number of the nucleus, and $E$ the characteristic energy of the emitted $\alpha$-particle in MeV. In
+order of increasing half-life, the points correspond to the
+following nucleii: Rn 215, Po 214, Po 216, Po 197, Fm 250, Ac 225, U 230, U 232, U 234, Gd 150, U 236, U 238, Pt 190, Gd 152, Nd 144. Data obtained from IAEA Nuclear Data Centre.}\label{fal}   
+\end{figure}
+
+The half-life, $\tau$,  the daughter charge-number, $Z_1=Z-2$, and
+the $\alpha$-particle energy, $E$, for atomic nucleii which undergo $\alpha$-decay
+are indeed found to satisfy a relationship of the form (\ref{e5.64}). The
+best fit to the data (see Fig.~\ref{fal}) is obtained using
+\begin{eqnarray}
+C_1 &= &28.9,\\[0.5ex]
+C_2 &=& 1.60,\\[0.5ex]
+C_3 &=& 1.61.
+\end{eqnarray}
+Note that these values are remarkably similar to those calculated above.
+
+\section{Square Potential Well}
+Consider a particle of mass $m$ and energy $E$ interacting with the
+simple square potential well
+\begin{equation}\label{e5.71}
+V(x) = \left\{\begin{array}{lcl}
+-V_0&\mbox{\hspace{1cm}}&\mbox{for $-a/2\leq x\leq a/2$}\\[0.5ex]
+0&&\mbox{otherwise}
+\end{array}
+\right.,
+\end{equation}
+where $V_0>0$. 
+
+Now, if $E>0$ then the particle is unbounded. Thus, when the particle encounters the well
+it is either reflected or transmitted. As is easily demonstrated, the reflection and transmission
+probabilities are given by Eqs.~(\ref{e5.28}) and (\ref{e5.29}), respectively,
+where
+\begin{eqnarray}
+k^2&=& \frac{2\,m\,E}{\hbar^2},\\[0.5ex]
+q^2 &=& \frac{2\,m\,(E+V_0)}{\hbar^2}.
+\end{eqnarray}
+
+Suppose, however, that $E<0$. In this case, the particle
+is bounded ({\em i.e.}, $|\psi|^2\rightarrow 0$ as $|x|\rightarrow\infty$). 
+Is is possible to find bounded solutions of Schr\"{o}dinger's equation
+in  the  finite square potential well (\ref{e5.71})? 
+
+Now, it is easily seen that  independent solutions of Schr\"{o}dinger's equation (\ref{e5.2})
+in the symmetric [{\em i.e.}, $V(-x)=V(x)$] potential (\ref{e5.71})
+must be either totally symmetric [{\em i.e.}, $\psi(-x)=\psi(x)$], or
+totally anti-symmetric [{\em i.e.}, $\psi(-x) =-\psi(x)$]. Moreover,
+the solutions must satisfy the boundary condition
+\begin{equation}
+\psi\rightarrow 0\mbox{\hspace{2cm}as $|x|\rightarrow\infty$}.
+\end{equation}
+
+Let us, first of all, search for a totally symmetric solution.
+In the region to the left of the well ({\em i.e.} $x<-a/2$), the
+solution of Schr\"{o}dinger's equation which satisfies the
+boundary condition $\psi\rightarrow 0$ and $x\rightarrow-\infty$ is
+\begin{equation}
+\psi(x) = A\,{\rm e}^{\,k\,x},
+\end{equation}
+where
+\begin{equation}
+k^2 = \frac{2\,m\,|E|}{\hbar^2}.
+\end{equation}
+By symmetry, the solution in the region to the right of the well ({\em i.e.},
+$x>a/2$) is
+\begin{equation}
+\psi(x) = A\,{\rm e}^{-k\,x}.
+\end{equation}
+The solution inside the well ({\em i.e.}, $|x|\leq a/2$) which
+satisfies the symmetry constraint $\psi(-x)=\psi(x)$ is
+\begin{equation}
+\psi(x) = B\,\cos(q\,x),
+\end{equation}
+where
+\begin{equation}
+q^2 = \frac{2\,m\,(V_0+E)}{\hbar^2}.
+\end{equation}
+Here, we have assumed that $E> -V_0$. 
+The constraint that $\psi(x)$ and its first derivative be continuous at the
+edges of the well ({\em i.e.}, at $x=\pm a/2$) yields
+\begin{equation}\label{e5.81}
+k = q\,\tan(q\,a/2).
+\end{equation}
+
+Let $y= q\,a/2$. It follows that
+\begin{equation}
+E = E_0\,y^2 - V_0,
+\end{equation}
+where
+\begin{equation}
+E_0 = \frac{2\,\hbar^2}{m\,a^2}.
+\end{equation}
+Moreover, Eq.~(\ref{e5.81}) becomes
+\begin{equation}\label{e5.84}
+\frac{\sqrt{\lambda-y^2}}{y} = \tan y,
+\end{equation}
+with
+\begin{equation}
+\lambda = \frac{V_0}{E_0}.
+\end{equation}
+Here, $y$ must lie in the range $0< y< \sqrt{\lambda}$: {\em i.e.},
+$E$ must lie in the range $-V_0< E < 0$.
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter05/fig07.eps}}
+\caption{\em The curves $\tan y$ (solid) and $\sqrt{\lambda - y^2}/y$ (dashed), calculated for $\lambda = 1.5\,\pi^2$. The latter curve takes the
+value $0$ when $y>\sqrt{\lambda}$. }\label{well}   
+\end{figure}
+
+Now, the solutions to Eq.~(\ref{e5.84}) correspond to the
+intersection of the curve $\sqrt{\lambda - y^2}/y$ with the curve
+$\tan y$. Figure~\ref{well} shows these two curves plotted for
+a particular value of $\lambda$. In this case, the curves intersect
+twice, indicating the existence of two totally symmetric bound states in the well.
+Moreover, it is evident, from the figure, that as $\lambda$ increases ({\em i.e.}, as the well becomes
+deeper)  there are more and more bound states. However, it is also evident that there is
+always at least one totally symmetric bound state, no matter how small $\lambda$
+becomes ({\em i.e.}, no matter how shallow the well becomes). In the limit $\lambda\gg 1$
+({\em i.e.}, the limit in which the well becomes very deep), the
+solutions to Eq.~(\ref{e5.84}) asymptote to the roots of $\tan y =\infty$.
+This gives $y = (2\,j-1)\,\pi/2$, where $j$ is a positive integer, or
+\begin{equation}
+q = \frac{(2\,j-1)\,\pi}{a}.
+\end{equation}
+These solutions are equivalent to the odd-$n$ infinite square well solutions 
+specified by Eq.~(\ref{e5.8}).
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter05/fig08.eps}}
+\caption{\em The curves $\tan y$ (solid) and $-y/\sqrt{\lambda - y^2}$ (dashed), calculated for $\lambda = 1.5\,\pi^2$. }\label{well1}   
+\end{figure}
+
+For the case of a totally anti-symmetric bound state, similar analysis to the
+above yields 
+\begin{equation}\label{e5.85}
+-\frac{y}{\sqrt{\lambda-y^2}} = \tan y.
+\end{equation}
+The solutions of this equation correspond to the intersection of the
+curve $\tan y$ with the curve  $-y/\sqrt{\lambda-y^2}$. Figure~\ref{well1} shows these two curves plotted for
+the same value of $\lambda$ as that used in Fig.~\ref{well}. In this
+case, the curves intersect once, indicating the existence of
+a single totally anti-symmetric bound state in the well. It is, again, evident, from the figure, that as $\lambda$ increases ({\em i.e.}, as the well becomes
+deeper) there are more and more bound states. However, it is also evident that
+when $\lambda$ becomes sufficiently small [{\em i.e.}, $\lambda < (\pi/2)^2$] then there is no totally
+anti-symmetric bound state. In other words, a very shallow potential well
+always possesses a totally symmetric bound state, but does not generally
+possess a totally anti-symmetric bound state. In the limit $\lambda\gg 1$
+({\em i.e.}, the limit in which the well becomes very deep), the
+solutions to Eq.~(\ref{e5.85}) asymptote to the roots of $\tan y =0$.
+This gives $y = j\,\pi$, where $j$ is a positive integer, or
+\begin{equation}
+q = \frac{2\,j\,\pi}{a}.
+\end{equation}
+These solutions are equivalent to the even-$n$ infinite square well solutions 
+specified by Eq.~(\ref{e5.8}).
+
+\section{Simple Harmonic Oscillator}\label{sosc}
+The classical Hamiltonian of a simple harmonic oscillator is
+\begin{equation}
+H = \frac{p^2}{2\,m} + \frac{1}{2}\,K\,x^2,
+\end{equation}
+where $K>0$ is the so-called force constant of the oscillator. Assuming that the quantum
+mechanical Hamiltonian has the same form as the classical Hamiltonian, the time-independent Schr\"{o}dinger equation for a particle of mass $m$ and energy $E$ moving in a
+simple harmonic potential becomes
+\begin{equation}\label{e5.90}
+\frac{d^2\psi}{dx^2}  =  \frac{2\,m}{\hbar^2}\left(\frac{1}{2}\,K\,x^2-E\right)\psi.
+\end{equation}
+Let $\omega = \sqrt{K/m}$, where $\omega$ is the oscillator's classical angular frequency of oscillation. Furthermore, let
+\begin{equation}
+y = \sqrt{\frac{m\,\omega}{\hbar}}\,x,
+\end{equation}
+and
+\begin{equation}\label{e5.92}
+\epsilon = \frac{2\,E}{\hbar\,\omega}.
+\end{equation}
+Equation (\ref{e5.90}) reduces to
+\begin{equation}\label{e5.93}
+\frac{d^2\psi}{dy^2} - (y^2-\epsilon)\,\psi = 0.
+\end{equation}
+We need to find solutions to the above equation which are bounded
+at infinity: {\em i.e.},  solutions which satisfy the boundary
+condition $\psi\rightarrow 0$ as $|y|\rightarrow\infty$.
+
+Consider the behavior of the solution to Eq.~(\ref{e5.93}) in the limit $|y|\gg 1$. As is easily seen, in this limit the equation simplifies somewhat to give
+\begin{equation}
+\frac{d^2\psi}{dy^2} - y^2\,\psi \simeq  0.
+\end{equation}
+The approximate solutions to the above equation are
+\begin{equation}
+\psi(y) \simeq A(y)\,{\rm e}^{\pm y^2/2},
+\end{equation}
+where $A(y)$ is a relatively slowly varying function of $y$.
+Clearly, if $\psi(y)$ is to remain bounded as $|y|\rightarrow\infty$ then we
+must chose the exponentially decaying solution. This suggests that
+we should write
+\begin{equation}\label{e5.96}
+\psi(y) = h(y)\,{\rm e}^{-y^2/2},
+\end{equation} 
+where we would expect $h(y)$ to be an algebraic, rather than an exponential, function of $y$.
+
+Substituting Eq.~(\ref{e5.96}) into Eq.~(\ref{e5.93}), we obtain
+\begin{equation}\label{e5.97}
+\frac{d^2h}{dy^2} - 2\,y\,\frac{dh}{dy} + (\epsilon-1)\,h = 0.
+\end{equation}
+Let us attempt a power-law solution of the form
+\begin{equation}\label{e5.98}
+h(y) = \sum_{i=0}^\infty c_i\,y^i.
+\end{equation}
+Inserting this test solution into Eq.~(\ref{e5.97}), and equating the
+coefficients of $y^i$, we obtain the recursion relation
+\begin{equation}\label{e5.99}
+c_{i+2} = \frac{(2\,i-\epsilon+1)}{(i+1)\,(i+2)}\,c_i.
+\end{equation}
+Consider the behavior of $h(y)$ in the limit $|y|\rightarrow\infty$.
+The above recursion relation simplifies to
+\begin{equation}
+c_{i+2} \simeq \frac{2}{i}\,c_i.
+\end{equation}
+Hence, at large $|y|$, when the higher powers of $y$ dominate, we
+have
+\begin{equation}
+h(y) \sim C \sum_{j}\frac{y^{2\,j}}{j!}\sim C\,{\rm e}^{\,y^2}.
+\end{equation}
+It follows that $\psi(y) = h(y)\,\exp(-y^2/2)$ varies as
+$\exp(\,y^2/2)$ as $|y|\rightarrow\infty$.  This behavior is unacceptable,
+since it does not satisfy the boundary condition $\psi\rightarrow 0$
+as $|y|\rightarrow\infty$. The only way in which we can prevent $\psi$
+from blowing up as $|y|\rightarrow\infty$
+is to demand that the power series (\ref{e5.98}) {\em terminate}\/ at
+some finite value of $i$. This implies, from the recursion relation
+(\ref{e5.99}), that
+\begin{equation}
+\epsilon = 2\,n+1,
+\end{equation}
+where $n$ is a non-negative integer. Note that the number of terms in the power
+series (\ref{e5.98}) is $n+1$. Finally, using Eq.~(\ref{e5.92}), we obtain
+\begin{equation}
+E = (n+1/2)\,\hbar\,\omega,
+\end{equation}
+for $n=0,1,2,\cdots$. 
+
+Hence, we conclude that a particle moving in a
+harmonic potential has quantized energy levels which
+are {\em equally spaced}. The
+spacing between successive energy levels is $\hbar\,\omega$, where
+$\omega$ is the classical oscillation frequency. Furthermore, the
+lowest energy state ($n=0$) possesses the {\em finite}\/ energy
+$(1/2)\,\hbar\,\omega$. This is sometimes called {\em zero-point energy}.
+It is easily demonstrated that the (normalized) wavefunction of the lowest
+energy state takes the form
+\begin{equation}
+\psi_0(x) = \frac{{\rm e}^{-x^2/2\,d^2}}{\pi^{1/4}\,\sqrt{d}},
+\end{equation}
+where $d=\sqrt{\hbar/m\,\omega}$. 
+
+Let $\psi_n(x)$ be an energy eigenstate of the harmonic oscillator
+corresponding to the eigenvalue
+\begin{equation}
+E_n = (n+1/2)\,\hbar\,\omega.
+\end{equation}
+Assuming that the $\psi_n$ are properly normalized (and real), we have
+\begin{equation}\label{e5.107}
+\int_{-\infty}^\infty \psi_n\,\psi_m\,dx = \delta_{nm}.
+\end{equation}
+Now, Eq.~(\ref{e5.93}) can be written
+\begin{equation}\label{e5.108}
+\left(-\frac{d^2}{d y^2}+y^2\right)\psi_n = (2n+1)\,\psi_n,
+\end{equation}
+where $x = d\,y$, and $d=\sqrt{\hbar/m\,\omega}$. It is helpful to
+define the operators
+\begin{equation}\label{e5.109}
+a_\pm = \frac{1}{\sqrt{2}}\left(\mp \frac{d}{dy}+y\right).
+\end{equation}
+As is easily demonstrated, these operators satisfy the commutation relation
+\begin{equation}
+[a_+,a_-] = -1.
+\end{equation}
+Using these operators, Eq.~(\ref{e5.108}) can also be written
+in the forms
+\begin{equation}
+a_+\,a_-\,\psi_n = n\,\psi_n,
+\end{equation}
+or
+\begin{equation}
+a_-\,a_+\,\psi_n = (n+1)\,\psi_n.
+\end{equation}
+The above two equations imply that
+\begin{eqnarray}\label{e5.113}
+a_+\,\psi_n &=& \sqrt{n+1}\,\psi_{n+1},\\[0.5ex]
+a_-\,\psi_n &=&\sqrt{n}\,\psi_{n-1}.\label{e5.114}
+\end{eqnarray}
+We conclude that $a_+$ and $a_-$ are {\em raising and lowering operators},
+respectively, for the harmonic oscillator: {\em i.e.}, operating on the wavefunction with $a_+$ causes the
+quantum number $n$ to increase by unity, and {\em vice versa}. 
+The Hamiltonian for the harmonic oscillator can be written in the form
+\begin{equation}
+H = \hbar\,\omega\,\left(a_+\,a_- + \frac{1}{2}\right),
+\end{equation}
+from which the result
+\begin{equation}
+H\,\psi_n = (n+1/2)\,\hbar\,\omega\,\psi_n = E_n\,\psi_n
+\end{equation}
+is readily deduced.
+Finally, Eqs.~(\ref{e5.107}), (\ref{e5.113}), and (\ref{e5.114})
+yield the useful expression
+\begin{eqnarray}\label{e5.xxx}
+\int_{-\infty}^\infty \psi_m\,x\,\psi_n\,dx &=& \frac{d}{\sqrt{2}}\int_{-\infty}^{\infty}\psi_m\,(a_+ + a_-)\,\psi_n\,dx\\[0.5ex]
+&=& \sqrt{\frac{\hbar}{2\,m\,\omega}}\left(\sqrt{m}\,\delta_{m,n+1} + \sqrt{n}\,\delta_{m,n-1}\right).\nonumber
+\end{eqnarray}
+
+\subsubsection*{Exercises}
+{\small
+\begin{enumerate}
+\item Show that the wavefunction of a particle of mass $m$ in an infinite one-dimensional square-well of width $a$
+returns to its original form after a quantum revival time $T=4\,m\,a^2/\pi\,\hbar$. 
+
+\item A particle of mass $m$ moves freely in one dimension between
+impenetrable walls located at 
+$x=0$ and $a$. Its initial wavefunction is
+$$
+\psi(x,0) = \sqrt{2/a}\,\sin(3\pi\,x/a).
+$$
+What is the subsequent time evolution of the wavefunction?
+Suppose that the initial wavefunction is 
+$$
+\psi(x,0) = \sqrt{1/a}\,\sin(\pi\,x/a)\,[1+2\,\cos(\pi\,x/a)].
+$$
+What now is the subsequent time evolution? Calculate the probability
+of finding the particle between 0 and $a/2$ as a function of time in
+each case.
+
+\item A particle of mass $m$ is in the ground-state of an infinite one-dimensional square-well of width $a$. Suddenly the well expands to
+twice its original size, as the right wall moves from $a$ to $2a$, leaving
+the wavefunction momentarily undisturbed. The energy of the particle
+is now measured. What is the most probable result? What is the probability
+of obtaining this result? What is the next most probable result, and
+what is its probability of occurrence? What is the expectation value
+of the energy? 
+
+\item A stream of particles of mass $m$ and energy $E>0$ encounter a
+potential step of height $W (<E)$: {\em i.e.}, $V(x)=0$ for $x<0$ and
+$V(x)=W$ for $x>0$ with the particles incident from $-\infty$. Show that the fraction
+reflected is
+$$
+R = \left(\frac{k-q}{k+q}\right)^2,
+$$
+where $k^2= (2m/\hbar^2)\,E$ and $q^{\,2}= (2m/\hbar^2)\,(E-W)$. 
+
+\item A stream of particles of mass $m$ and energy $E>0$ encounter the
+delta-function potential $V(x) = -\alpha\,\delta (x)$, where
+$\alpha>0$.  Show that the fraction
+reflected is
+$$
+R = \beta^2/(1+\beta^2),
+$$
+where $\beta= m\,\alpha/\hbar^2\,k$, and $k^2= (2m/\hbar^2)\,E$. 
+Does such a potential have a bound state? If so, what is its
+energy?
+
+\item Two potential wells of width $a$ are separated by a distance $L\gg a$.
+A particle of mass $m$ and energy $E$ is in one of the wells. Estimate
+the time required for the particle to tunnel to the other well.
+
+\item Consider the half-infinite potential well
+$$
+V(x) = \left\{\begin{array}{lll}
+\infty&\mbox{\hspace{1cm}}&x\leq 0\\
+-V_0&&0<x<L\\
+0 &&x\geq L
+\end{array}\right.,
+$$
+where $V_0> 0$. Demonstrate that the bound-states of a particle of
+mass $m$ and energy $-V_0<E<0$ satisfy
+$$
+\tan\left(\sqrt{2\,m\,(V_0+E)}\,\,L/\hbar\right) = - \sqrt{(V_0+E)/(-E)}.
+$$
+
+\item Find the properly normalized first two excited energy eigenstates of
+the harmonic oscillator, as well as  the expectation value of the potential energy in the $n$th energy eigenstate. Hint: Consider the raising and lowering operators $a_\pm$ defined
+in Eq.~(\ref{e5.109}).
+
+\end{enumerate}
+}

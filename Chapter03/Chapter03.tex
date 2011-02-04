@@ -1,0 +1,1115 @@
+\chapter{Wave-Particle Duality}\label{swave}
+\section{Introduction}
+In classical mechanics, waves and particles are two completely distinct
+types of physical entity. Waves are continuous and spatially extended, where\-as particles are discrete and have little or no spatial
+extent. However, in quantum mechanics, waves sometimes
+act as particles, and particles sometimes act as waves---this strange behaviour
+is known as {\em wave-particle duality}. In this chapter, we
+shall examine how  wave-particle duality shapes the general features of quantum mechanics.
+
+\section{Wavefunctions}
+A {\em wave}\/ is defined as a disturbance in some physical system which is {\em periodic}\/ in both space and time. 
+In one dimension, a wave is generally represented in terms of a {\em wavefunction}: {\em e.g.}, 
+\begin{equation}\label{ew}
+\psi(x,t) = A\,\cos(k\,x-\omega\,t+\varphi),
+\end{equation}
+where  $x$ represents position,  $t$ represents time, and $A$, $k$, $\omega >0$. 
+For instance, if we are considering a sound wave then $\psi(x,t)$ might correspond to the pressure perturbation
+associated with the wave at position $x$ and time $t$. On the other hand, if we are considering a light wave then $\psi(x,t)$
+might represent the wave's transverse electric field. As is well-known, the cosine function, $\cos(\theta)$, 
+is {\em periodic}\/ in its argument, $\theta$, with period $2\pi$: {\em i.e.}, $\cos(\theta+2\pi)=\cos\theta$ for all $\theta$. 
+The function also {\em oscillates}\/ between the minimum and maximum values $-1$ and $+1$, respectively, as
+$\theta$ varies. It follows that the wavefunction (\ref{ew}) is periodic in $x$ with period $\lambda=2\pi/k$:
+{\em i.e.}, $\psi(x+\lambda,t)=\psi(x,t)$ for all $x$ and $t$. Moreover, the wavefunction is periodic
+in $t$ with period $T=2\pi/\omega$: {\em i.e.}, $\psi(x,t+T)=\psi(x,t)$ for all $x$ and $t$.
+Finally, the wavefunction oscillates between the minimum and
+maximum values $-A$ and $+A$, respectively, as   $x$ and $t$ vary. The spatial period of the wave, $\lambda$, is
+known as its {\em wavelength}, and the temporal period, $T$, is called its {\em period}.  Furthermore, the quantity
+$A$ is  termed the wave {\em amplitude}, the quantity $k$ the {\em wavenumber}, and the
+quantity $\omega$ the wave {\em angular frequency}. Note that the units of $\omega$ are {\em radians per second}. 
+The conventional wave {\em frequency}, in {\em cycles per second}\/ (otherwise known as hertz), is $\nu=1/T=\omega/2\pi$. Finally, the quantity $\varphi$, appearing in expression (\ref{ew}), is termed the
+{\em phase angle}, and  determines the exact positions of the wave maxima and minima at a given time. In fact, the maxima are located at $k\,x-\omega\,t+\varphi = j\,2\pi$, where $j$ is an integer. This follows
+because the maxima of $\cos(\theta)$ occur at $\theta=j\,2\pi$. Note that a given maximum
+satisfies $x=(j-\varphi/2\pi)\,\lambda+ v\,t$, where $v=\omega/k$. It follows that the maximum, and, by implication, the whole wave, {\em propagates}\/ in
+the {\em positive}\/ $x$-direction at the velocity $\omega/k$. Analogous reasoning reveals that
+\begin{equation}
+\psi(x,t) = A\,\cos(-k\,x-\omega\,t+\varphi)=A\,\cos(k\,x+\omega\,t-\varphi),
+\end{equation}
+is the wavefunction of a wave of amplitude $A$, wavenumber $k$, angular frequency $\omega$, and phase
+angle $\varphi$, which propagates in the {\em negative}\/ $x$-direction at the velocity $\omega/k$. 
+
+
+\section{Plane Waves}
+As we have just seen, a  wave of amplitude $A$, wavenumber $k$,  angular frequency $\omega$, and phase
+angle $\varphi$, 
+propagating in the positive $x$-direction,  is  represented by the following wavefunction:
+\begin{equation}\label{e10.1}
+\psi(x,t)=A\,\cos(k\,x-\omega\,t+\varphi).
+\end{equation}
+Now, the   type of wave represented above is conventionally termed  a {\em one-dimen\-sio\-nal plane wave}. It is {\em one-dimensional}\/
+because its associated wavefunction only depends on the single Cartesian coordinate $x$. 
+Furthermore, it is a {\em plane wave}\/ because the wave maxima, which are located at
+\begin{equation}\label{e10.2}
+k\,x-\omega\,t+\varphi  = j\,2\pi,
+\end{equation}
+where $j$ is an integer, consist of a series of {\em parallel planes},  normal to the $x$-axis, which are equally spaced a distance
+$\lambda=2\pi/k$ apart, and propagate along the
+positive $x$-axis at the velocity $v=\omega/k$. 
+These conclusions follow because Eq.~(\ref{e10.2}) can be re-written in the form
+\begin{equation}\label{e10.3}
+x= d,
+\end{equation}
+where $d=(j-\varphi/2\pi)\,\lambda + v\,t$. Moreover, as is well-known, (\ref{e10.3})
+is  the equation of a plane, normal to the $x$-axis,  whose distance of closest approach to the
+origin is $d$. 
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter03/fig01.eps}}
+\caption{\em The solution of ${\bf n}\cdot{\bf r} = d$ is a plane.}\label{f10.1}   
+\end{figure}
+
+The previous equation can also be written in the coordinate-free form
+\begin{equation}\label{e10.4}
+ {\bf n}\cdot{\bf r} = d,
+\end{equation}
+where  ${\bf n} = (1,\,0,\,0)$ is a unit
+vector directed along the positive $x$-axis, and ${\bf r}=(x,\,y,\,z)$ represents the vector displacement of a general point from the origin. Since there is nothing special about the $x$-direction, it follows that if ${\bf n}$ is re-interpreted as a 
+unit vector pointing in an {\em arbitrary}\/ direction then (\ref{e10.4}) can be re-interpreted as the general equation of a plane.
+As before, the plane is normal to
+${\bf n}$, and its distance of closest approach to the origin is $d$. See Fig.~\ref{f10.1}. This observation allows us to write the three-dimensional
+equivalent to the wavefunction (\ref{e10.1}) as
+\begin{equation}\label{e10.5}
+\psi(x,y,z,t)=A\,\cos({\bf k}\cdot{\bf r}-\omega\,t+\varphi),
+\end{equation}
+where the constant vector ${\bf k} = (k_x,\,k_y,\,k_z)=k\,{\bf n}$ is called the {\em wavevector}. The  wave represented above is conventionally termed 
+a {\em three-dimensional plane wave}. It is three-dimensio\-nal because its  wavefunction, $\psi(x,y,z,t)$, depends on all
+three Cartesian coordinates. Moreover, it is a plane wave because the wave maxima are located at
+\begin{equation}
+{\bf k}\cdot{\bf r} -\omega\,t +\varphi= j\,2\pi,
+\end{equation}
+or
+\begin{equation}
+{\bf n}\cdot{\bf r} = (j-\varphi/2\pi)\,\lambda + v\,t,
+\end{equation}
+where  $\lambda=2\pi/k$,   and $v=\omega/k$. Note that the wavenumber, $k$, is the
+{\em magnitude}\/ of the wavevector, ${\bf k}$: {\em i.e.}, $k\equiv |{\bf k}|$. 
+It follows, by comparison with Eq.~(\ref{e10.4}), that the
+wave maxima consist of a series of parallel planes,  normal to the wavevector, which are equally spaced a distance $\lambda$ apart, and which propagate in the ${\bf k}$-direction  at the velocity $v$. See Fig.~\ref{f10.2}. Hence, the direction of the wavevector specifies the  wave propagation direction, whereas its magnitude  determines the wavenumber, $k$, and, thus, the wavelength, $\lambda=2\pi/k$. 
+
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter03/fig02.eps}}
+\caption{\em Wave maxima associated with a three-dimensional plane wave.}\label{f10.2}   
+\end{figure}
+
+\section{Representation of Waves via Complex Functions}
+In mathematics, the symbol ${\rm i}$ is conventionally used to represent the {\em square-root of minus one}: {\em i.e.}, one of the
+solutions of ${\rm i}^2 = -1$. Now, a {\em real number}, $x$ (say), can take any value in a continuum of different values lying between $-\infty$ and $+\infty$. 
+On the other hand, an {\em imaginary number}\/ takes the general form ${\rm i}\,y$, where $y$ is a real number. It follows that the square of
+a real number is a positive real number, whereas the square of an imaginary number is a negative real number. In addition, a general {\em complex number}\/ is written
+\begin{equation}
+z = x + {\rm i}\,y,
+\end{equation}
+where $x$ and $y$ are real numbers. In fact, $x$ is termed the {\em real part}\/ of $z$, and $y$ 
+the {\em imaginary part}\/ of $z$. This is written mathematically as $x={\rm Re}(z)$ and $y={\rm Im}(z)$. 
+Finally, the {\em complex conjugate}\/ of $z$ is defined $z^\ast = x-{\rm i}\,y$.
+
+Now, just as we
+can visualize a real number as a point on an infinite straight-line, we can visualize a complex number as
+a point in an infinite plane. The coordinates of the point in question are the real and imaginary
+parts of the number: {\em i.e.}, $z\equiv (x,\,y)$. This idea is illustrated in Fig.~\ref{f13.2}. 
+The distance, $r=\sqrt{x^2+y^2}$, of the representative point from the origin is termed the {\em modulus}\/
+of the corresponding complex number, $z$. This is written mathematically as $|z|=\sqrt{x^2+y^2}$.  Incidentally, it follows that $z\,z^\ast = x^2 + y^2=|z|^2$. 
+The angle, $\theta=\tan^{-1}(y/x)$,  that the straight-line joining the representative point to the origin subtends with the 
+real axis is termed the {\em argument}\/ of the corresponding complex number, $z$. This is written mathematically
+as ${\rm arg}(z)=\tan^{-1}(y/x)$. It follows from standard trigonometry that $x=r\,\cos\theta$, and $y=r\,\sin\theta$.
+Hence, $z= r\,\cos\theta+ {\rm i}\,r\sin\theta$. 
+
+\begin{figure}
+\epsfysize=3.25in
+\centerline{\epsffile{Chapter03/fig03.eps}}
+\caption{\em Representation of a complex number as a point in a plane.}\label{f13.2}   
+\end{figure}
+
+Complex numbers are often used to represent wavefunctions. All such representations  depend ultimately on a fundamental mathematical identity, known as
+{\em de Moivre's theorem}, which takes the form
+\begin{equation}
+{\rm e}^{\,{\rm i}\,\phi} \equiv \cos\phi + {\rm i}\,\sin\phi,
+\end{equation}
+where $\phi$ is a  real number. Incidentally, given that $z=r\,\cos\theta + {\rm i}\,r\,\sin\theta= r\,(\cos\theta+{\rm i}\,\sin\theta)$, where $z$ is a general
+complex number, $r=|z|$  its modulus, and $\theta={\rm arg}(z)$ its argument, it follows from de Moivre's theorem that any
+complex number, $z$, can be written
+\begin{equation}
+z = r\,{\rm e}^{\,{\rm i}\,\theta},
+\end{equation}
+where $r=|z|$ and $\theta={\rm arg}(z)$ are real numbers. 
+
+Now, a  one-dimensional wavefunction takes the general form
+\begin{equation}\label{e12.8}
+\psi(x,t) = A\,\cos(k\,x-\omega\,t+\varphi),
+\end{equation}
+where $A$ is the wave amplitude, $k$ the wavenumber,  $\omega$ the angular
+frequency, and $\varphi$ the phase angle.  Consider the complex wavefunction
+\begin{equation}\label{e12.10}
+\psi(x,t) = \psi_0\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)},
+\end{equation}
+where $\psi_0$ is a complex constant. We can write
+\begin{equation}
+\psi_0 = A\,{\rm e}^{\,{\rm i}\,\varphi},
+\end{equation}
+where $A$ is the modulus, and $\varphi$ the argument, of $\psi_0$.
+Hence, we deduce that
+\begin{eqnarray}
+{\rm Re}\left[\psi_0\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\right] &=& {\rm Re}\left[A\,{\rm e}^{\,{\rm i}\,\varphi}\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\right]\nonumber\\[0.5ex]
+&=&{\rm Re}\left[A\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t+\varphi)}\right]\nonumber\\[0.5ex]&=&A\,{\rm Re}\left[{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t+\varphi)}\right].
+\end{eqnarray}
+Thus, it follows from de Moirve's theorem, and Eq.~(\ref{e12.8}), that
+\begin{equation}
+{\rm Re}\left[\psi_0\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\right] =A\,\cos(k\,x-\omega\,t+\varphi)=\psi(x,t).
+\end{equation}
+In other words, a  general one-dimensional real wavefunction, (\ref{e12.8}), can be
+represented as the {\em real part}\/ of a complex wavefunction of the form (\ref{e12.10}).
+For ease
+of notation, the ``take the real part''  aspect of the above expression is usually omitted, and our general one-dimension wavefunction
+is simply written
+\begin{equation}\label{e12.13}
+\psi(x,t) = \psi_0\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}.
+\end{equation}
+ The
+main advantage of the complex representation, (\ref{e12.13}), over the more straightforward
+real representation, (\ref{e12.8}), is that the former enables us to combine the amplitude, $A$, and the
+phase angle, $\varphi$, of the wavefunction into a single complex amplitude, $\psi_0$. 
+Finally, the three dimensional generalization of the  above expression is
+\begin{equation}
+\psi({\bf r},t) = \psi_0\,{\rm e}^{\,{\rm i}\,({\bf k}\cdot{\bf r}-\omega\,t)},
+\end{equation}
+where ${\bf k}$ is the wavevector.  
+
+\section{Classical Light Waves}\label{s2.2}
+Consider a classical, monochromatic, linearly polarized, plane light wave,
+propagating through a vacuum in the $x$-direction. It is convenient to characterize a light wave
+(which is, of course, a type of electromagnetic wave) by specifying its associated 
+electric field. Suppose that the wave is polarized such that this
+ electric field oscillates in the $y$-direction. (According to standard
+electromagnetic theory, the  magnetic field oscillates in the $z$-direction, in phase with the electric field, with an amplitude which is that of the electric field  divided by the
+velocity of light in vacuum.) Now, the
+ electric field can be conveniently represented in terms of a {\em complex wavefunction}:
+\begin{equation}\label{e2.1}
+\psi (x,t) = \bar{\psi}\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}.
+\end{equation}
+Here, ${\rm i} = \sqrt{-1}$, $k$ and $\omega$ are real parameters, and $\bar{\psi}$ is a complex wave amplitude. By convention, the
+physical electric field is the {\em real part}\/ of the above expression.
+Suppose that 
+\begin{equation}\label{e2.2}
+\bar{\psi} = |\bar{\psi}|\,{\rm e}^{\,{\rm i}\,\varphi},
+\end{equation}
+where $\varphi$ is real. It follows that the physical electric field
+takes the form
+\begin{equation}\label{e2.3}
+E_y(x,t) = {\rm Re}[\psi(x,t)] = |\bar{\psi}|\,\cos(k\,x-\omega\,t +\varphi),
+\end{equation}
+where $|\bar{\psi}|$ is the amplitude of the electric oscillation, $k$ the wavenumber, $\omega$ the
+angular frequency, and $\varphi$ the phase angle. In addition, $\lambda=2\pi/k$ is the wavelength, and
+$\nu=\omega/2\pi$ the frequency (in hertz). 
+
+According to  standard electromagnetic theory,  the frequency and wavelength of light waves are related according to
+the well-known expression
+\begin{equation}
+c = \nu\,\lambda,
+\end{equation}
+or, equivalently, 
+\begin{equation}\label{e2.7}
+\omega = k\,c,
+\end{equation}
+where $c=3\times 10^8\,{\rm m/s}$. 
+Equations~(\ref{e2.3}) and (\ref{e2.7}) yield 
+\begin{equation}\label{e2.8}
+E_y(x,t) =|\bar{\psi}|\,\cos\left(k\,[x-(\omega/k)\,t]+\varphi\right)= |\bar{\psi}|\,\cos\left(k\,[x-c\,t]+\varphi\right).
+\end{equation}
+Note that $E_y$ depends on $x$ and $t$ only via the
+combination $x-c\,t$. It follows that the wave maxima and minima satisfy
+\begin{equation}
+x - c\, t = {\rm constant}.
+\end{equation}
+Thus, the wave maxima and minima  propagate in the $x$-direction at the fixed velocity
+\begin{equation}\label{e2.7a}
+\frac{dx}{dt} = c.
+\end{equation}
+
+An expression, such as  (\ref{e2.7}), which determines the wave angular frequency
+as a function of the wavenumber, is generally termed a {\em dispersion
+relation}. As we have already seen, and as is apparent from Eq.~(\ref{e2.8}),  the maxima and minima of a plane wave
+propagate at the characteristic velocity
+\begin{equation}
+v_p = \frac{\omega}{k},
+\end{equation}
+which is known as the {\em phase velocity}. Hence,  the dispersion relation (\ref{e2.7})  is effectively saying that the phase velocity of a plane light wave propagating through a vacuum always takes the fixed value $c$, irrespective
+of its wavelength or frequency. 
+
+Now, from standard electromagnetic theory, the {\em energy density}\/ ({\em i.e.}, the energy per unit volume) of a
+light wave is
+\begin{equation}
+U = \frac{E_y^{\,2}}{\epsilon_0},
+\end{equation}
+where $\epsilon_0= 8.85\times 10^{-12}\,{\rm F/m}$ is the {\em permittivity
+of free space}. Hence, it follows from Eqs.~(\ref{e2.1}) and (\ref{e2.3}) that
+\begin{equation}\label{e2.10}
+U \propto |\psi|^{\,2}.
+\end{equation}
+Furthermore, a light wave  possesses linear  {\em momentum}, as well
+as energy. This momentum is directed along the wave's direction of propagation, and is of density
+\begin{equation}\label{e2.11}
+G = \frac{U}{c}.
+\end{equation}
+
+\section{Photoelectric Effect}\label{s3.3}
+The so-called {\em photoelectric effect}, by which a polished metal surface emits electrons
+when illuminated by visible and ultra-violet light, was discovered by Heinrich Hertz in 1887.
+The following facts regarding this effect can be established via careful
+observation. First, a given surface only emits electrons when the {\em frequency}\/
+of the light with which it is illuminated exceeds a certain threshold value,
+which is a property of the metal. Second, the current of photoelectrons, when it
+exists, is proportional to the {\em intensity}\/ of the light falling on the surface. 
+Third, the energy of the photoelectrons is independent of the light intensity,
+but varies {\em linearly}\/ with the light frequency. These facts are
+inexplicable within the framework of classical physics.
+
+In 1905, Albert Einstein proposed a radical new theory of light in order to
+account for the photoelectric effect. According to this  theory, light
+of  fixed frequency $\nu$ consists of a collection of indivisible discrete packages, called
+{\em quanta},\footnote{Plural of {\em quantum}: Latin neuter
+of {\em quantus}\/: how much?} whose energy is
+\begin{equation}\label{ee3.15}
+E = h\,\nu.
+\end{equation}
+Here, $h = 6.6261\times 10^{-34}\,{\rm J\,s}$ is a new constant of nature,
+known as {\em Planck's constant}. Incidentally, $h$ is called Planck's constant, rather than Einstein's constant, because Max Planck first introduced the concept of the quantization of light, in 1900, whilst trying
+to account for the  electromagnetic spectrum of a black body ({\em i.e.},
+a perfect emitter and absorber of electromagnetic radiation).
+
+Suppose that the electrons at the surface of a metal lie in a potential well
+of depth $W$. In other words, the electrons have to acquire an energy $W$
+in order to be emitted from the surface. Here, $W$ is generally called
+the {\em work function}\/ of the surface, and is a property of the
+metal. Suppose that an electron absorbs a single quantum of light. Its energy
+therefore increases by $h\,\nu$. If $h\,\nu$ is greater than $W$ then the
+electron is emitted from the surface with residual kinetic energy
+\begin{equation}
+K = h\,\nu - W.
+\end{equation}
+Otherwise, the electron remains trapped in the potential well, and is not emitted. Here, we are assuming that the probability of an electron simultaneously absorbing
+two or more light quanta is negligibly small compared to the probability of it 
+absorbing a single light quantum (as is, indeed, the case for
+low intensity illumination). Incidentally, we can calculate Planck's
+constant, and the work function of the metal, by simply plotting the kinetic
+energy of the emitted photoelectrons as a function of the wave frequency,
+as shown in Fig.~\ref{f1}. This plot is a straight-line whose slope is $h$,
+and whose intercept with the $\nu$ axis is $W/h$. Finally, the number
+of emitted electrons increases with the intensity of the light because the
+more intense the light the larger the flux of light quanta onto the surface.
+Thus, Einstein's quantum theory is capable of accounting for all
+three of the previously mentioned observational facts regarding the photoelectric
+effect. 
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter03/fig04.eps}}
+\caption{\em Variation of the kinetic energy $K$ of photoelectrons with the wave-frequency $\nu$.}\label{f1}   
+\end{figure}
+
+\section{Quantum Theory of Light}
+According to Einstein's quantum theory of light, a monochromatic light wave of angular
+frequency $\omega$, propagating through a vacuum, can be thought of
+as a stream of particles, called {\em photons}, of energy 
+\begin{equation}\label{e2.17}
+E = \hbar\,\omega,
+\end{equation}
+where $\hbar = h/2\pi = 1.0546\times 10^{-34}\,{\rm J\,s}$. Since 
+classical light waves propagate at the fixed  velocity $c$, it stands to reason that photons
+must also move at this velocity. Now, according to Einstein's special theory
+of relativity, only massless particles can move at the speed of light in vacuum. Hence,
+photons must be {\em massless}. Special relativity also gives the following
+relationship between the energy $E$ and the momentum $p$ of a massless
+particle,
+\begin{equation}
+p = \frac{E}{c}.
+\end{equation}
+Note that the above relation is consistent with Eq.~(\ref{e2.11}), since
+if light is made up of a stream of photons, for which $E/p=c$, then the momentum density of light must be the energy density divided by $c$. 
+It follows from the previous two equations that photons carry momentum
+\begin{equation}\label{e2.19b}
+p = \hbar\,k
+\end{equation}
+along their direction of motion,
+since $\omega/c = k$ for a light wave [see Eq. (\ref{e2.7})]. 
+
+\section{Classical Interference of Light Waves}
+Let us now consider  the classical  interference of light waves. Figure~\ref{f2}
+shows a standard double-slit interference experiment in which monochromatic plane light waves are normally incident on two narrow parallel
+slits which are a distance $d$ apart. The light from the two slits is projected onto
+a screen a distance $D$ behind them, where $D\gg d$. 
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter03/fig05.eps}}
+\caption{\em Classical double-slit interference of light.}\label{f2}   
+\end{figure}
+
+Consider some point
+on the screen which is located a distance $y$ from the centre-line, as shown in the figure.
+Light from the first slit travels a distance $x_1$ to get to this point, whereas
+light from the second slit travels a slightly different distance $x_2$. It is
+easily demonstrated that
+\begin{equation}\label{e2.18}
+{\mit\Delta} x = x_2-x_1 \simeq \frac{d}{D}\,y,
+\end{equation}
+provided $d\ll D$. 
+It follows from Eq.~(\ref{e2.1}), and the well-known fact that light waves are {\em superposible}, that the wavefunction  at the point in
+question can be written
+\begin{equation}\label{e2.19}
+\psi(y,t) \propto \psi_1(t)\,{\rm e}^{\,{\rm i}\,k\,x_1} + \psi_2(t)\,{\rm e}^{\,{\rm i}\,k\,x_2},
+\end{equation}
+where $\psi_1$ and $\psi_2$ are the wavefunctions at the first and
+second slits, respectively. 
+ However, 
+ \begin{equation}\label{e2.19a}
+ \psi_1=\psi_2, 
+ \end{equation}
+ since the two slits are assumed to be
+illuminated by in-phase light waves of equal amplitude. (Note that we are ignoring the difference in amplitude
+of the waves from the two slits at the screen, due to the slight difference between $x_1$ and $x_2$,  compared to the difference in their phases.
+This is reasonable provided $D\gg \lambda$.) Now, the intensity ({\em i.e.}, the energy flux) of the
+light at some point on the projection screen is approximately equal to the energy density of the light at this point times the velocity of light (provided that $y\ll D$). Hence, it follows from Eq.~(\ref{e2.10})
+that the light intensity on the screen a distance $y$ from the center-line is
+\begin{equation}\label{e2.24}
+I(y) \propto |\psi(y,t)|^{\,2}.
+\end{equation}
+Using  Eqs.~(\ref{e2.18})--(\ref{e2.24}), we obtain
+\begin{equation}\label{e2.21}
+I(y) \propto \cos^2\left(\frac{k\,{\mit\Delta} x}{2}\right) \simeq \cos^2\left(
+\frac{k\,d}{2\,D}\,y\right).
+\end{equation}
+Figure~\ref{f3} shows the  characteristic interference pattern corresponding to the above expression. This pattern consists of equally spaced light and dark bands
+of characteristic width
+\begin{equation}\label{e2.22}
+{\mit\Delta}y = \frac{D\,\lambda}{d}.
+\end{equation}
+
+\begin{figure}
+\epsfysize=2in
+\centerline{\epsffile{Chapter03/fig06.eps}}
+\caption{\em Classical double-slit interference pattern.}\label{f3}   
+\end{figure}
+
+\section{Quantum Interference of Light}
+Let us now consider double-slit light interference from a quantum mechanical point of view.
+According to quantum theory, light waves consist of a stream of massless photons moving at the speed of light. Hence, we expect the two slits in Fig.~\ref{f2} to be spraying
+photons in all directions at the same rate. Suppose, however, that we reduce the intensity
+of the light source illuminating the slits until the source is so weak that only a {\em single}\/ photon 
+is present between the slits and the projection screen at any given time. Let us
+also replace the projection screen by a photographic film which records  the
+position
+where it is struck by each photon. So, if we wait a sufficiently long time that
+a great many photons  have passed through the slits and struck the photographic film, and then develop the film, do we see an interference pattern which looks like that shown in Fig.~\ref{f3}? The answer to this question, as determined by experiment, is 
+that we see {\em exactly}\/ the same interference pattern.
+
+Now, according to the above discussion,  the interference pattern is built
+up one photon at a time: {\em i.e.}, the pattern is not due to the interaction
+of different photons. Moreover, the point at which a given photon
+strikes the film is  not influenced by the points at which  previous photons
+struck the film, given that there is only one photon in the
+apparatus at any given time. Hence, the only way in which the
+classical interference pattern can be reconstructed, after a great many photons have passed through the apparatus, is if each photon has a
+greater {\em probability}\/ of striking the film at points where the classical
+interference pattern is bright, and a lesser probability of striking the film at points where the
+interference pattern is dark.
+
+Suppose, then, that we allow $N$ photons to
+pass through our apparatus, and then count the number of photons which
+strike the recording film between $y$ and $y+{\mit\Delta}y$, where ${\mit\Delta}y$
+is a relatively small division. Let us call this number $n(y)$. Now, the number of
+photons which strike a region of the film in a given time interval is equivalent to the intensity of the light illuminating that region of the film multiplied by the area of the region, since
+each photon carries a fixed amount of energy. Hence, in order to
+reconcile the classical and quantum viewpoints, we need
+\begin{equation}\label{e2.29}
+P_y(y) \equiv \lim_{N\rightarrow\infty}\left[\frac{n(y)}{N}\right] \propto I(y)\,{\mit\Delta}y,
+\end{equation}
+where $I(y)$ is given in Eq.~(\ref{e2.21}).
+Here, $P_y(y)$ is the {\em probability}\/ that a given photon strikes the film between
+$y$ and $y+{\mit\Delta}y$. This probability is simply a number between 0 and 1.
+A probability of 0 means that there is no chance of a photon striking the
+film between $y$ and $y+{\mit\Delta}y$, whereas a probability of 1
+means that every photon is certain to strike the film in this interval. 
+Note that $P_y\propto {\mit\Delta}y$. In other words,  the probability of a photon
+striking a region of the film of width ${\mit\Delta}y$ is directly proportional
+to this width. Actually, this is only true as long as ${\mit\Delta}y$ is
+relatively small.  It is convenient to define a quantity known as the {\em probability
+density}, $P(y)$, which is such that the probability of a photon striking a region of
+the film of infinitesimal width $dy$ is $P_y(y) = P(y)\,dy$. Now,
+Eq.~(\ref{e2.29}) yields $P_y(y)\propto I(y)\, dy$, which gives $P(y)\propto I(y)$. However, according to
+Eq.~(\ref{e2.24}), $I(y) \propto |\psi(y,t)|^{\,2}$. Thus, we obtain
+\begin{equation}
+P(y) \propto |\psi(y,t)|^{\,2}.
+\end{equation}
+In other words, the probability density of a photon striking a given point
+on the film is proportional to the {\em modulus squared}\/ of the wavefunction at that point. Another way of saying this is that the probability
+of a measurement of the photon's distance from the centerline, at
+the location of the film, yielding a result between $y$ and $y+dy$
+is proportional to $|\psi(y,t)|^{\,2}\,dy$.
+
+Note that, in the quantum mechanical picture, we can only predict
+the {\em probability}\/ that a given photon strikes a given point on the
+film. If photons behaved classically then we could, in principle, solve their
+equations of motion and predict {\em exactly}\/ where each photon was going to strike
+the film, given its initial position and velocity. This loss of determinancy
+in quantum mechanics is a direct consequence of {\em wave-particle duality}. 
+In other words, we can only reconcile the wave-like and particle-like
+properties of light in a {\em statistical}\/ sense. It is impossible to reconcile
+them on the individual particle level.
+
+In principle, each photon which passes through our apparatus is equally
+likely to pass through one of the two slits. So, can we determine
+which slit a given photon passed through? Well, suppose that our
+original interference experiment involves sending $N\gg 1$ photons
+through our apparatus. We know that we get an
+interference pattern in this experiment. Suppose that we perform a modified interference
+experiment in which we close off one slit, send $N/2$ photons
+through the apparatus, and then open the slit and close off
+the other slit, and send $N/2$ photons through the apparatus. In this
+second
+experiment, which is virtually identical to the first on the individual photon
+level,
+we know exactly which slit each photon passed through. 
+However, the wave theory of light (which we expect to agree
+with the quantum theory in the limit $N\gg 1$) tells us that our
+modified interference experiment will {\em not}\/ result in the formation of an interference pattern. After all, according to wave theory, it is impossible to obtain a two-slit interference
+pattern from a single slit. Hence, we conclude that any attempt to measure
+which slit each photon in our two-slit interference experiment
+passes through results in the destruction of the interference pattern. It follows
+that, in the quantum mechanical version of the two-slit interference experiment, we must think of each photon
+as essentially passing through {\em both}\/ slits simultaneously.
+
+\section{Classical Particles}
+In this course, we are going to concentrate, almost exclusively, on the
+behaviour of {\em non-relativistic}\/ particles of {\em non-zero mass}\/ ({\em e.g.}, electrons). In the
+absence of external forces, such particles, of mass $m$, energy $E$, and
+momentum $p$, move classically in a straight-line with velocity
+\begin{equation}\label{e2.31}
+v = \frac{p}{m},
+\end{equation}
+and satisfy
+\begin{equation}\label{e2.32}
+E = \frac{p^2}{2\,m}.
+\end{equation}
+
+\section{Quantum Particles}
+Just as light waves sometimes exhibit particle-like properties, it turns
+out that massive particles sometimes exhibit wave-like properties.
+For instance, it is possible to obtain a double-slit interference pattern
+from a stream of mono-energetic electrons passing through two closely
+spaced narrow slits. Now,  the
+effective wavelength of the electrons can be determined by measuring the width of the light and
+dark bands in the interference pattern [see Eq.~(\ref{e2.22})]. It is found that
+\begin{equation}\label{e2.33}
+\lambda = \frac{h}{p}.
+\end{equation}
+The same relation is found for other types of particles. The above
+wavelength is called the {\em de Broglie wavelength}, after Louis de Broglie
+who first suggested that particles should have wave-like properties in 1923.
+Note that the de Broglie wavelength is generally pretty small. For instance,
+that of an electron is
+\begin{equation}
+\lambda_e = 1.2\times 10^{-9}\,[E({\rm eV})]^{-1/2}\,{\rm m},
+\end{equation}
+where the electron energy is conveniently measured in units of electron-volts (eV). 
+(An electron accelerated from rest through a potential difference of 1000\,V
+acquires an energy of 1000\,eV, and so on.) The de Broglie wavelength
+of a proton is
+\begin{equation}
+\lambda_p = 2.9\times 10^{-11}\,[E({\rm eV})]^{-1/2}\,{\rm m}.
+\end{equation}
+
+Given the smallness of the de Broglie wavelengths of common particles,
+it is actually quite difficult to do particle interference experiments. 
+In general, in order to perform an  effective interference experiment, the spacing
+of the slits must not be too much greater than the wavelength of the wave. 
+Hence, particle interference experiments require either very low energy particles (since
+$\lambda\propto E^{-1/2}$), or very closely spaced slits. Usually
+the ``slits'' consist of crystals, which act a bit like diffraction gratings
+with a characteristic spacing of order the inter-atomic spacing (which is
+generally about $10^{-9}$\,m).
+
+Equation~(\ref{e2.33}) can be rearranged to give
+\begin{equation}\label{e2.36}
+p = \hbar\,k,
+\end{equation}
+which is exactly the same as the relation between momentum and
+wavenumber that we obtained earlier for photons [see Eq.~(\ref{e2.19b})].
+For the case of a particle moving the three dimensions, the above
+relation generalizes  to give
+\begin{equation}
+{\bf p} = \hbar\,{\bf k},
+\end{equation}
+where ${\bf p}$ is the particle's vector momentum, and ${\bf k}$ its wavevector.
+It follows that the momentum of a quantum particle, and, hence, its velocity, is always parallel to its wavevector. 
+
+Since the relation (\ref{e2.19b}) between momentum and wavenumber applies to both photons and massive particles,
+it seems plausible that the closely related relation (\ref{e2.17}) 
+between energy and wave angular frequency should  also apply to both photons
+and particles. If this is the case, and we can write
+\begin{equation}
+E = \hbar\,\omega
+\end{equation}
+for particle waves, then Eqs.~(\ref{e2.32}) and (\ref{e2.36}) yield the
+following dispersion relation for such waves:
+\begin{equation}\label{e2.38}
+\omega = \frac{\hbar\,k^2}{2\,m}.
+\end{equation}
+Now, we saw earlier that a plane wave propagates at the
+so-called phase velocity,
+\begin{equation}\label{epha}
+v_p = \frac{\omega}{k}.
+\end{equation}
+However, according to the above dispersion relation,  a 
+particle plane wave propagates at
+\begin{equation}
+v_p = \frac{p}{2\,m}.
+\end{equation}
+Note, from Eq.~(\ref{e2.31}), that this is only {\em half}\/ of the classical particle
+velocity. Does this imply that the dispersion relation (\ref{e2.38}) is
+incorrect? Let us investigate further.
+
+\section{Wave Packets}\label{s2.9}
+The above discussion suggests that the wavefunction of a massive particle
+of momentum $p$ and energy $E$, moving in the positive $x$-direction,  can be written
+\begin{equation}\label{e2.41}
+\psi(x,t) = \bar{\psi}\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)},
+\end{equation}
+where $k= p/\hbar>0$ and $\omega = E/\hbar>0$. Here, $\omega$ and
+$k$ are linked via the dispersion relation (\ref{e2.38}). Expression (\ref{e2.41}) represents a plane wave whose maxima and
+minima propagate in the positive $x$-direction
+with the phase velocity $v_p=\omega/k$. As we have seen, this phase velocity is only half of the classical velocity of a massive particle.
+
+From before, the most reasonable physical interpretation of the wavefunction is that
+$|\psi(x,t)|^{\,2}$ is proportional to the {\em probability density}\/ of finding the particle
+at position $x$ at time $t$.  However, the modulus squared of the wavefunction (\ref{e2.41}) is $|\bar{\psi}|^{\,2}$, which depends on neither $x$ nor $t$. In other words, this wavefunction represents a particle
+which is equally likely to be found anywhere on the $x$-axis at all times. 
+Hence, the fact that the maxima and minima of the  wavefunction  propagate at 
+a phase velocity which does not correspond to the classical particle velocity does not have any real physical consequences.
+
+So, how can we write the wavefunction of a particle which is {\em localized}\/
+in $x$: {\em i.e.}, a particle which is more likely to be found at some
+positions on the $x$-axis than at others? It turns out that we can achieve this goal by forming
+a {\em linear combination}\/ of plane waves of different wavenumbers:
+{\em i.e.}, 
+\begin{equation}\label{e2.42}
+\psi(x,t) = \int_{-\infty}^{\infty} \bar{\psi}(k)\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\,dk.
+\end{equation}
+Here, $\bar{\psi}(k)$ represents the complex amplitude of plane waves of wavenumber $k$ in this combination. In writing the above expression,
+we are relying on the assumption that particle waves are  {\em superposable}:
+{\em i.e.}, it is possible to add two valid wave solutions to form a third valid wave solution.
+The ultimate justification for this assumption is that particle waves
+satisfy a differential wave equation which is {\em linear}\/ in $\psi$. As we
+shall see, in Sect.~\ref{sch}, this is indeed the case. Incidentally, a plane wave which varies as
+$\exp[{\rm i}\,(k\,x-\omega\,t)]$ and has a {\em negative}\/ $k$  (but positive $\omega$) propagates
+in the {\em negative}\/ $x$-direction at the phase velocity $\omega/|k|$. Hence, the superposition (\ref{e2.42})
+includes both forward and backward propagating waves. 
+
+Now, there is a useful mathematical theorem, known as {\em Fourier's theorem}, which states that if
+\begin{equation}\label{e2.43}
+f(x) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \bar{f}(k)\,{\rm e}^{\,{\rm i}\,k\,x}\,dk,
+\end{equation}
+then
+\begin{equation}\label{e2.44}
+\bar{f}(k) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty f(x)\,{\rm e}^{-{\rm i}\,k\,x}\,dx.
+\end{equation}
+Here, $\bar{f}(k)$ is known as the {\em Fourier transform}\/ of the
+function $f(x)$. We can use Fourier's theorem to find the $k$-space function $\bar{\psi}(k)$ which generates any given $x$-space wavefunction $\psi(x)$
+at a given time.
+
+For instance, suppose that at $t=0$ the wavefunction of our particle takes the
+form
+\begin{equation}\label{e2.45}
+\psi(x,0) \propto \exp\left[{\rm i}\,k_0\,x - \frac{(x-x_0)^{\,2}}{4\,({\mit\Delta}x)^{\,2}}\right].
+\end{equation}
+Thus, the initial probability density of the particle is written
+\begin{equation}\label{e2.46}
+|\psi(x,0)|^{\,2} \propto \exp\left[- \frac{(x-x_0)^{\,2}}{2\,({\mit\Delta}x)^{\,2}}\right].
+\end{equation}
+This particular probability distribution is called a {\em Gaussian}\/ distribution, and is plotted in Fig.~\ref{f4}. 
+It can be seen that a measurement of the particle's position is most
+likely to yield the value $x_0$, and  very
+unlikely to yield a value which differs from $x_0$ by more than
+$3\,{\mit\Delta} x$. Thus, (\ref{e2.45}) is the wavefunction of a particle
+which is initially localized around $x=x_0$ in some region whose width is
+of order ${\mit\Delta} x$. This type of wavefunction is
+known as a {\em wave packet}.
+
+\begin{figure}
+\epsfysize=3.in
+\centerline{\epsffile{Chapter03/fig07.eps}}
+\caption{\em A Gaussian probability distribution in $x$-space.}\label{f4}   
+\end{figure}
+
+Now, according to Eq.~(\ref{e2.42}), 
+\begin{equation}
+\psi(x,0) = \int_{-\infty}^{\infty} \bar{\psi}(k)\,{\rm e}^{\,{\rm i}\,k\,x}\,dk.
+\end{equation}
+Hence, we can employ Fourier's theorem to invert this expression to give
+\begin{equation}\label{e2.42a}
+\bar{\psi}(k)\propto \int_{-\infty}^{\infty} \psi(x,0)\,{\rm e}^{-{\rm i}\,k\,x}\,dx.
+\end{equation}
+Making use of Eq.~(\ref{e2.45}),
+we obtain
+\begin{equation}
+\bar{\psi}(k) \propto
+{\rm e}^{-{\rm i}\,(k-k_0)\,x_0}\int_{-\infty}^{\infty} \exp\left[
+-{\rm i}\,(k-k_0)\,(x-x_0) - \frac{(x-x_0)^2}{4\,({\mit\Delta}x)^2}\right]dx.
+\end{equation}
+Changing the variable of integration to $y=(x-x_0)/ (2\,{\mit\Delta} x)$, this reduces to
+\begin{equation}
+\bar{\psi}(k) \propto {\rm e}^{-{\rm i}\,k\,x_0}
+\int_{-\infty}^{\infty}\exp\left[-{\rm i}\,\beta\,y - y^2\right] dy,
+\end{equation}
+where $\beta = 2\,(k-k_0)\,{\mit\Delta}x$. The above equation
+ can be rearranged to give
+\begin{equation}
+\bar{\psi}(k) \propto {\rm e}^{-{\rm i}\,k\,x_0 - \beta^2/4}\int_{-\infty}^{\infty} {\rm e}^{-(y-y_0)^{\,2}}\,dy,
+\end{equation}
+where $y_0 = - {\rm i}\,\beta/2$. The integral now just reduces to a number,
+as can easily be seen by making the change of variable $z=y-y_0$. 
+Hence, we obtain
+\begin{equation}\label{e2.51}
+\bar{\psi}(k) \propto \exp\left[-{\rm i}\,k\,x_0 - \frac{(k-k_0)^{\,2}}{4\,({\mit\Delta}k)^2}\right],
+\end{equation}
+where
+\begin{equation}
+{\mit\Delta} k = \frac{1}{2\,{\mit\Delta} x}.
+\end{equation}
+
+Now, if $|\psi(x)|^{\,2}$ is proportional to the probability density of a measurement of  the
+particle's position yielding the value $x$ then it stands to reason that $|\bar{\psi}(k)|^{\,2}$
+is proportional to the probability density of a measurement of the
+particle's wavenumber yielding the value $k$. (Recall that $p = \hbar\,k$,
+so a measurement of the particle's wavenumber, $k$, is equivalent to a measurement of the particle's
+momentum, $p$). According to Eq.~(\ref{e2.51}),
+\begin{equation}\label{e2.53}
+|\bar{\psi}(k)|^{\,2} \propto \exp\left[- \frac{(k-k_0)^{\,2}}{2\,({\mit\Delta}k)^{\,2}}\right].
+\end{equation}
+Note that this probability distribution is a {\em Gaussian}\/ in $k$-space. See
+Eq. (\ref{e2.46}) and Fig.~\ref{f4}. Hence, a measurement of $k$ is
+most likely to yield the value $k_0$, and very unlikely to yield
+a value which differs from $k_0$ by more than
+$3\,{\mit\Delta}k$. Incidentally,  a Gaussian is the {\em only}\/ mathematical function
+in $x$-space which has the same form as its Fourier transform in $k$-space.
+
+We have just seen that a Gaussian probability distribution of characteristic
+width ${\mit\Delta} x$ in $x$-space [see Eq.~(\ref{e2.46})] transforms to a Gaussian probability distribution of characteristic width
+${\mit\Delta} k$ in $k$-space [see Eq.~(\ref{e2.53})],
+where
+\begin{equation}
+{\mit\Delta}x\,{\mit\Delta} k = \frac{1}{2}.
+\end{equation}
+This illustrates an important property of wave packets. Namely, if we wish to
+construct a packet which is very localized in $x$-space ({\em i.e.}, if ${\mit\Delta}x$ is small) then we need
+to combine plane waves with a very wide range of different $k$-values
+({\em i.e.}, ${\mit\Delta}k$ will be large). Conversely, if we only combine
+plane waves whose wavenumbers differ by a small amount ({\em i.e.}, if
+${\mit\Delta}k$ is small) then the resulting wave packet will be very
+extended in $x$-space ({\em i.e.}, ${\mit\Delta}x$ will be large).
+
+\section{Evolution of Wave Packets}\label{exp}
+We have seen, in Eq.~(\ref{e2.45}), how to write the wavefunction of
+a particle which is initially localized in  $x$-space. 
+But,
+how does this wavefunction evolve in time? 
+Well, according to Eq.~(\ref{e2.42}), we have
+\begin{equation}\label{e2.56}
+\psi(x,t) = \int_{-\infty}^{\infty} \bar{\psi}(k)\,{\rm e}^{\,{\rm i}\,\phi(k)}\,dk,
+\end{equation}
+where
+\begin{equation}
+\phi(k) = k\,x - \omega(k)\,t.
+\end{equation}
+The function $\bar{\psi}(k)$ is obtained by Fourier transforming the
+wavefunction at $t=0$. See Eqs.~(\ref{e2.42a}) and (\ref{e2.51}). Now,
+according to Eq.~(\ref{e2.53}), $|\bar{\psi}(k)|$
+is {\em strongly peaked}\/ around $k=k_0$. Thus, it is a reasonable approximation
+to Taylor expand $\phi(k)$ about $k_0$. Keeping terms up to
+second-order in $k-k_0$, we obtain
+\begin{equation}
+ \psi(x,t)\propto \int_{-\infty}^{\infty} \bar{\psi}(k)\,
+\exp\!\left[\,{\rm i}\left\{\phi_0+ \phi_0'\,(k-k_0) + \frac{1}{2}\,\phi_0''\,(k-k_0)^{\,2}\right\}\right],
+\end{equation}
+where
+\begin{eqnarray}
+\phi_0 &=& \phi(k_0) = k_0\,x-\omega_0\,t,\\[0.5ex]
+\phi_0'&=& \frac{d\phi(k_0)}{dk} = x - v_g\,t,\\[0.5ex]
+\phi_0''&=&\frac{d^2\phi(k_0)}{dk^2} = - \alpha\,t,
+\end{eqnarray}
+with
+\begin{eqnarray}
+\omega_0 &=& \omega(k_0),\\[0.5ex]
+v_g &=& \frac{d\omega(k_0)}{dk},\\[0.5ex]
+\alpha &=& \frac{d^2\omega(k_0)}{dk^2}.\label{e2.64}
+\end{eqnarray}
+Substituting from Eq.~(\ref{e2.51}), rearranging, and then changing the variable of integration to $y=(k-k_0)/(2\,{\mit\Delta}k)$,
+we get
+\begin{equation}
+\psi(x,t)\propto {\rm e}^{\,{\rm i}\,(k_0\,x-\omega_0\,t)}
+\int_{-\infty}^{\infty}{\rm e}^{\, {\rm i}\,\beta_1\,y-(1+{\rm i}\,\beta_2)\,y^{\,2}}\,dy,
+\end{equation}
+where
+\begin{eqnarray}
+\beta_1 &=& 2\,{\mit\Delta}k\,(x-x_0-v_g\,t),\\[0.5ex]
+\beta_2&=& 2\,\alpha\,({\mit\Delta}k)^{\,2}\,t.
+\end{eqnarray}
+Incidentally, ${\mit\Delta k}=1/(2\,{\mit\Delta}x)$, where ${\mit\Delta}x$ is the
+initial width of the wave packet.
+The above expression can be rearranged to give
+\begin{equation}\label{e2.69}
+\psi(x,t)\propto {\rm e}^{\,{\rm i}\,(k_0\,x-\omega_0\,t)-(1+{\rm i}\,\beta_2)\,\beta^{\,2}/4}\int_{-\infty}^\infty
+{\rm e}^{-(1+{\rm i}\,\beta_2)\,(y-y_0)^{\,2}}\,dy,
+\end{equation}
+where $y_0={\rm i}\,\beta/2$ and $\beta=\beta_1/(1+{\rm i}\,\beta_2)$. 
+Again changing the variable of integration to $z=(1+{\rm i}\,\beta_2)^{1/2}\,(y-y_0)$, we get
+\begin{equation}
+\psi(x,t)\propto (1+{\rm i}\,\beta_2)^{-1/2}\,{\rm e}^{\,{\rm i}\,(k_0\,x-\omega_0\,t)-(1+{\rm i}\,\beta_2)\,\beta^{\,2}/4}\int_{-\infty}^\infty
+{\rm e}^{-z^2}\,dz.
+\end{equation}
+The integral now just reduces to a number. Hence, we obtain
+\begin{equation}\label{exxx}
+\psi(x,t)\propto\frac{\exp\left[\,{\rm i}\,(k_0\,x-\omega_0\,t) - (x-x_0-v_g\,t)^2\,\{1-{\rm i}\,2\,\alpha\,({\mit\Delta}k)^{\,2}\,t\}/(4\,\sigma^2)\right]}{\left[1+{\rm i}\,2\,\alpha\,({\mit\Delta}k)^{\,2}\,t\right]^{1/2}},
+\end{equation}
+where
+\begin{equation}\label{e2.70}
+\sigma^2(t) = ({\mit\Delta}x)^{\,2} + \frac{\alpha^2\,t^2}{4\,({\mit\Delta}x)^{\,2}}.
+\end{equation}
+Note that the above wavefunction is identical to our original wavefunction (\ref{e2.45}) at $t=0$. This, justifies the approximation which we made
+earlier by Taylor expanding  the phase factor $\phi(k)$ about $k=k_0$. 
+
+According to Eq.~(\ref{exxx}), the probability density of our particle
+as a function of time is written
+\begin{equation}
+|\psi(x,t)|^{\,2} \propto \sigma^{-1}(t)\exp\left[-\frac{(x-x_0-v_g\,t)^{\,2}}{2\,\sigma^{\,2}(t)}\right].
+\end{equation}
+Hence, the probability distribution is a Gaussian,  of
+characteristic width $\sigma$, which peaks at $x=x_0+v_g\,t$. Now, the
+most likely position of our particle  coincides with the peak of the
+distribution function. Thus, the particle's most likely position is given by
+\begin{equation}
+x = x_0+v_g\,t.
+\end{equation}
+It can be seen that the particle effectively moves at the uniform velocity
+\begin{equation}
+v_g = \frac{d\omega}{dk},
+\end{equation}
+which is known as the {\em group velocity}. In other words, a plane wave
+travels at the phase velocity, $v_p=\omega/k$, whereas a wave packet travels
+at the group velocity, $v_g=d\omega/dt$. Now, it follows from the dispersion
+relation (\ref{e2.38}) for particle waves that
+\begin{equation}
+v_g = \frac{p}{m}.
+\end{equation}
+However, it can be seen from Eq.~(\ref{e2.31}) that this is identical
+to the classical particle velocity. Hence, the dispersion relation (\ref{e2.38}) turns out to be consistent with classical physics, after all, as soon as we realize that
+individual particles must be identified with {\em wave packets}\/ rather than plane waves. In fact, a plane
+wave is usually interpreted as a {\em continuous stream}\/ of particles propagating in the same direction as the wave. 
+
+According to Eq.~(\ref{e2.70}),  the width of our wave packet
+grows as time progresses. Indeed, it follows from Eqs.~(\ref{e2.38}) and (\ref{e2.64})
+that the characteristic time for a wave packet of original width
+${\mit\Delta} x$ to double in spatial extent is
+\begin{equation}
+t_2 \sim \frac{m\,({\mit\Delta}x)^2}{\hbar}.
+\end{equation}
+For instance, if an electron is originally localized in a region of atomic scale ({\em i.e.},
+${\mit\Delta} x\sim 10^{-10}\,{\rm m}$) then the doubling time
+is only about $10^{-16}\,{\rm s}$. Evidently, particle
+wave packets (for freely moving particles) spread very rapidly. 
+
+Note, from the previous analysis, that the rate of spreading of a wave packet is ultimately
+governed by the second derivative of  $\omega(k)$
+with respect to $k$.  See Eqs.~(\ref{e2.64}) and (\ref{e2.70}). This is why a functional relationship between $\omega$ and $k$
+is generally known as a {\em dispersion relation}: {\em i.e.}, because it
+governs how wave packets  disperse as time progresses.
+However, for the special case where $\omega$ is a {\em linear}\/ function
+of $k$, the second derivative of $\omega$ with respect to $k$ is zero,
+and, hence, there is no dispersion of wave packets: {\em i.e.}, wave packets
+propagate without changing shape. Now, the dispersion relation
+(\ref{e2.7}) for light waves is linear in $k$. It follows that light pulses
+propagate through a vacuum without spreading. Another property
+of linear dispersion relations is that the phase velocity, $v_p=\omega/k$, and
+the group velocity, $v_g=d\omega/dk$, are {\em identical}. Thus, both plane light waves
+and light pulses propagate through a vacuum at the characteristic
+speed $c=3\times 10^8\,{\rm m/s}$. Of course, the dispersion relation (\ref{e2.38}) for particle waves is {\em not}\/ linear in $k$. Hence, particle
+plane waves and particle wave packets propagate at different velocities,
+and particle wave packets also gradually disperse as time progresses.
+
+\section{Heisenberg's Uncertainty Principle}\label{sun}
+According to the analysis contained in the previous two sections, a particle
+wave packet which is initially localized in $x$-space with characteristic
+width ${\mit\Delta}x$ is also localized in $k$-space with characteristic
+width ${\mit\Delta}k= 1/(2\,{\mit\Delta} x)$. However, as time progresses,
+the width of the wave packet in $x$-space increases, whilst that of the wave packet in $k$-space stays the same. [After all, our
+previous analysis obtained $\psi(x,t)$ from Eq.~(\ref{e2.56}), but assumed
+that $\bar{\psi}(k)$ was given by Eq.~(\ref{e2.51}) at all times.] Hence,
+in general, we can say that
+\begin{equation}
+{\mit\Delta}x\,{\mit\Delta} k\gtapp \frac{1}{2}.
+\end{equation}
+Furthermore, we can think of ${\mit\Delta}x$ and ${\mit\Delta} k$ as
+characterizing our {\em uncertainty}\/ regarding the values of the particle's
+position and wavenumber, respectively.
+
+Now, a measurement of a particle's wavenumber, $k$, is equivalent to
+a measurement of its momentum, $p$, since $p=\hbar \,k$. Hence,
+an uncertainty in $k$ of order ${\mit\Delta} k$ translates to
+an uncertainty in $p$ of order ${\mit\Delta}p=\hbar\,{\mit\Delta}k$.
+It follows from the above inequality that
+\begin{equation}
+{\mit\Delta}x\,{\mit\Delta} p \gtapp \frac{\hbar}{2}. 
+\end{equation}
+This is the famous {\em Heisenberg uncertainty principle},
+first proposed by Werner Heisenberg in 1927.
+According to this principle, it is impossible to simultaneously
+measure the position and momentum of a particle (exactly). Indeed, a good knowledge
+of the particle's position implies a poor knowledge of its momentum,
+and {\em vice versa}. Note that the uncertainty principle is a direct consequence of representing particles as waves.
+
+It can be seen from Eqs.~(\ref{e2.38}), (\ref{e2.64}), and (\ref{e2.70})
+that at large $t$ a particle wavefunction of original width ${\mit\Delta} x$
+(at $t=0$) spreads out such that its spatial extent becomes
+\begin{equation}\label{espread}
+\sigma\sim \frac{\hbar\,t}{m\,{\mit\Delta}x}.
+\end{equation}
+It is easily demonstrated that this spreading is a consequence of the
+uncertainty principle. Since the initial uncertainty in the particle's
+position is ${\mit\Delta}x$, it follows that the uncertainty in its
+momentum is of order $\hbar/{\mit\Delta}x$. This translates to an uncertainty
+in velocity of ${\mit\Delta}v = \hbar/(m\,{\mit\Delta}x)$. Thus,
+if we imagine that parts of the wavefunction propagate at $v_0+ {\mit\Delta}v/2$, and others at $v_0-{\mit\Delta}v/2$, where $v_0$ is
+the mean propagation velocity, then the wavefunction will
+ spread as time progresses. Indeed, at large $t$ we expect the
+width of the wavefunction to be
+\begin{equation}
+\sigma \sim {\mit\Delta}v\,t \sim  \frac{\hbar\,t}{m\,{\mit\Delta}x},
+\end{equation}
+which is identical to Eq.~(\ref{espread}). Evidently, the spreading of
+a particle wavefunction must be interpreted as an increase
+in our {\em uncertainty}\/ regarding the particle's position, rather than
+an increase in the spatial extent of the particle itself.
+
+\begin{figure}
+\epsfysize=3.in
+\centerline{\epsffile{Chapter03/fig08.eps}}
+\caption{\em Heisenberg's microscope.}\label{fh}   
+\end{figure}
+
+Figure~\ref{fh} illustrates a famous thought experiment known as
+{\em Heisenberg's microscope}. Suppose that we try to image an
+electron using a simple optical system in which the objective lens is of
+diameter $D$ and focal-length $f$. (In practice, this would only
+be possible using extremely short wavelength light.) It is a
+well-known result in optics that such a  system has a
+minimum angular resolving power of $\lambda/D$, where $\lambda$
+is the wavelength of the light illuminating the electron. If the electron is placed at the focus
+of the lens, which is where the minimum resolving power is achieved,  then this translates to a  uncertainty in the
+electron's transverse position of
+\begin{equation}
+{\mit\Delta}x \simeq f\,\frac{\lambda}{D}.
+\end{equation}
+However, 
+\begin{equation}
+\tan\alpha = \frac{D/2}{f},
+\end{equation}
+where $\alpha$ is the half-angle subtended by the lens at the electron.
+Assuming that $\alpha$ is small, we can write
+\begin{equation}
+\alpha\simeq \frac{D}{2\,f},
+\end{equation}
+so
+\begin{equation}
+{\mit\Delta} x\simeq \frac{\lambda}{2\,\alpha}.
+\end{equation}
+It follows that we can reduce the uncertainty in the electron's position
+by {\em minimizing}\/ the ratio $\lambda/\alpha$: {\em i.e.}, by using short
+wavelength radiation, and a wide-angle lens. 
+
+Let us now examine Heisenberg's microscope from a quantum mechanical
+point of view. According to quantum mechanics, the electron is imaged
+when it scatters an incoming photon towards the objective lens.
+Let the wavevector of the incoming photon have the $(x,y)$ 
+components $(k,0)$. See Fig.~\ref{fh}. If the scattered photon
+subtends an angle $\theta$ with the center-line of the optical
+system, as shown in the figure, then its wavevector is written $(k\,\sin\theta, k\cos\theta)$. Here,
+we are ignoring any wavelength shift of the photon on scattering---{\em i.e.},
+the magnitude of the ${\bf k}$-vector is assumed to be the same before and after scattering.
+Thus, the change in the $x$-component of the photon's wavevector
+is ${\mit\Delta}k_x= k\,(\sin\theta-1)$. This translates to a change
+in the photon's $x$-component of momentum of ${\mit\Delta}p_x = \hbar\,k\,(\sin\theta-1)$. By momentum conservation, the
+electron's $x$-momentum will change by an equal and opposite
+amount. However, $\theta$ can range all the way from $-\alpha$ to
+$+\alpha$, and the scattered photon will still be collected by
+the imaging system. It follows that the uncertainty in the electron's
+momentum is
+\begin{equation}
+{\mit\Delta} p \simeq 2\,\hbar\,k\,\sin\alpha\simeq \frac{4\pi\,\hbar\,\alpha}{\lambda}. 
+\end{equation}
+Note that in order to reduce the uncertainty in the momentum we need to {\em maximize}\/
+the ratio $\lambda/\alpha$. This is exactly the opposite of what we
+need to do to reduce the uncertainty in the position. Multiplying the
+previous two equations, we obtain
+\begin{equation}
+{\mit\Delta x}\,{\mit\Delta} p\sim h,
+\end{equation}
+which is essentially the uncertainty principle.
+
+According to Heisenberg's microscope, the uncertainty principle follows
+from two facts. First, it is impossible to measure any property of a microscopic dynamical system without
+{\em disturbing}\/ the system somewhat. Second, particle and light energy and momentum are {\em quantized}.
+Hence, there is a limit to how small we can make the aforementioned
+disturbance. Thus, there is an irreducible uncertainty in certain measurements which is a consequence of the act of measurement itself.
+
+\section{Schr\"{o}dinger's Equation}\label{sch}
+We have seen that the  wavefunction  of a free particle of mass $m$ satisfies
+\begin{equation}\label{e2.78}
+\psi(x,t)=\int_{-\infty}^{\infty}\bar{\psi}(k)\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\,dk,
+\end{equation}
+where $\bar{\psi}(k)$ is determined by $\psi(x,0)$, and
+\begin{equation}\label{e2.79}
+\omega(k) = \frac{\hbar\,k^2}{2\,m}.
+\end{equation}
+Now, it follows from Eq.~(\ref{e2.78}) that
+\begin{equation}\label{e2.80}
+\frac{\partial\psi}{\partial x} = \int_{-\infty}^{\infty}({\rm i}\,k)\,\bar{\psi}(k)\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\,dk,
+\end{equation}
+and
+\begin{equation}
+\frac{\partial^2\psi}{\partial x^2} = \int_{-\infty}^{\infty}(-k^2)\,\bar{\psi}(k)\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\,dk,
+\end{equation}
+whereas
+\begin{equation}
+\frac{\partial \psi}{\partial t} = \int_{-\infty}^{\infty}(-{\rm i}\,\omega)\,\bar{\psi}(k)\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\,dk.
+\end{equation}
+Thus,
+\begin{equation}
+{\rm i}\,\frac{\partial\psi}{\partial t} +\frac{\hbar}{2\,m}\,\frac{\partial^2\psi}{\partial x^2} =
+\int_{-\infty}^{\infty}\left(\omega-\frac{\hbar\,k^2}{2\,m}\right)\bar{\psi}(k)\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\,dk= 0,
+\end{equation}
+where use has been made of the dispersion relation (\ref{e2.79}).
+Multiplying through by $\hbar$, we obtain
+\begin{equation}\label{e2.84}
+{\rm i}\,\hbar\,\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2\,m}\frac{\partial^2\psi}{\partial x^2}.
+\end{equation}
+This expression is known as {\em Schr\"{o}dinger's equation}, since it was first
+introduced by Erwin Schr\"{o}dinger in 1925. Schr\"{o}dinger's equation
+is a {\em linear}, second-order, partial differential equation which governs the time evolution of a particle
+wavefunction, and is generally easier to solve than the integral equation
+(\ref{e2.78}).
+
+Of course, Eq.~(\ref{e2.84}) is only applicable to {\em freely
+moving} particles. Fortunately, it is fairly easy to guess the generalization of this
+equation for particles moving in some potential $V(x)$. It is plausible, from Eq.~(\ref{e2.80}),  that we can identify
+$k$ with the differential operator $-{\rm i}\,\partial/\partial x$. 
+Hence, the differential operator on the right-hand side of Eq.~(\ref{e2.84})
+is equivalent to $\hbar^2\,k^2/(2\,m)$. But, $p = \hbar\,k$. Thus,
+the operator is also equivalent to $p^2/(2\,m)$, which is just the energy of
+a freely moving particle. However, in the presence of a potential
+$V(x)$, the particle's energy is written $p^2/(2\,m) + V$. Thus, it
+seems reasonable to make the substitution
+\begin{equation}
+-\frac{\hbar^2}{2\,m}\frac{\partial^2}{\partial x^2}\rightarrow
+-\frac{\hbar^2}{2\,m}\frac{\partial^2}{\partial x^2} + V(x).
+\end{equation}
+This leads to the general form of Schr\"{o}dinger's equation:
+\begin{equation}
+{\rm i}\,\hbar\,\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2\,m}\frac{\partial^2\psi}{\partial x^2} + V(x)\,\psi.
+\end{equation}
+
+\section{Collapse of the Wave Function}\label{scoll}
+Consider an extended wavefunction $\psi(x,t)$. According to our
+usual interpretation, $|\psi(x,t)|^{\,2}$ is proportional to the
+probability density of a measurement of the particle's position yielding the
+value $x$ at time $t$. If the wavefunction is extended then there is a wide
+range of likely values that this  measurement could give. 
+Suppose that we make such a measurement, and obtain the value $x_0$.
+We now know that the particle is located at $x=x_0$.  
+If we make another measurement immediately after the first one then
+what value do we expect to obtain? Well, common sense tells us that
+we must obtain the same value, $x_0$, since the particle
+cannot have shifted position appreciably in an infinitesimal  time interval. 
+Thus, immediately after the first measurement, a measurement of
+the particle's position is certain to give the value $x_0$, and has
+no chance of giving any other value. This implies that the
+wavefunction must have {\em collapsed}\/ to some sort of  ``spike'' function
+located at $x=x_0$. This is illustrated in Fig.~\ref{coll}.
+Of course, as soon as the wavefunction has collapsed, it starts to
+expand again, as discussed in Sect.~\ref{exp}. Thus, the second measurement
+must be made reasonably quickly after the first, in order to guarantee that the
+same result will be obtained.
+
+\begin{figure}
+\epsfysize=3.in
+\centerline{\epsffile{Chapter03/fig09.eps}}
+\caption{\em Collapse of the wavefunction upon measurement of $x$.}\label{coll}   
+\end{figure}
+
+The above discussion illustrates an important point in quantum
+mechanics. Namely, that the wavefunction of a particle
+changes {\em discontinuously} (in time) whenever a measurement is made. We conclude that there are two types of time
+evolution of the wavefunction in quantum mechanics. First, there is a {\em smooth}\/ evolution which is governed
+by Schr\"{o}dinger's equation. This evolution takes place {\em between}\/ measurements. Second, there is a {\em discontinuous}\/ evolution which
+takes place each time a measurement is made.
+
+\subsubsection*{Exercises}
+{\small
+\begin{enumerate}
+\item A He-Ne laser emits radiation of wavelength $\lambda = 633$ nm. How
+many photons are emitted per second by a laser with a power of 1 mW?
+What force does such laser exert on a body which completely absorbs its
+radiation? 
+
+\item The ionization energy of a hydrogen atom in its ground state is
+$E_{ion} = 13.60$ eV (1 eV is the energy acquired by an electron accelerated through a potential difference of 1 V). Calculate the frequency, wavelength,
+and wavenumber of the electromagnetic radiation which will just ionize
+the atom. 
+
+\item The maximum energy of photoelectrons from aluminium is 2.3 eV
+for radiation of wavelength $2000\,\AA$, and 0.90 eV for radiation of
+wavelength $2580\,\AA$. Use this data to calculate Planck's constant,
+and the work function of aluminium. 
+
+\item Show that the de Broglie wavelength of an electron accelerated from rest across a potential difference $V$
+is given by
+$$
+\lambda = 1.29\times 10^{-9}\,V^{-1/2}\,{\rm m},
+$$
+where $V$ is measured in volts.
+
+\item If the atoms in a regular crystal are separated by $3\times 10^{-10}\,{\rm m}$ demonstrate that an accelerating
+voltage of about $1.5\,{\rm kV}$  would be required to produce an electron diffraction pattern from the crystal. 
+
+\item The relationship between wavelength and frequency for electromagnetic waves in a waveguide is
+$$
+\lambda = \frac{c}{\sqrt{\nu^2 - \nu_0^{\,2}}},
+$$
+where $c$ is the velocity of light in vacuum. 
+What are  the group and phase velocities of such waves as functions of $\nu_0$ and $\lambda$? 
+
+\item Nuclei, typically of size $10^{-14}$ m, frequently emit electrons
+with energies of 1--10 MeV. Use the uncertainty principle to show
+that electrons of energy 1 MeV could not be contained in the nucleus
+before the decay. 
+
+\item A particle of mass $m$ has a wavefunction
+$$
+\psi(x,t) = A\,\exp[-a\,(m\,x^2/\hbar + {\rm i}\, t)],
+$$
+where $A$ and $a$ are positive real constants. For what potential
+function $V(x)$ does $\psi$ satisfy the Schr\"{o}dinger equation?
+
+\end{enumerate} 
+}

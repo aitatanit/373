@@ -1,0 +1,1103 @@
+\chapter{Time-Independent Perturbation Theory}\label{stimin}
+\section{Introduction}
+Consider the following very commonly occurring problem. The Hamiltonian of a
+quantum mechanical system is written
+\begin{equation}
+H = H_0 + H_1.
+\end{equation} 
+Here, $H_0$ is a simple Hamiltonian whose eigenvalues and eigenstates
+are known {\em exactly}. $H_1$ introduces some interesting additional 
+physics into the problem, but is sufficiently complicated that when
+we add it to $H_0$ we can no longer find the exact energy eigenvalues
+and eigenstates. However, $H_1$ can, in some sense (which we shall
+specify more precisely later on), be regarded as being {\em small}\/ compared
+to $H_0$. Can we find approximate eigenvalues and eigenstates
+of the modified Hamiltonian, $H_0+H_1$, by performing some
+sort of perturbation expansion about the eigenvalues and eigenstates of the original
+Hamiltonian, $H_0$? Let us investigate.
+
+Incidentally, in this chapter, we shall only discuss so-called {\em time-independent
+perturbation theory}, in which the modification to the Hamiltonian,
+$H_1$, has no explicit dependence on time. It is also assumed
+that the unperturbed Hamiltonian, $H_0$, is time-independent.
+
+\section{Improved Notation}
+Before commencing our investigation, it is helpful to introduce some
+improved notation. Let the $\psi_i$ be a complete set of eigenstates
+of the Hamiltonian, $H$, corresponding to the eigenvalues $E_i$:
+{\em i.e.},
+\begin{equation}
+H\,\psi_i = E_i\,\psi_i.
+\end{equation}
+Now, we expect the $\psi_i$ to be orthonormal (see Sect.~\ref{seig}). 
+In one dimension, this implies that
+\begin{equation}\label{e12.1}
+\int_{-\infty}^\infty \psi_i^\ast\,\psi_j\,dx = \delta_{ij}.
+\end{equation}
+In three dimensions (see Cha.~\ref{sthree}), the above expression generalizes to
+\begin{equation}\label{e12.2}
+\int_{-\infty}^\infty \int_{-\infty}^\infty \int_{-\infty}^\infty \psi_i^\ast\,\psi_j\,dx\,dy\,dz = \delta_{ij}.
+\end{equation}
+Finally, if the $\psi_i$ are spinors (see Cha.~\ref{sspin}) then
+we have
+\begin{equation}\label{e12.3}
+\psi_i^\dag\,\psi_j = \delta_{ij}.
+\end{equation}
+The generalization to the case where $\psi$ is a product of a regular
+wavefunction and a spinor is fairly obvious. We can represent all
+of the above possibilities by writing
+\begin{equation}
+\langle \psi_i|\psi_j\rangle \equiv \langle i|j\rangle = \delta_{ij}.
+\end{equation}
+Here, the term in angle brackets represents the integrals in Eqs.~(\ref{e12.1})
+and (\ref{e12.2}) in one- and three-dimensional regular space, respectively,
+and the spinor product (\ref{e12.3}) in spin-space. The advantage of
+our new notation is its great generality: {\em i.e.}, it
+can deal with one-dimensional wavefunctions, three-dimensional wavefunctions,
+spinors, {\em etc.}
+
+Expanding a general wavefunction, $\psi_a$, in terms of the energy
+eigenstates, $\psi_i$, we obtain
+\begin{equation}\label{e12.7}
+\psi_a = \sum_i c_i\,\psi_i.
+\end{equation}
+In one dimension, the expansion coefficients take the form (see Sect.~\ref{seig})
+\begin{equation}
+c_i = \int_{-\infty}^\infty\psi_i^\ast\,\psi_a\,dx,
+\end{equation}
+whereas in three dimensions we get
+\begin{equation}
+c_i = \int_{-\infty}^\infty\int_{-\infty}^\infty\int_{-\infty}^\infty\psi_i^\ast\,\psi_a\,dx\,dy\,dz.
+\end{equation}
+Finally, if $\psi$ is a spinor then we have
+\begin{equation}
+c_i = \psi_i^\dag\,\psi_a.
+\end{equation}
+We can represent all of the above possibilities by
+writing
+\begin{equation}
+c_i =\langle\psi_i|\psi_a\rangle\equiv \langle i|a\rangle.
+\end{equation}
+The expansion (\ref{e12.7}) thus becomes
+\begin{equation}\label{e12.13a}
+\psi_a = \sum_i\langle\psi_i|\psi_a\rangle\,\psi_i\equiv \sum_i \langle i|a\rangle\,\psi_i.
+\end{equation}
+Incidentally, it follows that
+\begin{equation}
+\langle i|a\rangle^\ast=\langle a| i\rangle.
+\end{equation}
+
+Finally, if $A$ is a general operator, and the wavefunction
+$\psi_a$ is expanded in the manner shown in Eq.~(\ref{e12.7}), then the expectation value of
+$A$ is written (see Sect.~\ref{seig})
+\begin{equation}\label{e12.14}
+\langle A\rangle = \sum_{i,j} c_i^\ast\,c_j\,A_{ij}.
+\end{equation}
+Here, the $A_{ij}$ are unsurprisingly known as the {\em matrix
+elements}\/ of $A$.
+In one dimension, the matrix elements take the form
+\begin{equation}
+A_{ij} = \int_{-\infty}^\infty\psi_i^\ast\,A\,\psi_j\,dx,
+\end{equation}
+whereas in three dimensions we get
+\begin{equation}
+A_{ij} = \int_{-\infty}^\infty\int_{-\infty}^\infty\int_{-\infty}^\infty\psi_i^\ast\,A\,\psi_j\,dx\,dy\,dz.
+\end{equation}
+Finally, if $\psi$ is a spinor then we have
+\begin{equation}
+A_{ij}=\psi_i^\dag\,A\,\psi_j.
+\end{equation}
+We can represent all of the above possibilities by
+writing
+\begin{equation}
+A_{ij}=\langle \psi_i|A|\psi_j\rangle \equiv \langle i|A|j\rangle.
+\end{equation}
+The expansion (\ref{e12.14}) thus becomes
+\begin{equation}\label{e12.20a}
+\langle A\rangle \equiv\langle a|A|a\rangle= \sum_{i,j} \langle a|i\rangle
+\langle i|A|j\rangle \langle j|a\rangle.
+\end{equation}
+Incidentally, it follows that [see Eq.~(\ref{e5.48})]
+\begin{equation}
+ \langle i|A|j\rangle^\ast=\langle j| A^\dag|i\rangle.
+\end{equation}
+Finally, it is clear from Eq.~(\ref{e12.20a}) that
+\begin{equation}\label{e12.20}
+\sum_{i} |i\rangle \langle i| \equiv 1,
+\end{equation}
+where the $\psi_i$ are a {\em complete}\/ set of eigenstates, and 1 is the
+identity operator.
+
+\section{Two-State System}
+Consider the simplest possible non-trivial quantum mechanical system.
+In such a system,
+there are only {\em two}\/ independent eigenstates
+of the unperturbed Hamiltonian: {\em i.e.},
+\begin{eqnarray}\label{e12.21}
+H_0\,\psi_1 &=& E_1\,\psi_1,\\[0.5ex]
+H_0\,\psi_2&=&E_2\,\psi_2.\label{e12.22}
+\end{eqnarray}
+It is assumed that these states, and their associated eigenvalues, are known.
+We also expect the states to be orthonormal, and to form a complete set.
+
+Let us now try to solve the modified energy eigenvalue problem
+\begin{equation}\label{e12.23}
+(H_0+H_1)\,\psi_E = E\,\psi_E.
+\end{equation}
+We can, in fact, solve this problem exactly. Since the eigenstates
+of $H_0$ form a complete set, we can write [see Eq.~(\ref{e12.13a})]
+\begin{equation}\label{e12.24}
+\psi_E = \langle 1|E\rangle\,\psi_1 + \langle 2|E\rangle\,\psi_2.
+\end{equation}
+It follows from (\ref{e12.23}) that
+\begin{equation}\label{e12.25}
+\langle i|H_0 + H_1|E\rangle = E\,\langle i|E\rangle,
+\end{equation}
+where $i=1$ or $2$. Equations (\ref{e12.21}), (\ref{e12.22}), (\ref{e12.24}),
+(\ref{e12.25}), and the orthonormality condition
+\begin{equation}
+\langle i|j\rangle = \delta_{ij},
+\end{equation}
+yield two coupled equations which can be written
+in matrix form:
+\begin{eqnarray}\label{e12.27}
+\left(\begin{array}{cc}E_1-E+e_{11}& e_{12}\\[0.5ex]
+e_{12}^\ast& E_2-E+e_{22}\end{array}\right)\left(
+\begin{array}{c}\langle 1|E\rangle\\[0.5ex]
+\langle 2|E\rangle\end{array}\right)=\left(
+\begin{array}{c} 0\\[0.5ex]
+0\end{array}\right),
+\end{eqnarray}
+where
+\begin{eqnarray}
+e_{11} &=& \langle 1|H_1|1\rangle,\\[0.5ex]
+e_{22}&=&\langle 2|H_1|2\rangle,\\[0.5ex]
+e_{12}&=&\langle 1|H_1|2\rangle = \langle 2|H_1|1\rangle^\ast.
+\end{eqnarray}
+Here, use has been made of the fact that $H_1$ is an Hermitian operator.
+
+Consider the special (but not uncommon) case of a perturbing Hamiltonian
+whose diagonal matrix elements are zero, so that
+\begin{equation}
+e_{11}= e_{22} = 0.
+\end{equation}
+The solution of  Eq.~(\ref{e12.27}) (obtained by setting
+the determinant of the matrix to zero) is
+\begin{equation}
+E = \frac{(E_1+E_2)\pm\sqrt{(E_1-E_2)^2 + 4\,|e_{12}|^2}}
+{2}.
+\end{equation}
+Let us expand in the supposedly small parameter
+\begin{equation}
+\epsilon = \frac{|e_{12}|}{|E_1-E_2|}.
+\end{equation}
+We obtain
+\begin{equation}
+E \simeq \frac{1}{2}\,(E_1+E_2) \pm \frac{1}{2}\,(E_1-E_2)(1+2\,\epsilon^2+\cdots).
+\end{equation}
+The above expression yields the modification of the
+energy eigenvalues due to the perturbing Hamiltonian:
+\begin{eqnarray}
+E_1' &=& E_1 + \frac{|e_{12}|^2}{E_1-E_2}+ \cdots,\\[0.5ex]
+E_2' &=& E_2 - \frac{|e_{12}|^2}{E_1-E_2}+\cdots.
+\end{eqnarray}
+Note that $H_1$ causes the upper eigenvalue to rise, and the lower to fall.
+It is easily demonstrated that the modified eigenstates take the form
+\begin{eqnarray}
+\psi_1' &=&\psi_1+ \frac{e_{12}^\ast}{E_1-E_2}\,\psi_2+ \cdots,\\[0.5ex]
+\psi_2'&=& \psi_2 - \frac{e_{12}}{E_1-E_2}\,\psi_1+ \cdots.
+\end{eqnarray}
+Thus, the modified energy eigenstates consist of one of the
+unperturbed eigenstates, plus a slight admixture of the other.
+Now our expansion procedure is only valid when $\epsilon\ll 1$. 
+This suggests that the condition for the validity of the perturbation
+method as a whole is
+\begin{equation}
+|e_{12}|\ll |E_1-E_2|.
+\end{equation}
+In other words, when we say that $H_1$ needs to be small compared to
+$H_0$, what we are really saying is that the above inequality must be
+satisfied.
+
+\section{Non-Degenerate Perturbation Theory}\label{e12.4}
+Let us now generalize our perturbation analysis to deal
+with systems possessing more than two energy eigenstates. 
+Consider a system in which the energy
+eigenstates of the unperturbed Hamiltonian, $H_0$, are denoted
+\begin{equation}
+H_0\,\psi_n = E_n\,\psi_n,
+\end{equation}
+where $n$ runs from 1 to $N$. The eigenstates are assumed to
+be orthonormal, so that
+\begin{equation}
+\langle m|n\rangle = \delta_{nm},
+\end{equation}
+and to form a complete set. Let us now try to
+solve the energy eigenvalue problem for the perturbed Hamiltonian:
+\begin{equation}
+(H_0+H_1)\,\psi_E = E\,\psi_E.
+\end{equation}
+If follows that
+\begin{equation}
+\langle m|H_0+H_1|E\rangle = E\,\langle m |E\rangle,
+\end{equation}
+where $m$ can take any value from  1 to $N$. Now, we can express
+$\psi_E$ as a linear superposition of the unperturbed energy eigenstates:
+\begin{equation}
+\psi_E = \sum_k \langle k|E\rangle\,\psi_k,
+\end{equation}
+where $k$ runs from 1 to $N$. We can combine the above
+equations to give
+\begin{equation}\label{e12.45}
+(E_m-E+e_{mm})\,\langle m|E\rangle + \sum_{k\neq m}
+e_{mk}\,\langle k|E\rangle = 0,
+\end{equation}
+where
+\begin{equation}
+e_{mk} =\langle m|H_1| k\rangle.
+\end{equation}
+
+Let us now develop our perturbation expansion. We assume that 
+\begin{equation}
+\frac{e_{mk}}{E_m-E_k} \sim {\cal O}(\epsilon)
+\end{equation}
+for all $m\neq k$, where $\epsilon\ll 1$ is our expansion parameter.
+We also assume that
+\begin{equation}
+\frac{e_{mm}}{E_m}\sim {\cal O}(\epsilon)
+\end{equation}
+for all $m$. Let us search for a modified version of the $n$th unperturbed
+energy eigenstate for which
+\begin{equation}
+E = E_n + {\cal O}(\epsilon),
+\end{equation}
+and
+\begin{eqnarray}
+\langle n|E\rangle &=& 1,\\[0.5ex]
+\langle m|E\rangle&=&{\cal O}(\epsilon)
+\end{eqnarray}
+for $m\neq n$. Suppose that we write out Eq.~(\ref{e12.45}) for $m\neq n$,
+neglecting terms which are ${\cal O}(\epsilon^2)$ according to our expansion
+scheme. We find that
+\begin{equation}
+(E_m-E_n)\,\langle m|E\rangle + e_{mn} \simeq 0,
+\end{equation}
+giving
+\begin{equation}
+\langle m|E\rangle \simeq - \frac{e_{mn}}{E_m-E_n}.
+\end{equation}
+Substituting the above expression into Eq.~(\ref{e12.45}),
+evaluated for $m=n$, and neglecting ${\cal O}(\epsilon^3)$ terms, we obtain
+\begin{equation}
+(E_n-E+e_{nn})-\sum_{k\neq n}\frac{|e_{nk}|^2}{E_k-E_n} \simeq 0.
+\end{equation}
+Thus, the modified $n$th energy eigenstate possesses an eigenvalue
+\begin{equation}\label{e12.56}
+E_n' = E_n + e_{nn} + \sum_{k\neq n}\frac{|e_{nk}|^2}{E_n-E_k}
++ {\cal O}(\epsilon^3),
+\end{equation}
+and a wavefunction
+\begin{equation}\label{e12.57}
+\psi_n' = \psi_n + \sum_{k\neq n} \frac{e_{kn}}{E_n-E_k}\,\psi_k + {\cal O}(\epsilon^2).
+\end{equation}
+Incidentally, it is easily demonstrated that the modified eigenstates remain orthonormal
+to ${\cal O}(\epsilon^2)$. 
+
+\section{Quadratic Stark Effect}\label{s12.5}
+Suppose that a hydrogen atom is
+subject to a uniform external electric field, of magnitude $|{\bf E}|$,  directed along the $z$-axis. The Hamiltonian of the system can be split into two parts. Namely, the unperturbed
+Hamiltonian,
+\begin{equation}\label{e12.58}
+H_0 =\frac{p^2}{2\,m_e} -\frac{e^2}{4\pi\epsilon_0\,r},
+\end{equation}
+and the perturbing Hamiltonian
+\begin{equation}
+H_1 = e\,|{\bf E}|\,z.
+\end{equation}
+
+ Note that the electron spin is irrelevant to this problem 
+(since the spin operators all commute with $H_1$), so we can ignore
+the spin degrees of freedom of the system. Hence, the energy eigenstates
+of the unperturbed Hamiltonian are characterized by three quantum
+numbers---the radial quantum number $n$, and the two angular
+quantum numbers $l$ and $m$ (see Cha.~\ref{scent}). Let us
+denote these states as the $\psi_{nlm}$, and let their corresponding energy eigenvalues
+be the $E_{nlm}$. According to the analysis in the previous section,  the change in energy of the eigenstate characterized by the quantum
+numbers $n,l,m$ in  the presence of a {\em small}\/ electric field is given by
+\begin{eqnarray}
+\Delta E_{nlm}&=& e\,|{\bf E}|\,\langle n,l,m|z|n,l,m\rangle\nonumber\\[0.5ex]
+&&+ e^2\,|{\bf E}|^2\sum_{n',l',m'\neq n,l,m}\frac{|\langle n,l,m|z|n',l',m'\rangle|^2}{E_{nlm}-E_{n'l'm'}}.\label{e12.59}
+\end{eqnarray}
+This energy-shift is known as the {\em Stark effect}.
+
+The sum on the right-hand side of the above equation seems very complicated. However, it turns out that most of the terms in this sum
+are zero. This follows because the matrix elements $\langle n,l,m|z|n',l',m'\rangle$
+are zero for virtually all choices of the two sets of quantum number, $n,l,m$ and
+$n',l',m'$. Let us try to find a set of rules which determine when these
+matrix elements are non-zero. These rules are usually referred to as the
+{\em selection rules}\/ for the problem in hand.
+
+Now, since [see Eq.~(\ref{e8.3})]
+\begin{equation}
+L_z = x\,p_y - y\,p_x,
+\end{equation}
+it follows that [see Eqs.~(\ref{commxx})--(\ref{commxp})]
+\begin{equation}
+[L_z,z] = 0.
+\end{equation}
+Thus,
+\begin{eqnarray}
+\langle n,l,m|[L_z,z]|n',l',m'\rangle& =& \langle n,l,m|L_z\,z-z\,L_z|n',l',m'\rangle\nonumber\\[0.5ex]
+&=& \hbar\,(m-m')\,\langle n,l,m|z|n',l',m'\rangle = 0,
+\end{eqnarray}
+since $\psi_{nlm}$ is, by definition, an eigenstate of $L_z$ corresponding
+to the eigenvalue $m\,\hbar$. Hence, it is clear, from the above equation, 
+that one of the selection rules is that the matrix element $\langle n,l,m|z|n',l',m'\rangle$ is zero unless
+\begin{equation}\label{e12.63}
+m' = m.
+\end{equation}
+
+Let us now determine the selection rule for $l$. We have
+\begin{eqnarray}
+[L^2,z]&=& [L_x^{\,2},z] + [L_y^{\,2},z]\nonumber\\[0.5ex]
+& =& L_x\,[L_x,z] + [L_x,z]\,L_x + L_y\,[L_y,z]+[L_y,z]\,L_y\nonumber\\[0.5ex]
+&=& {\rm i}\,\hbar\,(-L_x\,y-y\,L_x+L_y\,x+x\,L_y)\nonumber\\[0.5ex]
+&=& 2\,{\rm i}\,\hbar\,(L_y\,x -L_x\,y + {\rm i}\,\hbar\,z)\nonumber\\[0.5ex]
+&=& 2\,{\rm i}\,\hbar\,(L_y\,x - y\,L_x) = 2\,{\rm i}\,\hbar\,(x\,L_y-L_x\,y),
+\end{eqnarray}
+where use has been made of Eqs.~(\ref{commxx})--(\ref{commxp}), (\ref{e8.1})--(\ref{e8.3}), and (\ref{e8.10}).
+Thus,
+\begin{eqnarray}
+[L^2,[L^2,z]]&=& 2\,{\rm i}\,\hbar\,\left(L^2, L_y\,x-L_x\,y + {\rm i}\,\hbar\,z\right)\nonumber\\[0.5ex]
+&=& 2\,{\rm i}\,\hbar\,\left(L_y\,[L^2,x] - L_x\,[L^2,y] + {\rm i}\,\hbar\,[L^2,z]\right)\nonumber\\[0.5ex]
+&=&-4\,\hbar^2\,L_y\,(y\,L_z-L_y\,z) + 4\,\hbar^2\,L_x\,(L_x\,z-x\,L_z)\nonumber\\[0.5ex]
+&&-2\,\hbar^2\,(L^2\,z-z\,L^2),
+\end{eqnarray}
+which reduces to
+\begin{eqnarray}
+[L^2,[L^2,z]]&=& -\hbar^2\,\left\{4\,(L_x\,x+ L_y\,y+L_z\,z)\,L_z
+-4\,(L_x^{\,2}+L_y^{\,2}+L_z^{\,2})\,z\right.\nonumber\\[0.5ex]
+&&\left.+2\,(L^2\,z-z\,L^2)\right\}\nonumber\\[0.5ex]
+&=&  -\hbar^2\,\left\{4\,(L_x\,x+ L_y\,y+L_z\,z)\,L_z-2\,(L^2\,z+z\,L^2)\right\}.
+\end{eqnarray}
+However, it is clear from Eqs.~(\ref{e8.1})--(\ref{e8.3}) that
+\begin{equation}
+L_x\,x+L_y\,y+L_z\,z = 0.
+\end{equation}
+Hence, we obtain
+\begin{equation}
+[L^2,[L^2,z]] = 2\,\hbar^2\,(L^2\,z+z\,L^2).
+\end{equation}
+Finally, the above expression expands to give
+\begin{equation}\label{e12.69}
+L^4\,z-2\,L^2\,z\,L^2 + z\,L^4 - 2\,\hbar^2\,(L^2\,z+z\,L^2) = 0.
+\end{equation}
+
+Equation (\ref{e12.69}) implies that
+\begin{equation}
+\langle n,l,m|L^4\,z-2\,L^2\,z\,L^2 + z\,L^4 - 2\,\hbar^2\,(L^2\,z+z\,L^2) |n',l',m\rangle = 0.
+\end{equation}
+Since, by definition, $\psi_{nlm}$ is an eigenstate of $L^2$ corresponding
+to the eigenvalue $l\,(l+1)\,\hbar^2$, this expression yields
+\begin{eqnarray}
+\left\{l^2\,(l+1)^2-2\,l\,(l+1)\,l'\,(l'+1) + l'^2\,(l'+1)^2\right.&&\nonumber\\[0.5ex]
+\left.-2\,l\,(l+1) - 2\,l'\,(l'+1)\right\}\langle n,l,m|z|n',l',m\rangle& =& 0,
+\end{eqnarray}
+which reduces to
+\begin{equation}
+(l+l'+2)\,(l+l')\,(l-l'+1)\,(l-l'-1)\,\langle n,l,m|z|n',l',m\rangle = 0.
+\end{equation}
+According to the above formula, the matrix element $\langle n,l,m|z|n',l',m\rangle$ vanishes unless $l=l'=0$ or $l'=l\pm 1$. [Of course, the
+factor $l+l'+2$, in the above equation, can never be zero, since $l$ and $l'$ can never be negative.]
+Recall, however, from Cha.~\ref{scent}, that an $l=0$ wavefunction
+is {\em spherically symmetric}. It, therefore, follows, from symmetry,
+that the matrix element $\langle n,l,m|z|n',l',m\rangle$ is zero when
+$l=l'=0$. In conclusion, the selection rule for $l$ is that the
+matrix element $\langle n,l,m|z|n',l',m\rangle$ is zero unless
+\begin{equation}\label{e12.73}
+l' = l\pm 1.
+\end{equation}
+
+Application of the selection rules (\ref{e12.63}) and (\ref{e12.73}) to
+Eq.~(\ref{e12.59}) yields
+\begin{equation}\label{e12.74}
+\Delta E_{nlm} = e^2\,|{\bf E}|^2\sum_{n',l'=l\pm 1}
+\frac{|\langle n,l,m|z|n',l',m\rangle|^2}{E_{nlm}-E_{n'l'm}}.
+\end{equation}
+Note that,  according to the selection rules, all of the terms in Eq.~(\ref{e12.59}) which vary linearly with
+the electric field-strength vanish.
+Only those terms which vary quadratically with the field-strength
+survive. Hence, this type of energy-shift of an atomic state in the
+presence of a small electric field is known as the {\em quadratic}\/
+Stark effect. Now, the {\em electric polarizability}\/ of an atom is
+defined in terms of the energy-shift of the atomic state as follows:
+\begin{equation}
+\Delta E = -\frac{1}{2}\,\alpha\,|{\bf E}|^2.
+\end{equation}
+Hence, we can write
+\begin{equation}\label{e12.76}
+\alpha_{nlm} = 2\,e^2\sum_{n',l'=l\pm 1}
+\frac{|\langle n,l,m|z|n',l',m\rangle|^2}{E_{n'l'm}-E_{nlm}}.
+\end{equation}
+
+Unfortunately, there is one fairly obvious problem with Eq.~(\ref{e12.74}). Namely,  it predicts  an {\em infinite}\/ energy-shift if there exists some non-zero
+matrix element $\langle n,l,m|z|n',l',m\rangle$ which couples
+two {\em degenerate}\/ unperturbed energy eigenstates: {\em i.e.},
+if $\langle n,l,m|z|n',l',m\rangle\neq 0$ and $E_{nlm}=E_{n'l'm}$.
+Clearly,  our perturbation method breaks down completely in this
+situation. Hence, we conclude that Eqs.~(\ref{e12.74}) and (\ref{e12.76})
+are only applicable to cases where the coupled eigenstates are
+{\em non-degenerate}. For this reason, the type of perturbation
+theory employed here is known as {\em non-degenerate perturbation theory}.
+Now, the unperturbed eigenstates of a hydrogen atom have energies which
+only depend on the radial quantum number $n$ (see Cha.~\ref{scent}). It follows that
+we can only apply the above results to the $n=1$ eigenstate (since
+for $n>1$ there will be coupling to degenerate eigenstates with
+the same value of $n$ but different values of $l$).  
+
+Thus, according to non-degenerate perturbation theory, the polarizability of the ground-state  ({\em i.e.}, $n=1$) of a hydrogen atom is given by
+\begin{equation}
+\alpha = 2\,e^2\sum_{n>1}\frac{|\langle 1,0,0|z|n,1,0\rangle|^2}{E_{n00}-E_{100}}.
+\end{equation}
+Here, we have made use of the fact that $E_{n10}=E_{n00}$. The sum in the above expression can be
+evaluated approximately by noting that (see Sect.~\ref{s10.4})
+\begin{equation}
+E_{n00} = -\frac{e^2}{8\pi\,\epsilon_0\,a_0\,n^2},
+\end{equation}
+where
+\begin{equation}
+a_0 = \frac{4\pi\epsilon_0\,\hbar^2}{m_e\,e^2}
+\end{equation}
+is the Bohr radius. Hence, we can write
+\begin{equation}
+E_{n00}-E_{100} \geq E_{200}-E_{100} = \frac{3}{4}\,\frac{e^2}{8\pi\,\epsilon_0\,a_0},
+\end{equation}
+which implies that
+\begin{equation}
+\alpha < \frac{16}{3}\,4\pi\epsilon_0\,a_0\,\sum_{n>1}
+|\langle 1,0,0|z|n,1,0\rangle|^2.
+\end{equation}
+However, [see Eq.~(\ref{e12.20})]
+\begin{eqnarray}
+\sum_{n>1}|\langle 1,0,0|z|n,1,0\rangle|^2
+&=& \sum_{n>1}\langle 1,0,0|z|n,1,0\rangle\,\langle n,1,0|z|1,0,0\rangle\nonumber\\[0.5ex]
+&=&\sum_{n',l',m'}\langle 1,0,0|z|n',l',m'\rangle\,\langle n',l',m'|z|1,0,0\rangle\nonumber\\[0.5ex]
+&=&\langle 1,0,0|z^2|1,0,0\rangle = \frac{1}{3}\,\langle 1,0,0|r^2|1,0,0\rangle,
+\end{eqnarray}
+where we have made use of the selection rules,  the fact that the
+$\psi_{n',l',m'}$ form a complete set, and the fact the the
+ground-state of hydrogen is spherically symmetric. Finally, it
+follows from Eq.~(\ref{e9.73}) that
+\begin{equation}
+\langle 1,0,0|r^2|1,0,0\rangle = 3\,a_0^{\,2}.
+\end{equation}
+Hence, we conclude that
+\begin{equation}
+\alpha < \frac{16}{3}\,4\pi\epsilon_0\,a_0^{\,3}\simeq 5.3\,\,4\pi\epsilon_0\,a_0^{\,3}.
+\end{equation}
+The exact result (which can be obtained by solving Schr\"{o}dinger's equation
+in parabolic coordinates) is
+\begin{equation}
+\alpha = \frac{9}{2}\,4\pi\epsilon_0\,a_0^{\,3} = 4.5\,\,4\pi\epsilon_0\,a_0^{\,3}.
+\end{equation}
+
+\section{Degenerate Perturbation Theory}\label{s12.6}
+Let us, rather naively, investigate the Stark effect in an excited ({\em i.e.}, 
+$n>1$) state of the hydrogen atom using standard non-degenerate
+perturbation theory. We can write
+\begin{equation}
+H_0\,\psi_{nlm} = E_n\,\psi_{nlm},
+\end{equation}
+since the energy eigenstates of the unperturbed Hamiltonian only depend
+on the quantum number $n$.  Making use of the selection rules
+(\ref{e12.63}) and (\ref{e12.73}), non-degenerate perturbation theory
+yields the following expressions for the perturbed energy levels
+and eigenstates [see Eqs.~(\ref{e12.56}) and (\ref{e12.57})]:
+\begin{equation}\label{e12.88}
+E_{nl}' = E_n + e_{nlnl} + \sum_{n',l'=l\pm 1}\frac{|e_{n'l'nl}|^2}{E_n-E_{n'}},
+\end{equation}
+and
+\begin{equation}\label{e12.89}
+\psi'_{nlm} = \psi_{nlm} + \sum_{n',l'=l\pm 1}\frac{e_{n'l'nl}}{E_n-E_{n'}}\,\psi_{n'l'm},
+\end{equation}
+where
+\begin{equation}
+e_{n'l'nl} = \langle n',l',m|H_1|n,l,m\rangle.
+\end{equation}
+Unfortunately, if $n>1$ then the summations in the above expressions
+are not well-defined, because there exist non-zero matrix elements, $e_{nl'nl}$,  which couple degenerate eigenstates: {\em i.e.}, there exist non-zero matrix elements which couple states with the same value of $n$, but
+different values of $l$. These particular matrix elements give rise to
+singular factors $1/(E_n-E_n)$ in the summations. This does not occur if
+$n=1$ because, in this case, the selection rule $l'=l\pm 1$, and the
+fact that $l=0$ (since $0\leq l < n$), only allow $l'$ to take the single value 1.
+Of course, there is no $n=1$ state with $l'=1$.
+Hence, there is only one coupled state corresponding to the
+eigenvalue $E_1$. Unfortunately, if $n>1$ then there are multiple
+coupled states corresponding to the eigenvalue $E_n$. 
+
+Note that our problem would disappear if the matrix elements of the
+perturbed Hamiltonian corresponding to the same value of $n$, but
+different values of $l$, were all zero: {\em i.e.}, if
+\begin{equation}\label{e12.91}
+\langle n,l',m|H_1|n,l,m\rangle = \lambda_{nl}\,\delta_{ll'}.
+\end{equation}
+In this case, all of the singular
+terms in Eqs.~(\ref{e12.88}) and (\ref{e12.89}) would reduce to zero.
+Unfortunately, the above equation is not satisfied. Fortunately, we can
+always redefine the unperturbed eigenstates corresponding to the
+eigenvalue $E_n$ in such a manner that Eq.~(\ref{e12.91}) is satisfied.
+Suppose that there are $N_n$ coupled eigenstates belonging
+to the eigenvalue $E_n$. Let us define $N_n$ new states
+which are linear combinations of our $N_n$ original degenerate eigenstates:
+\begin{equation}
+\psi_{nlm}^{(1)}= \sum_{k=1,N_n}\langle n,k,m|n,l^{(1)},m\rangle\,\psi_{nkm}.
+\end{equation}
+Note that these new states are also degenerate energy eigenstates of the
+unperturbed Hamiltonian, $H_0$,  corresponding to the eigenvalue $E_n$. The
+$\psi_{nlm}^{(1)}$ are chosen in such a manner that they are also
+eigenstates of the  perturbing Hamiltonian, $H_1$:
+{\em i.e.}, they are {\em simultaneous eigenstates}\/ of $H_0$ and $H_1$. Thus,
+\begin{equation}\label{e12.93}
+H_1\,\psi_{nlm}^{(1)} = \lambda_{nl}\,\psi_{nlm}^{(1)}.
+\end{equation}
+The $\psi_{nlm}^{(1)}$ are also chosen so as to be orthonormal:
+{\em i.e.},
+\begin{equation}
+\langle n,l'^{(1)},m|n,l^{(1)},m\rangle = \delta_{ll'}.
+\end{equation}
+It follows that
+\begin{equation}
+\langle n,l'^{(1)},m|H_1|n,l^{(1)},m\rangle =\lambda_{nl}\, \delta_{ll'}.
+\end{equation}
+Thus, if we use the new eigenstates, instead of the old ones, then we
+can employ Eqs.~(\ref{e12.88}) and (\ref{e12.89}) directly, since all
+of the singular terms vanish. The only remaining difficulty
+is to determine the new eigenstates in terms of the original ones.
+
+Now [see Eq.~(\ref{e12.20})]
+\begin{equation}
+\sum_{l=1,N_n}|n,l,m\rangle\langle n,l,m|\equiv 1,
+\end{equation}
+where $1$ denotes the identity operator in the sub-space of all coupled unperturbed
+eigenstates corresponding to the eigenvalue $E_n$. Using this completeness
+relation, the eigenvalue equation (\ref{e12.93}) can be
+transformed into a straightforward matrix equation:
+\begin{equation}
+\sum_{l''=1,N_n}\langle n,l',m|H_1|n,l'',m\rangle\,\langle n,l'',m|n,l^{(1)},m\rangle
+= \lambda_{nl}\,\langle n,l',m|n,l^{(1)},m\rangle.
+\end{equation}
+This can be written more transparently as
+\begin{equation}\label{e12.100}
+{\bf U}\,{\bf x} = \lambda \,{\bf x},
+\end{equation}
+where the elements of the $N_n\times N_n$ Hermitian matrix ${\bf U}$
+are
+\begin{equation}
+U_{jk} = \langle n,j,m|H_1|n,k,m\rangle.
+\end{equation}
+Provided that the determinant of ${\bf U}$ is non-zero, Eq.~(\ref{e12.100})
+can always be solved to give $N_n$ eigenvalues $\lambda_{nl}$ (for $l=1$ to $N_n$), with $N_n$ corresponding eigenvectors ${\bf x}_{nl}$. The
+normalized eigenvectors specify the weights of the new eigenstates in terms of the
+original eigenstates: {\em i.e.}, 
+\begin{equation}
+({\bf x}_{nl})_k = \langle n,k,m|n,l^{(1)},m\rangle,
+\end{equation}
+for $k=1$ to $N_n$. In our new scheme, Eqs.~(\ref{e12.88}) and (\ref{e12.89}) yield
+\begin{equation}
+E_{nl}' = E_n +\lambda_{nl}+\sum_{n'\neq n,l'=l\pm 1}\frac{|e_{n'l'nl}|^2}{E_n-E_{n'}},
+\end{equation}
+and
+\begin{equation}
+\psi_{nlm}^{(1)'} = \psi_{nlm}^{(1)} + \sum_{n'\neq n,l'=l\pm 1}
+\frac{e_{n'l'nl}}{E_n-E_{n'}}\,\psi_{n'l'm}.
+\end{equation}
+There are no singular terms in  these expressions, since the summations
+are over $n'\neq n$: {\em i.e.}, they specifically exclude the problematic,
+degenerate, unperturbed energy eigenstates corresponding to the eigenvalue
+$E_n$. Note that the first-order energy shifts are equivalent to the
+eigenvalues of the matrix equation (\ref{e12.100}).
+
+\section{Linear Stark Effect}
+Returning to the Stark effect, let us examine the effect of an external electric
+field on the energy levels of the $n=2$ states of a hydrogen atom. 
+There are four such states: an $l=0$ state, usually referred to as $2S$,
+and three $l=1$ states (with $m=-1,0,1$), usually referred to as 2P. All
+of these states possess the same unperturbed energy, $E_{200}
+= -e^2/(32\pi\,\epsilon_0\,a_0)$. 
+As before, the perturbing Hamiltonian is
+\begin{equation}
+H_1 = e\,|{\bf E}|\,z.
+\end{equation}
+According to the previously determined selection rules ({\em i.e.}, $m'=m$,
+and $l'=l\pm1$), this Hamiltonian couples $\psi_{200}$ and $\psi_{210}$.
+Hence, non-degenerate perturbation theory breaks down when applied to
+these two states. On the other hand, non-degenerate perturbation
+theory works fine for the $\psi_{211}$ and $\psi_{21-1}$ states,
+since these are not coupled to any other $n=2$ states by the perturbing
+Hamiltonian.
+
+In order to apply perturbation theory to the $\psi_{200}$ and $\psi_{210}$ states, we have to solve the
+matrix eigenvalue equation
+\begin{equation}
+{\bf U}\,{\bf x} = \lambda\,{\bf x},
+\end{equation}
+where ${\bf U}$ is the matrix of the matrix elements of $H_1$ between these states. Thus,
+\begin{equation}
+{\bf U} = e\,|{\bf E}|\left(\begin{array}{cc}
+0& \langle 2,0,0|z|2,1,0\rangle\\[0.5ex]
+\langle 2,1,0|z|2,0,0\rangle&0
+\end{array}\right),
+\end{equation}
+where the rows and columns correspond to  $\psi_{200}$ and $\psi_{210}$, respectively. Here, we have again
+made use of the selection rules, which tell us
+that the matrix element of $z$ between two hydrogen atom
+states is zero unless the states possess $l$ quantum numbers which differ by unity. It is easily demonstrated,
+from the exact forms of the 2S  and 2P wavefunctions, that
+\begin{equation}
+\langle 2,0,0|z|2,1,0\rangle = \langle 2,1,0|z|2,0,0\rangle = 3\,a_0.
+\end{equation}
+
+It can be seen, by inspection, that the eigenvalues of ${\bf U}$
+are $\lambda_1=3\,e\,a_0\,|{\bf E}|$ and $\lambda_2=-3\,e\,a_0\,|{\bf E}|$. The corresponding normalized eigenvectors are
+\begin{eqnarray}
+{\bf x}_1&=&\left(\begin{array}{c}
+1/\sqrt{2}\\[0.5ex]
+1/\sqrt{2}\end{array}\right),\\[0.5ex]
+{\bf x}_2&=&\left(\begin{array}{c}
+1/\sqrt{2}\\[0.5ex]
+-1/\sqrt{2}\end{array}\right).
+\end{eqnarray}
+It follows that the simultaneous eigenstates of $H_0$ and $H_1$ take the form
+\begin{eqnarray}
+\psi_1 &=& \frac{\psi_{200} + \psi_{210}}{\sqrt{2}},\\[0.5ex]
+\psi_2 &=& \frac{\psi_{200} -\psi_{210}}{\sqrt{2}}.
+\end{eqnarray}
+In the absence of an external electric field, both of these states possess the
+same energy, $E_{200}$. The first-order energy shifts induced by
+an external electric field are given by
+\begin{eqnarray}
+\Delta E_1 &=& +3\,e\,a_0\,|{\bf E}|,\\[0.5ex]
+\Delta E_2 &=& -3\,e\,a_0\,|{\bf E}|.
+\end{eqnarray}
+Thus, in the presence of
+an electric field, the energies of states 1 and 2 are shifted upwards and downwards, respectively, by an amount $3\,e\,a_0\,|{\bf E}|$. These states are orthogonal linear combinations of the
+original $\psi_{200}$ and $\psi_{210}$ states. Note that the energy shifts
+are {\em linear}\/ in the electric field-strength, so this effect---which is
+known as the {\em linear}\/ Stark effect---is  much larger  than the quadratic effect described in Sect.~\ref{s12.5}. 
+Note, also, that the energies of the $\psi_{211}$ and $\psi_{21-1}$ states are not affected by the electric field to first-order. Of course,
+to second-order the energies of these states are shifted by an amount
+which depends on the square of the electric field-strength (see Sect.~\ref{s12.5}).
+
+\section{Fine Structure of Hydrogen}\label{s12.8}
+According to special relativity, the kinetic energy ({\em i.e.}, the difference
+between the total energy and the rest mass energy) of a particle
+of rest mass $m$ and momentum $p$ is
+\begin{equation}
+T = \sqrt{p^2\,c^2+m^2\,c^4} - m\,c^2.
+\end{equation}
+In the non-relativistic limit $p\ll m\,c$, we can expand the square-root
+in the above expression to give
+\begin{equation}
+T = \frac{p^2}{2\,m}\left[1- \frac{1}{4}\left(\frac{p}{m\,c}\right)^2+ 
+{\cal O}\left(\frac{p}{m\,c}\right)^4\right].
+\end{equation}
+Hence,
+\begin{equation}
+T \simeq \frac{p^2}{2\,m} - \frac{p^4}{8\,m^3\,c^2}.
+\end{equation}
+Of course, we recognize the first term on the right-hand side of this equation
+as the standard non-relativistic expression for the kinetic energy.
+The second term is the lowest-order relativistic correction to this
+energy. Let us consider the effect of this type of correction on the energy
+levels of a hydrogen atom. So, the unperturbed Hamiltonian is
+given by Eq.~(\ref{e12.58}), and the perturbing Hamiltonian
+takes the form
+\begin{equation}
+H_1 = - \frac{p^4}{8\,m_e^{\,3}\,c^2}.
+\end{equation}
+
+Now, according to standard first-order perturbation theory (see Sect.~\ref{e12.4}), the lowest-order relativistic correction to the energy of a hydrogen atom state characterized
+by the standard quantum numbers $n$, $l$, and $m$ is given by
+\begin{eqnarray}
+\Delta E_{nlm} &=& \langle n,l,m|H_1|n,l,m\rangle = - \frac{1}{8\,m_e^{\,3}\,c^2}\,
+\langle n,l,m|p^4|n,l,m\rangle\nonumber\\[0.5ex]
+&=& - \frac{1}{8\,m_e^{\,3}\,c^2}\,
+\langle n,l,m|p^2\,p^2|n,l,m\rangle.
+\end{eqnarray}
+However, Schr\"{o}dinger's equation for a unperturbed hydrogen atom
+can be written
+\begin{equation}
+p^2\,\psi_{n,l,m} = 2\,m_e\,(E_n-V)\,\psi_{n,l,m},
+\end{equation}
+where $V=-e^2/(4\pi\epsilon_0\,r)$. 
+Since $p^2$ is an Hermitian operator, it follows that
+\begin{eqnarray}
+\Delta E_{nlm} &=& -\frac{1}{2\,m_e\,c^2}\,\langle n,l,m|(E_n -V)^2|n,l,m\rangle\nonumber\\[0.5ex]
+&=& -\frac{1}{2\,m_e\,c^2}\left(E_n^{\,2} - 2\,E_n\,\langle
+n,l,m|V|n,l,m\rangle + \langle n,l,m|V^2|n,l,m\rangle\right)\nonumber\\[0.5ex]
+&=& -\frac{1}{2\,m_e\,c^2}\left[
+E_n^{\,2} + 2\,E_n\left(\frac{e^2}{4\pi\epsilon_0}\right)\left\langle
+\frac{1}{r}\right\rangle + \left(\frac{e^2}{4\pi\epsilon_0}\right)^2\left\langle\frac{1}{r^{\,2}}\right\rangle\right].
+\end{eqnarray}
+It follows from Eqs.~(\ref{e9.74}) and (\ref{e9.75}) that
+\begin{eqnarray}
+\Delta E_{nlm} &=& -\frac{1}{2\,m_e\,c^2}\left[
+E_n^{\,2} + 2\,E_n\left(\frac{e^2}{4\pi\epsilon_0}\right)\frac{1}{n^2\,a_0} + \left(\frac{e^2}{4\pi\epsilon_0}\right)^2\frac{1}{(l+1/2)\,n^3\,a_0^{\,2}}\right].\nonumber\\[0.5ex]&&
+\end{eqnarray}
+Finally, making use of Eqs.~(\ref{e9.55}), (\ref{e9.56}), and (\ref{e9.57}), the above expression reduces to
+\begin{equation}\label{e12.121}
+\Delta E_{nlm} = E_n\,\frac{\alpha^2}{n^2}\left(\frac{n}{l+1/2}-\frac{3}{4}\right),
+\end{equation}
+where
+\begin{equation}
+\alpha = \frac{e^2}{4\pi\epsilon_0\,\hbar\,c}\simeq \frac{1}{137}
+\end{equation}
+is the dimensionless  {\em fine structure constant}.
+
+Note that the above derivation implicitly assumes that $p^4$ is an Hermitian
+operator. It turns out that this is not the case for $l=0$ states. However,
+somewhat fortuitously, 
+our calculation still gives the correct answer when $l=0$. Note, also,
+that we are able to use {\em non-degenerate}\/ perturbation theory in the
+above calculation, using the $\psi_{nlm}$ eigenstates, because the perturbing Hamiltonian commutes
+with both $L^2$ and $L_z$. It follows that there is no
+coupling between states with different $l$ and $m$ quantum numbers.
+Hence, all coupled states have different $n$ quantum numbers, and
+therefore have different energies.
+
+Now, an electron in a hydrogen atom experiences an electric field
+\begin{equation}
+{\bf E} = \frac{e\,{\bf r}}{4\pi\epsilon_0\,r^3}
+\end{equation}
+due to the charge on the nucleus. However, according to
+electromagnetic theory, a non-relativistic particle moving in a
+electric field ${\bf E}$ with velocity ${\bf v}$ also experiences an effective
+magnetic field
+\begin{equation}\label{e12.124}
+{\bf B} = -\frac{{\bf v}\times {\bf E}}{c^2}.
+\end{equation}
+Recall, that an electron possesses a magnetic moment [see Eqs.~(\ref{e10.58})
+and (\ref{e10.59})]
+\begin{equation}
+\bmu = - \frac{e}{m_e}\,{\bf S}
+\end{equation}
+due to its spin angular momentum, ${\bf S}$. We, therefore, expect
+an additional contribution to the Hamiltonian of a hydrogen atom of the form [see Eq.~(\ref{e10.60a})]
+\begin{eqnarray}
+H_1 &=& - \bmu\cdot {\bf B}\nonumber\\[0.5ex]
+&=& - \frac{e^2}{4\pi\epsilon_0\,m_e\,c^2\,r^3}\,{\bf v}\times {\bf r}\cdot{\bf S}\nonumber\\[0.5ex]
+&=& \frac{e^2}{4\pi\epsilon_0\,m_e^{\,2}\,c^2\,r^3}\,{\bf L}\cdot {\bf S},
+\end{eqnarray}
+where ${\bf L} = m_e\,{\bf r}\times {\bf v}$  is the electron's orbital angular momentum. This effect is known as {\em spin-orbit coupling}. It turns
+out that the above expression is too large, by a factor 2, due to an
+obscure relativistic effect known as {\em Thomas precession}. Hence, the true
+spin-orbit correction to the Hamiltonian is
+\begin{equation}\label{e12.127}
+H_1 = \frac{e^2}{8\pi\,\epsilon_0\,m_e^{\,2}\,c^2\,r^3}\,{\bf L}\cdot {\bf S}.
+\end{equation}
+Let us now apply perturbation theory to the hydrogen atom, using the
+above expression as the perturbing Hamiltonian.
+
+Now
+\begin{equation}
+{\bf J} = {\bf L} + {\bf S}
+\end{equation}
+is the total angular momentum of the system. Hence,
+\begin{equation}
+J^2 = L^2+S^2+ 2\,{\bf L}\cdot{\bf S},
+\end{equation}
+giving
+\begin{equation}
+{\bf L}\cdot {\bf S} = \frac{1}{2}\,(J^2-L^2-S^2).
+\end{equation}
+Recall, from Sect.~\ref{s11.2}, that whilst $J^2$ commutes with both $L^2$
+and $S^2$, it does not commute with either $L_z$ or $S_z$. It follows
+that the perturbing Hamiltonian (\ref{e12.127}) also commutes with both $L^2$ and $S^2$,  but does not commute with either $L_z$ or $S_z$.
+Hence, the simultaneous eigenstates of the unperturbed Hamiltonian (\ref{e12.58})
+and the perturbing Hamiltonian (\ref{e12.127}) are the same as the simultaneous
+eigenstates of $L^2$, $S^2$, and $J^2$ discussed in Sect.~\ref{s11.3}.
+It is important to know this since, according to Sect.~\ref{s12.6}, we
+can only safely apply perturbation theory to the simultaneous
+eigenstates of the unperturbed and perturbing Hamiltonians.
+
+Adopting the notation introduced in Sect.~\ref{s11.3}, let
+$\psi^{(2)}_{l,s;j,m_j}$ be a simultaneous eigenstate of $L^2$, $S^2$,
+$J^2$, and $J_z$ corresponding to the eigenvalues
+\begin{eqnarray}
+L^2\,\psi^{(2)}_{l,s;j,m_j} &=& l\,(l+1)\,\hbar^2\,\psi^{(2)}_{l,s;j,m_j},\\[0.5ex]
+S^2\,\psi^{(2)}_{l,s;j,m_j} &=& s\,(s+1)\,\hbar^2\,\psi^{(2)}_{l,s;j,m_j},\\[0.5ex]
+J^2\,\psi^{(2)}_{l,s;j,m_j} &=& j\,(j+1)\,\hbar^2\,\psi^{(2)}_{l,s;j,m_j},\\[0.5ex]
+J_z\,\psi^{(2)}_{l,s;j,m_j} &=& m_j\,\hbar\,\psi^{(2)}_{l,s;j,m_j}.
+\end{eqnarray}
+According to standard first-order perturbation theory, the energy-shift induced in such a state
+by spin-orbit coupling is given by
+\begin{eqnarray}
+\Delta E_{l,1/2;j,m_j} &=& \langle l,1/2;j,m_j|H_1|l,1/2;j,m_j\rangle\nonumber\\[0.5ex]
+&=&  \frac{e^2}{16\pi\,\epsilon_0\,m_e^{\,2}\,c^2}\left\langle
+1,1/2;j,m_j\left|\frac{J^2-L^2-S^2}{r^3}\right|l,1/2;j,m_j\right\rangle\nonumber\\[0.5ex]
+&=& \frac{e^2\,\hbar^2}{16\pi\,\epsilon_0\,m_e^{\,2}\,c^2}\,\left[j\,(j+1)-l\,(l+1)-3/4\right]\,\left\langle\frac{1}{r^3}\right\rangle.
+\end{eqnarray}
+Here, we have made use of the fact that $s=1/2$ for an electron. It follows
+from Eq.~(\ref{e9.75a}) that
+\begin{equation}
+\Delta E_{l,1/2;j,m_j}=  \frac{e^2\,\hbar^2}{16\pi\,\epsilon_0\,m_e^{\,2}\,c^2\,a_0^{\,3}}\left[\frac{j\,(j+1)-l\,(l+1)-3/4}{l\,(l+1/2)\,(l+1)\,n^3}\right],
+\end{equation}
+where $n$ is the radial quantum number. Finally, making use of Eqs.~(\ref{e9.55}), (\ref{e9.56}), and (\ref{e9.57}), the above expression reduces to
+\begin{equation}\label{e12.137}
+\Delta E_{l,1/2;j,m_j}=  E_n\,\frac{\alpha^2}{n^2}\left[
+\frac{n\,\left\{3/4+l\,(l+1)-j\,(j+1)\right\}}{2\,l\,(l+1/2)\,(l+1)}\right],
+\end{equation}
+where $\alpha$ is the fine structure constant. A comparison of this
+expression with Eq.~(\ref{e12.121}) reveals that the energy-shift
+due to spin-orbit coupling is of the same order of magnitude as that due
+to the lowest-order relativistic correction to the Hamiltonian. We can
+add these two corrections together (making use of the fact that
+$j=l\pm 1/2$ for a hydrogen atom---see Sect.~\ref{s11.3}) to obtain
+a net energy-shift of
+\begin{equation}\label{e12.138}
+\Delta E_{l,1/2;j,m_j}=  E_n\,\frac{\alpha^2}{n^2}\left(\frac{n}{j+1/2}-\frac{3}{4}\right).
+\end{equation}
+This modification of the energy levels of a hydrogen atom due to a combination
+of relativity and spin-orbit coupling is
+known as {\em fine structure}. 
+
+Now, it is conventional to refer to the energy eigenstates of a hydrogen
+atom which are also simultaneous eigenstates of $J^2$ as $nL_j$ states,
+where $n$ is the radial quantum number, $L=(S,P,D,F,\cdots)$ as $l=(0,1,2,3,\cdots)$, and $j$ is the total angular momentum quantum number.
+Let us examine the effect of the fine structure energy-shift (\ref{e12.138})
+on these eigenstates for  $n=1,2$ and 3.
+
+For $n=1$, in the absence of fine structure, there are two degenerate $1S_{1/2}$ states. 
+According to Eq.~(\ref{e12.138}), the fine structure induced energy-shifts of
+these two states are the same. Hence, fine structure does not
+break the degeneracy of the two $1S_{1/2}$ states of hydrogen. 
+
+For $n=2$, in the absence of fine structure, there are two $2S_{1/2}$
+states, two $2P_{1/2}$ states, and four $2P_{3/2}$ states, all
+of which are degenerate.
+According to Eq.~(\ref{e12.138}), the fine structure induced energy-shifts of
+the $2S_{1/2}$ and $2P_{1/2}$ states are the same as one another, but are different
+from the  induced
+energy-shift of the $2P_{3/2}$ states.
+Hence, fine structure does not break the
+degeneracy of the $2S_{1/2}$ and $2P_{1/2}$ states of hydrogen, but
+does break the degeneracy of these states relative to the $2P_{3/2}$
+states.
+
+ For $n=3$, in the absence of fine structure, there are two $3S_{1/2}$
+states, two $3P_{1/2}$ states, four $3P_{3/2}$ states,  four $3D_{3/2}$
+states, and six $3D_{5/2}$ states, all of
+which are degenerate. According to Eq.~(\ref{e12.138}), fine structure
+breaks these states into three groups: the $3S_{1/2}$ and $3P_{1/2}$ states,
+the $3P_{3/2}$ and $3D_{3/2}$ states, and the $3D_{5/2}$ states.
+
+The effect of the fine structure energy-shift on the $n=1$, 2, and 3 energy
+states of a hydrogen atom is illustrated in Fig.~\ref{ffine}.
+
+\begin{figure}
+\epsfysize=3.5in
+\centerline{\epsffile{Chapter12/fig01.eps}}
+\caption{\em Effect of the fine structure energy-shift on the
+$n=1,2$ and 3 states of a hydrogen atom. Not to scale.}\label{ffine}   
+\end{figure}
+
+Note, finally, that although expression (\ref{e12.137}) does not
+have a well-defined value for $l=0$, when added to expression (\ref{e12.121})  it, somewhat fortuitously, gives rise to an expression
+(\ref{e12.138}) which is both well-defined and correct when $l=0$.
+
+\section{Zeeman Effect}
+Consider a hydrogen atom placed in a uniform $z$-directed external
+magnetic field of strength $B$. The modification to the Hamiltonian
+of the system is
+\begin{equation}
+H_1 = -\bmu\cdot{\bf B},
+\end{equation}
+where
+\begin{equation}
+\bmu = - \frac{e}{2\,m_e}\,({\bf L} + 2\,{\bf S})
+\end{equation}
+is the total electron magnetic moment, including both orbital and spin contributions
+[see Eqs.~(\ref{e10.57})--(\ref{e10.59})].  Thus,
+\begin{equation}
+H_1 = \frac{e\,B}{2\,m_e}\,(L_z+ 2\,S_z).
+\end{equation}
+
+Suppose that the applied magnetic field is much weaker than the atom's internal
+magnetic field (\ref{e12.124}). Since the magnitude of the internal
+field is about 25 tesla, this is a fairly reasonable assumption. In this
+situation, we can treat $H_1$ as a small perturbation acting
+on the simultaneous eigenstates of the unperturbed Hamiltonian and
+the fine structure Hamiltonian. Of course, these states
+are the simultaneous eigenstates of $L^2$, $S^2$, $J^2$, and $J_z$ (see
+previous section). Hence, from standard perturbation theory, the
+first-order energy-shift induced by a weak external magnetic field
+is
+\begin{eqnarray}
+\Delta E_{l,1/2;j,m_j} &=& \langle l,1/2;j,m_j|H_1|l,1/2;j,m_j\rangle\nonumber\\[0.5ex]
+&=& \frac{e\,B}{2\,m_e}\,\left(m_j\,\hbar + \langle l,1/2;j,m_j|S_z|l,1/2;j,m_j\rangle\right),
+\end{eqnarray}
+since $J_z=L_z+S_z$. Now, according to Eqs.~(\ref{e11.47}) and
+(\ref{e11.48}), 
+\begin{equation}\label{e12.143}
+\psi^{(2)}_{j,m_j} = \left(\frac{j+m_j}{2\,l+1}\right)^{1/2}\psi^{(1)}_{m_j-1/2,1/2} + \left(\frac{j-m_j}{2\,l+1}\right)^{1/2}\,\psi^{(1)}_{m_j+1/2,-1/2}
+\end{equation}
+when $j=l+1/2$, and
+\begin{equation}
+\psi^{(2)}_{j,m_j} = \left(\frac{j+1-m_j}{2\,l+1}\right)^{1/2}\psi^{(1)}_{m_j-1/2,1/2} - \left(\frac{j+1+m_j}{2\,l+1}\right)^{1/2}\,\psi^{(1)}_{m_j+1/2,-1/2}
+\end{equation}
+when $j=l-1/2$. Here, the $\psi^{(1)}_{m,m_s}$ are the
+simultaneous eigenstates of $L^2$, $S^2$, $L_z$, and $S_z$, whereas
+the $\psi^{(2)}_{j,m_j}$ are the simultaneous eigenstates of
+$L^2$, $S^2$, $J^2$, and $J_z$. In particular,
+\begin{equation}\label{e12.145}
+S_z\,\psi^{(1)}_{m,\pm 1/2} = \pm \frac{\hbar}{2}\,\psi^{(1)}_{m,\pm 1/2}.
+\end{equation}
+It follows from Eqs.~(\ref{e12.143})--(\ref{e12.145}), and the
+orthormality of the $\psi^{(1)}$, that
+\begin{equation}
+\langle l,1/2;j,m_j|S_z|l,1/2;j,m_j\rangle = \pm \frac{m_j\,\hbar}{2\,l+1}
+\end{equation}
+when $j=l\pm 1/2$.  Thus, the induced energy-shift when a hydrogen atom is placed in  an external magnetic field---which is known as the {\em Zeeman effect}---becomes
+\begin{equation}\label{e12.147}
+\Delta E_{l,1/2;j,m_j} = \mu_B\,B\,m_j\left[1\pm \frac{1}{2\,l+1}\right]
+\end{equation}
+where the $\pm$ signs correspond to $j=l\pm 1/2$. Here,
+\begin{equation}
+\mu_B = \frac{e\,\hbar}{2\,m_e} = 5.788\times 10^{-5}\,{\rm eV/T}
+\end{equation}
+is known as the {\em Bohr magnetron}. Of course, the quantum number $m_j$ takes values differing by unity in the range $-j$ to $j$. It, thus,
+follows from Eq.~(\ref{e12.147}) that the Zeeman effect splits
+degenerate states characterized by $j=l+1/2$ into $2\,j+1$
+equally spaced states of interstate spacing
+\begin{equation}\label{e12.149}
+\Delta E_{j=l+1/2} = \mu_B\,B\,\frac{2\,l+2}{2\,l+1}.
+\end{equation}
+Likewise, the Zeeman effect splits degenerate states characterized by
+$j=l-1/2$ into $2\,j+1$ equally spaced states of interstate spacing
+\begin{equation}\label{e12.150}
+\Delta E_{j=l-1/2} = \mu_B\,B\,\frac{2\,l}{2\,l+1}.
+\end{equation}
+
+In conclusion, in the presence of a weak external magnetic field, the two degenerate $1S_{1/2}$
+states of the hydrogen atom are split by $2\,\mu_B\,B$. Likewise,
+the four degenerate  $2S_{1/2}$ and $2P_{1/2}$ states are split by
+$(2/3)\,\mu_B\,B$, whereas the four degenerate $2P_{3/2}$ states
+are split by $(4/3)\,\mu_B\,B$. This is illustrated in Fig.~\ref{fzee}.
+Note, finally, that since the $\psi^{(2)}_{l,m_j}$ are not simultaneous
+eigenstates of the unperturbed and perturbing Hamiltonians, 
+Eqs.~(\ref{e12.149}) and (\ref{e12.150}) can only be regarded as the expectation
+values of the magnetic-field induced energy-shifts. However, as long as
+the external magnetic field is much weaker than the internal magnetic
+field, these expectation  values are almost identical to the actual
+measured values of the energy-shifts.
+
+\begin{figure}
+\epsfysize=3.5in
+\centerline{\epsffile{Chapter12/fig02.eps}}
+\caption{\em The Zeeman effect for the
+$n=1$ and $2$ states of a hydrogen atom. Here, $\epsilon= \mu_B\,B$. Not to scale.}\label{fzee}   
+\end{figure}
+
+\section{Hyperfine Structure}
+The proton in a hydrogen atom is a spin one-half charged particle, and therefore
+possesses a magnetic moment. By analogy with Eq.~(\ref{e10.58}),
+we can write
+\begin{equation}\label{e12.151}
+\bmu_p = \frac{g_p\,e}{2\,m_p}\,{\bf S}_p,
+\end{equation}
+where $\bmu_p$ is the proton magnetic
+moment, ${\bf S}_p$ is the proton spin, and the proton gyromagnetic ratio $g_p$ is found experimentally to take that value $5.59$. Note that the
+magnetic moment of a proton is much smaller (by a factor of order $m_e/m_p$)
+than that of an electron.
+ According
+to classical electromagnetism, the proton's magnetic moment generates a
+magnetic field of the form
+\begin{equation}
+{\bf B} = \frac{\mu_0}{4\pi\,r^3}\,\left[3\,(\bmu_p\cdot{\bf e}_r)\,{\bf e}_r - \bmu_p\right] + \frac{2\,\mu_0}{3}\,\bmu_p\,\delta^3({\bf r}),
+\end{equation}
+where ${\bf e}_r = {\bf r}/r$. We can understand the origin of the delta-function term
+in the above expression by thinking of the proton as a tiny current loop centred on the origin.
+All magnetic field-lines generated by the loop must pass through the loop.
+Hence, if the size of the  loop goes to zero then the field will be infinite at the origin, and this contribution is what is reflected by the delta-function term. Now, the Hamiltonian of the electron in the magnetic
+field generated by the proton is simply
+\begin{equation}
+H_1 = - \bmu_e\cdot {\bf B},
+\end{equation}
+where
+\begin{equation}
+\bmu_e = - \frac{e}{m_e}\,{\bf S}_e.
+\end{equation}
+Here, $\bmu_e$ is the electron  magnetic moment [see Eqs.~(\ref{e10.58})
+and (\ref{e10.59})], and ${\bf S}_e$ the electron spin. Thus, the
+perturbing Hamiltonian is written
+\begin{equation}
+H_1=\frac{\mu_0\,g_p\,e^2}{8\pi\,m_p\,m_e}\,
+\frac{3\,({\bf S}_p\cdot{\bf e}_r)\,({\bf S}_e\cdot{\bf e}_r) - {\bf S}_p\cdot{\bf S}_e}{r^3} + \frac{\mu_0\,g_p\,e^2}{3\,m_p\,m_e}\,{\bf S}_p\cdot{\bf S}_e\,\delta^3({\bf r}).
+\end{equation}
+Note that, since we have neglected coupling between the proton
+spin and the magnetic field generated by the electron's orbital motion,
+the above expression is only valid for $l=0$ states.
+
+According to standard first-order perturbation theory, the energy-shift induced
+by spin-spin coupling between the proton and the electron is the expectation
+value of the perturbing Hamiltonian. Hence,
+\begin{equation}
+\Delta E = \frac{\mu_0\,g_p\,e^2}{8\pi\,m_p\,m_e}\left\langle\frac{3\,({\bf S}_p\cdot{\bf e}_r)\,({\bf S}_e\cdot{\bf e}_r) - {\bf S}_p\cdot{\bf S}_e}{r^3}\right\rangle+ \frac{\mu_0\,g_p\,e^2}{3\,m_p\,m_e}\,\langle{\bf S}_p\cdot{\bf S}_e\rangle\,|\psi(0)|^2.
+\end{equation}
+For the ground-state of hydrogen, which is spherically symmetric,
+the first term in the above expression vanishes by symmetry. 
+Moreover, it is easily demonstrated that $|\psi_{000}(0)|^2=
+1/(\pi\,a_0^{\,3})$. Thus, we obtain
+\begin{equation}
+\Delta E = \frac{\mu_0\,g_p\,e^2}{3\pi\,m_p\,m_e\,a_0^{\,3}}\,\langle{\bf S}_p\cdot{\bf S}_e\rangle.
+\end{equation}
+
+Let
+\begin{equation}
+{\bf S} = {\bf S}_e + {\bf S}_p
+\end{equation}
+be the total spin. We can show that
+\begin{equation}
+{\bf S}_p\cdot{\bf S}_e = \frac{1}{2}\,(S^2-S_e^{\,2}-S_p^{\,2}).
+\end{equation}
+Thus, the simultaneous eigenstates of the perturbing Hamiltonian
+and the main Hamiltonian are the simultaneous eigenstates of $S_e^{\,2}$,
+$S_p^{\,2}$, and $S^2$. However, both the proton and
+the electron are spin one-half particles. According to Sect.~\ref{shalf},
+when two spin one-half particles are combined (in the absence of orbital
+angular momentum) the net state  has either spin 1 or spin 0.
+In fact, there are three spin 1 states, known as triplet states, and a single
+spin 0 state, known as the singlet state. For all states,
+the eigenvalues of $S_e^{\,2}$ and $S_p^{\,2}$ are $(3/4)\,\hbar^2$.
+The eigenvalue of $S^2$ is 0 for the singlet state, and $2\,\hbar^2$
+for the triplet states. Hence,
+\begin{equation}
+\langle {\bf S}_p\cdot{\bf S}_e\rangle = - \frac{3}{4}\,\hbar^2
+\end{equation}
+for the singlet state, and
+\begin{equation}
+\langle {\bf S}_p\cdot{\bf S}_e\rangle =  \frac{1}{4}\,\hbar^2
+\end{equation}
+for the triplet states. 
+
+It follows, from the above analysis, that spin-spin coupling breaks
+the degeneracy of the two $1S_{1/2}$ states in hydrogen, lifting the
+energy of the triplet configuration, and lowering that of the singlet.
+This splitting is known as {\em hyperfine structure}.
+The net energy difference between the singlet and the triplet states
+is
+\begin{equation}
+\Delta E = \frac{8}{3}\,g_p\,\frac{m_e}{m_p}\,\alpha^2\,E_0 = 5.88\times 10^{-6}\,{\rm eV},
+\end{equation}
+where $E_0=13.6\,{\rm eV}$ is the (magnitude of the) ground-state energy.
+Note that the hyperfine energy-shift is much smaller, by a factor $m_e/m_p$, than
+a typical fine structure energy-shift.
+If we convert the above energy into a wavelength then we obtain
+\begin{equation}
+\lambda = 21.1\,{\rm cm}.
+\end{equation}
+This is the wavelength of the radiation emitted by a hydrogen atom
+which is collisionally excited from the singlet to the triplet
+state, and then decays back to the lower energy singlet state. 
+The 21\,cm line is famous in  radio astronomy because it was used to
+map out the spiral structure of our galaxy in the 1950's. 
